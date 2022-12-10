@@ -6,7 +6,9 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
  
- 
+  <link rel="preload" href="index.js" as="script">
+  
+  <link rel="stylesheet" href="style.css" type="text/css">
 <!-- originales -->
 
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
@@ -38,333 +40,105 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.tablesorter/2.31.3/js/extras/jquery.tablesorter.pager.min.js" ></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/jquery.tablesorter/2.31.3/css/jquery.tablesorter.pager.min.css" />
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/jquery.tablesorter/2.14.0/css/theme.blue.css"  />
+
+
 <script>
 
-    $( document ).ready(function() {
-      getData();
-    });
-
-    function getData() 
-    {
-      google.script.run.withSuccessHandler(function(ar) 
-      {
-        console.log(ar);
-        var displayfooter = "<tfoot>";
-        displayfooter += "<tr class=\"dark-row\">";
-        displayfooter += "<th colspan=\""+ar[0].length+"\">";
-          displayfooter += "<div class=\"pager\">";
-            displayfooter += "<button type=\"button\" class=\"first\" ><<</button>";
-            displayfooter += "<button type=\"button\" class=\"prev\"><</button>";
-            displayfooter += "<span class=\"pagedisplay\"></span>";
-            displayfooter += "<button type=\"button\" class=\"next\">></button>";
-            displayfooter += "<button type=\"button\" class=\"last\">>></button>";
-            displayfooter += "<select class=\"pagesize\" title=\"Select page size\">";
-              displayfooter += "<option value=\"15\">15</option>";
-              displayfooter += "<option value=\"25\">25</option>";
-              displayfooter += "<option value=\"30\">30</option>";
-              displayfooter += "<option value=\"40\">40</option>";
-            displayfooter += "</select>";
-            displayfooter += "<select class=\"gotoPage\" title=\"Select page number\"></select>";
-          displayfooter += "</div>";
-        displayfooter += "</th>";
-        displayfooter += "</tr>";
-        displayfooter += "</tfoot>";
-
-        var displayheader = ""; 
-        var displaybody = "<tbody>";
-        ar.forEach(function(item, index) 
+$( document ).ready(function() {
+          getData();
+        });
+    
+        function getData() 
         {
-          if(index == 0)
+          google.script.run.withSuccessHandler(function(ar) 
           {
-            displayheader = "<thead>";
-            displayheader += "<tr>";
-            displayheader += "<th>"+item[0]+"</th>";
-            displayheader += "<th>"+item[1]+"</th>";
-            displayheader += "<th>"+item[2]+"</th>";
-            displayheader += "<th>"+item[3]+"</th>";
-            displayheader += "<th>"+item[4]+"</th>";
-            displayheader += "<th>"+item[5]+"</th>";
-            displayheader += "</tr>";
-            displayheader += "</thead>";
-          }
-          else if(index > 0)
-          {
-            displaybody += "<tr>";
-            displaybody += "<td>"+item[0]+"</td>";
-            displaybody += "<td>"+item[1]+"</td>";
-            displaybody += "<td>"+item[2]+"</td>";
-            displaybody += "<td>"+item[3]+"</td>";
-            displaybody += "<td>"+item[4]+"</td>";            
-            displaybody += "<td>"+item[5]+"</td>";     
-            displaybody += "</tr>";
-          }    
-        });
-        displaybody += "</tbody>";
-
-        var displayTable = '';
-        displayTable += "<table id=\"mainTable\" class=\"tablesorter\" >";
-        displayTable += displayheader;
-        displayTable += displayfooter;
-        displayTable += displaybody;
-        displayTable += '</table>';     
-        document.getElementById("rowdata").innerHTML = displayTable;
-
-        $("#mainTable").tablesorter({
-          theme: 'blue',
-          sortList: [[0,0]],
-          widthFixed: true,
-          widgets: ['zebra', 'columns', 'filter']
-        })
-        .tablesorterPager({
-        // target the pager markup - see the HTML block below
-        container: $(".pager"),
-        output: '{startRow} to {endRow} ({totalRows})'
-        });
-
-      }).getRecords();
-    }
+            console.log(ar);
+            var displayfooter = "<tfoot>";
+            displayfooter += "<tr class=\"dark-row\">";
+            displayfooter += "<th colspan=\""+ar[0].length+"\">";
+              displayfooter += "<div class=\"pager\">";
+                displayfooter += "<button type=\"button\" class=\"first\" ><<</button>";
+                displayfooter += "<button type=\"button\" class=\"prev\"><</button>";
+                displayfooter += "<span class=\"pagedisplay\"></span>";
+                displayfooter += "<button type=\"button\" class=\"next\">></button>";
+                displayfooter += "<button type=\"button\" class=\"last\">>></button>";
+                displayfooter += "<select class=\"pagesize\" title=\"Select page size\">";
+                  displayfooter += "<option value=\"15\">15</option>";
+                  displayfooter += "<option value=\"25\">25</option>";
+                  displayfooter += "<option value=\"30\">30</option>";
+                  displayfooter += "<option value=\"40\">40</option>";
+                displayfooter += "</select>";
+                displayfooter += "<select class=\"gotoPage\" title=\"Select page number\"></select>";
+              displayfooter += "</div>";
+            displayfooter += "</th>";
+            displayfooter += "</tr>";
+            displayfooter += "</tfoot>";
+    
+            var displayheader = ""; 
+            var displaybody = "<tbody>";
+            ar.forEach(function(item, index) 
+            {
+              if(index == 0)
+              {
+                displayheader = "<thead>";
+                displayheader += "<tr>";
+                displayheader += "<th>"+item[0]+"</th>";
+                displayheader += "<th>"+item[1]+"</th>";
+                displayheader += "<th>"+item[2]+"</th>";
+                displayheader += "<th>"+item[3]+"</th>";
+                displayheader += "<th>"+item[4]+"</th>";
+                displayheader += "<th>"+item[5]+"</th>";
+                displayheader += "</tr>";
+                displayheader += "</thead>";
+              }
+              else if(index > 0)
+              {
+                displaybody += "<tr>";
+                displaybody += "<td>"+item[0]+"</td>";
+                displaybody += "<td>"+item[1]+"</td>";
+                displaybody += "<td>"+item[2]+"</td>";
+                displaybody += "<td>"+item[3]+"</td>";
+                displaybody += "<td>"+item[4]+"</td>";            
+                displaybody += "<td>"+item[5]+"</td>";     
+                displaybody += "</tr>";
+              }    
+            });
+            displaybody += "</tbody>";
+    
+            var displayTable = '';
+            displayTable += "<table id=\"mainTable\" class=\"tablesorter\" >";
+            displayTable += displayheader;
+            displayTable += displayfooter;
+            displayTable += displaybody;
+            displayTable += '</table>';     
+            document.getElementById("rowdata").innerHTML = displayTable;
+    
+            $("#mainTable").tablesorter({
+              theme: 'blue',
+              sortList: [[0,0]],
+              widthFixed: true,
+              widgets: ['zebra', 'columns', 'filter']
+            })
+            .tablesorterPager({
+            // target the pager markup - see the HTML block below
+            container: $(".pager"),
+            output: '{startRow} to {endRow} ({totalRows})'
+            });
+    
+          }).data_api_contratos_rofex();
+        }
 </script>
 
 
- <!-- esta parte me define todos los margenes de la pagina .container-fluid {
-    background-color: #f2f3f6;    
-    padding: 60px 50px default;
-
-    f4511e naranja
-    f2f3f6 griss
-    116c71 verde oscuro
-    2da4b1 celeste
-    741b47 rojo
-  }-->
-
-  <style>
-    Image{
-      max-width:100%;
-    }
-  body {
-    font: 400 15px Lato, bitter;
-    background-color: #f2f3f6;
-    line-height: 1.8;
-    color: #818181;
-  }
-  p {
-    font-size: 14px;
-    line-height: 1.375em;
-    color: #741b47;
-    font-weight: 400;
-    margin-bottom: 20px;
-  }
- h1 {
-    font-size: 52px;
-    text-transform: Exo;
-    color: #116c71;
-    font-weight: 700;
-    margin-bottom: 20px;
-  }
-  h2 {
-    font-size: 36px;
-    text-transform: bitter;
-    color: #116c71;
-    font-weight: 600;
-    margin-bottom: 30px;
-  }
-  h3 {
-    font-size: 25px;
-    text-transform: Exo;
-    color: #741b47;
-    font-weight: 400;
-    margin-bottom: 30px;
-  }
-  h4 {
-    font-size: 19px;
-    line-height: 1.375em;
-    color: #2da4b1;
-    font-weight: 400;
-    margin-bottom: 30px;
-  }  
-  .home{
-    display: flex;
-  }  
-  .jumbotron {
-    background-color: #f2f3f6;
-    color: #116c71;
-    padding: 100px 25px;
-    font-family: Exo, sans-serif;
-  }
-  .container-fluid {
-    background-color: #f2f3f6;    
-    padding: 200px 50px;
-  }
-  .bg-grey {
-    background-color: #f6f6f6;
-  }
-  .logo-small {
-    color: #f4511e;
-    font-size: 50px;
-  }
-  .logo {
-    color: #f4511e;
-    font-size: 200px;
-  }
-  .thumbnail {
-    padding: 0 0 15px 0;
-    border: none;
-    border-radius: 0;
-  }
-  .thumbnail img {
-    width: 100%;
-    height: 100%;
-    margin-bottom: 10px;
-  }
-  .carousel-control.right, .carousel-control.left {
-    background-image: none;
-    color: #f4511e;
-  }
-  .carousel-indicators li {
-    border-color: #f4511e;
-  }
-  .carousel-indicators li.active {
-    background-color: #f4511e;
-  }
-  .item h4 {
-    font-size: 19px;
-    line-height: 1.375em;
-    font-weight: 400;
-    font-style: italic;
-    margin: 70px 0;
-  }
-  .item span {
-    font-style: normal;
-  }
-
-  
-  
-  .panel {
-    border: 1px solid #f4511e; 
-    border-radius:0 !important;
-    transition: box-shadow 0.5s;
-  }
-  .panel:hover {
-    box-shadow: 5px 0px 40px rgba(0,0,0, .2);
-  }
-  .panel-footer .btn:hover {
-    border: 1px solid #2da4b1;
-    background-color: #116c71;
-    color: #2da4b1;
-  }
-  .panel-heading {
-    color: #fff !important;
-    background-color: #2da4b1 !important;
-    padding: 25px;
-    border-bottom: 1px solid transparent;
-    border-top-left-radius: 0px;
-    border-top-right-radius: 0px;
-    border-bottom-left-radius: 0px;
-    border-bottom-right-radius: 0px;
-  }
-  .panel-footer {
-    background-color: white !important;
-  }
-  .panel-footer h3 {
-    font-size: 32px;
-  }
-  .panel-footer h4 {
-    color: #aaa;
-    font-size: 14px;
-  }
-  .panel-footer .btn {
-    margin: 15px 0;
-    background-color: #2da4b1;
-    color: #fff;
-  <!-- botones-->
-
-}
-
-
-
-
-  .navbar {
-    margin-bottom: 0;
-    background-color: #f2f3f6;
-    z-index: 9999;
-    border: 1;
-    font-size: 12px !important;
-    line-height: 1.42857143 !important;
-    letter-spacing: 4px;
-    border-radius: 1;
-    font-family: Exo, sans-serif;
-  }
-  .navbar li a, .navbar .navbar-brand {
-    color: #2da4b1 !important;
-  }
-  .navbar-nav li a:hover, .navbar-nav li.active a {
-    color: #116c71 !important;
-    background-color: #fff !important;
-  }
-  .navbar-default .navbar-toggle {
-    border-color: transparent;
-    color: #fff !important;
-  }
-
-
-
-
-  footer .glyphicon {
-    font-size: 20px;
-    margin-bottom: 20px;
-    color: #116c71;
-  }
-  .slideanim {visibility:hidden;}
-  .slide {
-    animation-name: slide;
-    -webkit-animation-name: slide;
-    animation-duration: 1s;
-    -webkit-animation-duration: 1s;
-    visibility: visible;
-  }
-
-
-  @keyframes slide {
-    0% {
-      opacity: 0;
-      transform: translateY(70%);
-    } 
-    100% {
-      opacity: 1;
-      transform: translateY(0%);
-    }
-  }
-  @-webkit-keyframes slide {
-    0% {
-      opacity: 0;
-      -webkit-transform: translateY(70%);
-    } 
-    100% {
-      opacity: 1;
-      -webkit-transform: translateY(0%);
-    }
-  }
-  @media screen and (max-width: 768px) {
-    .col-sm-4 {
-      text-align: center;
-      margin: 25px 0;
-    }
-    .btn-lg {
-      width: 100%;
-      margin-bottom: 35px;
-    }
-  }
-  }
-  @media screen and (max-width: 480px) {
-    .logo {
-      font-size: 150px;
-    }
-  }
-  </style>
+ 
 </head>
 
  <!-- ARRANCA TODO -->
+ <script src="index.js" defer></script>
 
+
+
+ 
 <body id="myPage" data-spy="scroll" data-target=".navbar" data-offset="60">
 
 <nav class="navbar navbar-default navbar-fixed-top">
@@ -398,7 +172,7 @@
   <p>Somos una nueva forma de invertir en el mercado de capitales</p> 
   <form>
     <div class="input-group">
-      <input type="email" class="form-control" size="54" placeholder="Deja tu mail" required>
+      <input type="email" class="form-control" size="54" placeholder="Deja tus datos de contactos" required>
       <div class="input-group-btn">
         <button type="button" class="btn btn-danger">contactanos</button>
       </div>
@@ -663,41 +437,11 @@
   </div>
 </div>
 
-<div class="container-fluid">
-  <div class="row">
-    <div class="col-sm-6">
-      <h4> <?= texto1 ?> </a><br />  </h4>     
-      <table class="table table-striped">
-            <? for(var i in data ){?>
-              <tr>
-                <? for(var j in data [i]){?>
-                  <? if(i==0) {?>
-                    <th> <?= data [i][j]?></th>
-                  <?} else {?>
-                    <td> <?= data [i][j]?></td>
-                  <? } ?>
-                <? } ?>
-              </tr>
-            <? } ?>
-      </table>
-    </div>    
-  </div>
+ <div id="rowdata"></div>
+
+ <div class="container ">
+  <div id="pagination-wrapper"></div>
 </div>
-
-<div class="container-fluid">
-  <div class="row">
-    <div class="col-sm-6">
-  <h4>JQuery Tablesorter</h4><br>
-  <div id="rowdata"></div>
-    </div>    
-  </div>
-</div>
-
-
-
-
-
-
 
 <!-- Container (Dolar Section) -->
 <div id="Dolar" class="container-fluid bg-grey">
@@ -735,7 +479,6 @@
   <a href="#myPage" title="To Top">
     <span class="glyphicon glyphicon-chevron-up"></span>
   </a>
-  <p>Bootstrap Theme Made By <a href="https://www.w3schools.com" title="Visit w3schools">www.w3schools.com</a></p>
 </footer>
 
 <script>
@@ -774,6 +517,5 @@ $(document).ready(function(){
   });
 })
 </script>
-
 </body>
 </html>
