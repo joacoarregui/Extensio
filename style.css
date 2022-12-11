@@ -3,6 +3,10 @@ body {
   background-color: #f2f3f6;
   line-height: 1.8;
   color: #818181;
+  padding-left: 15px;
+  padding-right: 15px;
+  margin-left: 0px;
+  margin-right: 0px;
 }
 
 #preloader{
@@ -77,7 +81,7 @@ li {
 
 .container-fluid {
   background-color: #f2f3f6;    
-  padding: 60px 50px default;
+  padding: 60px 60px 50px 50px default;
 }
 .jumbotron {
   background-color: rgb(247, 248, 250);
@@ -85,7 +89,7 @@ li {
   font-family: Exo, sans-serif;
   padding-top: 20px;
   padding-bottom: 20px;
-  padding-left: 20px;
+  padding-left: 00px;
   padding-right: 00px;
   margin-bottom: 00px;
   margin-right: 0px;
@@ -201,7 +205,7 @@ img{
   transition: box-shadow 0.5s;
   color: #ffffff;
   text-align: left;
-  margin-left: 10px;
+  margin-left: 0px;
   justify-content: center;
   justify-items: center;
   
@@ -220,7 +224,7 @@ img{
   
 }
 .service-panel-heading:hover h1 {
-  font-size: 30px;
+  font-size: 25px;
   color:#2da4b1 !important;
   background-color: #ffffff !important;
   border-bottom: 1px solid transparent;
@@ -301,7 +305,7 @@ img{
   visibility: collapse;
 }
 .service-panel-heading h2 {
-  font-size: 32px;
+  font-size: 26px;
   color:#2da4b1 !important;
   background-color: #ffffff !important;
   border-bottom: 1px solid transparent;
@@ -329,8 +333,7 @@ img{
 }
 .service-panel-heading img {
   
-  max-width: 260px;    
-  max-height: 260px;
+
   justify-items: center;
   justify-content: center;
   text-align: center;
@@ -344,7 +347,7 @@ img{
 }
 
 .navbar {
-  margin-bottom: 0px;
+  margin-bottom: 20px;
   margin-top: 0px;
   background-color: #f2f3f6;
   z-index: 9999;
@@ -358,7 +361,7 @@ img{
 }
 .navbar li a, .navbar .navbar-brand {
   color: #2da4b1 !important;
-  padding-right: 20px;
+  padding-right: 0px;
 
 }
 .navbar-nav li a:hover, .navbar-nav li.active a {
@@ -370,7 +373,7 @@ img{
 .navbar-default .navbar-toggle {
   border-color: transparent;
   color: #116c71 !important;
-
+  margin-top: 15px;
 }
 
 
@@ -427,8 +430,8 @@ footer .glyphicon {
     margin-bottom: 35px;
   }
   img{
-    max-width: 450px;
-    max-height: 450px;    
+    max-width: 150px;
+    max-height: 150px;    
   }
 
 }
@@ -437,4 +440,31 @@ footer .glyphicon {
   .logo {
     font-size: 150px;
   }
+
+  img{
+    max-width: 150px;
+    max-height: 120px;
+  }  
+  h1{font-size: 35px} 
+  h2{font-size: 25px} 
+  h3{font-size: 20px} 
+  h4{font-size: 15px} 
+  h5{font-size: 25px} 
+  h6{font-size: 15px} 
+  p{font-size: 12px} 
+  l1{font-size: 12px} 
+  
+  .service-panel-heading:hover h1 {
+    font-size: 17px;
+  } 
+  .service-panel-heading h2 {
+    font-size: 20px;
+  }   
+  .service-panel-heading:hover h4 {
+    font-size: 13px;
+  }
+  .service-panel-heading:hover h5 {
+    font-size: 10px;
+  } 
+
 }
