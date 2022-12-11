@@ -462,11 +462,11 @@ footer .glyphicon {
   p{font-size: 12px} 
   l1{font-size: 12px} 
   .service-panel-heading img {
-    max-width: 185px;
+    max-width: 175px;
     max-height: 150px; 
     padding-right: 30px;
     padding-left: 5px;   
-    padding-bottom: 5px;   
+    padding-bottom: 10px;   
     padding-top: 5px; 
   }
   .service-panel-heading:hover h1 {
