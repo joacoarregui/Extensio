@@ -1,22 +1,22 @@
 body {
   font: 400 15px Lato, bitter;
-  background-color: #f2f3f6;
+  background-color: rgb(252, 253, 256);
   line-height: 1.8;
-  color: #818181;
-  padding-left: 15px;
-  padding-right: 15px;
-  margin-left: 0px;
-  margin-right: 0px;
+  color: #e96b6b;
+  width: 100%;
+  height: 100%;
+  padding: 0%;
+  overflow-x: hidden; no lo saques es el que te deja ok la pagina
 }
 
-#preloader{
-background: #116c717a url("https://drive.google.com/uc?export=view&id=1vGAtWfwQ_FYv6auzz3fV-IFGdIcJ-xoD") no-repeat center center;
+preloader{
+background: #116c717a  url(https://drive.google.com/uc?export=view&id=1vGAtWfwQ_FYv6auzz3fV-IFGdIcJ-xoD) no-repeat center center;
 background-size: 100%;
 height: 100vh;
 width: 100%;
 position: fixed;
 z-index: 100;
-}-->
+}
 p {
   font-size: 14px;
   line-height: 1.375em;
@@ -80,20 +80,20 @@ li {
 }
 
 .container-fluid {
-  background-color: #f2f3f6;    
+  background-color: rgb(242, 243, 247);    
   padding: 60px 60px 50px 50px default;
 }
 .jumbotron {
-  background-color: rgb(247, 248, 250);
+  background-color: rgb(252, 253, 255);
   color: #116c71;
   font-family: Exo, sans-serif;
   padding-top: 20px;
   padding-bottom: 20px;
-  padding-left: 00px;
-  padding-right: 00px;
+  padding-left: 15px;
+  padding-right: 20px;
   margin-bottom: 00px;
   margin-right: 0px;
-  margin-left: 00px;
+  margin-left: 15px;
   margin-top: 00px;
 }
 Image{
@@ -104,10 +104,13 @@ img{
   }
 .home{
   display: flex;
+  padding-right: 0px;
 }  
 
 .bg-grey {
   background-color: #f6f6f6;
+  padding-right: 100px;
+  justify-content: center;
 }
 .logo-small {
   color: #f4511e;
@@ -121,6 +124,7 @@ img{
   padding: 0 0 15px 0;
   border: none;
   border-radius: 0;
+  padding-right: 0px;
 }
 .thumbnail img {
   width: 100%;
@@ -224,7 +228,7 @@ img{
   
 }
 .service-panel-heading:hover h1 {
-  font-size: 25px;
+  font-size: 27px;
   color:#2da4b1 !important;
   background-color: #ffffff !important;
   border-bottom: 1px solid transparent;
@@ -245,7 +249,7 @@ img{
   size: 0px;
 }
 .service-panel-heading:hover h4 {
-  font-size: 20px;
+  font-size: 22px;
   color: #2da4b1 !important;
   background-color: #ffffff !important;
   border-bottom: 1px solid transparent;
@@ -257,7 +261,7 @@ img{
   padding: 0px 10px 1px 10px;
 }
 .service-panel-heading:hover h5 {
-  font-size: 15px;
+  font-size: 17px;
   color: #741b47 !important;
   background-color: #ffffff !important;
   border-bottom: 1px solid transparent;
@@ -332,24 +336,23 @@ img{
   visibility: collapse;
 }
 .service-panel-heading img {
-  
-
   justify-items: center;
   justify-content: center;
   text-align: center;
   padding-top: 10px;
-  padding-left: 30px;
-  padding-right: 30px;
-  padding-bottom: 10px;
+  padding-left: 40px;
+  padding-right: 15px;
+  padding-bottom: 20px;
   margin-right: 00px;
-  margin-bottom: 00px;
+  margin-bottom: 30px;
   margin-left: 00px;
 }
 
 .navbar {
   margin-bottom: 20px;
   margin-top: 0px;
-  background-color: #f2f3f6;
+  padding-right: 0px;
+  background-color: rgb(251, 252, 256);
   z-index: 9999;
   border: 1;
   font-size: 15px;
@@ -374,6 +377,7 @@ img{
   border-color: transparent;
   color: #116c71 !important;
   margin-top: 15px;
+  padding-right: 0px;
 }
 
 
@@ -383,9 +387,12 @@ footer .glyphicon {
   font-size: 20px;
   margin-bottom: 20px;
   color: #116c71;
+  padding-right: 0px;
 }
-.slideanim {visibility:hidden;}
+.slideanim {visibility:hidden;padding-right: 10px;}
+
 .slide {
+  padding-right: 0px;
   animation-name: slide;
   -webkit-animation-name: slide;
   animation-duration: 1s;
@@ -393,6 +400,7 @@ footer .glyphicon {
   visibility: visible;
 }
 .serviceanim {
+  padding-right: 0px;
   animation-name: slide;
   -webkit-animation-name: slide;
   animation-duration: 1s;
@@ -442,8 +450,8 @@ footer .glyphicon {
   }
 
   img{
-    max-width: 150px;
-    max-height: 120px;
+    max-width: 400px;
+    max-height: 400px;
   }  
   h1{font-size: 35px} 
   h2{font-size: 25px} 
@@ -453,7 +461,14 @@ footer .glyphicon {
   h6{font-size: 15px} 
   p{font-size: 12px} 
   l1{font-size: 12px} 
-  
+  .service-panel-heading img {
+    max-width: 185px;
+    max-height: 150px; 
+    padding-right: 30px;
+    padding-left: 5px;   
+    padding-bottom: 5px;   
+    padding-top: 5px; 
+  }
   .service-panel-heading:hover h1 {
     font-size: 17px;
   } 
