@@ -1,25 +1,18 @@
-
-
-.container-fluid {
-  background-color: #f2f3f6;    
-  padding: 60px 50px default;
-
-  f4511e naranja
-  f2f3f6 griss
-  116c71 verde oscuro
-  2da4b1 celeste
-  741b47 rojo
-}
-
-Image{
-    max-width:100%;
-  }
 body {
   font: 400 15px Lato, bitter;
   background-color: #f2f3f6;
   line-height: 1.8;
   color: #818181;
 }
+
+#preloader{
+background: #116c717a url("https://drive.google.com/uc?export=view&id=1vGAtWfwQ_FYv6auzz3fV-IFGdIcJ-xoD") no-repeat center center;
+background-size: 100%;
+height: 100vh;
+width: 100%;
+position: fixed;
+z-index: 100;
+}-->
 p {
   font-size: 14px;
   line-height: 1.375em;
@@ -55,19 +48,60 @@ h4 {
   font-weight: 400;
   margin-bottom: 30px;
 }  
+h5{
+  font: 400 35px Exo;
+  font-size: 30px;
+  line-height: 1.375em;
+  color: #116c71;
+  font-weight: 400;
+  margin-top: 15px;
+} 
+h6{
+  font: 400 15px Lato, Arial;
+  font-size: 20px;
+  line-height: 1.375em;
+  color: #116c71;
+  font-weight: 400;
+  margin-bottom: 10px;
+} 
+li {
+  font: 400 15px Lato, Arial;
+  font-size: 18px;
+  line-height: 1.375em;
+  color: #2da4b1;
+  font-weight: 400;
+  margin-bottom: 10px;
+  padding: 5px 5px;
+  margin-top: 5px;
+}
+
+.container-fluid {
+  background-color: #f2f3f6;    
+  padding: 60px 50px default;
+}
+.jumbotron {
+  background-color: rgb(247, 248, 250);
+  color: #116c71;
+  font-family: Exo, sans-serif;
+  padding-top: 20px;
+  padding-bottom: 20px;
+  padding-left: 20px;
+  padding-right: 00px;
+  margin-bottom: 00px;
+  margin-right: 0px;
+  margin-left: 00px;
+  margin-top: 00px;
+}
+Image{
+    max-width:100%;
+  }
+img{
+    max-width:100%;
+  }
 .home{
   display: flex;
 }  
-.jumbotron {
-  background-color: #f2f3f6;
-  color: #116c71;
-  padding: 100px 25px;
-  font-family: Exo, sans-serif;
-}
-.container-fluid {
-  background-color: #f2f3f6;    
-  padding: 200px 50px;
-}
+
 .bg-grey {
   background-color: #f6f6f6;
 }
@@ -114,28 +148,36 @@ h4 {
 
 .panel {
   border: 1px solid #f4511e; 
-  border-radius:0 !important;
+  border-radius:20px ;
   transition: box-shadow 0.5s;
 }
 .panel:hover {
-  box-shadow: 5px 0px 40px rgba(0,0,0, .2);
+  box-shadow: 10px 10px 40px rgba(0, 97, 119, 0.309);
+  border-radius:20px ;
+  margin-top: -7px;
+  transition: margin-top 0.3s;
+  border: 1px solid #1e89f4; 
 }
 .panel-footer .btn:hover {
+  border-radius:20px ;
   border: 1px solid #2da4b1;
   background-color: #116c71;
   color: #2da4b1;
+
 }
 .panel-heading {
+  border-radius:20px ;
   color: #fff !important;
   background-color: #2da4b1 !important;
   padding: 25px;
   border-bottom: 1px solid transparent;
-  border-top-left-radius: 0px;
-  border-top-right-radius: 0px;
+  border-top-left-radius: 20px;
+  border-top-right-radius: 20px;
   border-bottom-left-radius: 0px;
   border-bottom-right-radius: 0px;
 }
 .panel-footer {
+  border-radius:20px ;
   background-color: white !important;
 }
 .panel-footer h3 {
@@ -149,34 +191,186 @@ h4 {
   margin: 15px 0;
   background-color: #2da4b1;
   color: #fff;
-<!-- botones-->
-
 }
 
 
-
+.service-panel {
+  border: 1px solid #2da4b1; 
+  border-radius: 10px;
+  background-color: #ffffff;
+  transition: box-shadow 0.5s;
+  color: #ffffff;
+  text-align: left;
+  margin-left: 10px;
+  justify-content: center;
+  justify-items: center;
+  
+}
+.service-panel-heading:hover  {
+  border-radius: 10px;
+  color: #2da4b1 !important;
+  background-color: #ffffff !important;
+  border-bottom: 1px solid transparent;
+  padding-top: 0px;
+  padding-bottom: 0px;
+  visibility: visible;
+  size: 15px;
+  justify-content: left;
+  justify-items: left;
+  
+}
+.service-panel-heading:hover h1 {
+  font-size: 30px;
+  color:#2da4b1 !important;
+  background-color: #ffffff !important;
+  border-bottom: 1px solid transparent;
+  animation-name: slide;
+  -webkit-animation-name: slide;
+  animation-duration: 1s;
+  -webkit-animation-duration: 1s;
+  visibility: visible;
+  padding: 1px 10px 1px 10px;
+}
+.service-panel-heading:hover h2 {
+  color: rgb(255, 255, 255) !important;
+  background-color: #ffffff !important;
+  border-bottom: 1px solid transparent;
+  font-size: 0px;
+  visibility: collapse;
+  padding: 0px;
+  size: 0px;
+}
+.service-panel-heading:hover h4 {
+  font-size: 20px;
+  color: #2da4b1 !important;
+  background-color: #ffffff !important;
+  border-bottom: 1px solid transparent;
+  animation-name: slide;
+  -webkit-animation-name: slide;
+  animation-duration: 1s;
+  -webkit-animation-duration: 1s;
+  visibility: visible;
+  padding: 0px 10px 1px 10px;
+}
+.service-panel-heading:hover h5 {
+  font-size: 15px;
+  color: #741b47 !important;
+  background-color: #ffffff !important;
+  border-bottom: 1px solid transparent;
+  justify-content: left;
+  animation-name: slide;
+  -webkit-animation-name: slide;
+  animation-duration: 1s;
+  -webkit-animation-duration: 1s;
+  visibility: visible;
+  padding: 0px 10px 1px 10px;
+}
+.service-panel-heading:hover img {
+  animation-name: slide;
+  -webkit-animation-name: slide;
+  animation-duration: 1s;
+  -webkit-animation-duration: 1s;
+  visibility: hidden;
+  max-width: 0px;    
+  max-height: 0px;
+  padding-top: 0px;
+  padding-bottom: 0px;
+}
+.service-panel:hover {
+  box-shadow: 10px 10px 40px rgba(0, 97, 119, 0.309);
+  margin-top: 0px;
+  transition: margin-top 0.0s;
+  border: 1px solid #960404; 
+  color:#b13333;
+  border-radius: 10px;
+  visibility: visible;
+}
+.service-panel-heading {
+  color: rgb(255, 255, 255) !important;
+  background-color: #ffffff !important;
+  border-bottom: 1px solid transparent;
+  border-radius: 10px;
+  justify-content: center;
+  justify-items: center;
+}
+.service-panel-heading h1 {
+  color: rgb(255, 255, 255) !important;
+  background-color: #ffffff !important;
+  border-bottom: 1px solid transparent;
+  font-size: 0px;
+  visibility: collapse;
+}
+.service-panel-heading h2 {
+  font-size: 32px;
+  color:#2da4b1 !important;
+  background-color: #ffffff !important;
+  border-bottom: 1px solid transparent;
+  text-align: center;
+  margin-top: -50px;
+  animation-name: slide;
+  -webkit-animation-name: slide;
+  animation-duration: 0.5s;
+  -webkit-animation-duration: 0.5s;
+  visibility: visible;
+}
+.service-panel-heading h4 {
+  color: rgb(255, 255, 255) !important;
+  background-color: #ffffff !important;
+  border-bottom: 1px solid transparent;
+  font-size: 0px;
+  visibility: collapse;
+}
+.service-panel-heading h5 {
+  color: rgb(255, 255, 255) !important;
+  background-color: #ffffff !important;
+  border-bottom: 1px solid transparent;
+  font-size: 0px;
+  visibility: collapse;
+}
+.service-panel-heading img {
+  
+  max-width: 260px;    
+  max-height: 260px;
+  justify-items: center;
+  justify-content: center;
+  text-align: center;
+  padding-top: 10px;
+  padding-left: 30px;
+  padding-right: 30px;
+  padding-bottom: 10px;
+  margin-right: 00px;
+  margin-bottom: 00px;
+  margin-left: 00px;
+}
 
 .navbar {
-  margin-bottom: 0;
+  margin-bottom: 0px;
+  margin-top: 0px;
   background-color: #f2f3f6;
   z-index: 9999;
   border: 1;
-  font-size: 12px !important;
-  line-height: 1.42857143 !important;
-  letter-spacing: 4px;
-  border-radius: 1;
-  font-family: Exo, sans-serif;
+  font-size: 15px;
+  line-height: 1.42857143;
+  letter-spacing:4px;
+  border-radius: 0;
+  font-family: Arial, Helvetica, sans-serif, sans-serif;
+  
 }
 .navbar li a, .navbar .navbar-brand {
   color: #2da4b1 !important;
+  padding-right: 20px;
+
 }
 .navbar-nav li a:hover, .navbar-nav li.active a {
-  color: #116c71 !important;
-  background-color: #fff !important;
+  color: #196b74 !important;
+  background-color: #d7f8ff13 !important;
+  transition: box-shadow 0.8s;
+  box-shadow: 5px 5px 5px #196b744e;
 }
 .navbar-default .navbar-toggle {
   border-color: transparent;
-  color: #fff !important;
+  color: #116c71 !important;
+
 }
 
 
@@ -195,7 +389,13 @@ footer .glyphicon {
   -webkit-animation-duration: 1s;
   visibility: visible;
 }
-
+.serviceanim {
+  animation-name: slide;
+  -webkit-animation-name: slide;
+  animation-duration: 1s;
+  -webkit-animation-duration: 1s;
+  visibility: visible;
+}
 
 @keyframes slide {
   0% {
@@ -220,14 +420,19 @@ footer .glyphicon {
 @media screen and (max-width: 768px) {
   .col-sm-4 {
     text-align: center;
-    margin: 25px 0;
+    margin: 15px 0;
   }
   .btn-lg {
     width: 100%;
     margin-bottom: 35px;
   }
+  img{
+    max-width: 450px;
+    max-height: 450px;    
+  }
+
 }
-}
+
 @media screen and (max-width: 480px) {
   .logo {
     font-size: 150px;

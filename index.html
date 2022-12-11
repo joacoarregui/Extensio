@@ -5,10 +5,8 @@
   <title>Extensiosas</title>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
+
  
-  <link rel="preload" href="index.js" as="script">
-  
-  <link rel="stylesheet" href="style.css" type="text/css">
 <!-- originales -->
 
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
@@ -40,8 +38,9 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.tablesorter/2.31.3/js/extras/jquery.tablesorter.pager.min.js" ></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/jquery.tablesorter/2.31.3/css/jquery.tablesorter.pager.min.css" />
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/jquery.tablesorter/2.14.0/css/theme.blue.css"  />
-
-
+ 
+    <link rel="preload" href="index.js" as="script">
+    <link rel="stylesheet" href="/style.css">
 <script>
 
 $( document ).ready(function() {
@@ -134,98 +133,142 @@ $( document ).ready(function() {
 </head>
 
  <!-- ARRANCA TODO -->
- <script src="index.js" defer></script>
 
 
 
  
 <body id="myPage" data-spy="scroll" data-target=".navbar" data-offset="60">
+<!--<div id="preloader"></div>-->  
 
-<nav class="navbar navbar-default navbar-fixed-top">
-  <div class="container">
-    <div class="navbar-header">
-      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
-        <span class="icon-bar"></span>
-        <span class="icon-bar"></span>
-        <span class="icon-bar"></span>                        
-      </button>
-      <a class="navbar-brand" href="#myPage">Logo Extensio prueba hithub </a>
-    </div>
-      <!-- aca se definen los ID que mas abajo se mencionan para poder ir a los temas de las barras-->
-    <div class="collapse navbar-collapse" id="myNavbar">
-      <ul class="nav navbar-nav navbar-right">
-        <li><a href="#Extensio">Extensio</a></li>
-        <li><a href="#Invertir">Invertir</a></li>
-        <li><a href="#Empresas">Empresas</a></li>
-        <li><a href="#Blog">Blog</a></li>
-        <li><a href="#Dolar">Dolar</a></li>
-        <li><a href="#Cursos">Cursos</a></li>
-      </ul>
-    </div>
-  </div>
-</nav>
-
-
-
-<div class="jumbotron text-center">
-  <h1>Extensio</h1> 
-  <p>Somos una nueva forma de invertir en el mercado de capitales</p> 
-  <form>
-    <div class="input-group">
-      <input type="email" class="form-control" size="54" placeholder="Deja tus datos de contactos" required>
-      <div class="input-group-btn">
-        <button type="button" class="btn btn-danger">contactanos</button>
+  <nav class="navbar navbar-default navbar-fixed-top">
+    <div calss="container">
+      <div class="navbar-header">
+        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>   
+          <span class="icon-bar"></span>  
+          <span class="icon-bar"></span>      
+        </button>
+        <a class="navbar-brand" href="#myPage">
+          <img  src="https://drive.google.com/uc?export=view&id=1vGAtWfwQ_FYv6auzz3fV-IFGdIcJ-xoD"
+           width= 240 height= 70> 
+        </a>
+      </div>
+      <br>
+        <!-- aca se definen los ID que mas abajo se mencionan para poder ir a los temas de las barras-->
+      <div class="collapse navbar-collapse" id="myNavbar">
+        <div class="container">
+          <ul class="nav navbar-nav navbar-right">
+            <li><a href="#Extensio">Extensio</a></li>
+            <li><a href="#Empresas">Empresas</a></li>
+            <li><a href="#Invertir">Invertir</a></li>
+            <li><a href="#Blog">Blog</a></li>
+            <li><a href="#Dolar">Dolar</a></li>
+            <li><a href="#Cursos">Cursos</a></li>
+          </ul>
+        </div>
       </div>
     </div>
-  </form>
+  </nav>
+<br>
+<br>
+<br>
+
+<div class="jumbotron text-center">
+  <h2>Ofrecemos los servicios financieros más completos en el mercado de capitales</h2> 
+  <br>
+  <div class="row serviceanim">
+
+    <div class="col-sm-2 col-xs-6">
+      <div class="service-panel service-panel-default text-center">
+        <div class="service-panel-heading center">
+          <h1>Que es el dólar MEP</h1>
+          <h4><strong>Es el resultado de una operación bursátil, se compra de un bono argentino en pesos y luego se vende en dólares.</strong></h4>
+          <h5>Conoce más ➝</h5>
+          <h2>Comprar dólar MEP</h2>
+          <img  src="https://drive.google.com/uc?export=view&id=1ivG5Au12U7QDYc0VSQ2z35hHnWC-O9D9" width="250px" height="200px" > 
+        </div>
+      </div> 
+      <br>     
+    </div>   
+
+    <div class="col-sm-2 col-xs-6">
+      <div class="service-panel service-panel-default text-center">
+        <div class="service-panel-heading center">
+          <h1>Servicios Empresariales</h1>
+          <h4><strong>Es el resultado de una operación bursátil, se compra de un bono argentino en pesos y luego se vende en dólares.</strong></h4>
+          <h5>Conoce más ➝</h5>
+          <h2>Servicios para Empresas</h2>
+          <img  src="https://drive.google.com/uc?export=view&id=1yfdL7NZ9d5hFqgHHDQU-hxGci69Wm2L_"width="300px" height="200px" > 
+        </div>
+      </div> 
+      <br>     
+    </div>  
+
+    <div class="col-sm-2 col-xs-6">
+      <div class="service-panel service-panel-default text-center">
+       <div class="service-panel-heading center">
+          <h1>Qué es el Dólar Mep</h1>
+          <h4><strong>Es el resultado de una operación bursátil, se compra de un bono argentino en pesos y luego se vende en dólares.</strong></h4>
+          <h5>Conoce más ➝</h5>
+          <h2>Estrategias de Inversión</h2>
+          <img  src="https://drive.google.com/uc?export=view&id=1F8WDe_RHXlHK6h96WAVxy2e759eB7AB1" width="300px" height="200px" > 
+        </div>
+      </div> 
+      <br>     
+    </div>   
+
+    <div class="col-sm-2 col-xs-6">
+      <div class="service-panel service-panel-default text-center">
+        <div class="service-panel-heading center">
+          <h1>Aperturas de cuentas</h1>
+          <h4><strong>Es el resultado de una operación bursátil, se compra de un bono argentino en pesos y luego se vende en dólares.</strong></h4>
+          <h5>Conoce más ➝</h5>
+          <h2>Aperturas de cuentas</h2>
+          <img  src="https://drive.google.com/uc?export=view&id=1UDrYIq5_XabmWsCaZOThyWa8CO7YOkhh" width="350px" height="200px" > 
+        </div>
+      </div> 
+      <br>     
+    </div> 
+
+    <div class="col-sm-2 col-xs-6">
+      <div class="service-panel service-panel-default text-center">
+        <div class="service-panel-heading center">
+          <h1>Aperturas de cuentas</h1>
+          <h4><strong>Es el resultado de una operación bursátil, se compra de un bono argentino en pesos y luego se vende en dólares.</strong></h4>
+          <h5>Conoce más ➝</h5>
+          <h2>Accedé a datos de Mercado</h2>
+          <img  src="https://drive.google.com/uc?export=view&id=1wajoMOViK9AH0soLuqVrFNoSwjSWpVW5" width="300px" height="200px" > 
+        </div>
+      </div> 
+      <br>     
+    </div>
+
+    <div class="col-sm-2 col-xs-6">
+      <div class="service-panel service-panel-default text-center">
+        <div class="service-panel-heading center">
+          <h1>Aperturas de cuentas</h1>
+          <h4><strong>Es el resultado de una operación bursátil, se compra de un bono argentino en pesos y luego se vende en dólares.</strong></h4>
+          <h5>Conoce más ➝</h5>
+          <h2>Bots de AlgoTrading</h2>
+          <img  src="https://drive.google.com/uc?export=view&id=14ESh-8sk1idPd6XDsgRegF3PsePOGRM3" width="250px" height="200px" > 
+        </div>
+      </div> 
+      <br>     
+    </div>
+
+  </div>
 </div>
 
-<!-- TradingView Widget BEGIN -->
-<div class="tradingview-widget-container">
-  <div class="tradingview-widget-container__widget"></div>
 
-  <script type="text/javascript" src="https://s3.tradingview.com/external-embedding/embed-widget-tickers.js" async>
-  {
-   "autosize": true,
-  "symbols": [
-    {
-      "description": "DOLAR DIVISA",
-      "proName": "FX_IDC:USDARS"
-    },
-    {
-      "description": "REAL",
-      "proName": "FX_IDC:USDBRL"
-    },
-    {
-      "description": "YUAN",
-      "proName": "FX_IDC:USDCNH"
-    },
-    {
-      "description": "EURO",
-      "proName": "FX_IDC:USDEUR"
-    },
-    {
-      "description": "REAL/PESO",
-      "proName": "FX_IDC:BRLARS"
-    }
-  ],
-  "colorTheme": "dark",
-  "isTransparent": false,
-  "showSymbolLogo": true,
-  "locale": "es"
-}
-  </script>
-</div>
-<!-- TradingView Widget END -->
-<!-- slideadnim te da el efecto que todo esta llegando -->
-<!-- Container (Extensio Section) -->
 <div id="Extensio" class="container-fluid">
   <div class="row">
       <div class="col-sm-6">
         <div class="container">
         <div class="ml-5"> 
 
-        <h1>  1Nosotros Invertimos en </h1>  
+        <h1>  Nosotros Invertimos en </h1>  
         <h1> Business disruptivos </h1><br>
         <h2> Para inversores que buscan el crecimiento a largo</h2>
         <h2> plazo en los mercados de capitales</h2><br>
@@ -443,6 +486,16 @@ $( document ).ready(function() {
   <div id="pagination-wrapper"></div>
 </div>
 
+<form>
+  <div class="col-sm-8" >
+  <div class="input-group">
+    <input type="email" class="form-control" size="50" align="center" placeholder="Deja tus datos de contactos" required>
+    <div class="input-group-btn">
+      <button type="button" class="btn btn-danger">contactanos</button>
+    </div>
+  </div>
+  </div>  
+</form>
 <!-- Container (Dolar Section) -->
 <div id="Dolar" class="container-fluid bg-grey">
   <h2 class="text-center">CONTACT</h2>
@@ -517,5 +570,14 @@ $(document).ready(function(){
   });
 })
 </script>
+<!--
+<script>
+  var loader = document.getElementById("preloader");
+  window.addEventListener("load",function(){
+    loader.style.display="none";
+  })
+</script>
+-->
+
 </body>
 </html>
