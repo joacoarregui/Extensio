@@ -1,0 +1,39 @@
+<!-- TradingView Widget BEGIN -->
+<div class="tradingview-widget-container">
+  <div class="tradingview-widget-container__widget"></div>
+
+  <script type="text/javascript" src="https://s3.tradingview.com/external-embedding/embed-widget-tickers.js" async>
+  {
+   "autosize": true,
+  "symbols": [
+    {
+      "description": "DOLAR DIVISA",
+      "proName": "FX_IDC:USDARS"
+    },
+    {
+      "description": "REAL",
+      "proName": "FX_IDC:USDBRL"
+    },
+    {
+      "description": "YUAN",
+      "proName": "FX_IDC:USDCNH"
+    },
+    {
+      "description": "EURO",
+      "proName": "FX_IDC:USDEUR"
+    },
+    {
+      "description": "REAL/PESO",
+      "proName": "FX_IDC:BRLARS"
+    }
+  ],
+  "colorTheme": "dark",
+  "isTransparent": false,
+  "showSymbolLogo": true,
+  "locale": "es"
+}
+  </script>
+</div>
+<!-- TradingView Widget END -->
+<!-- slideadnim te da el efecto que todo esta llegando -->
+<!-- Container (Extensio Section) -->
