@@ -8,7 +8,7 @@ body {
   width: 100%;
   height: 100%;
   padding: 0%;
-  overflow-x: hidden; no lo saques es el que te deja ok la pagina
+  overflow-x: hidden; 
 }
 
 preloader{
@@ -102,10 +102,12 @@ li {
 }
 .container-whitecenter {
   background-color: rgb(253, 253, 253);    
-  padding: 10px 10px 10px 10px;
-
+  padding: 10px 10px 10px 30px;
 }
-
+.container-servicios-empresas {
+  background-color: rgb(253, 253, 253);    
+  padding: 10px 10px 10px 90px;
+}
 .servicios-empresas {
   background-color: rgb(255, 255, 255); 
  
@@ -130,11 +132,20 @@ li {
   font-family: Exo, sans-serif;
   padding-top: 20px;
   padding-bottom: 20px;
-  padding-left: 15px;
+  padding-left: 30px;
   padding-right: 20px;
   margin-bottom: 00px;
   margin-right: 0px;
   margin-left: 15px;
+  margin-top: 00px;
+}
+.row {
+  padding-top: 20px;
+  padding-bottom: 20px;
+  padding-right: 20px;
+  margin-bottom: 00px;
+  margin-right: 0px;
+  margin-left: 100px;
   margin-top: 00px;
 }
 Image{
@@ -256,8 +267,25 @@ background-color: #00c8d2;
   background-color: #2da4b1;
   color: #fff;
 }
+.btn-white {
+  margin: 15px 0;
+  background-color: #fff;
+  color: #2da4b1;
+  border: 1px solid #2da4b1;
+  border-radius:10px ;
+}
 
 .btn:hover {
+  border-radius:20px ;
+  border: 1px solid #2da4b1;
+  background-color: #ffffff;
+  color: #116c71;
+  box-shadow: 10px 10px 40px rgba(0, 97, 119, 0.309);
+  transition: background-color  0.5s;
+  transition: border-radius  0.5s;
+  border: 1px solid #1e89f4; 
+}
+.btn-white:hover {
   border-radius:20px ;
   border: 1px solid #2da4b1;
   background-color: #ffffff;
@@ -306,6 +334,14 @@ background-color: #00c8d2;
   color: rgb(255, 255, 255);
   background-color: #2da4b1 !important;
   border-bottom: 1px solid transparent;
+}
+.panel-heading h3 {
+  border-radius:20px ;
+  color: rgb(255, 255, 255);
+  background-color: #2da4b1 !important;
+  border-bottom: 1px solid transparent;
+  padding: 0px 0px 0px 0px;
+  margin: 0px 0px 0px 0px;
 }
 .panel-footer {
   border-radius:20px ;
@@ -470,11 +506,11 @@ background-color: #00c8d2;
   justify-content: center;
   text-align: center;
   padding-top: 5px;
-  padding-left: 25px;
-  padding-right: 25px;
+  padding-left: 5px;
+  padding-right: 5px;
   padding-bottom: 0px;
   margin-right: 00px;
-  margin-bottom: 10px;
+  margin-bottom: 5px;
   margin-left: 00px;
 }
 
@@ -507,6 +543,14 @@ background-color: #00c8d2;
 }
 
 
+
+
+
+
+
+
+
+
 .navbar {
   margin-bottom: 20px;
   margin-top: 0px;
@@ -516,7 +560,7 @@ background-color: #00c8d2;
   border: 1;
   font-size: 15px;
   line-height: 1.42857143;
-  letter-spacing:4px;
+  letter-spacing:3px;
   border-radius: 0;
   font-family: Arial, Helvetica, sans-serif, sans-serif;
   
@@ -638,8 +682,12 @@ footer .glyphicon {
   h4{font-size: 15px} 
   h5{font-size: 25px} 
   h6{font-size: 15px} 
+  h7{font-size: 20px}
   p{font-size: 12px} 
   l1{font-size: 12px} 
+  .jumbotron {
+    padding-left: 5px;   
+  } 
   .service-panel-heading img {
     max-width: 175px;
     max-height: 150px; 
@@ -693,6 +741,10 @@ footer .glyphicon {
 
     align-items: center;
   }
+  .container-servicios-empresas {
+    padding: 10px 20px 10px 10px;
+    text-align: center;
+  }
   .img-inversion:hover img{
     border-start-start-radius:150px;
     border-start-end-radius: 150px;
@@ -706,5 +758,14 @@ footer .glyphicon {
     transition: background-color  1.5s;
     transition: border-radius  0.5s;
     border: 1px solid #1ed0f4; 
+  }
+  .row {
+    padding-top: 20px;
+    padding-bottom: 20px;
+    padding-right: 20px;
+    margin-bottom: 00px;
+    margin-right: 00px;
+    margin-left: 0px;
+    margin-top: 0px;
   }
 }
