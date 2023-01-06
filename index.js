@@ -82,78 +82,14 @@ async function data_api_contratos_rofex(auth) {
     console.log('No data found.');
     return res.JSON();
   }
-  const values_contratos_rofex= res.data.values;
-    console.log(values_contratos_rofex);
-    var data_contratos = values_contratos_rofex
-  
-  rows_contratos_rofex.forEach((row) => {
-    console.log(`${row[0]}, ${row[1]},  ${row[2]},  ${row[3]},  ${row[4]}, ${row[5]}`);
+    const values_contratos_rofex= res.data.values;
+      console.log(values_contratos_rofex);
     
-  });  
-}
-authorize().then(data_api_contratos_rofex).catch(console.error)
+  rows_contratos_rofex.forEach((row) => {
+   console.log(`${row[0]}, ${row[1]},  ${row[2]},  ${row[3]},  ${row[4]}, ${row[5]}`);
+   });  
 
-var state = {
-  'querySet': data_contratos,
-  
-  'page': 1,
-  'rows': 25,
-  'window': 25,
-  }
-  
-  buildTable()
-  
-  function pagination(querySet, page, rows) {
-  
-  var trimStart = (page - 1) * rows
-  var trimEnd = trimStart + rows
-  
-  var trimmedData = querySet.slice(trimStart, trimEnd)
-  
-  var pages = Math.round(querySet.length / rows);
-  
-  return {
-      'querySet': trimmedData,
-      'pages': pages,
-  }
-  }
-  
-  function pageButtons(pages) {
-  var wrapper = document.getElementById('pagination-wrapper')
-  
-  wrapper.innerHTML = ``
-  console.log('Pages:', pages)
-  
-  
-  
-  $('.page').on('click', function() {
-      $('#table-body').empty()
-  
-      state.page = Number($(this).val())
-  
-      buildTable()
-  })
-  
-  }
-  
-  
-  function buildTable() {
-  var table = $('#table-body')
-  
-  var data = pagination(state.querySet, state.page, state.rows)
-  var myList = data.querySet
-  
-  for (var i = 1 in myList) {
-      //Keep in mind we are using "Template Litterals to create rows"
-      var row = `<tr>
-                <td>${myList[i].rank}</td>
-                <td>${myList[i].first_name}</td>
-                <td>${myList[i].last_name}</td>
-                <td>${myList[i].last_name2}</td>
-                <td>${myList[i].last_name1}</td>
-                `
-      table.append(row)
-  }
-  
-  pageButtons(data.pages)
-  }
+
+}
+authorize().then(data_api_contratos_rofex).catch(console.error);
+
