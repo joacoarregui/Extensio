@@ -138,6 +138,7 @@ li {
   margin-right: 0px;
   margin-left: 15px;
   margin-top: 00px;
+
 }
 .row {
   padding-top: 20px;
@@ -276,6 +277,16 @@ background-color: #00c8d2;
 }
 
 .btn:hover {
+  border-radius:20px ;
+  border: 1px solid #2da4b1;
+  background-color: #ffffff;
+  color: #116c71;
+  box-shadow: 10px 10px 40px rgba(0, 97, 119, 0.309);
+  transition: background-color  0.5s;
+  transition: border-radius  0.5s;
+  border: 1px solid #1e89f4; 
+}
+.btn:focus {
   border-radius:20px ;
   border: 1px solid #2da4b1;
   background-color: #ffffff;
@@ -541,15 +552,29 @@ background-color: #00c8d2;
   transition: border-radius  0.5s;
   border: 1px solid #1ed0f4; 
 }
+.grafico_mediano iframe {
 
+  width: 420px;
+  height: 650px;
+  border-radius: 50px;
+  color: #2da4b1 !important;
+  border: 1px solid #00e5ff2e;
+  background-color: solid rgb(253, 253, 253) !important;
+  padding: 5px;
+  margin: 5px; 
+  visibility: visible;
+  size: 15px;
+}
+.grafico_grande iframe {
 
-
-
-
-
-
-
-
+  height: 470px;
+  border-radius: 20px;
+  color: #2da4b1 !important;
+  border: 1px solid #00e5ff2e;
+  background-color: solid rgb(253, 253, 253) !important;
+  visibility: visible;
+  size: 15px;
+}
 
 .navbar {
   margin-bottom: 20px;
@@ -586,7 +611,6 @@ background-color: #00c8d2;
 
 
 
-
 footer .glyphicon {
   font-size: 20px;
   margin-bottom: 20px;
@@ -613,6 +637,18 @@ footer .glyphicon {
   visibility: visible;
 }
 
+.iframe-dolar iframe {
+  flex: auto;
+  border-radius: 50px;
+  color: #2da4b1 !important;
+  border: 1px solid #00e5ff2e;
+  background-color: solid rgb(253, 253, 253) !important;
+  padding: 5px;
+  margin: 5px; 
+  visibility: visible;
+  size: 15px;
+}
+
 @keyframes slide {
   0% {
     opacity: 0;
@@ -632,6 +668,10 @@ footer .glyphicon {
     opacity: 1;
     -webkit-transform: translateY(0%);
   }
+}
+.chart {
+  width: 100%; 
+  min-height: 450px;
 }
 @media screen and (max-width: 768px) {
   .col-sm-4 {
@@ -658,8 +698,21 @@ footer .glyphicon {
     padding-bottom: 0px;   
     padding-top: 0px; 
   }  
+  .grafico_mediano iframe {
 
+    width: 420px;
+    height: 600px;
+    border-radius: 50px;
+    color: #2da4b1 !important;
+    border: 1px solid #00e5ff2e;
+    background-color: solid rgb(253, 253, 253) !important;
+    padding: 5px;
+    margin: 5px; 
+    visibility: visible;
+    size: 15px;
+  }
 }
+
 
 @media screen and (max-width: 480px) {
   .logo {
@@ -768,4 +821,28 @@ footer .glyphicon {
     margin-left: 0px;
     margin-top: 0px;
   }
+  .grafico_mediano iframe {
+  
+    width: 420px;
+
+    border-radius: 50px;
+    color: #2da4b1 !important;
+    border: 1px solid #00e5ff2e;
+    background-color: solid rgb(253, 253, 253) !important;
+    padding:0px;
+    margin: 0px; 
+    visibility: visible;
+ 
+  }
+  .grafico_grande iframe {
+  
+    height: 300px;
+    border-radius: 20px;
+    color: #2da4b1 !important;
+    border: 1px solid #00e5ff2e;
+    background-color: solid rgb(253, 253, 253) !important;
+    padding:0px;
+    visibility: visible;
+ 
+  } 
 }
