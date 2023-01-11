@@ -209,12 +209,6 @@ background-color: #00c8d2;
 
 }
 
-.col-sm-2 img{
-  margin-left: 10px;
-  margin-right: 10px;
-  padding-left: 2px;
-  padding-right: 4px;
-}
 .col-md-2 h4 {
   margin-top: 20px;
   padding:  5px;
@@ -577,7 +571,7 @@ background-color: #00c8d2;
 }
 
 .navbar {
-  margin-bottom: 20px;
+  margin-bottom: 0px;
   margin-top: 0px;
   padding-right: 0px;
   background-color: rgb(251, 252, 256);
@@ -593,7 +587,6 @@ background-color: #00c8d2;
 .navbar li a, .navbar .navbar-brand {
   color: #2da4b1 !important;
   padding-right: 0px;
-
 }
 .navbar-nav li a:hover, .navbar-nav li.active a {
   color: #196b74 !important;
@@ -607,6 +600,10 @@ background-color: #00c8d2;
   color: #116c71 !important;
   margin-top: 15px;
   padding-right: 0px;
+}
+.navbar-default img {
+  width: 240px;
+  height: 60px;
 }
 
 
@@ -678,6 +675,10 @@ footer .glyphicon {
     text-align: center;
     margin: 15px 0;
   }
+  .col-sm-2 img{
+    width: 100%;
+    max-height: 150px;
+  }
   .btn-lg {
     width: 100%;
     margin-bottom: 35px; 
@@ -715,17 +716,21 @@ footer .glyphicon {
 
 
 @media screen and (max-width: 480px) {
+  .body{
+    max-width: 100%;
+    max-height: 100%;
+  }
   .logo {
-    font-size: 150px;
+    font-size: 50px;
   }
 
   img{
-    max-width: 400px;
-    max-height: 400px;
+    max-width: 100%; 
+    max-height: 100%;
     padding-left: 5px;
   }  
   iframe{
-    max-width: 100%;
+    max-width: 100%; 
     max-height: 0%;   
   }
 
@@ -739,13 +744,17 @@ footer .glyphicon {
   p{font-size: 12px} 
   l1{font-size: 12px} 
   .jumbotron {
-    padding-left: 5px;   
+    padding-left: 0px;  
   } 
+  .navbar-default img {
+    max-width: 100%; 
+    max-height: 100px; 
+  }
   .service-panel-heading img {
-    max-width: 175px;
+    max-width: 100%; 
     max-height: 150px; 
-    padding-right: 30px;
-    padding-left: 5px;   
+    padding-right: 0px;
+    padding-left: 0px;    
     padding-bottom: 10px;   
     padding-top: 5px; 
   }
@@ -762,10 +771,10 @@ footer .glyphicon {
     font-size: 10px;
   } 
   .slideanim img{
-    padding-right: 10px;
-    padding-left: 5px;
-    max-width: 330px;
-    max-height: 330px;
+    padding-right: 10px; 
+    padding-left: 5px; 
+    max-width: 100%; 
+    max-height: 100%; 
   }
   .servicios-empresas img {
     background-color: rgb(255, 255, 255);    
@@ -773,20 +782,20 @@ footer .glyphicon {
     margin-top: -50px;
     border-bottom-left-radius: 100px;
     border-bottom-right-radius: 100px;
-    max-width: 390px;
-    max-height: 330px;
+    max-width: 100%; 
+    max-height: 330px; 
   }
   .container-fluid {
-    padding: 10px 20px 10px 10px;
+    padding: 10px 0px 10px 0px; 
     text-align: center;
   }
   .container-fluid img{
     background-color: rgb(242, 243, 247);    
-    padding: 10px 15px 10px 10px;
+    padding: 10px 0px 10px 0px; 
     align-items: center;
   }
   .container-whitecenter {
-    padding: 10px 20px 10px 10px;
+    padding: 10px 0px 10px 0px; 
     text-align: center;
   }
   .container-whitecenter img{
@@ -795,7 +804,7 @@ footer .glyphicon {
     align-items: center;
   }
   .container-servicios-empresas {
-    padding: 10px 20px 10px 10px;
+    padding: 10px 0px 10px 0px; 
     text-align: center;
   }
   .img-inversion:hover img{
@@ -815,7 +824,7 @@ footer .glyphicon {
   .row {
     padding-top: 20px;
     padding-bottom: 20px;
-    padding-right: 20px;
+    padding-right: 0px; 
     margin-bottom: 00px;
     margin-right: 00px;
     margin-left: 0px;
@@ -823,7 +832,7 @@ footer .glyphicon {
   }
   .grafico_mediano iframe {
   
-    width: 420px;
+    width: 100%;
 
     border-radius: 50px;
     color: #2da4b1 !important;
@@ -836,13 +845,12 @@ footer .glyphicon {
   }
   .grafico_grande iframe {
   
-    height: 300px;
-    border-radius: 20px;
+    height: 100%;
+    border-radius: 10px;
     color: #2da4b1 !important;
     border: 1px solid #00e5ff2e;
     background-color: solid rgb(253, 253, 253) !important;
     padding:0px;
     visibility: visible;
- 
   } 
 }
