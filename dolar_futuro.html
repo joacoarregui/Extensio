@@ -35,6 +35,7 @@
   <script src="./tabla_futuros.js"></script>
   <link rel="preload" href="tabla_futuros2.js" as="script">
   <script src="./tabla_futuros2.js"></script>
+  <!--<meta name="viewport" content="width=device-width,initial-scale=1.0,maximum-scale=1.0,minimum-scale=1.0">-->
   <!-- script sort tables -->
 <base target="_top">
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js" ></script>
@@ -79,6 +80,7 @@
         <!-- aca se definen los ID que mas abajo se mencionan para poder ir a los temas de las barras-->
       <div class="collapse navbar-collapse" id="myNavbar">
         <div class="container">
+          <div class="container-nav">
           <ul class="nav navbar-nav navbar-right">
             <li><a href="index.html">Extensio</a></li>
             <li><a href="Empresas.html" >Empresas</a></li>
@@ -89,6 +91,7 @@
             <li><a href="blog.html">Blog</a></li>
             <li><a href="cursos.html">Cursos</a></li>
           </ul>
+        </div>
         </div>
       </div>
     </div>
@@ -102,135 +105,116 @@
 
 <!--SERVICIOS PRIMEROS -->
 <div id="servicios" class="jumbotron text-center">
-  <h2>Comprá dólar mep y ampliá las posibilidades de manejo de dinero</h2> 
-  <br>
-  <div class="iframe-dolar">
-    <div class="col-sm-6 col-xs-12">
-      <div class="lista_despegable">
-        <a href="#demo" class="btn btn-default btn-lg " data-toggle="collapse">¿Qué significa cada tipo de dólar?</a>
-        <div id="demo" class="collapse">
-          <h6><strong>•Mayorista:</strong> Surge de la operatoria en el MULC y comunicación del BCRA 3500</h6>
-          <h6><strong>•Solidario:</strong> Dólar oficial que se vende en los bancos + el 30% de impuesto país y 35% a cuenta de ganancias.</h6>
-          <h6><strong>•MEP: </strong>Resultado de una operación bursátil, se compra de un bono argentino en pesos y luego se vende en dólares.</h6>
-          <h6><strong>•CCL:</strong> Operación bursátil, se compra de un bono argentino en pesos y luego se vende en dólares cáble, para ser transferidos al exterior.</h6>
-          <h6><strong>•BLUE:</strong> Dolar que cotiza en la calle </h6>
-        </div>  
-      </div>
-    </div>
-    <div class="col-sm-6 col-xs-12">
-      <iframe width="330" height="280" src="https://script.google.com/macros/s/AKfycbzTBuajl-l-wJGjFSSwVRJ3nTqJHpBBx407jPr5EUV2076RkV2l2XanR3Pddl2K8UW0/exec"></iframe>
-      <iframe width="330" height="280" src="https://script.google.com/a/macros/extensiosas.com/s/AKfycbwJ1MhxmOa2iNA0dHGKyOA1w078WqSd0C7NJo1QsNLol5KKRG50TIWH-0p6ZGZ5zSUPuA/exec"></iframe>
-    </div>
-      <br><br><br> <br><br><br><br><br><br><br><br><br><br><br>
-    <div class="grafico_mediano">
-      <div class="col-sm-6 col-xs-12">
-        <h1><strong>Beneficios del dólar MEP</strong></h1>
-        <h7>Sin límites</h7> 
-        <h4>¡No hay cupo ni tope! Comprá y vendé dólares sin montos mínimos ni máximos en cada operación.</h4> 
-        <h7>Seguridad</h7> 
-        <h4>Los brókers que elegimos son entidades financieras nacionales reguladas por la Comisión Nacional de Valores.</h4> 
-        <h7>Sin impuestos</h7> 
-        <h4>No aplica el 30% de impuesto PAIS, ni el 35% de adelanto del Impuesto a las ganancias</h4> 
-      </div>
-      <div class="col-sm-6 col-xs-12">
-        <iframe  width=100% height=100%  class=chart  seamless frameborder="0" scrolling="no" src="https://docs.google.com/spreadsheets/d/e/2PACX-1vToX_LguuKTdCHslllyHge91zXJ7jsT_9oyQVgE-FBWtVJc6roM8ie1rm6c2Rv867-miv2E-DsdxTpg/pubchart?oid=683653827&amp;format=interactive" ></iframe>
-        <iframe width=100% height=100%  class=chart seamless frameborder="0" scrolling="no" src="https://docs.google.com/spreadsheets/d/e/2PACX-1vTsMxukhIWNVkgwsL3PK4DK5v2w73K__jVUDH9c9wM2hTcDx-DX568cqEiVhnANGLGsFGUnO0wHNCHL/pubchart?oid=294758732&amp;format=interactive"></iframe>
 
-      </div>
-      <br>
-    </div>
+  <!-- TradingView Widget BEGIN -->
+
+  <div class="tradingview-widget-container">
+    <div class="tradingview-widget-container__widget"></div>
+    <script type="text/javascript" src="https://s3.tradingview.com/external-embedding/embed-widget-tickers.js" async>
+    {
+    "autosize": true,
+    "symbols": [
+      {
+        "description": "DOLAR DIVISA",
+        "proName": "FX_IDC:USDARS"
+      },
+      {
+        "description": "REAL",
+        "proName": "FX_IDC:USDBRL"
+      },
+      {
+        "description": "YUAN",
+        "proName": "FX_IDC:USDCNH"
+      },
+      {
+        "description": "EURO",
+        "proName": "FX_IDC:USDEUR"
+      },
+      {
+        "description": "REAL/PESO",
+        "proName": "FX_IDC:BRLARS"
+      },
+  {
+        "description": "Euro/Ars",
+        "proName": "FX_IDC:EURARS"
+      }
+    ],
+    "colorTheme": "dark",
+    "isTransparent": false,
+    "showSymbolLogo": true,
+    "locale": "es"
+  }
+    </script>
   </div>
 
-</div>
+<br><br>
+<h3>Para una mejor experiencia, gire el celular en modo horizontal o utilice un dispositvo como una notebook.</h3> 
+<h3>Contratos futuros de dólar ROFEX, abajo dejamos la explicación:</h3> 
 
 <div class="container">
   <div class="grafico_grande">
     <iframe   class=chart seamless frameborder="0" scrolling="no" src="https://script.google.com/macros/s/AKfycbyFKJ3piwoWmRyo-bq5HGl1msTQSO_Auevctan-Yeph05O_ywa7ZE9n91I415ITZBlhNQ/exec"></iframe>
   </div>
 </div>
-<div class="jumbotron text-center">
+
+<div class="container text-center">
   <div class="lista_despegable">
-    <a href="#demo" class="btn btn-default btn-lg " data-toggle="collapse">¿Cuando no puedo comprar dólar MEP?</a>
+    <a href="#demo" class="btn btn-default btn-lg " data-toggle="collapse">Explicación de las columnas</a>
     <div id="demo" class="collapse" align="left">
-      <h6>No se puede comprar dólar MEP si se encuentra en alguno de los siguientes puntos, contemplando que pueden cambiar incluso agregarse nuevos puntos, por lo que antes de operar sugerimos consultar con el asesor:</h6>
-      <h6>1_Si compre dólares solidarios a través del banco en los últimos 90 días</h6>
-      <h6>2_Si accedí al MULC como persona física o como empresa en los últimos 90 días para importación o exportacion de bienes y servicios</h6>
-      <h6>3_Si cobre un sueldo de una empresa que se benefició del programa ATP o Repro</h6>
-      <h6>4_Si soy beneficiario de programas sociales nacionales, planes, subsidios, beneficios de la seguridad social, ni asignaciones familiares incompatibles con la operación ordenada</h6>
-      <h6>5_Si tengo pendiente de cancelacion refinanciamientos de tarjeta del periodo Marzo 2020 a Junio 2020</h6>
-      <h6>6_Si tengo pendiente de cancelación créditos a tasa cero (conf. Art. 9° del Decreto N° 332/2020 y modificatorias)</h6>
-      <h6>7_Si tengo pendiente de cancelación el Art. 2 del Decreto 319/20 (créditos hipotecarios sobre inmuebles destinados a vivienda única y prendarios UVA con cuota mensual congelada)</h6>
-      <h6>8_Si tengo pendiente de cancelación "Créditos Tasa Cero 2021" otorgados en el marco del Decreto Nro. 512/2021 (y modificatorias), conforme Comunicación “A” 7342 del BCRA</h6>
-      <h6>9_Si me encuentro incluido en ninguna de las siguientes categorías conforme a la Com. “A” 7606 del BCRA: a) usuarios de los servicios públicos que solicitaron y obtuvieron el subsidio en las tarifas derivadas del suministro de gas natural por red y/o energía eléctrica ; ó b) usuarios de los mismos servicios que hubieran obtenido el subsidio de manera automática; ó c) usuarios que mantengan el subsidio en las tarifas de agua potable</h6>
-      <h6>10_Si soy beneficiario como empleador del salario complementario establecido en el Programa de Asistencia de Emergencia al Trabajo y a la Producción (ATP), creado por el Decreto Nro. 332/2020, conforme con los plazos y requisitos dispuestos por la DECAD-2020-817-APN-JGM de fecha 17 de mayo de 2020 y mod.; y que no percibí el Programa de Recuperación Productiva 2 (Repro II) previsto en la Resolución 1565/20</h6>
-      <h6>11_Si me encuentro incluido en ninguna de las siguientes categorías conforme a la Com. “A” 7586 del BCRA: a) beneficiarios de Dec. Nº 260/2020 Coronavirus (Covid-19) ó b) personas humanas alcanzadas por la Res. Conjunta de la Pta. del Honorable Senado de la Nación y del Pte. de la Honorable Cámara de Diputado de la Nación Nº 12/2020 del 1/10/2020</h6>
-      <h6>12_Que, conforme a las Comunicaciones “A” 7609 y “A” 7610 del BCRA y siendo una persona jurídica, me encuentro incluido dentro de los residentes dedicados a la actividad agrícola que, en el marco del Decreto N°576/2022 ni en el marco del Decreto N°787/2022, venden mercadería a quien realice su exportación, en forma directa o como resultado de un proceso productivo realizado en el país (incluidos los sujetos indicados en la Comunicación “C” 93169)</h6>
+      <h6><strong>Concepto:</strong> Es el contrato futuro de un mes determinado. Comienza con las primeras 3 letras del mes en inglés seguido del año que el contrato vence</h6>
+      <h6><strong>Vencimiento:</strong> Es la fecha en que ese contrato deja de existir y por lo tanto a ese día el valor del contrato futuro será igual al valor del dólar spot</h6>
+      <h6><strong>Precio:</strong> Es el valor al que el contrato futuro cerró al día de hoy, a partir de las 18 horas, por lo que antes tiene el valor del cierre del día hábil anterior</h6>
+      <h6><strong>Px/Spot:</strong> Es la devaluación explícita que hay entre el valor del contrato y el valor del dólar mayorista hoy. Es un simple indicador de cuanto esta proyectando el mercado que el valor del dólar valdrá más en el futuro a la fecha de cierre del contrato</h6>
+      <h6><strong>T.E.A:</strong> Es la tasa efectiva anual del contrato. Surge del valor de la columna anterior llevado a como sería la devaluación en un año si se mantiene ese ritmo de devalaución. Es importante esta columna porque determina la curva anual de devaluación de los futuros e identifica si un futuro esta más caro o barato de lo normal</h6>
+      <h6><strong>Proyectado:</strong> Es el valor proyectado del dólar mayorista a la fecha de vencimiento del contrato, teniendo en cuenta 2 cosas, siendo la primera la actual devaluación mensual o semanal que está llevando a cabo el gobierno, junto con la devaluación proyectada del REM que hace el BCRA.</h6>
     </div>  
   </div>
-    <a target="_blank" href="https://chatwith.io/es/s/extensio">     
-      <button class="btn btn-default btn-lg">Contactanos por whatsapp</button>  
-    </a>     
 </div>
+<div class="container">
+  <h3>Evolución Tasa Efectiva Mensual de devaluación</h3> 
+</div>
+<div class="container-whitecenter">
+  <div class="col-md-6 col-md-6">
+    <h6><strong>Objetivo del gráfico:</strong> Analizar un cambio de tendencia con respecto a la devaluación de los últimos 90 días, para poder aprovechar estrategias de cobertura. Un cambio de tendencia a la baja, probablemente hará que los precios de los contratos futuros bajen, mientras que un cambio de tendencia al alza posiblemente hará que los valores de los contratos futuros suban</h6>
+    <h6><strong>Tasa Mensual Devaluación:</strong> Es la tasa de devaluación por día que tuvo la divisa y ese valor se lo lleva a tiempo de 30 días a los efectos de analizar la tendencia. </h6>
+    <h6><strong>Media Móvil TMD:</strong> Es la media móvil simple de la variación de los últimos 5 días de la divisa. Se usa para suavizar los movimientos de la TMD anterior. </h6>
 
-
-
-<!-- Container (Invertir Section) -->
-<div id="apertura" class="container-fluid ">
-  <div class="row">
-    <div class="row slideanim" >
-      <div class="col-sm-4">
-        <div class="img-apertura">
-        <img  src="https://drive.google.com/uc?export=view&id=1UDrYIq5_XabmWsCaZOThyWa8CO7YOkhh" width="600px"  > 
-         </div>
-      </div>
-      <div class="col-sm-8">
-        <h7>Con Extensio podés abrir tu cuenta de manera ágil y 100% digital.</h7>
-        <h2>Trabajamos con los mejores brokers locales e internacionales, para darte un servicio de calidad.</h2>
-        <h4><strong>BROKER:</strong> Los brokers son sociedades registradas ante organismos de contralor y desarrollan plataformas que usamos para comprar y vender activos financieros y otras operaciones, brindando soporte en conjunto con nosotros hacia el cliente.</h4><br>
-        <h4><strong>NOSOTROS:</strong> Mientras que nuestros aliados tienen la mejor tecnología aplicada en sus plataformas, nosotros nos enfocamos en asesorarte al 100% en las decisiones de inversión, incluso pudiendo ejecutar las operaciones desde mesa de operaciones o por correo por vos si lo deseas.</h4>
-      </div>
-    </div>
+  </div>
+  <div class="grafico_movil_costado">
+    <iframe class=chart seamless frameborder="0" scrolling="no" src="https://docs.google.com/spreadsheets/d/e/2PACX-1vQX98uxX-fPYvwz_OPfdHkGsyYbmQITo1nTzx01YiqepLIwFjuUpqHalY65YzuC_PyVP917dOzXlqjT/pubchart?oid=1113029249&amp;format=interactive"></iframe>
   </div>
 </div>
 
+<div class="container">
+  <h3>Evolución Tasa Efectiva Anuales de los contratos</h3> 
+</div>
+<div class="container-whitecenter">
+  <div class="col-md-6 col-md-6">
+    <h6><strong>T.E.A Dolar Mayorista o Spot:</strong> Es la tasa efectiva anual  pasada y actual que el gobierno aplicó y aplica sobre el tipo de cambio. El pasado junto con las perspectivas a futuro dan un indicio de hacia donde va la tendencia de devaluación</h6>
+    <h6><strong>TEAS de los contratos:</strong> Son las tasas efectivas anuales que los contratos proyectan que el gobierno devaluará. En general se dividen entre las tasas de los futuros más próximos a vencer y más lejanos, contemplando que de corto plazo los contratos más lejanos siguen la tendencia de los contratos más cercanos </h6>
+    <h6><strong>Objetivo del gráfico:</strong> Analizar la tendencia de las tasas efectivas anuales de devaluación de los contratos, para identificar brechas entre períodos más cortos y largos, junto con el análisis de si las tasas actualmente estan más caras que la del dolar spot o si estan baratas.</h6>
 
-<!--
-<script>
-  const requestUrl = 'https://opensheet.elk.sh/1SJPq2Ics3_0r1pbWqmK0pbKZ-1KObviEnz9De5TUS7o/json';
+  </div>
+  <div class="grafico_movil_costado">
+    <iframe class=chart seamless frameborder="0" scrolling="no" src="https://docs.google.com/spreadsheets/d/e/2PACX-1vSdQf5PJdGqIyv8Mpav5eo4rXJnf1RkKBsAHjJz2FpVVcfmahGlmiHoulJ_H0eocC1kjIH_LYvgbJMS/pubchart?oid=1048378653&amp;format=interactive"></iframe>
+  </div>
+</div>
 
-const requestJSON = async url => {
-  const response = await (await fetch(url)).json();
-  concepto.innerHTML = response.concepto;
-  vencimiento.innerHTML = response.vencimiento;
-  precio.innerHTML = response.precio;
-  devaluacion.innerHTML = response.devaluacion;
-  tea.innerHTML = response.tea;
-  proyeccion.innerHTML = response.proyeccion;
-}
-requestJSON(requestUrl);
-</script>
+<div class="container">
+  <h3>Evolución Tasa Efectiva Anuales de los contratos</h3> 
+</div>
+<div class="container-whitecenter">
+  <div class="col-md-6 col-md-6">
+    <h6><strong>T.E.A Dolar Mayorista o Spot:</strong> Es la tasa efectiva anual  pasada y actual que el gobierno aplicó y aplica sobre el tipo de cambio. El pasado junto con las perspectivas a futuro dan un indicio de hacia donde va la tendencia de devaluación</h6>
+    <h6><strong>TEAS de los contratos:</strong> Son las tasas efectivas anuales que los contratos proyectan que el gobierno devaluará. En general se dividen entre las tasas de los futuros más próximos a vencer y más lejanos, contemplando que de corto plazo los contratos más lejanos siguen la tendencia de los contratos más cercanos </h6>
+    <h6><strong>Objetivo del gráfico:</strong> Analizar la tendencia de las tasas efectivas anuales de devaluación de los contratos, para identificar brechas entre períodos más cortos y largos, junto con el análisis de si las tasas actualmente estan más caras que la del dolar spot o si estan baratas.</h6>
 
-<h1>Requesting data and inserting</h1>
+  </div>
+  <div class="grafico_movil_costado">
+    <iframe class=chart seamless frameborder="0" scrolling="no" src="https://docs.google.com/spreadsheets/d/e/2PACX-1vQXNyE_KuOBf1gSL75-RWsDihZz9b6hZAOUD0wNnlfuVkiCYLs-Y9NiudTBX-jQJuuCx_pweupVBttF/pubchart?oid=299159920&amp;format=interactive"></iframe>
+  </div>
+</div>
 
-<table id='overview-table'>
-  <tr>
-    <th>Concepto</th>
-    <th>Vencimiento</th>
-    <th>Precio</th>
-    <th>devaluacion</th>
-    <th>tea</th>
-    <th>proyeccion</th>
-  </tr>
-  <tr>
-    <td id='concepto'></td>
-    <td id='vencimiento'></td>
-    <td id='precio'></td>
-    <td id='devaluacion'></td>
-    <td id='tea'></td>
-    <td id='proyeccion'></td>
-  </tr>
-</table>
--->
 <div id="Dolar" class="container-fluid bg-grey">
   <h2 class="text-center">CONTACTO</h2>
   <div class="row">

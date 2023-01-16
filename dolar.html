@@ -27,7 +27,7 @@
 <!-- originales -->
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
-
+  <meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=4.0">
 
   <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
   <link rel="preload" href="index.js" as="script">
@@ -71,11 +71,9 @@
           <span class="icon-bar"></span>   
         </button>
         <a class="navbar-brand" href="index.html">
-          <img  src="https://drive.google.com/uc?export=view&id=1vGAtWfwQ_FYv6auzz3fV-IFGdIcJ-xoD"
-           width= 200 height= 60> 
+          <img  src="https://drive.google.com/uc?export=view&id=1vGAtWfwQ_FYv6auzz3fV-IFGdIcJ-xoD"> 
         </a>
       </div>
-      <br>
         <!-- aca se definen los ID que mas abajo se mencionan para poder ir a los temas de las barras-->
       <div class="collapse navbar-collapse" id="myNavbar">
         <div class="container">
@@ -110,8 +108,8 @@
   <div class="iframe-dolar">
     <div class="col-sm-6 col-xs-12">
       <div class="lista_despegable">
-        <a href="#demo" class="btn btn-default btn-lg " data-toggle="collapse">¿Qué significa cada tipo de dólar?</a>
-        <div id="demo" class="collapse">
+        <a href="#demo1" class="btn btn-default btn-lg " data-toggle="collapse">¿Qué significa cada tipo de dólar?</a>
+        <div id="demo1" class="collapse">
           <h6><strong>•Mayorista:</strong> Surge de la operatoria en el MULC y comunicación del BCRA 3500</h6>
           <h6><strong>•Solidario:</strong> Dólar oficial que se vende en los bancos + el 30% de impuesto país y 35% a cuenta de ganancias.</h6>
           <h6><strong>•MEP: </strong>Resultado de una operación bursátil, se compra de un bono argentino en pesos y luego se vende en dólares.</h6>
@@ -146,24 +144,6 @@
 </div>
 
 <div class="jumbotron text-center">
-  <div class="lista_despegable">
-    <a href="#demo" class="btn btn-default btn-lg " data-toggle="collapse">¿Cuando no puedo comprar dólar MEP?</a>
-    <div id="demo" class="collapse" align="left">
-      <h6>No se puede comprar dólar MEP si se encuentra en alguno de los siguientes puntos, contemplando que pueden cambiar incluso agregarse nuevos puntos, por lo que antes de operar sugerimos consultar con el asesor:</h6>
-      <h6>1_Si compre dólares solidarios a través del banco en los últimos 90 días</h6>
-      <h6>2_Si accedí al MULC como persona física o como empresa en los últimos 90 días para importación o exportacion de bienes y servicios</h6>
-      <h6>3_Si cobre un sueldo de una empresa que se benefició del programa ATP o Repro</h6>
-      <h6>4_Si soy beneficiario de programas sociales nacionales, planes, subsidios, beneficios de la seguridad social, ni asignaciones familiares incompatibles con la operación ordenada</h6>
-      <h6>5_Si tengo pendiente de cancelacion refinanciamientos de tarjeta del periodo Marzo 2020 a Junio 2020</h6>
-      <h6>6_Si tengo pendiente de cancelación créditos a tasa cero (conf. Art. 9° del Decreto N° 332/2020 y modificatorias)</h6>
-      <h6>7_Si tengo pendiente de cancelación el Art. 2 del Decreto 319/20 (créditos hipotecarios sobre inmuebles destinados a vivienda única y prendarios UVA con cuota mensual congelada)</h6>
-      <h6>8_Si tengo pendiente de cancelación "Créditos Tasa Cero 2021" otorgados en el marco del Decreto Nro. 512/2021 (y modificatorias), conforme Comunicación “A” 7342 del BCRA</h6>
-      <h6>9_Si me encuentro incluido en ninguna de las siguientes categorías conforme a la Com. “A” 7606 del BCRA: a) usuarios de los servicios públicos que solicitaron y obtuvieron el subsidio en las tarifas derivadas del suministro de gas natural por red y/o energía eléctrica ; ó b) usuarios de los mismos servicios que hubieran obtenido el subsidio de manera automática; ó c) usuarios que mantengan el subsidio en las tarifas de agua potable</h6>
-      <h6>10_Si soy beneficiario como empleador del salario complementario establecido en el Programa de Asistencia de Emergencia al Trabajo y a la Producción (ATP), creado por el Decreto Nro. 332/2020, conforme con los plazos y requisitos dispuestos por la DECAD-2020-817-APN-JGM de fecha 17 de mayo de 2020 y mod.; y que no percibí el Programa de Recuperación Productiva 2 (Repro II) previsto en la Resolución 1565/20</h6>
-      <h6>11_Si me encuentro incluido en ninguna de las siguientes categorías conforme a la Com. “A” 7586 del BCRA: a) beneficiarios de Dec. Nº 260/2020 Coronavirus (Covid-19) ó b) personas humanas alcanzadas por la Res. Conjunta de la Pta. del Honorable Senado de la Nación y del Pte. de la Honorable Cámara de Diputado de la Nación Nº 12/2020 del 1/10/2020</h6>
-      <h6>12_Que, conforme a las Comunicaciones “A” 7609 y “A” 7610 del BCRA y siendo una persona jurídica, me encuentro incluido dentro de los residentes dedicados a la actividad agrícola que, en el marco del Decreto N°576/2022 ni en el marco del Decreto N°787/2022, venden mercadería a quien realice su exportación, en forma directa o como resultado de un proceso productivo realizado en el país (incluidos los sujetos indicados en la Comunicación “C” 93169)</h6>
-    </div>  
-  </div>
     <a target="_blank" href="https://chatwith.io/es/s/extensio">     
       <button class="btn btn-default btn-lg">Contactanos por whatsapp</button>  
     </a>     
@@ -271,7 +251,26 @@ requestJSON(requestUrl);
 </div>
 
 
-
+<div class="container-fluid bg-grey text-center">
+  <div class="lista_despegable">
+    <a href="#demo" class="btn btn-default btn-lg " data-toggle="collapse">¿Cuando no puedo comprar dólar MEP?</a>
+    <div id="demo" class="collapse" align="left">
+      <h6>No se puede comprar dólar MEP si se encuentra en alguno de los siguientes puntos, contemplando que pueden cambiar incluso agregarse nuevos puntos, por lo que antes de operar sugerimos consultar con el asesor:</h6>
+      <h6>1_Si compre dólares solidarios a través del banco en los últimos 90 días</h6>
+      <h6>2_Si accedí al MULC como persona física o como empresa en los últimos 90 días para importación o exportacion de bienes y servicios</h6>
+      <h6>3_Si cobre un sueldo de una empresa que se benefició del programa ATP o Repro</h6>
+      <h6>4_Si soy beneficiario de programas sociales nacionales, planes, subsidios, beneficios de la seguridad social, ni asignaciones familiares incompatibles con la operación ordenada</h6>
+      <h6>5_Si tengo pendiente de cancelacion refinanciamientos de tarjeta del periodo Marzo 2020 a Junio 2020</h6>
+      <h6>6_Si tengo pendiente de cancelación créditos a tasa cero (conf. Art. 9° del Decreto N° 332/2020 y modificatorias)</h6>
+      <h6>7_Si tengo pendiente de cancelación el Art. 2 del Decreto 319/20 (créditos hipotecarios sobre inmuebles destinados a vivienda única y prendarios UVA con cuota mensual congelada)</h6>
+      <h6>8_Si tengo pendiente de cancelación "Créditos Tasa Cero 2021" otorgados en el marco del Decreto Nro. 512/2021 (y modificatorias), conforme Comunicación “A” 7342 del BCRA</h6>
+      <h6>9_Si me encuentro incluido en ninguna de las siguientes categorías conforme a la Com. “A” 7606 del BCRA: a) usuarios de los servicios públicos que solicitaron y obtuvieron el subsidio en las tarifas derivadas del suministro de gas natural por red y/o energía eléctrica ; ó b) usuarios de los mismos servicios que hubieran obtenido el subsidio de manera automática; ó c) usuarios que mantengan el subsidio en las tarifas de agua potable</h6>
+      <h6>10_Si soy beneficiario como empleador del salario complementario establecido en el Programa de Asistencia de Emergencia al Trabajo y a la Producción (ATP), creado por el Decreto Nro. 332/2020, conforme con los plazos y requisitos dispuestos por la DECAD-2020-817-APN-JGM de fecha 17 de mayo de 2020 y mod.; y que no percibí el Programa de Recuperación Productiva 2 (Repro II) previsto en la Resolución 1565/20</h6>
+      <h6>11_Si me encuentro incluido en ninguna de las siguientes categorías conforme a la Com. “A” 7586 del BCRA: a) beneficiarios de Dec. Nº 260/2020 Coronavirus (Covid-19) ó b) personas humanas alcanzadas por la Res. Conjunta de la Pta. del Honorable Senado de la Nación y del Pte. de la Honorable Cámara de Diputado de la Nación Nº 12/2020 del 1/10/2020</h6>
+      <h6>12_Que, conforme a las Comunicaciones “A” 7609 y “A” 7610 del BCRA y siendo una persona jurídica, me encuentro incluido dentro de los residentes dedicados a la actividad agrícola que, en el marco del Decreto N°576/2022 ni en el marco del Decreto N°787/2022, venden mercadería a quien realice su exportación, en forma directa o como resultado de un proceso productivo realizado en el país (incluidos los sujetos indicados en la Comunicación “C” 93169)</h6>
+    </div>  
+  </div>
+</div>
 
 <script>
   const scriptURL = 'https://script.google.com/macros/s/AKfycbzCSm6Tmma3lWOxdS_UjQsr8SHEHMUAuhK4KKpZU6nuX5yJuFVnlEiKTQViTMY3DLfXgg/exec'
