@@ -45,94 +45,6 @@
     <link rel="stylesheet"                 href="./style.css">
 
     <link rel="icon" href="https://drive.google.com/uc?export=view&id=1TDpO7D-xdhEp-Q6YrhFCVj-OyfAE9iEQ" type="image/x-icon">
-    <script>
-
-$( document ).ready(function() {
-          getData();
-        });
-    
-        function getData() 
-        {
-          google.script.run.withSuccessHandler(function(ar) 
-          {
-            console.log(ar);
-            var displayfooter = "<tfoot>";
-            displayfooter += "<tr class=\"dark-row\">";
-            displayfooter += "<th colspan=\""+ar[0].length+"\">";
-              displayfooter += "<div class=\"pager\">";
-                displayfooter += "<button type=\"button\" class=\"first\" ><<</button>";
-                displayfooter += "<button type=\"button\" class=\"prev\"><</button>";
-                displayfooter += "<span class=\"pagedisplay\"></span>";
-                displayfooter += "<button type=\"button\" class=\"next\">></button>";
-                displayfooter += "<button type=\"button\" class=\"last\">>></button>";
-                displayfooter += "<select class=\"pagesize\" title=\"Select page size\">";
-                  displayfooter += "<option value=\"15\">15</option>";
-                  displayfooter += "<option value=\"25\">25</option>";
-                  displayfooter += "<option value=\"30\">30</option>";
-                  displayfooter += "<option value=\"40\">40</option>";
-                displayfooter += "</select>";
-                displayfooter += "<select class=\"gotoPage\" title=\"Select page number\"></select>";
-              displayfooter += "</div>";
-            displayfooter += "</th>";
-            displayfooter += "</tr>";
-            displayfooter += "</tfoot>";
-    
-            var displayheader = ""; 
-            var displaybody = "<tbody>";
-            ar.forEach(function(item, index) 
-            {
-              if(index == 0)
-              {
-                displayheader = "<thead>";
-                displayheader += "<tr>";
-                displayheader += "<th>"+item[0]+"</th>";
-                displayheader += "<th>"+item[1]+"</th>";
-                displayheader += "<th>"+item[2]+"</th>";
-                displayheader += "<th>"+item[3]+"</th>";
-                displayheader += "<th>"+item[4]+"</th>";
-                displayheader += "<th>"+item[5]+"</th>";
-                displayheader += "</tr>";
-                displayheader += "</thead>";
-              }
-              else if(index > 0)
-              {
-                displaybody += "<tr>";
-                displaybody += "<td>"+item[0]+"</td>";
-                displaybody += "<td>"+item[1]+"</td>";
-                displaybody += "<td>"+item[2]+"</td>";
-                displaybody += "<td>"+item[3]+"</td>";
-                displaybody += "<td>"+item[4]+"</td>";            
-                displaybody += "<td>"+item[5]+"</td>";     
-                displaybody += "</tr>";
-              }    
-            });
-            displaybody += "</tbody>";
-    
-            var displayTable = '';
-            displayTable += "<table id=\"mainTable\" class=\"tablesorter\" >";
-            displayTable += displayheader;
-            displayTable += displayfooter;
-            displayTable += displaybody;
-            displayTable += '</table>';     
-            document.getElementById("rowdata").innerHTML = displayTable;
-    
-            $("#mainTable").tablesorter({
-              theme: 'blue',
-              sortList: [[0,0]],
-              widthFixed: true,
-              widgets: ['zebra', 'columns', 'filter']
-            })
-            .tablesorterPager({
-            // target the pager markup - see the HTML block below
-            container: $(".pager"),
-            output: '{startRow} to {endRow} ({totalRows})'
-            });
-    
-          }).data_api_contratos_rofex();
-        }
-</script>
-
-
  
 </head>
 <body>
@@ -181,7 +93,7 @@ $( document ).ready(function() {
   <br>
   <div class="row serviceanim">
 
-    <div class="col-sm-2 col-xs-6">
+    <div class="col-md-2 col-md-3 col-xs-6">
       <div class="service-panel service-panel-default text-center">
         <div class="service-panel-heading center">
           <h1>Que es el dólar MEP</h1>
@@ -194,7 +106,7 @@ $( document ).ready(function() {
       <br>     
     </div>   
 
-    <div class="col-sm-2 col-xs-6">
+    <div class="col-md-2 col-md-3 col-xs-6">
       <div class="service-panel service-panel-default text-center">
         <div class="service-panel-heading center">
           <h1>Servicios Empresariales</h1>
@@ -207,7 +119,7 @@ $( document ).ready(function() {
       <br>     
     </div>  
 
-    <div class="col-sm-2 col-xs-6">
+    <div class="col-md-2 col-md-3 col-xs-6">
       <div class="service-panel service-panel-default text-center">
        <div class="service-panel-heading center">
           <h1>Hace crecer tus ahorros</h1>
@@ -220,7 +132,7 @@ $( document ).ready(function() {
       <br>     
     </div>   
 
-    <div class="col-sm-2 col-xs-6">
+    <div class="col-md-2 col-md-3 col-xs-6">
       <div class="service-panel service-panel-default text-center">
         <div class="service-panel-heading center">
           <h1>Abrí tu cuenta local y en USA</h1>
@@ -233,7 +145,7 @@ $( document ).ready(function() {
       <br>     
     </div> 
 
-    <div class="col-sm-2 col-xs-6">
+    <div class="col-md-2 col-md-3 col-xs-6">
       <div class="service-panel service-panel-default text-center">
         <div class="service-panel-heading center">
           <h1>Toda la información en un lugar</h1>
@@ -246,7 +158,7 @@ $( document ).ready(function() {
       <br>     
     </div>
 
-    <div class="col-sm-2 col-xs-6">
+    <div class="col-md-2 col-md-3 col-xs-6">
       <div class="service-panel service-panel-default text-center">
         <div class="service-panel-heading center">
           <h1>Potencia tu emprendimiento</h1>
@@ -278,7 +190,7 @@ $( document ).ready(function() {
 <!--J SERVICIOS SEGUNDOS -->
 <div class="jumbotron text-center">
   <div class="row serviceanim">
-    <div class="col-sm-2 col-xs-6">
+    <div class="col-md-2 col-md-3 col-xs-6">
       <div class="service-panel service-panel-default text-center">
         <div class="service-panel-heading center">
           <h1>Aprendé a Invertir</h1>
@@ -291,10 +203,10 @@ $( document ).ready(function() {
       <br>     
     </div>   
 
-    <div class="col-sm-2 col-xs-6">
+    <div class="col-md-2 col-md-3 col-xs-6">
       <div class="service-panel service-panel-default text-center">
         <div class="service-panel-heading center">
-          <h1>Sin limites para enviar y recibir</h1>
+          <h1>Sin limites para enviar y recibircol-md-2 col-md-3 col-xs-6</h1>
           <h4><strong>Usá el mercado de capitales para enviar y recibir dinero desde y hacia el exterior hacia cualquier cuenta del mundo, sin límites ni restricciones.</strong></h4>
           <h5>Conoce más ➝</h5>
           <h2>Transacciones con el Exterior</h2>
@@ -305,7 +217,7 @@ $( document ).ready(function() {
     </div>  
 
 
-    <div class="col-sm-2 col-xs-6">
+    <div class="col-md-2 col-md-3 col-xs-6">
       <div class="service-panel service-panel-default text-center">
        <div class="service-panel-heading center">
           <h1>Nuestra opinión en los medios</h1>
@@ -706,13 +618,13 @@ $( document ).ready(function() {
 <div id="Dolar" class="container-fluid bg-grey">
   <h2 class="text-center">CONTACTO</h2>
   <div class="row">
-    <div class="col-sm-5">
+    <div class="col-lg-6 col-md-12 col-xs-12">
       <h3>Dejanos tus datos de contacto y en menos de 24 horas nos estaremos contactando contigo.</h3>
       <h3><span class="glyphicon glyphicon-map-marker"></span> CABA, Argentina</h3>
       <h3><span class="glyphicon glyphicon-phone"></span> +549 1133049049</h3>
       <h3><span class="glyphicon glyphicon-envelope"></span> joaquinarregui@extensiosas.com</h3>
     </div>
-    <div class="col-sm-7 slideanim">
+    <div class="col-lg-6 col-md-12 col-xs-12 slideanim">
       <form name="submit-to-google-sheet">
       <div class="row">
         <div class="col-sm-6 form-group">

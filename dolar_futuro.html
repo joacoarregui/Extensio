@@ -1,0 +1,342 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+  <title>Invertir</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+ 
+<!-- originales -->
+
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+  <link href="https://fonts.googleapis.com/css?family=Bitter" rel="stylesheet" type="text/css">
+  <link href="https://fonts.googleapis.com/css?family=Exo" rel="stylesheet" type="text/css">
+
+<!-- script tables -->
+  <script src="https://cdn.jsdelivr.net/npm/jquery@3.6.0/dist/jquery.slim.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/js/bootstrap.bundle.min.js"></script>
+
+
+  <!-- script margin -->
+<!--  <script src="https://cdn.jsdelivr.net/npm/jquery@3.6.0/dist/jquery.slim.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/js/bootstrap.bundle.min.js"></script>-->
+
+<!-- originales -->
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+
+
+  <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+  <link rel="preload" href="index.js" as="script">
+  <link rel="preload" href="tabla_futuros.js" as="script">
+  <script src="./tabla_futuros.js"></script>
+  <link rel="preload" href="tabla_futuros2.js" as="script">
+  <script src="./tabla_futuros2.js"></script>
+  <!--<meta name="viewport" content="width=device-width,initial-scale=1.0,maximum-scale=1.0,minimum-scale=1.0">-->
+  <!-- script sort tables -->
+<base target="_top">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js" ></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.tablesorter/2.31.3/js/jquery.tablesorter.min.js" ></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.tablesorter/2.31.3/js/jquery.tablesorter.widgets.min.js" ></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.tablesorter/2.31.3/js/extras/jquery.tablesorter.pager.min.js" ></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/jquery.tablesorter/2.31.3/css/jquery.tablesorter.pager.min.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/jquery.tablesorter/2.14.0/css/theme.blue.css"  />
+ 
+
+    <link rel=“stylesheet” type=“text/css” href=“./style.css”>
+    <link rel="stylesheet"                 href="./style.css">
+    
+    <link rel="preload" href="API_GSHEET.py" as script>
+  
+    <link rel="icon" href="https://drive.google.com/uc?export=view&id=1TDpO7D-xdhEp-Q6YrhFCVj-OyfAE9iEQ" type="image/x-icon">
+    
+   
+
+ 
+</head>
+<body>
+
+<div id="myPage" data-spy="scroll" data-target=".navbar" data-offset="60">
+<!--<div id="preloader"></div>-->  
+ <!-- NAVEGADOR -->
+
+  <nav class="navbar navbar-default navbar-fixed-top">
+    <div calss="container">
+      <div class="navbar-header">
+        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>   
+        </button>
+        <a class="navbar-brand" href="index.html">
+          <img  src="https://drive.google.com/uc?export=view&id=1vGAtWfwQ_FYv6auzz3fV-IFGdIcJ-xoD"
+           width= 200 height= 60> 
+        </a>
+      </div>
+      <br>
+        <!-- aca se definen los ID que mas abajo se mencionan para poder ir a los temas de las barras-->
+      <div class="collapse navbar-collapse" id="myNavbar">
+        <div class="container">
+          <div class="container-nav">
+          <ul class="nav navbar-nav navbar-right">
+            <li><a href="index.html">Extensio</a></li>
+            <li><a href="Empresas.html" >Empresas</a></li>
+            <li><a href="dolar.html">Dolar</a></li>
+            <li><a href="emprendedores.html">Emprendedores</a></li>
+            <li><a href="Invertir.html">Invertir</a></li>
+            <li><a href="datosmercado.html">Datos mercado</a></li>
+            <li><a href="blog.html">Blog</a></li>
+            <li><a href="cursos.html">Cursos</a></li>
+          </ul>
+        </div>
+        </div>
+      </div>
+    </div>
+  </nav>
+<br>
+<br>
+<br>
+
+
+
+
+<!--SERVICIOS PRIMEROS -->
+<div id="servicios" class="jumbotron text-center">
+
+  <!-- TradingView Widget BEGIN -->
+
+  <div class="tradingview-widget-container">
+    <div class="tradingview-widget-container__widget"></div>
+    <script type="text/javascript" src="https://s3.tradingview.com/external-embedding/embed-widget-tickers.js" async>
+    {
+    "autosize": true,
+    "symbols": [
+      {
+        "description": "DOLAR DIVISA",
+        "proName": "FX_IDC:USDARS"
+      },
+      {
+        "description": "REAL",
+        "proName": "FX_IDC:USDBRL"
+      },
+      {
+        "description": "YUAN",
+        "proName": "FX_IDC:USDCNH"
+      },
+      {
+        "description": "EURO",
+        "proName": "FX_IDC:USDEUR"
+      },
+      {
+        "description": "REAL/PESO",
+        "proName": "FX_IDC:BRLARS"
+      },
+  {
+        "description": "Euro/Ars",
+        "proName": "FX_IDC:EURARS"
+      }
+    ],
+    "colorTheme": "dark",
+    "isTransparent": false,
+    "showSymbolLogo": true,
+    "locale": "es"
+  }
+    </script>
+  </div>
+
+<br><br>
+<h3>Para una mejor experiencia, gire el celular en modo horizontal o utilice un dispositvo como una notebook.</h3> 
+<h3>Contratos futuros de dólar ROFEX, abajo dejamos la explicación:</h3> 
+
+<div class="container">
+  <div class="grafico_grande">
+    <iframe   class=chart seamless frameborder="0" scrolling="no" src="https://script.google.com/macros/s/AKfycbyFKJ3piwoWmRyo-bq5HGl1msTQSO_Auevctan-Yeph05O_ywa7ZE9n91I415ITZBlhNQ/exec"></iframe>
+  </div>
+</div>
+
+<div class="container text-center">
+  <div class="lista_despegable">
+    <a href="#demo" class="btn btn-default btn-lg " data-toggle="collapse">Explicación de las columnas</a>
+    <div id="demo" class="collapse" align="left">
+      <h6><strong>Concepto:</strong> Es el contrato futuro de un mes determinado. Comienza con las primeras 3 letras del mes en inglés seguido del año que el contrato vence</h6>
+      <h6><strong>Vencimiento:</strong> Es la fecha en que ese contrato deja de existir y por lo tanto a ese día el valor del contrato futuro será igual al valor del dólar spot</h6>
+      <h6><strong>Precio:</strong> Es el valor al que el contrato futuro cerró al día de hoy, a partir de las 18 horas, por lo que antes tiene el valor del cierre del día hábil anterior</h6>
+      <h6><strong>Px/Spot:</strong> Es la devaluación explícita que hay entre el valor del contrato y el valor del dólar mayorista hoy. Es un simple indicador de cuanto esta proyectando el mercado que el valor del dólar valdrá más en el futuro a la fecha de cierre del contrato</h6>
+      <h6><strong>T.E.A:</strong> Es la tasa efectiva anual del contrato. Surge del valor de la columna anterior llevado a como sería la devaluación en un año si se mantiene ese ritmo de devalaución. Es importante esta columna porque determina la curva anual de devaluación de los futuros e identifica si un futuro esta más caro o barato de lo normal</h6>
+      <h6><strong>Proyectado:</strong> Es el valor proyectado del dólar mayorista a la fecha de vencimiento del contrato, teniendo en cuenta 2 cosas, siendo la primera la actual devaluación mensual o semanal que está llevando a cabo el gobierno, junto con la devaluación proyectada del REM que hace el BCRA.</h6>
+    </div>  
+  </div>
+</div>
+<div class="container">
+  <h3>Evolución Tasa Efectiva Mensual de devaluación</h3> 
+</div>
+<div class="container-whitecenter">
+  <div class="col-md-6 col-md-6">
+    <h6><strong>Objetivo del gráfico:</strong> Analizar un cambio de tendencia con respecto a la devaluación de los últimos 90 días, para poder aprovechar estrategias de cobertura. Un cambio de tendencia a la baja, probablemente hará que los precios de los contratos futuros bajen, mientras que un cambio de tendencia al alza posiblemente hará que los valores de los contratos futuros suban</h6>
+    <h6><strong>Tasa Mensual Devaluación:</strong> Es la tasa de devaluación por día que tuvo la divisa y ese valor se lo lleva a tiempo de 30 días a los efectos de analizar la tendencia. </h6>
+    <h6><strong>Media Móvil TMD:</strong> Es la media móvil simple de la variación de los últimos 5 días de la divisa. Se usa para suavizar los movimientos de la TMD anterior. </h6>
+
+  </div>
+  <div class="grafico_movil_costado">
+    <iframe class=chart seamless frameborder="0" scrolling="no" src="https://docs.google.com/spreadsheets/d/e/2PACX-1vQX98uxX-fPYvwz_OPfdHkGsyYbmQITo1nTzx01YiqepLIwFjuUpqHalY65YzuC_PyVP917dOzXlqjT/pubchart?oid=1113029249&amp;format=interactive"></iframe>
+  </div>
+</div>
+
+<div class="container">
+  <h3>Evolución Tasa Efectiva Anuales de los contratos</h3> 
+</div>
+<div class="container-whitecenter">
+  <div class="col-md-6 col-md-6">
+    <h6><strong>T.E.A Dolar Mayorista o Spot:</strong> Es la tasa efectiva anual  pasada y actual que el gobierno aplicó y aplica sobre el tipo de cambio. El pasado junto con las perspectivas a futuro dan un indicio de hacia donde va la tendencia de devaluación</h6>
+    <h6><strong>TEAS de los contratos:</strong> Son las tasas efectivas anuales que los contratos proyectan que el gobierno devaluará. En general se dividen entre las tasas de los futuros más próximos a vencer y más lejanos, contemplando que de corto plazo los contratos más lejanos siguen la tendencia de los contratos más cercanos.</h6>
+    <h6><strong>Objetivo del gráfico:</strong> Analizar la tendencia de las tasas efectivas anuales de devaluación de los contratos, para identificar brechas entre períodos más cortos y largos, junto con el análisis de si las tasas actualmente estan más caras que la del dolar spot o si estan baratas.</h6>
+
+  </div>
+  <div class="grafico_movil_costado">
+    <iframe class=chart seamless frameborder="0" scrolling="no" src="https://docs.google.com/spreadsheets/d/e/2PACX-1vSdQf5PJdGqIyv8Mpav5eo4rXJnf1RkKBsAHjJz2FpVVcfmahGlmiHoulJ_H0eocC1kjIH_LYvgbJMS/pubchart?oid=1048378653&amp;format=interactive"></iframe>
+  </div>
+</div>
+
+<div class="container">
+  <h3>Evolución de los 6 contratos futuros más próximos</h3> 
+</div>
+<div class="container-whitecenter">
+  <div class="col-md-6 col-md-6">
+    <h6><strong>Líneas de contratos futuros verdes y celestes:</strong> Estas líneas corresponden a los 3 contratos futuros que venceran dentro de los siguientes 3 meses. En general estos contratos se acomodan a la tasa proyectada de devaluación que el mercado pondera de corto plazo.</h6>
+    <h6><strong>Líneas de contratos futuros amarillo, naranja y rojo:</strong>  Estas líneas corresponden a los siguientes 3 contratos futuros con respecto a los anteriores que venceran luego de los siguientes 3 meses y hasta 6 meses. En general estos contratos se basan en la misma proyección que tienen los 3 contratos anteriores, pero con tasas más moderadas y menos elevadas, aunque en terminos nominales la diferencia con el paso de los meses es mayor. </h6>
+    <h6><strong>Objetivo del gráfico:</strong> Analizar las tendencias que tienen los contratos, diferenciando entre los que tienen un vencimiento más cercano y los que tienen un vencimiento más lejanos, buscando oportunidades entre las distintas estrategias que ofrecemos.</h6>
+
+  </div>
+  <div class="grafico_movil_costado">
+    <iframe class=chart seamless frameborder="0" scrolling="no" src="https://docs.google.com/spreadsheets/d/e/2PACX-1vQXNyE_KuOBf1gSL75-RWsDihZz9b6hZAOUD0wNnlfuVkiCYLs-Y9NiudTBX-jQJuuCx_pweupVBttF/pubchart?oid=299159920&amp;format=interactive"></iframe>
+  </div>
+</div>
+
+<div id="Dolar" class="container-fluid bg-grey">
+  <h2 class="text-center">CONTACTO</h2>
+  <div class="row">
+    <div class="col-lg-6 col-md-12 col-xs-12">
+      <h3>Dejanos tus datos de contacto y en menos de 24 horas nos estaremos contactando contigo.</h3>
+      <h3><span class="glyphicon glyphicon-map-marker"></span> CABA, Argentina</h3>
+      <h3><span class="glyphicon glyphicon-phone"></span> +549 1133049049</h3>
+      <h3><span class="glyphicon glyphicon-envelope"></span> joaquinarregui@extensiosas.com</h3>
+    </div>
+    <div class="col-lg-6 col-md-12 col-xs-12 slideanim">
+      <form name="submit-to-google-sheet">
+      <div class="row">
+        <div class="col-sm-6 form-group">
+          <input class="form-control" id="name" name="fullname" placeholder="Nombre y Apellido" type="text" required>
+        </div>
+        <div class="col-sm-6 form-group">
+          <input class="form-control" id="email" name="email" placeholder="Email" type="email" required>
+        </div>
+      </div>
+      <div class="checkbox" align="left">
+        <h4>Selecciona los temas que estes interesado recibir asesoramiento o realizar operaciones</h4>
+        <label><input type="checkbox" name="cb_dolarmep"> Comprar dólar MEP o enviar/recibir dolares hacia/desde el exterior</label><br><br>
+        <label><input type="checkbox" name="cb_fci"> Invertir en fondos comunes de Inversiones</label><br><br>
+        <label><input type="checkbox" name="cb_apertura_offshore"> Abrir una cuenta de inversión en Estados Unidos</label><br><br>
+        <label><input type="checkbox" name="cb_jubilacion"> Ahorrar para mejorar mi jubilación o para largo plazo</label><br><br>
+        <label><input type="checkbox" name="cb_dividendos"> Invertir en empresas con altos dividendos</label><br><br>
+        <label><input type="checkbox" name="cb_disruptivas"> Invertir en empresas disruptivas</label><br><br>
+        <label><input type="checkbox" name="cb_on"> Invertir en obligaciones negociables u ON</label><br><br>
+        <label><input type="checkbox" name="cb_curso"> Quiero hacer un curso de Mercado de Capitales</label><br>
+      </div>
+      <textarea class="form-control" id="comments" name="comments" placeholder="Comentanos en detalle en que podemos ayudarte" rows="5"></textarea><br>
+      
+      <div class="row">
+        <div class="col-sm-12 form-group">
+          <button class="btn btn-success pull-right" type="submit" id="submit">Enviar</button>
+        </div>
+      </div>
+    </form>
+    </div>
+  </div>
+</div>
+
+
+
+
+<script>
+  const scriptURL = 'https://script.google.com/macros/s/AKfycbzCSm6Tmma3lWOxdS_UjQsr8SHEHMUAuhK4KKpZU6nuX5yJuFVnlEiKTQViTMY3DLfXgg/exec'
+  const form = document.forms['submit-to-google-sheet']
+  form.addEventListener('submit', e => {
+    e.preventDefault()
+    fetch(scriptURL, { method: 'POST', body: new FormData(form) })
+      .then(response => console.log('Success!', response))
+      .catch(error => console.error('Error!', error.message))
+  })
+</script>
+
+<script>
+  $("#submit").click(function(){
+    var nombrepotencialcliente= $("#name").val() ;
+    swal({
+      title: "Excelente",
+      text: "En breve uno de nuestros asesores se contactará contigo!",
+      icon: "success",
+      button: "aceptar",
+    });
+
+  });
+</script>
+
+<!-- NO LO BORRES POR ALGUN MOTIVO BORRA EL DE ARRIBAImage of location/map -->
+<img src="" class="w3-image w3-greyscale-min" style="width:100%">
+
+<footer class="container-fluid text-center">
+  <a href="#myPage" title="To Top">
+    <span class="glyphicon glyphicon-chevron-up"></span>
+  </a>
+</footer>
+
+<script>
+$(document).ready(function(){
+  // Add smooth scrolling to all links in navbar + footer link
+  $(".navbar a, footer a[href='#myPage']").on('click', function(event) {
+    // Make sure this.hash has a value before overriding default behavior
+    if (this.hash !== "") {
+      // Prevent default anchor click behavior
+      event.preventDefault();
+
+      // Store hash
+      var hash = this.hash;
+
+      // Using jQuery's animate() method to add smooth page scroll
+      // The optional number (900) specifies the number of milliseconds it takes to scroll to the specified area
+      $('html, body').animate({
+        scrollTop: $(hash).offset().top
+      }, 900, function(){
+   
+        // Add hash (#) to URL when done scrolling (default click behavior)
+        window.location.hash = hash;
+      });
+    } // End if
+  });
+  
+  $(window).scroll(function() {
+    $(".slideanim").each(function(){
+      var pos = $(this).offset().top;
+
+      var winTop = $(window).scrollTop();
+        if (pos < winTop + 600) {
+          $(this).addClass("slide");
+        }
+    });
+  });
+})
+</script>
+<!--
+<script>
+  var loader = document.getElementById("preloader");
+  window.addEventListener("load",function(){
+    loader.style.display="none";
+  })
+</script>
+-->
+
+</body>
+</html>
