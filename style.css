@@ -78,6 +78,75 @@ h7{
   font-weight: 600;
   margin-bottom: 30px;
 }
+.h2_golden{
+  text-transform: bitter;
+  color: #dad83c;
+  font-weight: 600;
+  margin-bottom: 30px;
+}
+.h2_technology{
+  text-transform: bitter;
+  color: #150443;
+  font-weight: 600;
+  margin-bottom: 30px;
+}
+.h3_technology{
+  color: #1f0443;
+}
+.h3_finanzas{
+  color: #2da4b1;
+}
+.h3_marketing{
+  color: #565505;
+}
+.letra_pie_dibujo{
+  font-size: 15px;
+  font-weight: 400;
+  color: #741b47;
+}
+.h4_invertir{
+  color: #fcffff;
+  text-transform: Exo;
+}
+.h4_invertir_texto_izquierda{
+  color: #fcffff;
+  text-transform: Exo;
+  text-align: left;
+  padding: 5px;
+  padding-top: 10px;
+  padding-left: 10px;
+}
+.h1_invertir{
+  font-size: 52px;
+  text-transform: Exo;
+  color: #fcffff;
+  text-align: left;
+  padding: 5px;
+  padding-top: 10px;
+}
+.conservate_value{
+  color: #98d9e6;
+  padding: 5px;
+
+}
+.moderate_value{
+  color: #94f7eb;
+  padding: 5px;
+
+}
+.high_value{
+  color: #f7dbb7;
+  padding: 5px;
+
+}
+.h4_invertir_texto_izquierda{
+  color: #fcffff;
+  text-transform: Exo;
+  text-align: left;
+  padding: 5px;
+  padding-top: 10px;
+  padding-left: 10px;
+}
 
 li {
   font: 400 15px Lato, Arial;
@@ -89,7 +158,9 @@ li {
   padding: 5px 5px;
   margin-top: 5px;
 }
-
+.img_background_invertir{
+  background-image: url('https://drive.google.com/uc?export=view&id=1qeCPCt0xbiej6l43QyXhkW2U5wX9nWf8') ; 
+  }
 .container-fluid {
   background-color: rgb(242, 243, 247);    
   padding: 10px 10px 10px 10px;
@@ -107,7 +178,7 @@ li {
 }
 .container-whitecenter {
   background-color: rgb(253, 253, 253);    
-  padding: 10px 10px 10px 30px;
+  padding: 10px 10px 10px 20px;
   margin-bottom: 10px;
 }
 .container-servicios-empresas {
@@ -152,7 +223,7 @@ li {
   padding-right: 20px;
   margin-bottom: 00px;
   margin-right: 0px;
-  margin-left: 80px;
+  margin-left: 60px;
   margin-top: 00px;
 }
 Image{
@@ -215,6 +286,36 @@ background-color: #00c8d2;
 
 }
 
+
+.textbox_shadow_animation_finanzas:hover h3 {
+  padding: 5px;
+  margin-top: -5px;
+  margin-left: -5px;
+  border-radius:10px ;
+  border: 1px solid #42daeb;
+  color: #21a9b8;
+  box-shadow: 10px 10px 20px rgba(0, 97, 119, 0.309);
+  transition: border-radius  0.5s;
+}
+.textbox_shadow_animation_marketing:hover h3 {
+  padding: 5px;
+  margin-top: -5px;
+  margin-left: -5px;
+  border-radius:10px ;
+  border: 1px solid #9c9826;
+  box-shadow: 10px 10px 20px rgba(151, 114, 27, 0.309);
+  transition: border-radius  0.5s;
+}
+.textbox_shadow_animation_technology:hover h3 {
+  padding: 5px;
+  margin-top: -5px;
+  margin-left: -5px;
+  border-radius:10px ;
+  color: #4b0553;
+  border: 1px solid #360349;
+  box-shadow: 10px 10px 20px #5003544c;
+  transition: border-radius  0.5s;
+}
 .col-md-2 h4 {
   margin-top: 20px;
   padding:  5px;
@@ -308,16 +409,16 @@ background-color: #00c8d2;
 }
 
 .panel {
-  border: 1px solid #f4511e; 
-  border-radius:20px ;
+  border: 2px solid #1e94f499; 
+  border-radius:23px ;
   transition: box-shadow 0.5s;
 }
 .panel:hover {
   box-shadow: 10px 10px 40px rgba(0, 97, 119, 0.309);
-  border-radius:20px ;
+  border-radius:23px ;
   margin-top: -7px;
   transition: margin-top 0.3s;
-  border: 1px solid #1e89f4; 
+  border: 2px solid #1e94f499; 
 }
 .panel-footer .btn:hover {
   border-radius:20px ;
@@ -353,6 +454,78 @@ background-color: #00c8d2;
   border-bottom: 1px solid transparent;
   padding: 0px 0px 0px 0px;
   margin: 0px 0px 0px 0px;
+}
+.panel-heading4 {
+  border-radius:20px ;
+  color: rgb(255, 255, 255);
+  background-color: #02122b !important;
+  padding: 25px;
+  border-bottom: 1px solid transparent;
+  border-top-left-radius: 20px;
+  border-top-right-radius: 20px;
+  border-bottom-left-radius: 0px;
+  border-bottom-right-radius: 0px;
+}
+.panel-heading4 h1 {
+  border-radius:20px ;
+  color: rgb(255, 255, 255);
+  border-bottom: 1px solid transparent;
+}
+.panel-heading4 h3 {
+  border-radius:20px ;
+  color: rgb(255, 255, 255);
+  border-bottom: 1px solid transparent;
+  padding: 0px 0px 0px 0px;
+  margin: 0px 0px 0px 0px;
+}
+.panel-heading1 {
+  border-radius:20px ;
+  color: rgb(255, 255, 255);
+  background-color: rgb(238, 118, 118) !important;
+  padding: 25px;
+  border-bottom: 1px solid transparent;
+  border-top-left-radius: 20px;
+  border-top-right-radius: 20px;
+  border-bottom-left-radius: 0px;
+  border-bottom-right-radius: 0px;
+}
+.panel-heading1 h1 {
+  border-radius:20px ;
+  color: rgb(255, 255, 255);
+  border-bottom: 1px solid transparent;
+}
+.panel-heading1 h3 {
+  border-radius:20px ;
+  color: rgb(255, 255, 255);
+  border-bottom: 1px solid transparent;
+  padding: 0px 0px 0px 0px;
+  margin: 0px 0px 0px 0px;
+}
+.panel-heading2 {
+  border-radius:20px ;
+  color: rgb(255, 255, 255);
+  background-color: #dad83c;
+  padding: 25px;
+  border-bottom: 1px solid transparent;
+  border-top-left-radius: 20px;
+  border-top-right-radius: 20px;
+  border-bottom-left-radius: 0px;
+  border-bottom-right-radius: 0px;
+}
+.panel-heading2 h1 {
+  border-radius:20px ;
+  color: rgb(255, 255, 255);
+  border-bottom: 1px solid transparent;
+}
+.panel-heading2 h3 {
+  border-radius:20px ;
+  color: rgb(255, 255, 255);
+  border-bottom: 1px solid transparent;
+  padding: 0px 0px 0px 0px;
+  margin: 0px 0px 0px 0px;
+}
+.panel h4 {
+  padding: 0px 10px 0px 10px;
 }
 .panel-footer {
   border-radius:20px ;
@@ -499,8 +672,8 @@ background-color: #00c8d2;
   visibility: visible;
 }
 .service-panel-heading h3 {
-  color: rgb(255, 255, 255) !important;
-  background-color: #ffffff !important;
+  color: rgb(255, 255, 255) ;
+  background-color: #ffffff ;
   border-bottom: 1px solid transparent;
   font-size: 0px;
   visibility: collapse;
@@ -552,6 +725,18 @@ background-color: #00c8d2;
   transition: border-radius  0.5s;
   border: 1px solid #1ed0f4; 
 }
+.img-emprendedor:hover img{
+  border-start-start-radius:100px;
+  border-start-end-radius: 50px;
+  border-end-end-radius:50px;
+  border-end-start-radius:100px;
+ 
+  background-color: #85efff0f;
+  box-shadow: 10px 10px 40px rgba(4, 154, 188, 0.515);
+  transition: background-color  1.5s;
+  transition: border-radius  0.5s;
+  border: 1px solid #1ed0f4; 
+}
 .grafico_mediano iframe {
 
   max-width: 360px;
@@ -567,6 +752,15 @@ background-color: #00c8d2;
 }
 .grafico_grande iframe {
   height: 470px;
+  border-radius: 20px;
+  color: #2da4b1 !important;
+  border: 1px solid #00e5ff2e;
+  background-color: solid rgb(253, 253, 253) !important;
+  visibility: visible;
+  size: 15px;
+}
+.tabla_grande iframe {
+  height: 500px;
   border-radius: 20px;
   color: #2da4b1 !important;
   border: 1px solid #00e5ff2e;
@@ -592,7 +786,7 @@ background-color: #00c8d2;
   margin-top: 0px;
   padding-bottom: 1px;
   margin-bottom: 1px;
-  padding-right: 0px;
+  padding-right: 5px;
   background-color: rgb(251, 252, 256);
   z-index: 9999;
   border: 1;
@@ -606,7 +800,7 @@ background-color: #00c8d2;
 
 .navbar li a, .navbar .navbar-brand {
   color: #2da4b1 !important;
-  padding-right: 0px;
+  padding-right: 5px;
   padding-bottom: 1px;
   margin-bottom: 1px;
 }
@@ -641,7 +835,7 @@ footer .glyphicon {
   color: #116c71;
   padding-right: 0px;
 }
-.slideanim {visibility:hidden;padding-right: 10px;padding-left: 50px;}
+.slideanim {visibility:hidden;padding-right: 10px;padding-left: 30px;}
 
 .slide {
   padding-right: 0px;
@@ -796,6 +990,17 @@ footer .glyphicon {
     padding:0px;
     visibility: visible;
   } 
+  .tabla_grande iframe {
+  
+    height: 100%;
+    min-height: 400px;
+    border-radius: 10px;
+    color: #2da4b1 !important;
+    border: 1px solid #00e5ff2e;
+    background-color: solid rgb(253, 253, 253) !important;
+    padding:0px;
+    visibility: visible;
+  } 
   .grafico_movil_costado iframe {
     max-width: 800px;
     max-height: 450px;
@@ -894,6 +1099,17 @@ footer .glyphicon {
   
     height: 100%;
     min-height: 350px;
+    border-radius: 10px;
+    color: #2da4b1 !important;
+    border: 1px solid #00e5ff2e;
+    background-color: solid rgb(253, 253, 253) !important;
+    padding:0px;
+    visibility: visible;
+  } 
+  .tabla_grande iframe {
+  
+    height: 100%;
+    min-height: 410px;
     border-radius: 10px;
     color: #2da4b1 !important;
     border: 1px solid #00e5ff2e;
@@ -1064,6 +1280,17 @@ footer .glyphicon {
   
     height: 100%;
     min-height: 390px;
+    border-radius: 10px;
+    color: #2da4b1 !important;
+    border: 1px solid #00e5ff2e;
+    background-color: solid rgb(253, 253, 253) !important;
+    padding:0px;
+    visibility: visible;
+  } 
+  .tabla_grande iframe {
+  
+    height: 100%;
+    min-height: 410px;
     border-radius: 10px;
     color: #2da4b1 !important;
     border: 1px solid #00e5ff2e;
