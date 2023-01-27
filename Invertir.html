@@ -45,92 +45,7 @@
     <link rel="stylesheet"                 href="./style.css">
 
     <link rel="icon" href="https://drive.google.com/uc?export=view&id=1TDpO7D-xdhEp-Q6YrhFCVj-OyfAE9iEQ" type="image/x-icon">
-    <script>
-
-$( document ).ready(function() {
-          getData();
-        });
-    
-        function getData() 
-        {
-          google.script.run.withSuccessHandler(function(ar) 
-          {
-            console.log(ar);
-            var displayfooter = "<tfoot>";
-            displayfooter += "<tr class=\"dark-row\">";
-            displayfooter += "<th colspan=\""+ar[0].length+"\">";
-              displayfooter += "<div class=\"pager\">";
-                displayfooter += "<button type=\"button\" class=\"first\" ><<</button>";
-                displayfooter += "<button type=\"button\" class=\"prev\"><</button>";
-                displayfooter += "<span class=\"pagedisplay\"></span>";
-                displayfooter += "<button type=\"button\" class=\"next\">></button>";
-                displayfooter += "<button type=\"button\" class=\"last\">>></button>";
-                displayfooter += "<select class=\"pagesize\" title=\"Select page size\">";
-                  displayfooter += "<option value=\"15\">15</option>";
-                  displayfooter += "<option value=\"25\">25</option>";
-                  displayfooter += "<option value=\"30\">30</option>";
-                  displayfooter += "<option value=\"40\">40</option>";
-                displayfooter += "</select>";
-                displayfooter += "<select class=\"gotoPage\" title=\"Select page number\"></select>";
-              displayfooter += "</div>";
-            displayfooter += "</th>";
-            displayfooter += "</tr>";
-            displayfooter += "</tfoot>";
-    
-            var displayheader = ""; 
-            var displaybody = "<tbody>";
-            ar.forEach(function(item, index) 
-            {
-              if(index == 0)
-              {
-                displayheader = "<thead>";
-                displayheader += "<tr>";
-                displayheader += "<th>"+item[0]+"</th>";
-                displayheader += "<th>"+item[1]+"</th>";
-                displayheader += "<th>"+item[2]+"</th>";
-                displayheader += "<th>"+item[3]+"</th>";
-                displayheader += "<th>"+item[4]+"</th>";
-                displayheader += "<th>"+item[5]+"</th>";
-                displayheader += "</tr>";
-                displayheader += "</thead>";
-              }
-              else if(index > 0)
-              {
-                displaybody += "<tr>";
-                displaybody += "<td>"+item[0]+"</td>";
-                displaybody += "<td>"+item[1]+"</td>";
-                displaybody += "<td>"+item[2]+"</td>";
-                displaybody += "<td>"+item[3]+"</td>";
-                displaybody += "<td>"+item[4]+"</td>";            
-                displaybody += "<td>"+item[5]+"</td>";     
-                displaybody += "</tr>";
-              }    
-            });
-            displaybody += "</tbody>";
-    
-            var displayTable = '';
-            displayTable += "<table id=\"mainTable\" class=\"tablesorter\" >";
-            displayTable += displayheader;
-            displayTable += displayfooter;
-            displayTable += displaybody;
-            displayTable += '</table>';     
-            document.getElementById("rowdata").innerHTML = displayTable;
-    
-            $("#mainTable").tablesorter({
-              theme: 'blue',
-              sortList: [[0,0]],
-              widthFixed: true,
-              widgets: ['zebra', 'columns', 'filter']
-            })
-            .tablesorterPager({
-            // target the pager markup - see the HTML block below
-            container: $(".pager"),
-            output: '{startRow} to {endRow} ({totalRows})'
-            });
-    
-          }).data_api_contratos_rofex();
-        }
-</script>
+  
 
 
  
@@ -162,7 +77,7 @@ $( document ).ready(function() {
             <li><a href="index.html">Extensio</a></li>
             <li><a href="Empresas.html" >Empresas</a></li>
             <li><a href="dolar.html">Dolar</a></li>
-            <li><a href="emprendedores.html">Emprendedores</a></li>
+            <li><a href="Emprendedores.html">Emprendedores</a></li>
             <li><a href="Invertir.html">Invertir</a></li>
             <li><a href="datosmercado.html">Datos mercado</a></li>
             <li><a href="blog.html">Blog</a></li>
@@ -267,17 +182,17 @@ $( document ).ready(function() {
     <br><br><br><br>
     <div class="col-sm-12 col-xs-12">
       <div class="lista_despegable">
-        <a href="#demo1" class="btn btn-default btn-lg " data-toggle="collapse">¿Cómo abro mi cuenta y cuál es el monto mínimo para invertir?</a>
+        <a href="#demo1" class="btn btn-default btn-lg " data-toggle="collapse">Abrir mi cuenta y mínimo para invertir</a>
         <div id="demo1" class="collapse">
           <h6 class="h4_invertir"><strong>Si sos una persona:</strong> Hacé click en la parte de abrir cuenta y en 5 minutos comenzá a operar.</h6>
           <h6 class="h4_invertir"><strong>Si sos una empresa:</strong> Ssolo con llenar un formulario y documentación que te pedimos como balances y ddjj de ganancias del año anterior comenzás a operar.</h6>
           <h6 class="h4_invertir"><strong>No hay mínimos.</strong> Aun así recomendamos que el mínimo sea de usd 1.000 o de 5 sueldos de ingresos a los efectos de darle una importancia y seguimiento.</h6>
         </div>  
       </div>
-    </div>
+    </div>        
     <div class="col-sm-12 col-xs-12">
       <div class="lista_despegable">
-        <a href="#demo2" class="btn btn-default btn-lg " data-toggle="collapse">Cómo se opera valores en el mercado local y en USA?</a>
+        <a href="#demo2" class="btn btn-default btn-lg " data-toggle="collapse">Operar en el mercado local y en USA</a>
         <div id="demo2" class="collapse">
           <h6 class="h4_invertir"><strong>En el mercado local</strong> se operan valores negociables a través de la plataforma que pone a disposición la sociedad Bolsas y Mercados Argentinos S.A. (BYMA) para que inversores puedan comprar o vender valores negociables a través de Agentes de compensación y liquidación (ALYC) como INVIU, y estos inversores puedan ser asesorados por nosotros.</h6>
           <h6 class="h4_invertir"><strong>En el mercado de USA</strong> se operan los valores negociables a través de las plataformas que pone a disposición las sociedades New York Stock Exchange (NYSE) y National Association of Securities Dealers Automated Quotation (NASDAQ) para que inversores puedan comprar o vender valores negociables a través de Agentes como interactivebrokers</h6>
@@ -286,7 +201,7 @@ $( document ).ready(function() {
     </div>
     <div class="col-sm-12 col-xs-12">
       <div class="lista_despegable">
-        <a href="#demo3" class="btn btn-default btn-lg " data-toggle="collapse">¿Cuáles son los tipos de títulos y valores que puedo operar?        </a>
+        <a href="#demo3" class="btn btn-default btn-lg " data-toggle="collapse">Títulos y valores que puedo operar</a>
         <div id="demo3" class="collapse">
           <h6 class="h4_invertir"><strong>Acciones y ADRS</strong> Títulos que emiten sociedades locales y del exterior que representa el valor de una de las fracciones iguales en que se divide su capital social.</h6>
           <h6 class="h4_invertir"><strong>Exchange Trade Found (ETF): </strong> ondos superdiversificados de instrumentos que pueden estar compuestos de bonos o de acciones, y estos dependen del objetivo del fondo.</h6>
@@ -300,6 +215,7 @@ $( document ).ready(function() {
       </div>
       <br><br>
     </div>    
+  
     <h3 class="h4_invertir_texto_izquierda"> Todas estas inversiones se confeccionar con el fin de invertir a largo plazo, dejando otro tipo de instrumentos a invertir para horizontes menores a 5 años.</h3>
 
     <br><br>
