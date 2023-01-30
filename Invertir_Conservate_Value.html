@@ -1,0 +1,527 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+  <title>Invertir</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+ 
+<!-- originales -->
+
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+  <link href="https://fonts.googleapis.com/css?family=Bitter" rel="stylesheet" type="text/css">
+  <link href="https://fonts.googleapis.com/css?family=Exo" rel="stylesheet" type="text/css">
+
+<!-- script tables -->
+  <script src="https://cdn.jsdelivr.net/npm/jquery@3.6.0/dist/jquery.slim.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/js/bootstrap.bundle.min.js"></script>
+
+
+  <!-- script margin -->
+<!--  <script src="https://cdn.jsdelivr.net/npm/jquery@3.6.0/dist/jquery.slim.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/js/bootstrap.bundle.min.js"></script>-->
+
+<!-- originales -->
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+
+
+  <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+<!-- script sort tables -->
+<base target="_top">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js" ></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.tablesorter/2.31.3/js/jquery.tablesorter.min.js" ></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.tablesorter/2.31.3/js/jquery.tablesorter.widgets.min.js" ></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.tablesorter/2.31.3/js/extras/jquery.tablesorter.pager.min.js" ></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/jquery.tablesorter/2.31.3/css/jquery.tablesorter.pager.min.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/jquery.tablesorter/2.14.0/css/theme.blue.css"  />
+ 
+    <link rel="preload" href="index.js" as="script">
+
+    <link rel=“stylesheet” type=“text/css” href=“./style.css”>
+    <link rel="stylesheet"                 href="./style.css">
+
+    <link rel="icon" href="https://drive.google.com/uc?export=view&id=1TDpO7D-xdhEp-Q6YrhFCVj-OyfAE9iEQ" type="image/x-icon">
+  
+
+
+ 
+</head>
+<body>
+
+<div id="myPage" data-spy="scroll" data-target=".navbar" data-offset="60">
+<!--<div id="preloader"></div>-->  
+ <!-- NAVEGADOR -->
+
+  <nav class="navbar navbar-default navbar-fixed-top">
+    <div calss="container">
+      <div class="navbar-header">
+        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>   
+        </button>
+        <a class="navbar-brand" href="index.html">
+          <img  src="https://drive.google.com/uc?export=view&id=1vGAtWfwQ_FYv6auzz3fV-IFGdIcJ-xoD"
+           width= 200 height= 60> 
+        </a>
+      </div>
+      <br>
+        <!-- aca se definen los ID que mas abajo se mencionan para poder ir a los temas de las barras-->
+      <div class="collapse navbar-collapse" id="myNavbar">
+        <div class="container">
+          <ul class="nav navbar-nav navbar-right">
+            <li><a href="index.html">Extensio</a></li>
+            <li><a href="Empresas.html" >Empresas</a></li>
+            <li><a href="dolar.html">Dolar</a></li>
+            <li><a href="Emprendedores.html">Emprendedores</a></li>
+            <li><a href="Invertir.html">Invertir</a></li>
+            <li><a href="datosmercado.html">Datos mercado</a></li>
+            <li><a href="blog.html">Blog</a></li>
+            <li><a href="cursos.html">Cursos</a></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </nav>
+<br>
+<br>
+<br>
+
+
+
+  <div class="tradingview-widget-container">
+    <div class="tradingview-widget-container__widget"></div>
+    <div class="tradingview-widget-copyright"><span class="blue-text"></div>
+    <script type="text/javascript" src="https://s3.tradingview.com/external-embedding/embed-widget-tickers.js" async>
+    {
+    "symbols": [
+      {"description": "Ark Innovation ","proName": "AMEX:ARKK"},
+      {"description": "Mineras VanEck","proName": "AMEX:GDX"}, 
+      {"description": "Tesla","proName": "NASDAQ:TSLA"},    
+      {"description": "Chinas de Internet","proName": "AMEX:KWEB"},       
+      {"description": "Bioceres Crop","proName": "NASDAQ:BIOX"},    
+      {"description": "Ark Genoma","proName": "AMEX:ARKG"},
+      {"description": "Ark Robotics","proName": "AMEX:ARKQ"}     
+    ],
+    "colorTheme": "dark",
+    "isTransparent": false,
+    "showSymbolLogo": true, 
+    "locale": "es"
+  }
+    </script>
+  </div>
+
+<!--SERVICIOS PRIMEROS -->
+<div id="servicios" class="container-white">
+  <div class="col-sm-12 col-xs-12">
+    <div class="lista_despegable">
+      <a href="#demo1" class="btn btn-default btn-lg " data-toggle="collapse">Opciones de estrategias</a>
+      <div id="demo1" class="collapse">
+        <h6 ><strong>Ir al inicio de Inversiones</strong> </h6>
+        <h6 ><strong>Ir al perfil Moderate Value</strong> </h6>
+        <h6 ><strong>Ir al perfil High Value</strong> </h6>
+      </div>  
+    </div>
+  </div> 
+  
+</div>
+<div class="container">
+
+</div>
+
+
+<div  class="img_background_invertir">
+    <h1 class="conservate_value" >  Conservate Value</h1>  
+    <div class="col-lg-6 col-md-12 col-xs-12">
+      <h3 class="conservate_value"> Tiene como objetivo invertir en empresas de valor fundamental proyectable, especialmente en empresas que ya cuentan con una trayectoria de más de 20 años en el Mercado de Capitales, con el fin de disminuir la volatilidad de mediano plazo</h3>
+      <h3 class="conservate_value">La inversión se combina con una exposición baja en empresas de innovación disruptiva o empresas con alto valor fundamental en el largo plazo.</h3>
+      <h3 class="conservate_value"> Estrategias de Inversión aplicadas a un Inversor Conservador,  por períodos mayores a 2 años y con baja o moderada tolerancia a la volatilidad.</h3>
+      <h3 class="conservate_value"> Esta estrategia de renta variable gestionada activamente busca el crecimiento del capital a largo plazo mediante la inversión en valores cotizados en EE. UU., incluidos los ADR, de empresas con alta trayectoria en el mercado de capitales</h3>
+      <br><br><br><!--no sacar los br-->
+    </div>
+      <div class="col-lg-6 col-md-12 col-xs-12">
+        <img  src="https://tuderechoasaber.com.do/wp-content/uploads/2019/02/blockchain.gif" width="950px"  > 
+    </div>
+  <div class="container" ></div><!--no borres el container-->
+    <div class="col-lg-12 col-md-12 col-xs-12">
+      <div class="lista_despegable">
+        <a href="#demo1" class="btn btn-default btn-lg " data-toggle="collapse">Abrir mi cuenta y mínimo para invertir</a>
+        <div id="demo1" class="collapse">
+          <h6 class="h4_invertir"><strong>Si sos una persona:</strong> Hacé click en la parte de abrir cuenta y en 5 minutos comenzá a operar.</h6>
+          <h6 class="h4_invertir"><strong>Si sos una empresa:</strong> Ssolo con llenar un formulario y documentación que te pedimos como balances y ddjj de ganancias del año anterior comenzás a operar.</h6>
+          <h6 class="h4_invertir"><strong>No hay mínimos.</strong> Aun así recomendamos que el mínimo sea de usd 1.000 o de 5 sueldos de ingresos a los efectos de darle una importancia y seguimiento.</h6>
+        </div>  
+      </div>
+    </div>        
+    <div class="col-lg-12 col-md-12 col-xs-12">
+      <div class="lista_despegable">
+        <a href="#demo2" class="btn btn-default btn-lg " data-toggle="collapse">Operar en el mercado local y en USA</a>
+        <div id="demo2" class="collapse">
+          <h6 class="h4_invertir"><strong>En el mercado local</strong> se operan valores negociables a través de la plataforma que pone a disposición la sociedad Bolsas y Mercados Argentinos S.A. (BYMA) para que inversores puedan comprar o vender valores negociables a través de Agentes de compensación y liquidación (ALYC) como INVIU, y estos inversores puedan ser asesorados por nosotros.</h6>
+          <h6 class="h4_invertir"><strong>En el mercado de USA</strong> se operan los valores negociables a través de las plataformas que pone a disposición las sociedades New York Stock Exchange (NYSE) y National Association of Securities Dealers Automated Quotation (NASDAQ) para que inversores puedan comprar o vender valores negociables a través de Agentes como interactivebrokers</h6>
+        </div>  
+      </div>
+    </div>
+    <div class="col-lg-12 col-md-12 col-xs-12">
+      <div class="lista_despegable">
+        <a href="#demo3" class="btn btn-default btn-lg " data-toggle="collapse">Títulos y valores que puedo operar</a>
+        <div id="demo3" class="collapse">
+          <h6 class="h4_invertir"><strong>Acciones y ADRS</strong> Títulos que emiten sociedades locales y del exterior que representa el valor de una de las fracciones iguales en que se divide su capital social.</h6>
+          <h6 class="h4_invertir"><strong>Exchange Trade Found (ETF): </strong> ondos superdiversificados de instrumentos que pueden estar compuestos de bonos o de acciones, y estos dependen del objetivo del fondo.</h6>
+          <h6 class="h4_invertir"><strong>Fondos comunes de inversión en dólares y pesos</strong> Diversifica tu cartera con bajos montos de suscripción, y cada fondo es para un fin específico (renta fija, variable o mix).</h6>
+          <h6 class="h4_invertir"><strong>Bonos y títulos en dólares y pesos:</strong> Deuda que emite el estado y ofrece pagar una renta fija determinada.</h6>
+          <h6 class="h4_invertir"><strong>Obligaciones negociables en dólares y pesos: </strong> Deuda que emiten las empresas de primer nivel y ofrecen pagar una renta fija determinada.</h6>
+          <h6 class="h4_invertir"><strong>Acciones y CEDEARS solo en pesos:</strong> Títulos que emiten sociedades locales y del exterior que representa el valor de una de las fracciones iguales en que se divide su capital social.</h6>
+          <h6 class="h4_invertir"><strong>Futuros de commodities: Vas a poder comprar futuros de dólar, oro, petróleo, soja, maiz, etc.</strong> Aun así recomendamos que el mínimo sea de usd 1.000 o de 5 sueldos de ingresos a los efectos de darle una importancia y seguimiento.</h6>
+        </div>  
+      </div>
+    </div>   
+<div class="jumbotron-white">
+  <div class="data_perfiles_inversores_1">
+  <div class="col-lg-12 col-md-12 col-xs-12">
+    <img  src="https://drive.google.com/uc?export=view&id=1Y6FoV8kNEz7C6q_DFSVrkajbB_l-pdD7"  > 
+    <br><br>
+  </div>
+  <h3 class="conservate_value">Los datos del portafolio son al 30/09/22</h3>
+  </div>
+  <div class="data_perfiles_inversores_2">
+  <div class="col-lg-6 col-md-12 col-xs-12">
+    <img  src="https://drive.google.com/uc?export=view&id=1h7iWuj-uoWKgJeZxxSPyeanahvRNZhsH"  > 
+  </div> 
+  <div class="col-lg-6 col-md-12 col-xs-12">
+    <iframe width="716" height="448" seamless frameborder="0" scrolling="no" src="https://docs.google.com/spreadsheets/d/e/2PACX-1vT5Y-O66Yy-_jtXi--WhC_Zy4iy7nZtmWNMQUx2Sjn9VhzDrEPCaObt5-dWZxzuO-q0bIVAr5b3bgSC/pubchart?oid=448239372&amp;format=interactive"></iframe>  </div>
+  <div class="col-lg-6 col-md-12 col-xs-12">
+    <img  src="https://drive.google.com/uc?export=view&id=1Kz7bEHbzlGl3TnNPFSCdRVLxUxTaAeBT"  > 
+  </div>
+  <div class="col-lg-6 col-md-12 col-xs-12">
+    <img  src="https://drive.google.com/uc?export=view&id=12Y63lt1SNLNILziAE-nj8tmIMjEONiX-"  > 
+  </div> 
+</div>
+</div>
+<div class="container">
+  <h3 class="h4_invertir">Estas inversiones se confeccionar con el fin de invertir a largo plazo, con horizontes a 5 años.</h3>
+</div>
+
+
+</div>
+
+<div class="container"></div>
+
+
+<div id="servicios-empresas" class="servicios-empresas">
+</div>
+
+
+
+<!-- Container (Invertir Section) -->
+<div id="apertura" class="container-fluid ">
+  <div class="row">
+    <div class="row slideanim" >
+      <div class="col-sm-4">
+        <div class="img-apertura">
+        <img  src="https://drive.google.com/uc?export=view&id=1UDrYIq5_XabmWsCaZOThyWa8CO7YOkhh" width="800px"  > 
+         </div>
+      </div>
+      <div class="col-sm-8">
+        <h7>Con Extensio podés abrir tu cuenta de manera ágil y 100% digital.</h7>
+        <h2>Trabajamos con los mejores brokers locales e internacionales, para darte un servicio de calidad.</h2>
+        <h4><strong>BROKER:</strong> Los brokers son sociedades registradas ante organismos de contralor y desarrollan plataformas que usamos para comprar y vender activos financieros y otras operaciones, brindando soporte en conjunto con nosotros hacia el cliente.</h4><br>
+        <h4><strong>NOSOTROS:</strong> Mientras que nuestros aliados tienen la mejor tecnología aplicada en sus plataformas, nosotros nos enfocamos en asesorarte al 100% en las decisiones de inversión, incluso pudiendo ejecutar las operaciones desde mesa de operaciones o por correo por vos si lo deseas.</h4>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div  class="container-whitecenter text-center">
+  <div class="col-md-12 col-sm-12 col-xs-12">
+    <h1>Nuestros Brokers</h1>
+    <h2>Locales para cuentas en Argentina</h2>
+  <br>
+  </div>
+  <div class="row slideanim">
+    <div class="col-md-2">
+      <img  src="https://drive.google.com/uc?export=view&id=15btzoUS4t1JGuc9_apvZHNtok8icMI4I" width="200px"  height="75px" > 
+      <h4>Del Grupo Financiero Galicia, Inviu se enfoca el desarrollo en tecnologia para mejorar el servicio a personas y empresas. Nuestro alias de asesor es JOAQUIN.INVIU .</h4>
+      <a target="_blank" href="https://www.inviu.com.ar/asesores/joaquin-inviu">
+        <p>Pagina de Inviu ➝</p>
+      </a>
+      <br>
+    </div>
+    <div class="col-md-2">
+    <img  src="https://drive.google.com/uc?export=view&id=1TcIIAYIbbA4Xidix8bGGrVBLG7ZaiSSn" width="200px" height="75px">
+      <h4>Adcap se especializa en brindar soluciones de financiamiento a empresas, desde pymes hasta grandes empresas. Cuentan con sus propios fondos de inversion.</h4>
+      <a target="_blank" href="https://www.ad-cap.com.ar/">
+        <p>Pagina de Adcap ➝</p>
+      </a>
+        <br>
+    </div>
+    <div class="col-md-2">
+      <img  src="https://drive.google.com/uc?export=view&id=1HumOLm7P3bmE0gae6OiwBAf-w2fTfmzT" width="200px" height="75px" > 
+      <h4>Bull Market es el broker elegido para retail que desea invertir en renta variable argentina con estrategias, contando con tecnología de punta para aplicarlas.</h4>
+      <a target="_blank" href="https://www.bullmarketbrokers.com/">
+        <p>Pagina de BMB ➝</p>
+      </a>
+      <br>
+    </div>
+    <div class="col-md-2">
+      <img  src="https://drive.google.com/uc?export=view&id=1PBN3NHZwftUUFh5XsAkhzMb9FuZXqJXE" width="200px" height="75px" > 
+      <h4>Balanz se especializa en brindar servicios a empresas multinacionales y empresas grandes. Expertos en estructuracion y emision de deuda corporativa.</h4>
+      <a target="_blank" href="https://balanz.com/">     
+        <p>Pagina de Balanz ➝</p>
+      </a> 
+      <br>
+    </div>
+    <div class="col-md-2">
+      <img  src="https://drive.google.com/uc?export=view&id=1wEhNE3NAfZoRtP5_NWTY7HHBRqz5Oaqh" width="200px" height="75px" > 
+      <h4>IEB se especializa en brindar servicios a empresas y personas, teniendo sus fondos propios y research extenso sobre el mercado local tanto renta fija como acciones. </h4>
+      <a target="_blank" href="https://invertirenbolsa.com.ar/">     
+        <p>Pagina de IEB ➝</p>
+      </a>
+      <br>
+    </div>   
+    <div class="col-md-2">
+      <img  src="https://drive.google.com/uc?export=view&id=1Co6fy3lX-BREtKtMPZYE0fO_3cfeiQsb" width="200px" height="75px" > 
+      <h4>Banza es la unidad de negocios de Adcap orientado para personas, desarrollando continuamente la tecnologia de customer experience. Nuestro alias es EXTENSIO.</h4>
+      <a target="_blank" href="https://banza.com.ar/">     
+        <p>Pagina de Banza ➝</p>
+      </a>
+        <br>
+    </div>   
+  </div>
+  <div class="col-md-12 col-sm-12 col-xs-12">
+  <h2>Internacionales para cuentas en Estados Unidos</h2> 
+  </div>
+  <div class="row slideanim">
+    <div class="col-md-4">
+      <img  src="https://drive.google.com/uc?export=view&id=1HvA2cVpVkKI5c4ZgmXUJ_WH4znup73MP" width="170px" height="100px" > 
+      <h4>Interactive Brokers es el mejor broker para pequeños inversores. Posee 1.7 millones de clientes, ya que cuenta con las mejores comisiones y excelentes plataformas de inversión. Cotiza en NASDAQ y la valoracion de la empresa supera los 25 billones.</h4>
+      <a target="_blank" href="https://www.interactivebrokers.com/es/home.php">     
+        <p>Pagina de IBKR ➝</p>
+      </a>
+    </div>
+    <div class="col-md-4">
+      <img  src="https://drive.google.com/uc?export=view&id=1Ekjs3WC8Gpd0dcsZkw-JTyAWC9XrsCOF" width="200px" height="100px" > 
+      <h4>Pershing es un Broker para inversores de mediano tramo que desean tener una mejor calidad de servicior. Se convirtió en una subsidiaria del Bank of New York Mellon. Tiene casi 1.9 trillones de dólares bajo administración.</h4>
+      <a target="_blank" href="https://www.pershing.com/">     
+        <p>Pagina de Pershing ➝</p>
+      </a>
+    </div>
+    <div class="col-md-4">
+       <br>
+      <img  src="https://drive.google.com/uc?export=view&id=1oSEAR5q6Rs7xHXKlkEbyfXnYLY20hZQI" width="200px" height="70px" > 
+      <h4>Stonex es un Broker para pequeños y medianos inversores. Se especializan en operar en el mercado de futuros tanto comodities como monedas como en el mercado físico.Cotiza en NASDAQ y la valoracion de la empresa ronda los 2 billones de dólares.</h4>
+      <a target="_blank" href="https://www.pershing.com/">     
+        <p>Pagina de StoneX ➝</p>
+      </a>
+    </div>
+
+  </div>
+  <div class="col-sm-2 ">
+   </div> 
+  <div class="col-sm-4 ">
+    <a target="_blank" href="https://chatwith.io/es/s/extensio">     
+      <button class="btn btn-default btn-lg">Contactanos por whatsapp</button>  
+    </a>     
+   </div> 
+   <div class="col-sm-4 ">
+    <a target="_blank" href="mailto:joaquinarregui@extensiosas.com?cc=info@extensiosas.com&Subject=Consulta%20por%20asistencia%20en%20el%20mercado%20de%20capitales&body=Hola,%0AQuisiera%20consulta%20para%20abrir%20una%20cuenta%20en%20el%20mercado%20de%20capitales.%0ASaludos.">     
+    <button class="btn btn-default btn-lg">Contactanos por mail</button>     
+    </a>  
+   </div> 
+   <br><br><br><br>
+
+   <h2>Frases del mercado</h2>
+   <div id="myCarousel" class="carousel slide text-center" data-ride="carousel">
+     <!-- Indicators -->
+     <ol class="carousel-indicators">
+       <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
+       <li data-target="#myCarousel" data-slide-to="1"></li>
+       <li data-target="#myCarousel" data-slide-to="2"></li>
+       <li data-target="#myCarousel" data-slide-to="3"></li>
+       <li data-target="#myCarousel" data-slide-to="4"></li>
+       <li data-target="#myCarousel" data-slide-to="5"></li>
+       <li data-target="#myCarousel" data-slide-to="6"></li>
+       <li data-target="#myCarousel" data-slide-to="7"></li>
+       <li data-target="#myCarousel" data-slide-to="8"></li>
+       <li data-target="#myCarousel" data-slide-to="9"></li>       
+     </ol>
+ 
+     <!-- Wrapper for slides -->
+     <div class="carousel-inner" role="listbox">
+       <div class="item active">
+         <h4>"Si no estas preparado para tener una acción de una empresa por 10 años, no la compres!"<br><span>Warren Buffet, CEO de Berkshire Hathaway</span></h4>
+       </div>
+       <div class="item">
+         <h4>"El plazo fijo nunca le gana a la inflación, y cuando le gane o se empare, cuidado con el dólar!"<br><span>Dicho bolsero argentino</span></h4>
+       </div>
+       <div class="item">
+         <h4>"Se puede perder dinero a corto plazo pero necesitas del largo plazo para ganar dinero"<br><span>Peter Lynch, Gestor de Fondos de Fidelity</span></h4>
+       </div>
+       <div class="item">
+        <h4>"El momento de máximo pesimismo es el mejor para comprar y el momento de máximo optimismo es el mejor para vender"<br><span>John Templeton, creador de fondos Templeton</span></h4>
+      </div>       
+       <div class="item">
+        <h4>"El principal problema del inversor, e incluso su peor enemigo, es probablemente él mismo"<br><span>Benjamin Graham, Padre del Value Investing.</span></h4>
+      </div>       
+       <div class="item">
+        <h4>"Asegurate de estar del lado correcto del cambio, concentrate en invertir en tecnologías emergentes y nuevas porque en años son las que más crecen"<br><span>Cathie Wood, CEO de ARK Investments</span></h4>
+      </div>        
+       <div class="item">
+        <h4>"Las acciones son una apuesta segura, pero solo si permanece invertido el tiempo suficiente para superar las correccione"<br><span>Peter Lynch, Actor, Gestor de Fondos de Fidelity</span></h4>
+      </div>  
+      <div class="item">
+        <h4>"Es mucho mejor comprar una compañía maravillosa a un precio justo que una compañía justa a un precio maravilloso"<br><span>Warren Buffet, CEO de Berkshire Hathaway</span></h4>
+      </div>         
+      <div class="item">
+        <h4>"Las acciones argentina son un ciclo constante, cuando nadie las quiere compra y no le hagas caso a los rumores, cuando todos la quieren vende."<br><span>Dicho bolsero argentino</span></h4>
+      </div> 
+      <div class="item">
+        <h4>"Las personas que no pueden controlar sus emociones no son aptas para obtener beneficios mediante la inversión"<br><span>Benjamin Graham, Padre del Value Investing.</span></h4>
+      </div>               
+     </div>
+ 
+     <!-- Left and right controls -->
+     <a class="left carousel-control" href="#myCarousel" role="button" data-slide="prev">
+       <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
+       <span class="sr-only">Previous</span>
+     </a>
+     <a class="right carousel-control" href="#myCarousel" role="button" data-slide="next">
+       <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
+       <span class="sr-only">Next</span>
+     </a>
+   </div>
+
+</div>
+
+
+<div id="Dolar" class="container-fluid bg-grey">
+  <h2 class="text-center">CONTACTO</h2>
+  <div class="row">
+    <div class="col-lg-6 col-md-12 col-xs-12">
+      <h3>Dejanos tus datos de contacto y en menos de 24 horas nos estaremos contactando contigo.</h3>
+      <h3><span class="glyphicon glyphicon-map-marker"></span> CABA, Argentina</h3>
+      <h3><span class="glyphicon glyphicon-phone"></span> +549 1133049049</h3>
+      <h3><span class="glyphicon glyphicon-user"></span> MBA. Joaquin Arregui</h3>
+      <h3><span class="glyphicon glyphicon-certificate"></span> CNV Matricula 1057</h3>
+      <h3><span class="glyphicon glyphicon-envelope"></span> joaquinarregui@extensiosas.com</h3>
+    </div>
+    <div class="col-lg-6 col-md-12 col-xs-12 slideanim">
+      <form name="submit-to-google-sheet">
+      <div class="row">
+        <div class="col-sm-6 form-group">
+          <input class="form-control" id="name" name="fullname" placeholder="Nombre y Apellido" type="text" required>
+        </div>
+        <div class="col-sm-6 form-group">
+          <input class="form-control" id="email" name="email" placeholder="Email" type="email" required>
+        </div>
+      </div>
+      <div class="checkbox" align="left">
+        <h4>Selecciona los temas que estes interesado recibir asesoramiento o realizar operaciones</h4>
+        <label><input type="checkbox" name="cb_dolarmep"> Comprar dólar MEP o enviar/recibir dolares hacia/desde el exterior</label><br><br>
+        <label><input type="checkbox" name="cb_fci"> Invertir en fondos comunes de Inversiones</label><br><br>
+        <label><input type="checkbox" name="cb_apertura_offshore"> Abrir una cuenta de inversión en Estados Unidos</label><br><br>
+        <label><input type="checkbox" name="cb_jubilacion"> Ahorrar para mejorar mi jubilación o para largo plazo</label><br><br>
+        <label><input type="checkbox" name="cb_dividendos"> Invertir en empresas con altos dividendos</label><br><br>
+        <label><input type="checkbox" name="cb_disruptivas"> Invertir en empresas disruptivas</label><br><br>
+        <label><input type="checkbox" name="cb_on"> Invertir en obligaciones negociables u ON</label><br><br>
+        <label><input type="checkbox" name="cb_curso"> Quiero hacer un curso de Mercado de Capitales</label><br>
+      </div>
+      <textarea class="form-control" id="comments" name="comments" placeholder="Comentanos en detalle en que podemos ayudarte" rows="5"></textarea><br>
+      
+      <div class="row">
+        <div class="col-sm-12 form-group">
+          <button class="btn btn-success pull-right" type="submit" id="submit">Enviar</button>
+        </div>
+      </div>
+    </form>
+    </div>
+  </div>
+</div>
+
+
+
+
+<script>
+  const scriptURL = 'https://script.google.com/macros/s/AKfycbzCSm6Tmma3lWOxdS_UjQsr8SHEHMUAuhK4KKpZU6nuX5yJuFVnlEiKTQViTMY3DLfXgg/exec'
+  const form = document.forms['submit-to-google-sheet']
+  form.addEventListener('submit', e => {
+    e.preventDefault()
+    fetch(scriptURL, { method: 'POST', body: new FormData(form) })
+      .then(response => console.log('Success!', response))
+      .catch(error => console.error('Error!', error.message))
+  })
+</script>
+
+<script>
+  $("#submit").click(function(){
+    var nombrepotencialcliente= $("#name").val() ;
+    swal({
+      title: "Excelente",
+      text: "En breve uno de nuestros asesores se contactará contigo!",
+      icon: "success",
+      button: "aceptar",
+    });
+
+  });
+</script>
+
+<!-- NO LO BORRES POR ALGUN MOTIVO BORRA EL DE ARRIBAImage of location/map -->
+<img src="" class="w3-image w3-greyscale-min" style="width:100%">
+
+<footer class="container-fluid text-center">
+  <a href="#myPage" title="To Top">
+    <span class="glyphicon glyphicon-chevron-up"></span>
+  </a>
+</footer>
+
+<script>
+$(document).ready(function(){
+  // Add smooth scrolling to all links in navbar + footer link
+  $(".navbar a, footer a[href='#myPage']").on('click', function(event) {
+    // Make sure this.hash has a value before overriding default behavior
+    if (this.hash !== "") {
+      // Prevent default anchor click behavior
+      event.preventDefault();
+
+      // Store hash
+      var hash = this.hash;
+
+      // Using jQuery's animate() method to add smooth page scroll
+      // The optional number (900) specifies the number of milliseconds it takes to scroll to the specified area
+      $('html, body').animate({
+        scrollTop: $(hash).offset().top
+      }, 900, function(){
+   
+        // Add hash (#) to URL when done scrolling (default click behavior)
+        window.location.hash = hash;
+      });
+    } // End if
+  });
+  
+  $(window).scroll(function() {
+    $(".slideanim").each(function(){
+      var pos = $(this).offset().top;
+
+      var winTop = $(window).scrollTop();
+        if (pos < winTop + 600) {
+          $(this).addClass("slide");
+        }
+    });
+  });
+})
+</script>
+<!--
+<script>
+  var loader = document.getElementById("preloader");
+  window.addEventListener("load",function(){
+    loader.style.display="none";
+  })
+</script>
+-->
+
+</body>
+</html>
