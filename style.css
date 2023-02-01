@@ -1335,10 +1335,10 @@ footer .glyphicon {
     visibility: visible;
   } 
   .img_background_invertir{
-    background-image: url('https://drive.google.com/uc?export=view&id=1qeCPCt0xbiej6l43QyXhkW2U5wX9nWf8') ; 
-    padding: 1px;
-    }
-  
+  background-image: url('https://drive.google.com/uc?export=view&id=1qeCPCt0xbiej6l43QyXhkW2U5wX9nWf8') ; 
+  padding: 1px;
+  }
+
   .data_perfiles_inversores_1 img {
     min-height: 70px;
     min-width: 300px;
