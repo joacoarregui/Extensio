@@ -160,6 +160,7 @@ li {
 }
 .img_background_invertir{
   background-image: url('https://drive.google.com/uc?export=view&id=1qeCPCt0xbiej6l43QyXhkW2U5wX9nWf8') ; 
+  padding: 30px;
   }
 .container-fluid {
   background-color: rgb(242, 243, 247);    
@@ -766,11 +767,11 @@ background-color: #00c8d2;
   size: 15px;
 }
 .data_perfiles_inversores_1 img {
-  width: 1050px;
+  width: 900px;
   height: 150px;
 }
 .data_perfiles_inversores_2 img {
-  width: 900px;
+  width: 800px;
   height: 450px;
 }
 
@@ -1005,6 +1006,11 @@ footer .glyphicon {
     padding:0px;
     visibility: visible;
   } 
+  .img_background_invertir{
+    background-image: url('https://drive.google.com/uc?export=view&id=1qeCPCt0xbiej6l43QyXhkW2U5wX9nWf8') ; 
+    padding: 20px;
+    }
+  
   .data_perfiles_inversores_1 img {
     min-height: 100px;
     height: 100%;
@@ -1132,6 +1138,11 @@ footer .glyphicon {
     padding:0px;
     visibility: visible;
   } 
+  .img_background_invertir{
+    background-image: url('https://drive.google.com/uc?export=view&id=1qeCPCt0xbiej6l43QyXhkW2U5wX9nWf8') ; 
+    padding: 15px;
+    }
+  
   .data_perfiles_inversores_1 img {
     min-height: 100px;
     height: 100%;
@@ -1323,6 +1334,11 @@ footer .glyphicon {
     padding:0px;
     visibility: visible;
   } 
+  .img_background_invertir{
+    background-image: url('https://drive.google.com/uc?export=view&id=1qeCPCt0xbiej6l43QyXhkW2U5wX9nWf8') ; 
+    padding: 1px;
+    }
+  
   .data_perfiles_inversores_1 img {
     min-height: 70px;
     min-width: 300px;
