@@ -311,9 +311,9 @@ background-color: #00c8d2;
   margin-top: -5px;
   margin-left: -5px;
   border-radius:10px ;
-  border: 1px solid #42daeb;
+  border: 1px solid #bceff5;
   color: #ffffff;
-  box-shadow: 10px 10px 20px rgba(0, 97, 119, 0.309);
+  box-shadow: 10px 10px 20px rgba(14, 161, 194, 0.309);
   transition: border-radius  0.5s;
 }
 .textbox_shadow_animation_conta:hover h3 {
