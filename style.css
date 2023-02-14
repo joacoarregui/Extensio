@@ -71,7 +71,7 @@ h6{
   font-weight: 400;
   margin-bottom: 10px;
 } 
-h7{
+.h7{
   font-size: 36px;
   text-transform: bitter;
   color: #00c8d2;
@@ -170,7 +170,9 @@ li {
  
     background-color: #02050a;
     padding: 30px;
+   
 }
+
 .img_background_portada_fondo{
  
   background-color: #116c717a;
@@ -179,9 +181,11 @@ li {
 
 
 .container-fluid {
+  background-color: rgba(242, 243, 247, 0);    
+}
+.fluid{
   background-color: rgb(242, 243, 247);    
   padding: 10px 10px 10px 10px;
-
 }
 .container-nav {
   background-color: rgb(255, 255, 255);    
@@ -189,6 +193,10 @@ li {
   margin-top: -20px;
 }
 .container-fluid img{
+  background-color: rgba(242, 243, 247, 0);    
+  align-items: center;
+}
+.fluid img{
   background-color: rgb(242, 243, 247);    
   padding: 10px 10px 10px 70px;
   align-items: center;
@@ -1362,10 +1370,17 @@ footer .glyphicon {
   }
 
   .container-fluid {
+    text-align: center;
+  }
+  .fluid {
     padding: 10px 0px 10px 0px; 
     text-align: center;
   }
   .container-fluid img{
+    background-color: rgba(242, 243, 247, 0);    
+    align-items: center;
+  }
+  .fluid img{
     background-color: rgb(242, 243, 247);    
     padding: 10px 0px 10px 0px; 
     align-items: center;
@@ -1434,10 +1449,10 @@ footer .glyphicon {
   padding: 1px;
   }
 .img_background_invertir_fondo{
-    padding: 10px;
+    padding: 5px;
 }
 .img_background_portada_fondo{
-  padding: 10px;
+  padding: 5px;
 }
   .data_perfiles_inversores_1 img {
     min-height: 70px;
