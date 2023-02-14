@@ -158,6 +158,10 @@ li {
   padding: 5px 5px;
   margin-top: 5px;
 }
+.prueba{
+  font: 400 15px Lato, Arial;
+
+}
 .img_background_invertir{
   background-image: url('https://drive.google.com/uc?export=view&id=1qeCPCt0xbiej6l43QyXhkW2U5wX9nWf8') ; 
   padding: 30px;
