@@ -813,13 +813,24 @@ background-color: #00c8d2;
   transition: border-radius  0.5s;
   border: 1px solid #1ed0f4; 
 }
+.img-giros:hover img{
+  border-start-start-radius:450px;
+  border-start-end-radius: 450px;
+  border-end-end-radius:450px;
+  border-end-start-radius:450px;
+ 
+  background-color: #85efff0f;
+  box-shadow: 10px 10px 40px rgba(4, 154, 188, 0.515);
+  transition: background-color  1.5s;
+  transition: border-radius  0.5s;
+  border: 1px solid #1ed0f4; 
+}
 .grafico_mediano iframe {
-
-  max-width: 360px;
-  height: 650px;
+  max-width: 350px;
+  height: 600px;
   border-radius: 50px;
-  color: #2da4b1 !important;
-  border: 1px solid #00e5ff2e;
+  color: #2da4b1;
+  border:2px solid #2beaff;
   padding: 5px;
   margin: 5px; 
   visibility: visible;
@@ -829,7 +840,7 @@ background-color: #00c8d2;
   height: 470px;
   border-radius: 20px;
   color: #2da4b1 !important;
-  border: 1px solid #00e5ff2e;
+  border: 1px solid #2da4b1;
   background-color: solid rgb(253, 253, 253) !important;
   visibility: visible;
   size: 15px;
@@ -1076,14 +1087,9 @@ footer .glyphicon {
   .grafico_mediano iframe {
     flex: auto;
     max-width: 100%;
-    
     border-radius: 50px;
-    color: #2da4b1 !important;
-    border: 1px solid #00e5ff2e;
     padding:0px;
     margin: 0px; 
-    visibility: visible;
- 
   }
   .grafico_grande iframe {
   
@@ -1213,14 +1219,9 @@ footer .glyphicon {
   .grafico_mediano iframe {
     flex: auto;
     max-width: 100%;
-    
     border-radius: 50px;
-    color: #2da4b1 !important;
-    border: 1px solid #00e5ff2e;
     padding:0px;
     margin: 0px; 
-    visibility: visible;
- 
   }
   .grafico_grande iframe {
   
@@ -1422,27 +1423,14 @@ footer .glyphicon {
     margin-top: 0px;
   }
   .grafico_mediano iframe {
-    flex: auto;
-    max-width: 100%;
-    
-    border-radius: 50px;
-    color: #2da4b1 !important;
-    border: 1px solid #00e5ff2e;
     padding:0px;
     margin: 0px; 
-    visibility: visible;
- 
   }
   .grafico_grande iframe {
-  
     height: 100%;
     min-height: 390px;
     border-radius: 10px;
-    color: #2da4b1 !important;
-    border: 1px solid #00e5ff2e;
-    background-color: solid rgb(253, 253, 253) !important;
     padding:0px;
-    visibility: visible;
   } 
   .img_background_invertir{
   background-image: url('https://drive.google.com/uc?export=view&id=1qeCPCt0xbiej6l43QyXhkW2U5wX9nWf8') ; 
