@@ -5,8 +5,7 @@
   <title>Invertir</title>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-
- 
+  
 <!-- originales -->
 
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
@@ -18,12 +17,6 @@
   <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/js/bootstrap.bundle.min.js"></script>
 
-
-  <!-- script margin -->
-<!--  <script src="https://cdn.jsdelivr.net/npm/jquery@3.6.0/dist/jquery.slim.min.js"></script>
-  <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"></script>
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/js/bootstrap.bundle.min.js"></script>-->
-
 <!-- originales -->
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
@@ -32,9 +25,7 @@
   <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
   <link rel="preload" href="index.js" as="script">
   <link rel="preload" href="tabla_futuros.js" as="script">
-  <script src="./tabla_futuros.js"></script>
-  <link rel="preload" href="tabla_futuros2.js" as="script">
-  <script src="./tabla_futuros2.js"></script>
+
   <!-- script sort tables -->
 <base target="_top">
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js" ></script>
@@ -51,8 +42,9 @@
     <link rel="preload" href="API_GSHEET.py" as script>
   
     <link rel="icon" href="https://drive.google.com/uc?export=view&id=1TDpO7D-xdhEp-Q6YrhFCVj-OyfAE9iEQ" type="image/x-icon">
-    
-   
+
+
+
 
  
 </head>
@@ -94,8 +86,6 @@
 <br>
 <br>
 <br>
-
-
 
 
 <!--SERVICIOS PRIMEROS -->
@@ -163,12 +153,15 @@
       <div class="grafico_mediano">
       <div class="col-md-4  col-sm-6 col-xs-12">
         <iframe class=chart seamless frameborder="0" scrolling="no" src="https://docs.google.com/spreadsheets/d/e/2PACX-1vTsMxukhIWNVkgwsL3PK4DK5v2w73K__jVUDH9c9wM2hTcDx-DX568cqEiVhnANGLGsFGUnO0wHNCHL/pubchart?oid=975602410&amp;format=interactive"></iframe>
+
+
       </div>
     </div>
 
   </div>
 </div>
 <div class="container">
+
 
 </div>
 <!-- Container (Invertir Section) -->
@@ -191,43 +184,6 @@
 </div>
 
 
-<!--
-<script>
-  const requestUrl = 'https://opensheet.elk.sh/1SJPq2Ics3_0r1pbWqmK0pbKZ-1KObviEnz9De5TUS7o/json';
-
-const requestJSON = async url => {
-  const response = await (await fetch(url)).json();
-  concepto.innerHTML = response.concepto;
-  vencimiento.innerHTML = response.vencimiento;
-  precio.innerHTML = response.precio;
-  devaluacion.innerHTML = response.devaluacion;
-  tea.innerHTML = response.tea;
-  proyeccion.innerHTML = response.proyeccion;
-}
-requestJSON(requestUrl);
-</script>
-
-<h1>Requesting data and inserting</h1>
-
-<table id='overview-table'>
-  <tr>
-    <th>Concepto</th>
-    <th>Vencimiento</th>
-    <th>Precio</th>
-    <th>devaluacion</th>
-    <th>tea</th>
-    <th>proyeccion</th>
-  </tr>
-  <tr>
-    <td id='concepto'></td>
-    <td id='vencimiento'></td>
-    <td id='precio'></td>
-    <td id='devaluacion'></td>
-    <td id='tea'></td>
-    <td id='proyeccion'></td>
-  </tr>
-</table>
--->
 <div id="Dolar" class="container-fluid bg-grey">
   <h2 class="text-center">CONTACTO</h2>
   <div class="row">
@@ -363,14 +319,7 @@ $(document).ready(function(){
   });
 })
 </script>
-<!--
-<script>
-  var loader = document.getElementById("preloader");
-  window.addEventListener("load",function(){
-    loader.style.display="none";
-  })
-</script>
--->
+
 
 </body>
 </html>

@@ -167,6 +167,11 @@ li {
     background-color: #02050a;
     padding: 30px;
 }
+.img_background_portada_fondo{
+ 
+  background-color: #116c717a;
+  padding: 30px;
+}
 
 
 .container-fluid {
@@ -194,7 +199,7 @@ li {
   padding: 10px 10px 10px 90px;
 }
 .servicios-empresas {
-  background-color: rgb(255, 255, 255); 
+  background-color: #02050a; 
  
 }
 .servicios-empresas img {
@@ -210,12 +215,7 @@ li {
   padding-left: 000px;
   text-align: right;  
 }
-.prueba4 iframe{
-  background: transparent;
-  background-color: #00232b;
-  
 
-}
 
 .jumbotron {
   background-color: rgb(252, 253, 255);
@@ -874,13 +874,27 @@ background-color: #00c8d2;
 
 
 
+
 footer .glyphicon {
   font-size: 20px;
   margin-bottom: 20px;
   color: #116c71;
   padding-right: 0px;
 }
-.slideanim {visibility:hidden;padding-right: 10px;padding-left: 30px;}
+.slideanim {
+  visibility:hidden;
+  padding-right: 10px;
+  padding-left: 30px;
+}
+.slideanim_portada {
+  padding-right: 10px;
+  padding-left: 20px;
+  animation-name: slide;
+  -webkit-animation-name: slide;
+  animation-duration: 5s;
+  -webkit-animation-duration: 5s;
+  visibility: visible;
+}
 
 .slide {
   padding-right: 0px;
@@ -911,6 +925,7 @@ footer .glyphicon {
   visibility: visible;
   size: 15px;
 }
+
 
 @keyframes slide {
   0% {
@@ -1042,6 +1057,9 @@ footer .glyphicon {
   .img_background_invertir_fondo{
       padding: 20px;
   }    
+  .img_background_portada_fondo{
+    padding: 20px;
+}  
 
   .data_perfiles_inversores_1 img {
     min-height: 100px;
@@ -1175,6 +1193,9 @@ footer .glyphicon {
     padding: 15px;
     }
   .img_background_invertir_fondo{
+    padding: 15px;
+  }
+  .img_background_portada_fondo{
     padding: 15px;
   }
   .data_perfiles_inversores_1 img {
@@ -1375,6 +1396,9 @@ footer .glyphicon {
 .img_background_invertir_fondo{
     padding: 10px;
 }
+.img_background_portada_fondo{
+  padding: 10px;
+}
   .data_perfiles_inversores_1 img {
     min-height: 70px;
     min-width: 300px;
@@ -1412,5 +1436,9 @@ footer .glyphicon {
     min-height: 330px;
     border-radius: 5px;
     visibility: visible;
+  }
+  .slideanim_portada {
+    padding-right: 1px;
+    padding-left: 1px;
   }
 }
