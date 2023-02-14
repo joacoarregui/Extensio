@@ -86,12 +86,12 @@ h7{
 }
 .h2_technology{
   text-transform: bitter;
-  color: #150443;
+  color: #8f49eb;
   font-weight: 600;
   margin-bottom: 30px;
 }
 .h3_technology{
-  color: #1f0443;
+  color: #8f49eb;
 }
 .h3_finanzas{
   color: #2da4b1;
@@ -311,8 +311,18 @@ background-color: #00c8d2;
   margin-top: -5px;
   margin-left: -5px;
   border-radius:10px ;
+  border: 1px solid #bceff5;
+  color: #ffffff;
+  box-shadow: 10px 10px 20px rgba(14, 161, 194, 0.309);
+  transition: border-radius  0.5s;
+}
+.textbox_shadow_animation_conta:hover h3 {
+  padding: 5px;
+  margin-top: -5px;
+  margin-left: -5px;
+  border-radius:10px ;
   border: 1px solid #42daeb;
-  color: #21a9b8;
+  color: #2da4b1;
   box-shadow: 10px 10px 20px rgba(0, 97, 119, 0.309);
   transition: border-radius  0.5s;
 }
@@ -330,9 +340,9 @@ background-color: #00c8d2;
   margin-top: -5px;
   margin-left: -5px;
   border-radius:10px ;
-  color: #4b0553;
-  border: 1px solid #360349;
-  box-shadow: 10px 10px 20px #5003544c;
+  color: #8f49eb;
+  border: 1px solid #66028a;
+  box-shadow: 10px 10px 20px #78027e4c;
   transition: border-radius  0.5s;
 }
 .col-md-2 h4 {
@@ -802,7 +812,6 @@ background-color: #00c8d2;
   border-radius: 50px;
   color: #2da4b1 !important;
   border: 1px solid #00e5ff2e;
-  background-color: solid rgb(253, 253, 253) !important;
   padding: 5px;
   margin: 5px; 
   visibility: visible;
@@ -1055,7 +1064,6 @@ footer .glyphicon {
     border-radius: 50px;
     color: #2da4b1 !important;
     border: 1px solid #00e5ff2e;
-    background-color: solid rgb(253, 253, 253) !important;
     padding:0px;
     margin: 0px; 
     visibility: visible;
@@ -1193,7 +1201,6 @@ footer .glyphicon {
     border-radius: 50px;
     color: #2da4b1 !important;
     border: 1px solid #00e5ff2e;
-    background-color: solid rgb(253, 253, 253) !important;
     padding:0px;
     margin: 0px; 
     visibility: visible;
@@ -1289,15 +1296,15 @@ footer .glyphicon {
     max-height: 0%;   
   }
 
-  h1{font-size: 35px} 
-  h2{font-size: 25px} 
-  h3{font-size: 20px} 
-  h4{font-size: 15px} 
-  h5{font-size: 25px} 
-  h6{font-size: 15px} 
-  h7{font-size: 20px}
-  p{font-size: 12px} 
-  l1{font-size: 12px} 
+  h1{font-size: 37px} 
+  h2{font-size: 27px} 
+  h3{font-size: 19px} 
+  h4{font-size: 14px} 
+  h5{font-size: 22px} 
+  h6{font-size: 16px} 
+  h7{font-size: 26px}
+  p{font-size: 14px} 
+  l1{font-size: 14px} 
   .jumbotron {
     padding-left: 0px;  
   } 
@@ -1326,6 +1333,11 @@ footer .glyphicon {
   .service-panel-heading:hover h5 {
     font-size: 10px;
   } 
+  .h1_invertir{
+    font-size: 36px;
+    padding: 2px;
+    padding-top: 5px;
+  }
   .slideanim img{
     padding-right: 10px; 
     padding-left: 5px; 
@@ -1394,7 +1406,6 @@ footer .glyphicon {
     border-radius: 50px;
     color: #2da4b1 !important;
     border: 1px solid #00e5ff2e;
-    background-color: solid rgb(253, 253, 253) !important;
     padding:0px;
     margin: 0px; 
     visibility: visible;
