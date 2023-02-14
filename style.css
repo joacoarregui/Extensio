@@ -86,12 +86,12 @@ h7{
 }
 .h2_technology{
   text-transform: bitter;
-  color: #150443;
+  color: #8f49eb;
   font-weight: 600;
   margin-bottom: 30px;
 }
 .h3_technology{
-  color: #1f0443;
+  color: #8f49eb;
 }
 .h3_finanzas{
   color: #2da4b1;
@@ -158,9 +158,26 @@ li {
   padding: 5px 5px;
   margin-top: 5px;
 }
+.prueba{
+  font: 400 15px Lato, Arial;
+
+}
 .img_background_invertir{
   background-image: url('https://drive.google.com/uc?export=view&id=1qeCPCt0xbiej6l43QyXhkW2U5wX9nWf8') ; 
+  padding: 30px;
   }
+.img_background_invertir_fondo{
+ 
+    background-color: #02050a;
+    padding: 30px;
+}
+.img_background_portada_fondo{
+ 
+  background-color: #116c717a;
+  padding: 30px;
+}
+
+
 .container-fluid {
   background-color: rgb(242, 243, 247);    
   padding: 10px 10px 10px 10px;
@@ -186,15 +203,16 @@ li {
   padding: 10px 10px 10px 90px;
 }
 .servicios-empresas {
-  background-color: rgb(255, 255, 255); 
+  background-color: #02050a; 
  
 }
 .servicios-empresas img {
-  background-color: rgb(255, 255, 255);    
+  background-color: #02050a;    
   margin-left: 0px;
-  margin-top: -50px;
-  border-bottom-left-radius: 100px;
-  border-bottom-right-radius: 100px;
+  margin-top: -10px;
+  border-bottom-left-radius: 200px;
+  border-bottom-right-radius: 200px;
+  max-height: 350px;
 }
 .servicios-empresas-derecha {
   background-color: rgb(255, 255, 255); 
@@ -202,12 +220,7 @@ li {
   padding-left: 000px;
   text-align: right;  
 }
-.prueba4 iframe{
-  background: transparent;
-  background-color: #00232b;
-  
 
-}
 
 .jumbotron {
   background-color: rgb(252, 253, 255);
@@ -299,7 +312,17 @@ background-color: #00c8d2;
   margin-left: -5px;
   border-radius:10px ;
   border: 1px solid #42daeb;
-  color: #21a9b8;
+  color: #ffffff;
+  box-shadow: 10px 10px 20px rgba(0, 97, 119, 0.309);
+  transition: border-radius  0.5s;
+}
+.textbox_shadow_animation_conta:hover h3 {
+  padding: 5px;
+  margin-top: -5px;
+  margin-left: -5px;
+  border-radius:10px ;
+  border: 1px solid #42daeb;
+  color: #2da4b1;
   box-shadow: 10px 10px 20px rgba(0, 97, 119, 0.309);
   transition: border-radius  0.5s;
 }
@@ -317,9 +340,9 @@ background-color: #00c8d2;
   margin-top: -5px;
   margin-left: -5px;
   border-radius:10px ;
-  color: #4b0553;
-  border: 1px solid #360349;
-  box-shadow: 10px 10px 20px #5003544c;
+  color: #8f49eb;
+  border: 1px solid #66028a;
+  box-shadow: 10px 10px 20px #78027e4c;
   transition: border-radius  0.5s;
 }
 .col-md-2 h4 {
@@ -382,7 +405,24 @@ background-color: #00c8d2;
   border: 1px solid #2da4b1;
   border-radius:10px ;
 }
-
+.btn-broker {
+  margin: 5px ;
+  background-color: #ffffff;
+  color: #2da4b1;
+  font-size:40px ;
+  padding: 5px;
+}
+.btn-broker:hover {
+  border-radius:20px ;
+  font-size:40px ;
+  border: 1px solid #2da4b1;
+  background-color: #ffffff;
+  color: #116c71 ;
+  box-shadow: 10px 10px 40px rgba(0, 97, 119, 0.309);
+  transition: background-color  0.5s;
+  transition: border-radius  0.5s;
+  border: 1px solid #1e89f4; 
+}
 .btn:hover {
   border-radius:20px ;
   border: 1px solid #2da4b1;
@@ -412,6 +452,28 @@ background-color: #00c8d2;
   transition: background-color  0.5s;
   transition: border-radius  0.5s;
   border: 1px solid #1e89f4; 
+}
+.portada_curso{
+  border: 3px solid #1e94f499; 
+  border-radius:20px ;
+  transition: box-shadow 0.5s;
+  width: 400px;
+  height: 400px;
+}
+.portada_curso:hover {
+  box-shadow: 10px 10px 40px rgba(0, 97, 119, 0.309);
+  border-radius:30px ;
+  margin-top: -7px;
+  transition: margin-top 0.3s;
+  border: 2px solid #1e94f499; 
+}
+.portada_curso img{
+  border-radius:20px ;
+  width: 390px;
+  height: 390px;
+}
+.portada_curso:hover img{
+  border-radius:30px ;
 }
 
 .panel {
@@ -750,7 +812,6 @@ background-color: #00c8d2;
   border-radius: 50px;
   color: #2da4b1 !important;
   border: 1px solid #00e5ff2e;
-  background-color: solid rgb(253, 253, 253) !important;
   padding: 5px;
   margin: 5px; 
   visibility: visible;
@@ -766,11 +827,11 @@ background-color: #00c8d2;
   size: 15px;
 }
 .data_perfiles_inversores_1 img {
-  width: 1050px;
+  width: 900px;
   height: 150px;
 }
 .data_perfiles_inversores_2 img {
-  width: 900px;
+  width: 800px;
   height: 450px;
 }
 
@@ -844,13 +905,27 @@ background-color: #00c8d2;
 
 
 
+
 footer .glyphicon {
   font-size: 20px;
   margin-bottom: 20px;
   color: #116c71;
   padding-right: 0px;
 }
-.slideanim {visibility:hidden;padding-right: 10px;padding-left: 30px;}
+.slideanim {
+  visibility:hidden;
+  padding-right: 10px;
+  padding-left: 30px;
+}
+.slideanim_portada {
+  padding-right: 10px;
+  padding-left: 20px;
+  animation-name: slide;
+  -webkit-animation-name: slide;
+  animation-duration: 5s;
+  -webkit-animation-duration: 5s;
+  visibility: visible;
+}
 
 .slide {
   padding-right: 0px;
@@ -881,6 +956,7 @@ footer .glyphicon {
   visibility: visible;
   size: 15px;
 }
+
 
 @keyframes slide {
   0% {
@@ -988,7 +1064,6 @@ footer .glyphicon {
     border-radius: 50px;
     color: #2da4b1 !important;
     border: 1px solid #00e5ff2e;
-    background-color: solid rgb(253, 253, 253) !important;
     padding:0px;
     margin: 0px; 
     visibility: visible;
@@ -1005,6 +1080,17 @@ footer .glyphicon {
     padding:0px;
     visibility: visible;
   } 
+  .img_background_invertir{
+    background-image: url('https://drive.google.com/uc?export=view&id=1qeCPCt0xbiej6l43QyXhkW2U5wX9nWf8') ; 
+    padding: 20px;
+    }
+  .img_background_invertir_fondo{
+      padding: 20px;
+  }    
+  .img_background_portada_fondo{
+    padding: 20px;
+}  
+
   .data_perfiles_inversores_1 img {
     min-height: 100px;
     height: 100%;
@@ -1115,7 +1201,6 @@ footer .glyphicon {
     border-radius: 50px;
     color: #2da4b1 !important;
     border: 1px solid #00e5ff2e;
-    background-color: solid rgb(253, 253, 253) !important;
     padding:0px;
     margin: 0px; 
     visibility: visible;
@@ -1132,6 +1217,16 @@ footer .glyphicon {
     padding:0px;
     visibility: visible;
   } 
+  .img_background_invertir{
+    background-image: url('https://drive.google.com/uc?export=view&id=1qeCPCt0xbiej6l43QyXhkW2U5wX9nWf8') ; 
+    padding: 15px;
+    }
+  .img_background_invertir_fondo{
+    padding: 15px;
+  }
+  .img_background_portada_fondo{
+    padding: 15px;
+  }
   .data_perfiles_inversores_1 img {
     min-height: 100px;
     height: 100%;
@@ -1201,15 +1296,15 @@ footer .glyphicon {
     max-height: 0%;   
   }
 
-  h1{font-size: 35px} 
-  h2{font-size: 25px} 
-  h3{font-size: 20px} 
-  h4{font-size: 15px} 
-  h5{font-size: 25px} 
-  h6{font-size: 15px} 
-  h7{font-size: 20px}
-  p{font-size: 12px} 
-  l1{font-size: 12px} 
+  h1{font-size: 37px} 
+  h2{font-size: 27px} 
+  h3{font-size: 19px} 
+  h4{font-size: 14px} 
+  h5{font-size: 22px} 
+  h6{font-size: 16px} 
+  h7{font-size: 26px}
+  p{font-size: 14px} 
+  l1{font-size: 14px} 
   .jumbotron {
     padding-left: 0px;  
   } 
@@ -1238,6 +1333,11 @@ footer .glyphicon {
   .service-panel-heading:hover h5 {
     font-size: 10px;
   } 
+  .h1_invertir{
+    font-size: 36px;
+    padding: 2px;
+    padding-top: 5px;
+  }
   .slideanim img{
     padding-right: 10px; 
     padding-left: 5px; 
@@ -1245,11 +1345,11 @@ footer .glyphicon {
     max-height: 100%; 
   }
   .servicios-empresas img {
-    background-color: rgb(255, 255, 255);    
-    margin-left: 0px;
-    margin-top: -50px;
-    border-bottom-left-radius: 100px;
-    border-bottom-right-radius: 100px;
+    background-color: #02050a;    
+    margin-left: -3px;
+    margin-top: 0px;
+    border-bottom-left-radius: 50px;
+    border-bottom-right-radius: 50px;
     max-width: 100%; 
     max-height: 330px; 
   }
@@ -1306,7 +1406,6 @@ footer .glyphicon {
     border-radius: 50px;
     color: #2da4b1 !important;
     border: 1px solid #00e5ff2e;
-    background-color: solid rgb(253, 253, 253) !important;
     padding:0px;
     margin: 0px; 
     visibility: visible;
@@ -1323,6 +1422,16 @@ footer .glyphicon {
     padding:0px;
     visibility: visible;
   } 
+  .img_background_invertir{
+  background-image: url('https://drive.google.com/uc?export=view&id=1qeCPCt0xbiej6l43QyXhkW2U5wX9nWf8') ; 
+  padding: 1px;
+  }
+.img_background_invertir_fondo{
+    padding: 10px;
+}
+.img_background_portada_fondo{
+  padding: 10px;
+}
   .data_perfiles_inversores_1 img {
     min-height: 70px;
     min-width: 300px;
@@ -1331,6 +1440,16 @@ footer .glyphicon {
     min-height: 250px;
     height: 100%;
     min-width: 250px;
+  }
+  .portada_curso {
+    max-width: 330px;
+    max-height: 330px;
+
+  }
+  .portada_curso img{
+    max-width: 320px;
+    max-height: 320px;
+
   }
   .tabla_grande iframe {
   
@@ -1350,5 +1469,9 @@ footer .glyphicon {
     min-height: 330px;
     border-radius: 5px;
     visibility: visible;
+  }
+  .slideanim_portada {
+    padding-right: 1px;
+    padding-left: 1px;
   }
 }
