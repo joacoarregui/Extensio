@@ -153,6 +153,7 @@ li {
   font-size: 18px;
   line-height: 1.375em;
   color: #2da4b1;
+  background-color:rgba(252, 252, 252, 0);
   font-weight: 400;
   margin-bottom: 10px;
   padding: 5px 5px;
@@ -882,7 +883,7 @@ background-color: #00c8d2;
   padding-bottom: 1px;
   margin-bottom: 1px;
   padding-right: 5px;
-  background-color: rgb(251, 252, 256);
+  background-color:rgb(252, 255, 255) ;
   z-index: 9999;
   border: 1;
   font-size: 15px;
@@ -890,20 +891,30 @@ background-color: #00c8d2;
   letter-spacing:3px;
   border-radius: 0;
   font-family: Arial, Helvetica, sans-serif, sans-serif;
-  
 }
 
 .navbar li a, .navbar .navbar-brand {
   color: #2da4b1 !important;
+  background-color: #ffffff;
   padding-right: 5px;
   padding-bottom: 1px;
   margin-bottom: 1px;
 }
 .navbar-nav li a:hover, .navbar-nav li.active a {
-  color: #196b74 !important;
-  background-color: #d7f8ff13 !important;
-  transition: box-shadow 0.8s;
+  color: #196b74 ;
+  background-color: #ffffff !important;
+  transition: box-shadow 0.5s;
   border-radius: 7px;
+  box-shadow: 5px 5px 5px #196b744e;
+}
+.dropdown-menu{
+  color: #196b74 ;
+  background-color: rgb(255, 255, 255) solid;
+  transition: box-shadow 0.5s;
+  border-radius: 7px;
+  border-left:#2df3fd64 ;
+  border-top:#2df3fd64 ;
+  border-right:rgba(45, 243, 253, 0.705);
   box-shadow: 5px 5px 5px #196b744e;
 }
 .navbar-default .navbar-toggle {
@@ -920,7 +931,7 @@ background-color: #00c8d2;
 }
 .navbar-default .navbar-toggle .icon-bar{
   color: #187373 solid;
-  background-color: #ffffffc0 ;
+  background-color: rgba(255, 255, 255, 0.753) ;
 }
 .navbar-default img {
   width: 200px;
