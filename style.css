@@ -883,7 +883,7 @@ background-color: #00c8d2;
   padding-bottom: 1px;
   margin-bottom: 1px;
   padding-right: 5px;
-  background-color:rgb(252, 255, 255) ;
+  background-color:rgb(251, 252, 255) ;
   z-index: 9999;
   border: 1;
   font-size: 15px;
@@ -895,7 +895,7 @@ background-color: #00c8d2;
 
 .navbar li a, .navbar .navbar-brand {
   color: #2da4b1 !important;
-  background-color: #ffffff;
+  background-color: rgb(251, 252, 255);
   padding-right: 5px;
   padding-bottom: 1px;
   margin-bottom: 1px;
