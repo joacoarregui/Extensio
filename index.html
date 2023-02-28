@@ -48,9 +48,7 @@
 </head>
 <body>
 <div id="myPage" data-spy="scroll" data-target=".navbar" data-offset="60">
-<!--<div id="preloader"></div>-->  
  <!-- NAVEGADOR -->
-
   <nav class="navbar navbar-default navbar-fixed-top">
     <div calss="container">
       <div class="navbar-header">
@@ -59,8 +57,8 @@
           <span class="icon-bar"></span>
           <span class="icon-bar"></span>   
         </button>
-        <a class="navbar-brand" href="#servicios">
-          <img  src="https://drive.google.com/uc?export=view&id=1vGAtWfwQ_FYv6auzz3fV-IFGdIcJ-xoD" width= 100% height= 100%> 
+        <a class="navbar-brand" href="index">
+          <img  src="https://drive.google.com/uc?export=view&id=1vGAtWfwQ_FYv6auzz3fV-IFGdIcJ-xoD" width= 100% height= 100%>
         </a>
       </div>
       <br>
@@ -68,14 +66,21 @@
       <div class="collapse navbar-collapse" id="myNavbar">
         <div class="container">
           <ul class="nav navbar-nav navbar-right">
-            <li><a href="#servicios">Extensio</a></li>
-            <li><a href="Empresas.html" >Empresas</a></li>
-            <li><a href="dolar.html">Dolar</a></li>
-            <li><a href="Emprendedores.html">Emprendedores</a></li>
-            <li><a href="Invertir.html">Invertir</a></li>
-            <li><a href="datosmercado.html">Datos mercado</a></li>
-            <li><a href="blog.html">Blog</a></li>
-            <li><a href="cursos.html">Cursos</a></li>
+            <li><a href="index">Home</a></li>
+            <li class="dropdown">
+              <a class="dropdown-toggle" data-toggle="dropdown" >Servicios<span class="caret"></span></a>
+              <ul class="dropdown-menu">
+                <li><a href="Empresas">Empresas</a></li>
+                <li><a href="Emprendedores">Emprendedores</a></li>
+                <li><a href="Planes_ahorros">Planes de Ahorros</a></li>
+                <li><a href="Invertir">Inversiones</a></li>
+              </ul>
+            </li>            
+            <li><a href="dolar">Dolar</a></li>
+            <li><a href="Invertir">Invertir</a></li>
+            <li><a href="datosmercado">Mercado</a></li>
+            <li><a href="blog">Blog</a></li>
+            <li><a href="cursos">Cursos</a></li>
           </ul>
         </div>
       </div>
@@ -84,28 +89,29 @@
 <br><br><br>
 
 <!--portada-->
-<div id="inversiones" class="container-fluid">
+<div id="inversiones" class="container-fluid fluid">
   <div class="row">
       <div class="col-lg-6 col-md-6 col-xs-12">
         <div class="container">
-          <h1>  Nosotros Invertimos en </h1>  
-          <h1> Business disruptivos </h1><br>
-          <h2> Para inversores que buscan el crecimiento a largo</h2>
-          <h2> plazo en los mercados de capitales</h2><br>
+          <h1>Nosotros Invertimos en</h1>  
+          <h1>Negocios disruptivos </h1>
+          <h4>Para inversores que buscan el crecimiento a largo plazo</h4>
           <h4>Desde el 2022 nos especializamos en analizar los ETF de ARK Investment y empresas de High Value</h4>
-          <a href="Invertir.html">
-            <button class="btn btn-default btn-lg">Explorá tu perfil</button>
-         </a>
-         <div class="col-sm-4 ">
-          <a target="_blank" href="https://chatwith.io/es/s/extensio">     
-            <button class="btn btn-default btn-lg">Contactanos por whatsapp</button>  
-          </a>     
-         </div> 
-         <div class="col-sm-4 ">
-          <a target="_blank" href="mailto:joaquinarregui@extensiosas.com?cc=info@extensiosas.com&Subject=Consulta%20por%20asistencia%20en%20el%20mercado%20de%20capitales&body=Hola,%0AQuisiera%20consulta%20para%20abrir%20una%20cuenta%20en%20el%20mercado%20de%20capitales.%0ASaludos.">     
-          <button class="btn btn-default btn-lg">Contactanos por mail</button>     
-          </a>  
-         </div>          
+          <div class="col-sm-3">
+            <a href="Invertir.html">
+              <button class="btn btn-default btn-lg">Explorá tu perfil</button>
+            </a>
+          </div>
+          <div class="col-sm-3">
+            <a target="_blank" href="https://chatwith.io/es/s/extensio">     
+              <button class="btn btn-default btn-lg">Contactanos por whatsapp</button>  
+            </a>     
+          </div> 
+          <div class="col-sm-3">
+            <a target="_blank" href="mailto:joaquinarregui@extensiosas.com?cc=info@extensiosas.com&Subject=Consulta%20por%20asistencia%20en%20el%20mercado%20de%20capitales&body=Hola,%0AQuisiera%20consulta%20para%20abrir%20una%20cuenta%20en%20el%20mercado%20de%20capitales.%0ASaludos.">     
+               <button class="btn btn-default btn-lg">Contactanos por mail</button>     
+            </a>  
+          </div>          
         </div>
       </div>
       <div class="slideanim_portada">
@@ -132,7 +138,6 @@
       </div>
     </div>
   </div>
-  <br><br><br>  
 </div>
 <!--servicios primeros-->
 <div id="servicios"  class="img_background_portada_fondo">
@@ -253,11 +258,11 @@
     <div class="col-md-2 col-md-3 col-xs-6">
       <div class="service-panel service-panel-default text-center">
        <div class="service-panel-heading center">
-          <h1>Nuestra opinión en los medios</h1>
-          <h3><strong>Damos notas de opinión e información técnica en los diarios más relevantes de finanzas en Argentina.</strong></h3>
-          <h5><a href="blog.html">Conoce más ➝</a></h5>
-          <h2>Notas en los diarios</h2>
-          <img  src="https://drive.google.com/uc?export=view&id=16coUO8vr2HrvrJ10oC-LBh9aUPKgCqLK" width="350px" height="200px" > 
+          <h1>Haz que el dinero trabaje para vos</h1>
+          <h3><strong>Dar un giro de 180 grados en tus finanzas es fácil, todo comienza con un plan y un cambio para tu futuro. Brindamos asesoría en finanzas personales y las inversiones son en brokers regulados </strong></h3>
+          <h5><a href="Planes_ahorros.html">Conoce más ➝</a></h5>
+          <h2>Planes de ahorro con inversión</h2>
+          <img  src="https://drive.google.com/uc?export=view&id=1NRnOP-V9w-zMqC56w4UtjuYtJC0ybhCA" width="260px" height="200px" > 
         </div>
       </div> 
       <br>     
@@ -293,7 +298,7 @@
 
 
 <!-- apertura cuenta -->
-<div id="apertura" class="container-fluid ">
+<div id="apertura" class="container-fluid fluid">
   <div class="row">
     <div class="row slideanim" >
       <div class="col-lg-4 col-sm-10 col-xs-12">
@@ -302,7 +307,7 @@
          </div>
       </div>
       <div class="col-md-8 col-sm-12 col-xs-12">
-        <h7>Con Extensio podés abrir tu cuenta de manera ágil y 100% digital.</h7>
+        <h2 class="extensio_turquesa">Con Extensio podés abrir tu cuenta de manera ágil y 100% digital.</h2>
         <h2>Trabajamos con los mejores brokers locales e internacionales, para darte un servicio de calidad.</h2>
         <h4><strong>BROKER:</strong> Son sociedades registradas ante organismos de contralor y desarrollan plataformas que usamos para comprar y vender activos financieros y otras operaciones.</h4><br>
         <h4><strong>NOSOTROS:</strong> Nos enfocamos en asesorarte al 100% en las decisiones de inversión, incluso pudiendo ejecutar las operaciones desde mesa de operaciones o por correo por vos si lo deseas.</h4>
@@ -527,7 +532,7 @@
 
 </div>
 
-<div id="Dolar" class="container-fluid bg-grey">
+<div id="Dolar" class="container-fluid fluid bg-grey">
   <h2 class="text-center">CONTACTO</h2>
   <div class="row">
     <div class="col-lg-6 col-md-12 col-xs-12">
@@ -599,7 +604,7 @@
 </script>
 
 
-<footer class="container-fluid text-center">
+<footer class="container-fluid fluid text-center">
   <a href="#myPage" title="To Top">
     <span class="glyphicon glyphicon-chevron-up"></span>
   </a>
