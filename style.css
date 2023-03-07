@@ -786,11 +786,20 @@ background-color: #00c8d2;
   transition: border-radius  1s;
   border: 1px solid #1ed0f4; 
 }
+.img-inversion img {
+  border: 2px solid #000a0c;
+  color: #000a0c;
+  background-color: #000a0c;
+  border-end-end-radius:20px;
+  border-end-start-radius:20px;
+  border-start-end-radius: 20px;
+  border-start-start-radius:20px;
+}
 .img-inversion:hover img{
-  border-end-end-radius:250px;
-  border-end-start-radius:250px;
-  border-start-end-radius: 250px;
-  border-start-start-radius:250px;
+  border-end-end-radius:50px;
+  border-end-start-radius:50px;
+  border-start-end-radius: 50px;
+  border-start-start-radius:50px;
  
   border: 1px solid #00e5ff2e;
   background-color: #85efff0f;
@@ -1204,10 +1213,10 @@ footer .glyphicon {
     padding-left: 5px;
   } 
   .img-inversion:hover img{
-    border-start-start-radius:150px;
-    border-start-end-radius: 150px;
-    border-end-start-radius:150px;
-    border-end-end-radius:150px;
+    border-start-start-radius:50px;
+    border-start-end-radius: 50px;
+    border-end-start-radius:50px;
+    border-end-end-radius:50px;
  
     border: 1px solid #00e5ff2e;
     background-color: #85efff0f;
@@ -1336,10 +1345,10 @@ footer .glyphicon {
     margin-bottom: 10px;
   }
   .img-inversion:hover img{
-    border-start-start-radius:150px;
-    border-start-end-radius: 150px;
-    border-end-start-radius:150px;
-    border-end-end-radius:150px;
+    border-start-start-radius:50px;
+    border-start-end-radius: 50px;
+    border-end-start-radius:50px;
+    border-end-end-radius:50px;
  
     border: 1px solid #00e5ff2e;
     background-color: #85efff0f;
@@ -1548,10 +1557,10 @@ footer .glyphicon {
     text-align: center;
   }
   .img-inversion:hover img{
-    border-start-start-radius:150px;
-    border-start-end-radius: 150px;
-    border-end-start-radius:150px;
-    border-end-end-radius:150px;
+    border-start-start-radius:50px;
+    border-start-end-radius: 50px;
+    border-end-start-radius:50px;
+    border-end-end-radius:50px;
  
     border: 1px solid #00e5ff2e;
     background-color: #85efff0f;
