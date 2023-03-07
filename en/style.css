@@ -963,7 +963,12 @@ background-color: #00c8d2;
   padding-bottom: 1px;
 }
 
-
+.bandera img {
+  width: 45px;
+  height: 30px;
+  margin-top: 18px;
+  margin-bottom: 1px;
+}
 
 
 
@@ -1456,6 +1461,12 @@ footer .glyphicon {
     max-width: 170px; 
     margin-bottom: 1px;
     margin-top: 5px;
+  }
+  .bandera img {
+    width: 60px;
+    height: 40px;
+    margin-top: 1px;
+    margin-bottom: 1px;
   }
   .service-panel-heading img {
     max-width: 100%; 
