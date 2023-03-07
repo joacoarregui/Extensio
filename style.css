@@ -1,3 +1,4 @@
+
 body {
   display:flex;
   font: 400 15px Lato, bitter;
@@ -429,6 +430,24 @@ background-color: #00c8d2;
   transition: border-radius  0.5s;
   border: 1px solid #1e89f4; 
 }
+.btn-mas_servicios {
+  margin: 5px ;
+  color: #ffffff;
+  padding: 5px;
+  text-align: center;
+  
+}
+.btn-mas_servicios:hover {
+  border-radius:20px ;
+  border: 1px solid #2da4b1;
+  background-color: #ffffff;
+  color: #116c71 ;
+  box-shadow: 10px 10px 40px rgba(0, 97, 119, 0.309);
+  transition: background-color  0.5s;
+  transition: border-radius  0.5s;
+  border: 1px solid #1e89f4; 
+  text-align: center;
+}
 .btn:hover {
   border-radius:20px ;
   border: 1px solid #2da4b1;
@@ -628,8 +647,6 @@ background-color: #00c8d2;
   color: #ffffff;
   text-align: left;
   margin-left: 0px;
-  justify-content: center;
-  justify-items: center;
   
 }
 .service-panel:hover {
@@ -641,6 +658,8 @@ background-color: #00c8d2;
   color:#3363b1;
   border-radius: 20px;
   visibility: visible;
+  align-items: center;
+  align-content: center;
 }
 .service-panel-heading {
   color: rgb(255, 255, 255) !important;
@@ -664,8 +683,8 @@ background-color: #00c8d2;
   margin-bottom: 27px; 
 }
 .service-panel-heading:hover h1 {
-  font-size: 25px;
-  color:#1793a1 !important;
+  font-size: 30px;
+  color:#19d5e9 !important;
   background-color: #ffffff !important;
   border-bottom: 1px solid transparent;
   animation-name: slide;
@@ -686,7 +705,7 @@ background-color: #00c8d2;
   size: 0px;
 }
 .service-panel-heading:hover h3 {
-  font-size: 20px;
+  font-size: 27px;
   color: #2da4b1 !important;
   background-color: #ffffff !important;
   border-bottom: 1px solid transparent;
@@ -696,7 +715,7 @@ background-color: #00c8d2;
   -webkit-animation-duration: 1s;
   visibility: visible;
   padding: 0px 10px 0px 10px;
-  margin-top: -15px;
+  margin-top: 0px;
 }
 .service-panel-heading:hover h5 {
   font-size: 17px;
@@ -709,7 +728,7 @@ background-color: #00c8d2;
   -webkit-animation-duration: 1s;
   visibility: visible;
   padding: 0px 10px 10px 10px;
-  margin-top: -25px;
+  margin-top: -5px;
 }
 .service-panel-heading:hover img {
   animation-name: slide;
@@ -760,9 +779,8 @@ background-color: #00c8d2;
   visibility: collapse;
 }
 .service-panel-heading img {
-  justify-items: center;
-  justify-content: center;
   text-align: center;
+  align-items: center;
   padding-top: 5px;
   padding-left: 5px;
   padding-right: 5px;
@@ -770,6 +788,8 @@ background-color: #00c8d2;
   margin-right: 00px;
   margin-bottom: 5px;
   margin-left: 00px;
+  max-width: 400px;    
+  max-height: 300px;  
 }
 
 .img-apertura:hover img{
@@ -1501,23 +1521,23 @@ footer .glyphicon {
   }
   .service-panel-heading img {
     max-width: 100%; 
-    max-height: 150px; 
-    padding-right: 0px;
-    padding-left: 0px;    
+    max-height: 250px; 
+    padding-right: 5px;
+    padding-left: 5px;    
     padding-bottom: 10px;   
     padding-top: 5px; 
   }
   .service-panel-heading:hover h1 {
-    font-size: 17px;
+    font-size: 25px;
   } 
   .service-panel-heading h2 {
-    font-size: 20px;
+    font-size: 28px;
   }   
   .service-panel-heading:hover h3 {
-    font-size: 13px;
+    font-size: 23px;
   }
   .service-panel-heading:hover h5 {
-    font-size: 10px;
+    font-size: 18px;
   } 
   .h1_invertir{
     font-size: 36px;
