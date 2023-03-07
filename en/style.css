@@ -787,26 +787,47 @@ background-color: #00c8d2;
   border: 1px solid #1ed0f4; 
 }
 .img-inversion img {
-  border: 2px solid #000a0c;
+  border: 2px solid #1ed0f4;
   color: #000a0c;
   background-color: #000a0c;
   border-end-end-radius:20px;
   border-end-start-radius:20px;
   border-start-end-radius: 20px;
   border-start-start-radius:20px;
+  height: 450px;
 }
 .img-inversion:hover img{
-  border-end-end-radius:50px;
-  border-end-start-radius:50px;
-  border-start-end-radius: 50px;
-  border-start-start-radius:50px;
- 
-  border: 1px solid #00e5ff2e;
+  border-end-end-radius:60px;
+  border-end-start-radius:60px;
+  border-start-end-radius: 60px;
+  border-start-start-radius:60px;
   background-color: #85efff0f;
   color: #116c71;
-  box-shadow: 10px 10px 40px rgba(4, 154, 188, 0.515);
+  box-shadow: 10px 10px 40px rgba(4, 166, 202, 0.645);
   transition: background-color  1.5s;
-  transition: border-radius  0.5s;
+  transition: border-radius  0.7s;
+  border: 1px solid #1ed0f4; 
+}
+.img-inversion-icons img {
+  border: 2px solid #1ed0f4;
+  color: #000a0c;
+  background-color: #000a0c;
+  border-end-end-radius:20px;
+  border-end-start-radius:20px;
+  border-start-end-radius: 20px;
+  border-start-start-radius:20px;
+  margin: 10px 0px 10px 0px;
+}
+.img-inversion-icons:hover img{
+  border-end-end-radius:30px;
+  border-end-start-radius:30px;
+  border-start-end-radius: 30px;
+  border-start-start-radius:30px;
+  background-color: #85efff0f;
+  color: #116c71;
+  box-shadow: 5px 5px 25px rgba(4, 166, 202, 0.549);
+  transition: background-color  1.5s;
+  transition: border-radius  0.7s;
   border: 1px solid #1ed0f4; 
 }
 .img-emprendedor:hover img{
@@ -1557,6 +1578,10 @@ footer .glyphicon {
   .container-servicios-empresas {
     padding: 10px 0px 10px 0px; 
     text-align: center;
+  }
+  .img-inversion img {
+   
+   max-height: 300px;
   }
   .img-inversion:hover img{
     border-start-start-radius:50px;
