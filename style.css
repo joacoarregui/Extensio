@@ -30,26 +30,26 @@ h1 {
   font-size: 50px;
   text-transform: Exo;
   color: #116c71;
-  font-weight: 700;
+  font-weight: 500;
   margin-bottom: 20px;
   line-height: 1.375em;
 }
 h2 {
-  font-size: 36px;
+  font-size: 40px;
   text-transform: bitter;
   color: #116c71;
-  font-weight: 600;
+  font-weight: 400;
   margin-bottom: 30px;
 }
 h3 {
-  font-size: 25px;
+  font-size: 30px;
   text-transform: Exo;
   color: #961f43;
   font-weight: 400;
   margin-bottom: 30px;
 }
 h4 {
-  font-size: 19px;
+  font-size: 25px;
   line-height: 1.375em;
   color: #2da4b1;
   font-weight: 400;
@@ -409,6 +409,11 @@ background-color: #00c8d2;
   margin: 15px 0;
   background-color: #2da4b1;
   color: #fff;
+}
+.btn-lg {
+  margin-bottom: 10px;
+  margin-left: 10px;
+  margin-right: 10px; 
 }
 .btn-white {
   margin: 15px 0;
@@ -819,6 +824,7 @@ background-color: #00c8d2;
   border-start-end-radius: 20px;
   border-start-start-radius:20px;
   height: 450px;
+  margin-top: 5px;
 }
 .img-inversion:hover img{
   border-end-end-radius:60px;
@@ -840,7 +846,7 @@ background-color: #00c8d2;
   border-end-start-radius:20px;
   border-start-end-radius: 20px;
   border-start-start-radius:20px;
-  margin: 10px 0px 10px 0px;
+  margin: 15px 0px 15px 0px;
 }
 .img-inversion-icons:hover img{
   border-end-end-radius:30px;
@@ -1018,6 +1024,8 @@ footer .glyphicon {
   padding-left: 30px;
 }
 .slideanim_portada {
+  margin-top: 10px;
+  margin-bottom: 10px;
   padding-right: 10px;
   padding-left: 20px;
   animation-name: slide;
@@ -1241,8 +1249,9 @@ footer .glyphicon {
     max-height: 150px;  
   }
   .btn-lg {
-    width: 100%;
-    margin-bottom: 35px; 
+    margin-bottom: 10px;
+    margin-left: 10px;
+    margin-right: 10px; 
   }
   img{
     max-width: 100%; 
@@ -1254,7 +1263,6 @@ footer .glyphicon {
     border-start-end-radius: 50px;
     border-end-start-radius:50px;
     border-end-end-radius:50px;
- 
     border: 1px solid #00e5ff2e;
     background-color: #85efff0f;
     color: #116c71;
@@ -1366,7 +1374,7 @@ footer .glyphicon {
   }
   .btn-lg {
     width: 100%;
-    margin-bottom: 35px; 
+    margin-bottom: 10px; 
   }
   .jumbotron {
     padding-left: 5px;  
@@ -1609,6 +1617,7 @@ footer .glyphicon {
   }
   .img-inversion img {
    max-height: 300px;
+   margin-top: 10px;
   }
   .img-inversion:hover img{
     border-start-start-radius:50px;
@@ -1632,6 +1641,12 @@ footer .glyphicon {
     margin-right: 00px;
     margin-left: 0px;
     margin-top: 0px;
+  }
+  .btn-broker {
+    font-size:27px ;
+  }
+  .btn-broker:hover {
+    font-size:27px ;
   }
   .grafico_mediano iframe {
     padding:0px;
@@ -1694,6 +1709,8 @@ footer .glyphicon {
   .slideanim_portada {
     padding-right: 1px;
     padding-left: 1px;
+    margin-top: 10px;
+    margin-bottom: 10px;
   }
   .tablinks{
     padding: 10px 0px 10px 5px;
