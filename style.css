@@ -89,6 +89,12 @@ h6{
   font-weight: 200;
   margin-bottom: 10px;
 }
+.red_white_background{
+  text-transform: bitter;
+  color: #d20062;
+  font-weight: 200;
+  margin-bottom: 10px;
+}
 .h2_golden{
   text-transform: bitter;
   color: #dad83c;
@@ -405,7 +411,7 @@ background-color: #00c8d2;
 }
 
 .btn {
-  margin: 15px 0;
+  margin: 5px;
   background-color: #2da4b1;
   color: #fff;
 }
@@ -415,7 +421,7 @@ background-color: #00c8d2;
   margin-right: 10px; 
 }
 .btn-white {
-  margin: 15px 0;
+  margin: 5px;
   background-color: #fff;
   color: #2da4b1;
   border: 1px solid #2da4b1;
@@ -442,7 +448,7 @@ background-color: #00c8d2;
 .btn-mas_servicios {
   margin: 5px ;
   color: #ffffff;
-  padding: 5px;
+
   text-align: center;
   
 }
@@ -521,7 +527,7 @@ background-color: #00c8d2;
   border: 1px solid #3ec5d4 ;
 }
 .panel:hover {
-  box-shadow: 10px 10px 40px rgba(0, 97, 119, 0.309);
+  box-shadow: 10px 10px 40px rgba(0, 97, 119, 0.508);
   border-radius:23px ;
   margin-top: -7px;
   transition: margin-top 0.3s;
@@ -656,7 +662,18 @@ background-color: #00c8d2;
   border:1px solid #74c5d3;
   color: rgb(255, 255, 255);
   background-color: #0395a5be;
-  padding: 25px;
+  padding: 15px;
+  border-top-left-radius: 20px;
+  border-top-right-radius: 20px;
+  border-bottom-left-radius: 20px;
+  border-bottom-right-radius: 20px;
+}
+.panel-heading_variante2 {
+  border-radius:20px  ;
+  border:1px solid #74c5d3;
+  color: rgb(255, 255, 255);
+  background-color: #a50336be;
+  padding: 15px;
   border-top-left-radius: 20px;
   border-top-right-radius: 20px;
   border-bottom-left-radius: 20px;
@@ -1263,9 +1280,9 @@ footer .glyphicon {
     max-height: 150px;  
   }
   .btn-lg {
-    margin-bottom: 10px;
-    margin-left: 10px;
-    margin-right: 10px; 
+    margin-bottom: 5px;
+    margin-left: 5px;
+    margin-right: 5px; 
   }
   img{
     max-width: 100%; 
@@ -1388,7 +1405,7 @@ footer .glyphicon {
   }
   .btn-lg {
     width: 100%;
-    margin-bottom: 10px; 
+    margin-bottom: 5px; 
   }
   .jumbotron {
     padding-left: 5px;  
@@ -1661,6 +1678,10 @@ footer .glyphicon {
   }
   .btn-broker:hover {
     font-size:27px ;
+  }
+  .btn-lg {
+    margin-left: 1px;
+    margin-right: 1px; 
   }
   .grafico_mediano iframe {
     padding:0px;
