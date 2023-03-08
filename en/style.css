@@ -1193,7 +1193,7 @@ footer .glyphicon {
   width: 100%; 
   min-height: 450px;
 }
-@media screen and (max-width: 1050px) {
+@media screen and (max-width: 1200px) {
   .navbar li a, .navbar .navbar-brand {
     padding-right: 0px;
     margin-bottom: 0px;

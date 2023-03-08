@@ -789,6 +789,7 @@ background-color: #00c8d2;
   margin-right: 00px;
   margin-bottom: 5px;
   margin-left: 00px;
+  max-height: 300px;
 }
 
 .img-apertura:hover img{
@@ -1010,17 +1011,7 @@ background-color: #00c8d2;
   margin-bottom: 1px;
   padding-bottom: 1px;
 }
-.bandera img {
-  width: 45px;
-  height: 30px;
-  margin-top: 18px;
-  margin-bottom: 1px;
-  border-end-end-radius:5px;
-  border-end-start-radius:5px;
-  border-start-end-radius: 5px;
-  border-start-start-radius:5px;
-  margin-left: 5px;
-}
+
 
 footer .glyphicon {
   font-size: 20px;
@@ -1156,7 +1147,17 @@ footer .glyphicon {
   border-color: #008cd2;
   
 }
-
+.bandera img {
+  width: 45px;
+  height: 30px;
+  margin-top: 18px;
+  margin-bottom: 1px;
+  border-end-end-radius:5px;
+  border-end-start-radius:5px;
+  border-start-end-radius: 5px;
+  border-start-start-radius:5px;
+  margin-left: 5px;
+}
 
 /* Fade in tabs */
 @-webkit-keyframes fadeEffect {
@@ -1193,7 +1194,7 @@ footer .glyphicon {
   width: 100%; 
   min-height: 450px;
 }
-@media screen and (max-width: 1050px) {
+@media screen and (max-width: 1200px) {
   .navbar li a, .navbar .navbar-brand {
     padding-right: 0px;
     margin-bottom: 0px;
@@ -1537,7 +1538,6 @@ footer .glyphicon {
   }
   .service-panel-heading img {
     max-width: 100%; 
-    max-height: 250px; 
     padding-right: 5px;
     padding-left: 5px;    
     padding-bottom: 10px;   
