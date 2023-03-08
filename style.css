@@ -642,8 +642,12 @@ background-color: #00c8d2;
 .panel h4 {
   padding: 0px 10px 0px 10px;
 }
+.panel h3 {
+  padding: 0px 10px 0px 10px;
+}
 .panel-footer {
   border-radius:20px ;
+  border-color: #00c8d2;
   background-color: white !important;
 }
 .panel-footer h3 {
