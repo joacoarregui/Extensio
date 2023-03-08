@@ -1011,15 +1011,6 @@ background-color: #00c8d2;
   padding-bottom: 1px;
 }
 
-.bandera img {
-  width: 45px;
-  height: 30px;
-  margin-top: 18px;
-  margin-bottom: 1px;
-  border-radius: 5px;
-}
-
-
 
 footer .glyphicon {
   font-size: 20px;
@@ -1155,6 +1146,17 @@ footer .glyphicon {
   border-color: #008cd2;
   
 }
+.bandera img {
+  width: 45px;
+  height: 30px;
+  margin-top: 18px;
+  margin-bottom: 1px;
+  border-end-end-radius:5px;
+  border-end-start-radius:5px;
+  border-start-end-radius: 5px;
+  border-start-start-radius:5px;
+  margin-left: 5px;
+}
 
 /* Fade in tabs */
 @-webkit-keyframes fadeEffect {
@@ -1216,6 +1218,7 @@ footer .glyphicon {
     padding-top: 1px;
     padding-bottom: 1px;
   }
+
   .jumbotron {
     padding-left: 5px;  
     margin-left: 5px;
@@ -1341,7 +1344,17 @@ footer .glyphicon {
     padding-bottom: 0px;   
     padding-top: 0px; 
   }  
-   
+  .bandera img {
+    width: 40px;
+    height: 25px;
+    margin-top: 10px;
+    margin-bottom: 1px;
+    border-end-end-radius:5px;
+    border-end-start-radius:5px;
+    border-start-end-radius: 5px;
+    border-start-start-radius:5px;
+    margin-left: 5px;
+  }
 }
 
 @media screen and (max-width: 768px) {
@@ -1472,6 +1485,17 @@ footer .glyphicon {
     margin-bottom: 1px;
     margin-top: 1px;
   }
+  .bandera img {
+    max-width: 45px;
+    max-height: 30px;
+    margin-top: 10px;
+    margin-bottom: 1px;
+    border-end-end-radius:5px;
+    border-end-start-radius:5px;
+    border-start-end-radius: 5px;
+    border-start-start-radius:5px;
+    margin-left: 5px;
+  }  
 }
 
 
@@ -1510,13 +1534,6 @@ footer .glyphicon {
     max-width: 170px; 
     margin-bottom: 1px;
     margin-top: 5px;
-  }
-    .bandera img {
-    width: 60px;
-    height: 40px;
-    margin-top: 1px;
-    margin-bottom: 1px;
-
   }
   .service-panel-heading img {
     max-width: 100%; 
@@ -1691,4 +1708,15 @@ footer .glyphicon {
     margin: 3px 0px 3px 0px;
     font-size: 20px;
   }
+  .bandera img {
+    width: 40px;
+    height: 30px;
+    margin-top: 5px;
+    margin-bottom: 1px;
+    border-end-end-radius:5px;
+    border-end-start-radius:5px;
+    border-start-end-radius: 5px;
+    border-start-start-radius:5px;
+    margin-left: 5px;
+  }  
 }
