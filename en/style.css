@@ -20,14 +20,14 @@ position: fixed;
 z-index: 100;
 }
 p {
-  font-size: 14px;
+  font-size: 0.7vw;
   line-height: 1.375em;
   color: #741b47;
   font-weight: 400;
   margin-bottom: 20px;
 }
 h1 {
-  font-size: 50px;
+  font-size: 2.6vw;
   text-transform: Exo;
   color: #116c71;
   font-weight: 500;
@@ -35,21 +35,21 @@ h1 {
   line-height: 1.375em;
 }
 h2 {
-  font-size: 40px;
+  font-size: 2.08vw;
   text-transform: bitter;
   color: #116c71;
   font-weight: 400;
   margin-bottom: 30px;
 }
 h3 {
-  font-size: 1.875rem;
+  font-size: 1.70vw;
   text-transform: Exo;
   color: #961f43;
   font-weight: 400;
   margin-bottom: 30px;
 }
 h4 {
-  font-size: 25px;
+  font-size: 1.3vw;
   line-height: 1.375em;
   color: #2da4b1;
   font-weight: 400;
@@ -57,13 +57,13 @@ h4 {
 }  
 h5{
   font: open-sans;
-  font-size: 28px;
+  font-size: 1.48vw;
   line-height: 1.375em;
   color: #05e6f2;
   margin-top: 15px;
 } 
 h6{
-  font: 400 15px Lato, Arial;
+  font: 400 0.75vw Lato, Arial;
   font-size: 20px;
   line-height: 1.375em;
   color: #116c71;
@@ -71,7 +71,7 @@ h6{
   margin-bottom: 10px;
 } 
 .h7{
-  font-size: 36px;
+  font-size: 1.9vw;
   text-transform: bitter;
   color: #00c8d2;
   font-weight: 590;
@@ -1126,12 +1126,34 @@ footer .glyphicon {
 .tab {
   overflow: hidden;
   border: 1px solid #add2d6;
+  border-radius: 10px;
   background-color: rgb(245, 245, 245);
   margin-bottom: 5px;
 }
+.tab-invertir {
+  overflow: hidden;
+  border: 1px solid #00c8d2;
+  border-radius: 10px;
+  background-color: #02050a;
+  margin-bottom: 5px;
+}
+.tabcontent img{
+  min-width: 600px;
+  min-height: 500px;
 
+}
 /* Style the buttons inside the tab */
 .tab button {
+  background-color: inherit;
+  float: left;
+  border: none;
+  outline: none;
+  cursor: pointer;
+  padding: 14px 16px;
+  transition: 0.3s;
+  font-size: 17px;
+}
+.tab-invertir button {
   background-color: inherit;
   float: left;
   border: none;
@@ -1148,21 +1170,47 @@ footer .glyphicon {
   transition: border-radius 0.5s;
   border-radius: 7px;
 }
+.tab-invertir button:hover {
+  background-color: #ddd;
+  transition: border-radius 0.5s;
+  border-radius: 7px;
+}
+
+
 .tablinks{
   padding: 15px 0px 15px 10px;
-  margin: 3px 0px 3px 0px;
+  margin: 0px 0px 0px 0px;
   font-size: 30px;
 }
+.tab-invertir-links{
+  padding: 15px 0px 15px 10px;
+  margin: 0px 0px 0px 0px;
+  font-size: 30px;
+}
+
 .tablinks:hover {
   background-color: #ddd;
   transition: border-radius 0.5s;
   border-radius: 7px;
 }
+.tab-invertir-links:hover {
+  background-color: #001e2e;
+  transition: border-radius 0.5s;
+  color: #ffffff;
+  border-radius: 10px;
+}
+
 .tablinks.active {
   background-color:   #008cd2;
   color: #ffffff;
   transition: border-radius 1.0s;
   border-radius: 15px;
+}
+.tab-invertir-links.active {
+  background-color:   #13adcc;
+  color: #ffffff;
+  transition: border-radius 1.0s;
+  border-radius: 10px;
 }
 
 /* Create an active/current tablink class */
@@ -1172,11 +1220,18 @@ footer .glyphicon {
   transition: border-radius 1.0s;
   border-radius: 15px;
 }
-.activaciontab:active{
+.tab-invertir button.active {
   background-color:   #008cd2;
   color: #ffffff;
   transition: border-radius 1.0s;
   border-radius: 15px;
+}
+
+.activaciontab:active{
+  background-color:   #008cd2;
+  color: #ffffff;
+  transition: border-radius 1.0s;
+  border-radius: 10px;
 }
 
 /* Style the tab content */
@@ -1195,7 +1250,8 @@ footer .glyphicon {
   background-color:#2da4b1;
   border-radius: 10px;
   border: 1px solid #c1c7cb;
-  margin: 0px;
+  margin-top: 10px;
+  margin-bottom: 10px;
 }
 
 .topright:hover {
@@ -1418,6 +1474,12 @@ footer .glyphicon {
     border-start-start-radius:5px;
     margin-left: 5px;
   }
+  .tabcontent img{
+    max-width: 600px;
+    max-height: 400px;
+    min-width: 400px;
+    min-height: 300px;
+  }  
 }
 
 @media screen and (max-width: 768px) {
@@ -1562,6 +1624,10 @@ footer .glyphicon {
     border-start-start-radius:5px;
     margin-left: 5px;
   }  
+  .tabcontent img{
+    max-width: 550px;
+    max-height: 350px;
+  }  
 }
 
 
@@ -1593,6 +1659,15 @@ footer .glyphicon {
   h7{font-size: 26px}
   p{font-size: 14px} 
   l1{font-size: 14px} 
+  .conservate_value{
+    padding: 2px;
+  }
+  .moderate_value{
+    padding: 2px;
+  }
+  .high_value{
+    padding: 2px;
+  }
   .jumbotron {
     padding-left: 0px;  
   } 
@@ -1785,9 +1860,20 @@ footer .glyphicon {
   }
   .tablinks{
     padding: 10px 0px 10px 5px;
-    margin: 3px 0px 3px 0px;
+    margin: 0px 0px 0px 0px;
     font-size: 20px;
   }
+  .tab-invertir-links{
+    padding: 10px 0px 10px 5px;
+    margin: 0px 0px 0px 0px;
+    font-size: 20px;
+  }
+  .tabcontent img{
+    max-width: 300px;
+    max-height: 250px;
+    min-width: 250px;
+    min-height: 200px;
+  } 
   .bandera img {
     width: 40px;
     height: 30px;
