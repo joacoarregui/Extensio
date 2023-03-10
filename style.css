@@ -953,10 +953,21 @@ background-color: #00c8d2;
 .data_perfiles_inversores_1 img {
   width: 900px;
   height: 150px;
+  padding-top: 10px;
+  padding-bottom: 10px;
 }
 .data_perfiles_inversores_2 img {
-  width: 800px;
+  width: 600px;
   height: 450px;
+  margin-top: 10px;
+  margin-bottom: 10px;
+  padding-top: 20px;
+  padding-bottom: 20px;
+}
+.data_perfiles_inversores_2 iframe {
+
+  padding-top: 20px;
+  padding-bottom: 20px;
 }
 
 .tabla_grande iframe {
