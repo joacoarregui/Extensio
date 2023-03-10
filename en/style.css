@@ -1,5 +1,4 @@
 
-
 body {
   display:flex;
   font: 400 15px Lato, bitter;
@@ -1139,7 +1138,7 @@ footer .glyphicon {
   border: none;
   outline: none;
   cursor: pointer;
-  padding: 14px 5px;
+  padding: 5px 5px 5px 5px;
   transition: 0.3s;
   font-size: 17px;
 }
@@ -1149,7 +1148,7 @@ footer .glyphicon {
   border: none;
   outline: none;
   cursor: pointer;
-  padding: 14px 5px;
+  padding: 5px 5px 5px 5px;
   transition: 0.3s;
   font-size: 17px;
 }
