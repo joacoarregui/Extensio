@@ -1,0 +1,488 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+  <title>Invest</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+ 
+<!-- originales -->
+
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+  <link href="https://fonts.googleapis.com/css?family=Bitter" rel="stylesheet" type="text/css">
+  <link href="https://fonts.googleapis.com/css?family=Exo" rel="stylesheet" type="text/css">
+
+<!-- script tables -->
+  <script src="https://cdn.jsdelivr.net/npm/jquery@3.6.0/dist/jquery.slim.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/js/bootstrap.bundle.min.js"></script>
+
+
+  <!-- script margin -->
+<!--  <script src="https://cdn.jsdelivr.net/npm/jquery@3.6.0/dist/jquery.slim.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/js/bootstrap.bundle.min.js"></script>-->
+
+<!-- originales -->
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+
+
+  <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+<!-- script sort tables -->
+<base target="_top">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js" ></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.tablesorter/2.31.3/js/jquery.tablesorter.min.js" ></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.tablesorter/2.31.3/js/jquery.tablesorter.widgets.min.js" ></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.tablesorter/2.31.3/js/extras/jquery.tablesorter.pager.min.js" ></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/jquery.tablesorter/2.31.3/css/jquery.tablesorter.pager.min.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/jquery.tablesorter/2.14.0/css/theme.blue.css"  />
+ 
+    <link rel="preload" href="index.js" as="script">
+
+    <link rel=“stylesheet” type=“text/css” href=“./style.css”>
+    <link rel="stylesheet"                 href="./style.css">
+
+    <link rel="icon" href="https://drive.google.com/uc?export=view&id=1TDpO7D-xdhEp-Q6YrhFCVj-OyfAE9iEQ" type="image/x-icon">
+  
+
+
+ 
+</head>
+<body>
+
+<div id="myPage" data-spy="scroll" data-target=".navbar" data-offset="60">
+<!--<div id="preloader"></div>-->  
+ <!-- NAVEGADOR -->
+
+  <nav class="navbar navbar-default navbar-fixed-top">
+    <div calss="container">
+      <div class="navbar-header">
+        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>   
+        </button>
+        <a class="navbar-brand" href="https://www.extensiosas.com/en/home-en">
+          <img  src="https://drive.google.com/uc?export=view&id=1rlo6XgU0BHv0q0SLJtuqaKE0sibLKw2u" width= 100% height= 100%> 
+        </a>
+      </div>
+      <br>
+        <!-- aca se definen los ID que mas abajo se mencionan para poder ir a los temas de las barras-->
+      <div class="collapse navbar-collapse" id="myNavbar">
+        <div class="container">
+          <ul class="nav navbar-nav navbar-right">
+            <li><a href="home">Home</a></li>
+            <li><a href="outsourcing-services-en">Outsorcing</a></li>
+            <li><a href="Saving_plans-en">Saving plans</a></li>
+            <li><a href="Invest-en">Investments</a></li>
+            <li><a href="courses-en">Courses</a></li>
+            <a class="bandera" href="https://www.extensiosas.com/Invertir">
+              <img  src="https://drive.google.com/uc?export=view&id=1flW6P53UykIXNtQihXCbyBI9N3rvzpez" width= 100% height= 100%> 
+            </a>             
+          </ul>
+        </div>
+      </div>
+    </div>
+  </nav>
+<div class="img_background_invertir_fondo">
+    <br><br><br>
+  <div class="tradingview-widget-container">
+    <div class="tradingview-widget-container__widget"></div>
+    <div class="tradingview-widget-copyright"><a href="https://es.tradingview.com/markets/" rel="noopener" target="_blank"></a></div>
+    <script type="text/javascript" src="https://s3.tradingview.com/external-embedding/embed-widget-ticker-tape.js" async>
+    {
+    "symbols": [
+      {"description": "Ark Innovation ","proName": "AMEX:ARKK"},
+      {"description": "Mineras VanEck","proName": "AMEX:GDX"}, 
+      {"description": "Tesla","proName": "NASDAQ:TSLA"},    
+      {"description": "Chinas de Internet","proName": "AMEX:KWEB"},       
+      {"description": "Bioceres Crop","proName": "NASDAQ:BIOX"},    
+      {"description": "Ark Genoma","proName": "AMEX:ARKG"},
+      {"description": "Ark Robotics","proName": "AMEX:ARKQ"}     
+    ],
+    "colorTheme": "dark",
+    "isTransparent": false,
+    "showSymbolLogo": true,
+    "displayMode": "adaptive", 
+    "locale": "es"
+  }
+    </script>
+  </div>
+</div>
+<!--SERVICIOS PRIMEROS -->
+<div id="servicios" class="jumbotron text-center">
+  <h1 class="extensio_turquesa">Invest with our disruptive innovation approach!</h1> 
+  <h2 class="extensio_turquesa">Starting in 2022, we decided to allocate a large portion of our portfolio to leading companies and innovation enablers, to help you achieve your long-term financial goals.</h2> 
+</div>
+
+<div  class="img_background_invertir_fondo">
+  <div class="container-fluid text-center">
+    <h1 class="extensio_turquesa" > Investment strategies </h1>  
+
+    <div class="tab-invertir">
+      <div class="col-lg-3 col-md-3  col-sm-12 col-xs-12 tab-invertir-links text-center" onclick="openCity(event, 'conservate_value_strategy')">Conservate Value</div>
+      <div class="col-lg-3 col-md-3 col-sm-12 col-xs-12 tab-invertir-links text-center"onclick="openCity(event, 'moderate_value_strategy')">Moderate Value</div>
+      <div class="col-lg-3 col-md-3 col-sm-12 col-xs-12 tab-invertir-links text-center"onclick="openCity(event, 'high_value_strategy')">High Value</div>
+      <div class="col-lg-3 col-md-3 col-sm-12 col-xs-12 tab-invertir-links text-center"onclick="openCity(event, 'ultra_conservate_value_strategy')">Ultra Conservate Value</div>
+    </div>
+  
+  <div id="conservate_value_strategy" class="tabcontent">
+    <div class="col-lg-12  col-md-12 col-sm-12 col-xs-12 ">
+      <div class="col-lg-6 col-md-5 col-sm-12 col-xs-12 "><br>
+        <img  src="https://tuderechoasaber.com.do/wp-content/uploads/2019/02/blockchain.gif" >
+      </div> 
+      <div class="col-lg-6  col-md-5 col-sm-12 col-xs-12 ">
+        <h3 class="conservate_value"> Our investment strategy focuses on companies with projectable fundamental value, especially those that have demonstrated a solid track record of more than 20 years in the capital markets.  </h3>
+        <h3 class="conservate_value"> In order to minimize medium-term volatility, we combine these investments with low exposure to disruptive innovation companies or those with high long-term fundamental value.</h3>
+        <h3 class="conservate_value"> This strategy is designed for conservative investors with an investment horizon of at least 2 years and low to moderate risk tolerance.</h3>
+        <a  href="Invertir_Conservate_Value">     
+          <button class="btn btn-default btn-lg">See more ➡</button>  
+       </a>    
+      </div> 
+    </div>
+    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<button onclick="this.parentElement.style.display='none'" class="topright">Close profile</button>
+    <br>
+  </div>
+
+  <div id="moderate_value_strategy" class="tabcontent">
+    <div class="col-lg-12  col-md-12 col-sm-12 col-xs-12 ">
+      <div class="col-lg-6  col-md-6 col-sm-12 col-xs-12 "><br>
+        <img  src="https://thumbs.gfycat.com/EveryOptimisticGemsbok-size_restricted.gif" >
+      </div> 
+      <div class="col-lg-6  col-md-6 col-sm-12 col-xs-12 ">
+        <h3 class="moderate_value"> Our investment strategy aims to provide moderate exposure to disruptive innovation through companies with projectable fundamental value in order to minimize volatility in exchange for slightly lower returns.  </h3>
+        <h3 class="moderate_value"> We focus on companies that focus on areas such as artificial intelligence, robotics, energy storage and DNA sequencing, and combine them with companies that have more predictable and stable revenues to achieve a balance in the portfolio.</h3>
+        <h3 class="moderate_value"> This strategy is designed for moderate investors with an investment horizon of at least 5 years and a medium risk tolerance.</h3>
+        <a  href="Invertir_Moderate_Value">     
+          <button class="btn btn-default btn-lg">See more ➡</button>  
+       </a>    
+      </div> 
+    </div>
+    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<button onclick="this.parentElement.style.display='none'" class="topright">Close Profile</button>
+    <br>
+  </div>
+
+  <div id="high_value_strategy" class="tabcontent">
+    <div class="col-lg-12  col-md-12 col-sm-12 col-xs-12 ">
+      <div class="col-lg-6  col-md-6 col-sm-12 col-xs-12 "><br>
+        <img  src="https://thumbs.gfycat.com/AgonizingObviousHochstettersfrog-size_restricted.gif" >
+      </div> 
+      <div class="col-lg-6  col-md-6 col-sm-12 col-xs-12 ">
+        <h3 class="high_value"> Our investment strategy focuses on providing broad exposure to disruptive innovation and companies with high fundamental value. </h3>
+        <h3 class="high_value">We focus on areas of innovation such as artificial intelligence, robotics, energy storage, DNA sequencing and blockchain technology, which will transform industries and create significant growth in the future.</h3>
+        <h3 class="high_value"> If you are looking for a bold investment with an investment horizon of at least 5 years and a high risk tolerance, this strategy may be for you.</h3>
+        <a  href="Invertir_High_Value">     
+          <button class="btn btn-default btn-lg">Explorar perfil ➡</button>  
+       </a>    
+      </div> 
+    </div>
+    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<button onclick="this.parentElement.style.display='none'" class="topright">Close Profile</button>
+    <br>
+  </div>
+
+  <div id="ultra_conservate_value_strategy" class="tabcontent">
+    <div class="col-lg-12  col-md-12 col-sm-12 col-xs-12 ">
+      <div class="col-lg-6  col-md-6 col-sm-12 col-xs-12 "><br>
+        <img  src="https://wallpapercave.com/uwp/uwp2115607.gif" >
+      </div> 
+      <div class="col-lg-6  col-md-6 col-sm-12 col-xs-12 ">
+        <h3 class="h2_technology">If you are looking for a more stable investment option with lower volatility, we have a fixed income strategy that includes corporate bonds, sovereign debt and dividend funds.  </h3>
+        <h3 class="h2_technology"> This strategy is designed for investors who seek modest returns and want to minimize risk.</h3>
+        <h3 class="h2_technology"> We also combine these funds with others that buy U.S. treasury debt as well as developing country debt to further diversify your portfolio and reduce risk. If you would like to explore this investment option, contact us for more information.</h3>
+        <a target="_blank" href="https://chatwith.io/es/s/extensio">     
+          <button class="btn btn-default btn-lg">whatsapp</button>  
+        </a>  
+      </div> 
+    </div>
+    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<button onclick="this.parentElement.style.display='none'" class="topright">Close Profile</button>
+    <br>
+  </div>
+
+  <script>
+    function openCity(evt, cityName) {
+      var i, tabcontent, tablinks;
+      tabcontent = document.getElementsByClassName("tabcontent");
+      for (i = 0; i < tabcontent.length; i++) {
+        tabcontent[i].style.display = "none";
+      }
+      tablinks = document.getElementsByClassName("tab-invertir-links");
+      for (i = 0; i < tablinks.length; i++) {
+        tablinks[i].className = tablinks[i].className.replace(" active", "");
+      }
+      document.getElementById(cityName).style.display = "block";
+      evt.currentTarget.className += " active";
+    }
+    </script> 
+  </div>     
+</div>
+<div class="img_background_invertir_fondo text-center">
+  <div class="container-fluid  text-center">    
+    <h3 class="extensio_turquesa"> All these investments are made for long-term investment purposes, leaving other types of instruments to be invested for horizons of less than 5 years.</h3>
+    <div  class="col-lg-12 col-sm-12 col-xs-12 text-center">
+      <div class="col-lg-1 col-md-4 col-sm-4 col-xs-4 img-inversion-icons">
+        <a target="_blank" href="https://instagram.com/extensio.finanzas?igshid=NmQ2ZmYxZjA=">
+            <img src="https://drive.google.com/uc?export=view&id=1XPsgqFYNQf5BrhxlTw64o00_MF-j1TGT" width=100% height=100% >  
+        </a>
+      </div>         
+      <div class="col-lg-1 col-md-4 col-sm-4 col-xs-4 img-inversion-icons">
+        <a target="_blank" href="https://www.linkedin.com/in/joaquin-arregui-36918979">
+          <img  src="https://drive.google.com/uc?export=view&id=1DgXbmm9k4oMS4gzporEWxEp3IMHVAxlV" width=100% height=100%  >  
+        </a>
+      </div>
+      <div class="col-lg-1 col-md-4 col-sm-4 col-xs-4 img-inversion-icons">
+        <a target="_blank" href="https://twitter.com/joaquinarregui8">
+          <img  src="https://drive.google.com/uc?export=view&id=1N8bjiwsCo5lUzTYCh9d0B_mlhNySGPqP" width=100% height=100% >        
+        </a>
+      </div>
+      <div class="col-lg-9 col-md-9 col-sm-12 col-xs-12 text-center">
+        <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12 text-center">
+        <a target="_blank" href="https://chatwith.io/es/s/extensio">     
+          <button class="btn btn-default btn-lg">Contact us by whatsapp</button>  
+        </a>     
+        </div>
+        <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12 text-center">
+        <a target="_blank" href="mailto:joaquinarregui@extensiosas.com?cc=info@extensiosas.com&Subject=Consulta%20por%20asistencia%20en%20el%20mercado%20de%20capitales&body=Hola,%0AQuisiera%20consulta%20para%20abrir%20una%20cuenta%20en%20el%20mercado%20de%20capitales.%0ASaludos.">     
+          <button class="btn btn-default btn-lg">Contact us by mail</button>     
+        </a> 
+        </div>
+      </div>
+    </div>
+
+    <!--
+    <div class="col-sm-12 col-xs-12">
+      <div class="lista_despegable">
+        <a href="#demo1" class="btn btn-default btn-lg " data-toggle="collapse">Abrir mi cuenta y mínimo a invertir</a>
+        <div id="demo1" class="collapse">
+          <h6 class="h4_invertir"><strong>Si sos una persona:</strong> Hacé click en la parte de abrir cuenta y en 5 minutos comenzá a operar.</h6>
+          <h6 class="h4_invertir"><strong>Si sos una empresa:</strong> Solo con llenar un formulario y documentación que te pedimos como balances y ddjj de ganancias del año anterior comenzás a operar.</h6>
+          <h6 class="h4_invertir"><strong>No hay mínimos.</strong> Aun así recomendamos que el mínimo sea de usd 1.000 o de 5 sueldos de ingresos a los efectos de darle una importancia y seguimiento.</h6>
+        </div>  
+      </div>
+    </div>        
+    <div class="col-sm-12 col-xs-12">
+      <div class="lista_despegable">
+        <a href="#demo2" class="btn btn-default btn-lg " data-toggle="collapse">Operar en el mercado local y en USA</a>
+        <div id="demo2" class="collapse">
+          <h6 class="h4_invertir"><strong>En el mercado local</strong> se operan valores negociables a través de la plataforma que pone a disposición la sociedad Bolsas y Mercados Argentinos S.A. (BYMA) para que inversores puedan comprar o vender valores negociables a través de Agentes de compensación y liquidación (ALYC) como INVIU, y estos inversores puedan ser asesorados por nosotros.</h6>
+          <h6 class="h4_invertir"><strong>En el mercado de USA</strong> se operan los valores negociables a través de las plataformas que pone a disposición las sociedades New York Stock Exchange (NYSE) y National Association of Securities Dealers Automated Quotation (NASDAQ) para que inversores puedan comprar o vender valores negociables a través de Agentes como interactivebrokers</h6>
+        </div>  
+      </div>
+    </div>
+    <div class="col-sm-12 col-xs-12">
+      <div class="lista_despegable">
+        <a href="#demo3" class="btn btn-default btn-lg " data-toggle="collapse">Títulos y valores que puedo operar</a>
+        <div id="demo3" class="collapse">
+          <h6 class="h4_invertir"><strong>Acciones y ADRS</strong> Títulos que emiten sociedades locales y del exterior que representa el valor de una de las fracciones iguales en que se divide su capital social.</h6>
+          <h6 class="h4_invertir"><strong>Exchange Trade Found (ETF): </strong> ondos superdiversificados de instrumentos que pueden estar compuestos de bonos o de acciones, y estos dependen del objetivo del fondo.</h6>
+          <h6 class="h4_invertir"><strong>Fondos comunes de inversión en dólares y pesos</strong> Diversifica tu cartera con bajos montos de suscripción, y cada fondo es para un fin específico (renta fija, variable o mix).</h6>
+          <h6 class="h4_invertir"><strong>Bonos y títulos en dólares y pesos:</strong> Deuda que emite el estado y ofrece pagar una renta fija determinada.</h6>
+          <h6 class="h4_invertir"><strong>Obligaciones negociables en dólares y pesos: </strong> Deuda que emiten las empresas de primer nivel y ofrecen pagar una renta fija determinada.</h6>
+          <h6 class="h4_invertir"><strong>Acciones y CEDEARS solo en pesos:</strong> Títulos que emiten sociedades locales y del exterior que representa el valor de una de las fracciones iguales en que se divide su capital social.</h6>
+          <h6 class="h4_invertir"><strong>Futuros de commodities: Vas a poder comprar futuros de dólar, oro, petróleo, soja, maiz, etc.</strong> Aun así recomendamos que el mínimo sea de usd 1.000 o de 5 sueldos de ingresos a los efectos de darle una importancia y seguimiento.</h6>
+        </div>  
+      </div>
+      <br><br>
+    </div>   --> 
+</div>
+</div>
+
+<!-- Container (Invertir Section) -->
+<div id="apertura" class="container-fluid fluid">
+  <div class="row">
+    <div class="row slideanim" >
+      <div class="col-lg-6 col-md-12 col-sm-12 col-xs-12">
+        <div class="img-apertura">
+        <img  src="https://drive.google.com/uc?export=view&id=1UDrYIq5_XabmWsCaZOThyWa8CO7YOkhh"> 
+         </div>
+      </div>
+      <div class="col-lg-6 col-md-12 col-sm-12 col-xs-12 text-center">
+        <h2 class="extensio_turquesa">With Us you can open your account in an agile and 100% digital way.</h2>
+        <h2>We work with the best brokers, to give you a quality service.</h2>
+        <h4><strong>BROKERS:</strong> They are companies registered in SEC and develop platforms that we use to buy and sell financial assets and other operations.</h4><br>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!--brokers-->
+<div  class="container-whitecenter text-center">
+  <div class="col-md-12 col-sm-12 col-xs-12">
+    <h1>Get to know the brokers we work with</h1>
+    <div class="lista_despegable">
+      <div class="container">
+        <h2 href="#demo1"class="btn-broker" data-toggle="collapse">In USA</h2>
+      </div>
+      <div id="demo1" class="collapse">
+        <div class="row slideanim">
+          <div class="col-md-4">
+            <img  src="https://drive.google.com/uc?export=view&id=1HvA2cVpVkKI5c4ZgmXUJ_WH4znup73MP" width="170px" height="100px" > 
+            <h4>Interactive Brokers is the best broker for small investors. It has 1.7 million customers, as it has the best commissions and excellent investment platforms. It is listed on NASDAQ and the company's valuation exceeds 25 billion.</h4>
+            <a target="_blank" href="https://www.interactivebrokers.com/es/home.php">     
+              <p>IBKR website ➝</p>
+            </a>
+          </div>
+          <div class="col-md-4">
+            <img  src="https://drive.google.com/uc?export=view&id=1Ekjs3WC8Gpd0dcsZkw-JTyAWC9XrsCOF" width="200px" height="100px" > 
+            <h4>Pershing is a broker for mid-size investors who want a better quality of service. It became a subsidiary of Bank of New York Mellon. It has almost 1.9 trillion dollars under management.</h4>
+            <a target="_blank" href="https://www.pershing.com/">     
+              <p>Pershing website ➝</p>
+            </a>
+          </div>
+          <div class="col-md-4">
+            <br>
+            <img  src="https://drive.google.com/uc?export=view&id=1oSEAR5q6Rs7xHXKlkEbyfXnYLY20hZQI" width="200px" height="70px" > 
+            <h4>Stonex is a broker for small and medium sized investors. They specialize in trading in the commodities and currencies futures market as well as in the physical market, listed on NASDAQ and the company's valuation is around 2 billion dollars.</h4>
+            <a target="_blank" href="https://www.pershing.com/">     
+              <p>StoneX website ➝</p>
+            </a>
+          </div>
+        </div>     
+      </div>  
+    </div>
+    <br>
+
+    <div class="col-sm-2 "></div> 
+    <div class="col-sm-4 ">
+      <a target="_blank" href="https://chatwith.io/es/s/extensio">     
+        <button class="btn btn-default btn-lg">Contact us by whatsapp</button>  
+      </a>     
+    </div> 
+    <div class="col-sm-4 ">
+      <a target="_blank" href="mailto:joaquinarregui@extensiosas.com?cc=info@extensiosas.com&Subject=Consultation%20by%20assistance%20capital%20marjet&body=Hi,%0AI%20wish%20to%20know%20for%20starting%20to%20invest%20.%0ARegards."> 
+        <button class="btn btn-default btn-lg">Contact us by mail</button>     
+      </a>  
+    </div> 
+   <br><br><br><br>
+  </div>
+</div>
+
+<div class="container"></div>
+<!--frases-carrousel-->
+
+
+
+<div id="Dolar" class="container-fluid fluid bg-grey">
+  <h2 class="text-center">CONTACT</h2>
+  <div class="row">
+    <div class="col-lg-6 col-md-12 col-xs-12">
+      <h3>Leave us your contact information and in less than 24 hours we will be contacting you.</h3>
+      <h3><span class="glyphicon glyphicon-map-marker"></span> CABA, Argentina</h3>
+      <h3><span class="glyphicon glyphicon-phone"></span> +549 1133049049</h3>
+      <h3><span class="glyphicon glyphicon-user"></span> MBA. Joaquin Arregui</h3>
+      <h3><span class="glyphicon glyphicon-certificate"></span> CNV Matricula 1057</h3>
+      <h3><span class="glyphicon glyphicon-envelope"></span> joaquinarregui@extensiosas.com</h3>
+    </div>
+    <div class="col-lg-6 col-md-12 col-xs-12 slideanim">
+      <form name="submit-to-google-sheet">
+      <div class="row">
+        <div class="col-sm-6 form-group">
+          <input class="form-control" id="name" name="fullname" placeholder="First and Last name" type="text" required>
+        </div>
+        <div class="col-sm-6 form-group">
+          <input class="form-control" id="email" name="email" placeholder="Email" type="email" required>
+        </div>
+      </div>
+      <div class="checkbox" align="left">
+        <h4>Select the topics you are interested in to receive advice or to perform operations.</h4>
+        <label><input type="checkbox" name="cb_jubilacion"> Saving to improve my retirement or for the long term</label><br><br>
+        <label><input type="checkbox" name="cb_dividendos"> Investing in companies with high dividends</label><br><br>
+        <label><input type="checkbox" name="cb_disruptivas"> Investing in disruptive companies</label><br><br>
+      </div>
+      <textarea class="form-control" id="comments" name="comments" placeholder="Let us know in detail how we can help you" rows="5"></textarea><br>
+      
+      <div class="row">
+        <div class="col-sm-12 form-group">
+          <button class="btn btn-success pull-right" type="submit" id="submit">Send</button>
+        </div>
+      </div>
+    </form>
+    </div>
+  </div>
+</div>
+
+
+
+
+<script>
+  const scriptURL = 'https://script.google.com/macros/s/AKfycbzCSm6Tmma3lWOxdS_UjQsr8SHEHMUAuhK4KKpZU6nuX5yJuFVnlEiKTQViTMY3DLfXgg/exec'
+  const form = document.forms['submit-to-google-sheet']
+  form.addEventListener('submit', e => {
+    e.preventDefault()
+    fetch(scriptURL, { method: 'POST', body: new FormData(form) })
+      .then(response => console.log('Success!', response))
+      .catch(error => console.error('Error!', error.message))
+  })
+</script>
+
+<script>
+  $("#submit").click(function(){
+    var nombrepotencialcliente= $("#name").val() ;
+    swal({
+      title: "Excelent",
+      text: "One of our consultants will contact you shortly!",
+      icon: "success",
+      button: "accept",
+    });
+
+  });
+</script>
+
+<div class="container-fluid fluid bg-grey text-center">
+  <h4 class="text-center">Extensio S.A.S ® Copyright 2022. All rights reserved.</h4>
+</div>
+
+<footer class="container-fluid fluid text-center">
+  <a href="#myPage" title="To Top">
+    <span class="glyphicon glyphicon-chevron-up"></span>
+  </a>
+</footer>
+
+<script>
+$(document).ready(function(){
+  // Add smooth scrolling to all links in navbar + footer link
+  $(".navbar a, footer a[href='#myPage']").on('click', function(event) {
+    // Make sure this.hash has a value before overriding default behavior
+    if (this.hash !== "") {
+      // Prevent default anchor click behavior
+      event.preventDefault();
+
+      // Store hash
+      var hash = this.hash;
+
+      // Using jQuery's animate() method to add smooth page scroll
+      // The optional number (900) specifies the number of milliseconds it takes to scroll to the specified area
+      $('html, body').animate({
+        scrollTop: $(hash).offset().top
+      }, 900, function(){
+   
+        // Add hash (#) to URL when done scrolling (default click behavior)
+        window.location.hash = hash;
+      });
+    } // End if
+  });
+  
+  $(window).scroll(function() {
+    $(".slideanim").each(function(){
+      var pos = $(this).offset().top;
+
+      var winTop = $(window).scrollTop();
+        if (pos < winTop + 600) {
+          $(this).addClass("slide");
+        }
+    });
+  });
+})
+</script>
+<!--
+<script>
+  var loader = document.getElementById("preloader");
+  window.addEventListener("load",function(){
+    loader.style.display="none";
+  })
+</script>
+-->
+
+</body>
+</html>
