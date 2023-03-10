@@ -595,6 +595,7 @@ background-color: #00c8d2;
 }
 .panel-heading1 {
   border-radius:20px ;
+  border-color: #2da4b1;
   color: rgb(255, 255, 255);
   background-color: rgb(238, 118, 118) !important;
   padding: 25px;
