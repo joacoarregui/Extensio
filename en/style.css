@@ -1134,6 +1134,7 @@ footer .glyphicon {
 /* Style the buttons inside the tab */
 .tab button {
   background-color: inherit;
+  font: bitter;
   float: left;
   border: none;
   outline: none;
@@ -1145,6 +1146,7 @@ footer .glyphicon {
 .tab-invertir button {
   background-color: inherit;
   float: left;
+  font: bitter;
   border: none;
   outline: none;
   cursor: pointer;
@@ -1158,11 +1160,13 @@ footer .glyphicon {
   background-color: #ddd;
   transition: border-radius 0.5s;
   border-radius: 7px;
+  font: bitter;
 }
 .tab-invertir button:hover {
   background-color: #ddd;
   transition: border-radius 0.5s;
   border-radius: 7px;
+  font: bitter;
 }
 
 
