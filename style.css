@@ -496,28 +496,7 @@ background-color: #00c8d2;
   transition: border-radius  0.5s;
   border: 1px solid #1e89f4; 
 }
-.portada_curso{
-  border: 3px solid #1e94f499; 
-  border-radius:20px ;
-  transition: box-shadow 0.5s;
-  width: 400px;
-  height: 400px;
-}
-.portada_curso:hover {
-  box-shadow: 10px 10px 40px rgba(0, 97, 119, 0.309);
-  border-radius:30px ;
-  margin-top: -7px;
-  transition: margin-top 0.3s;
-  border: 2px solid #1e94f499; 
-}
-.portada_curso img{
-  border-radius:20px ;
-  width: 390px;
-  height: 390px;
-}
-.portada_curso:hover img{
-  border-radius:30px ;
-}
+
 
 .panel {
   border-radius:23px ;
@@ -1251,6 +1230,12 @@ footer .glyphicon {
   -webkit-animation: fadeEffect 1s;
   animation: fadeEffect 1s;
 }
+.tabcontent_curso {
+  display: none;
+  padding: 5px 5px;
+  -webkit-animation: fadeEffect 1s;
+  animation: fadeEffect 1s;
+}
 /* Style the close button */
 .topright {
   float: center;
@@ -1271,6 +1256,27 @@ footer .glyphicon {
   border-radius: 30px;
   border-color: #008cd2;
   
+}
+.portada_curso_inversor{
+  border: 3px solid #1e94f499; 
+  border-radius:20px ;
+  transition: box-shadow 0.5s;
+
+}
+.portada_curso_inversor:hover {
+  box-shadow: 10px 10px 40px rgba(0, 97, 119, 0.309);
+  border-radius:30px ;
+  margin-top: -7px;
+  transition: margin-top 0.3s;
+  border: 2px solid #1e94f499; 
+}
+.portada_curso_inversor img{
+  border-radius:20px ;
+  height: 400px;
+  width: 400px;
+}
+.portada_curso_inversor:hover img{
+  border-radius:30px ;
 }
 .bandera img {
   width: 45px;
@@ -1830,14 +1836,18 @@ footer .glyphicon {
     height: 100%;
     min-width: 250px;
   }
-  .portada_curso {
+  .portada_curso_inversor {
     max-width: 330px;
     max-height: 330px;
+    margin: 0px;
+    padding: 0px;
 
   }
-  .portada_curso img{
-    max-width: 320px;
-    max-height: 320px;
+  .portada_curso_inversor img{
+    max-width: 300px;
+    max-height: 300px;
+    margin: 0px;
+    padding: 0px;
 
   }
   .tabla_grande iframe {
