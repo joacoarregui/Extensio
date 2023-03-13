@@ -6,7 +6,7 @@ $(document).ready(function() {
     var sheetName = "TEXTO";
   
     // Rango de la hoja de cálculo
-    var range = "C24:H39";
+    var range = "C28:H39";
   
     // URL de la API de Google Sheets
     var url = "https://sheets.googleapis.com/v4/spreadsheets/" + spreadsheetId + "/values/" + sheetName + "!" + range;
