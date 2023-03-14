@@ -1918,53 +1918,42 @@ footer .glyphicon {
 }
 
 
-
-.containerlog {
-  background: #ffffff00;
-  border-radius: 10px;
-  box-shadow: 0 14px 28px rgba(0, 0, 0, 0.25), 
-              0 10px 10px rgba(0, 0, 0, 0.22);
-  position: relative;
-  overflow: hidden;
-  max-width: 100%;
-  min-height: 480px;
+.container-log {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
 }
 
-.form-containerlog {
-  position: absolute;
-  top: 0;
-  height: 100%;
-  transition: all 0.6s ease-in-out;
+form-log {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
-.sign-up-containerlog {
-  left: 0;
-  width: 50%;
-  z-index: 2;
+label-log {
+  margin-bottom: 5px;
 }
 
-.sign-in-containerlog {
-  left: 0;
-  width: 50%;
-  opacity: 0;
-  z-index: 1;
+input-log {
+  padding: 5px;
+  margin-bottom: 10px;
+  border-radius: 5px;
+  border: none;
 }
 
-.containerlog.right-panel-active .sign-up-containerlog {
-  transform: translateX(100%);
+button-log {
+  padding: 10px 20px;
+  background-color: #3498db;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
 }
 
-.containerlog.right-panel-active .sign-in-containerlog {
-  transform: translateX(100%);
-  opacity: 1;
-  z-index: 5;
-  animation: show 0.6s;
+#register-form-log {
+  display: none;
 }
 
-
-.form-containerlog h1 {
-  margin: 0;
-  color: #333;
-  font-size: 24px;
-  font-weight: 600;
-}
+.error-log {
+  color: red
