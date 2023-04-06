@@ -961,20 +961,53 @@ background-color: #00c8d2;
 .container-fluid table {
   max-width: 1800px;
   max-height: 650px;
-  min-height: 350px;
-  min-width: 500px;
+  min-height: 500px;
+  min-width: 700px;
   text-align: center;
   align-items: center;
+  padding: 10px;
 }
-.tabla_high_value tr {
-  border-bottom: 0.5px solid #4c5f61;
-  border-left: 0.5px solid #4c5f61;
-  border-right: 0.5px solid #4c5f61;
-  font-size: 1vw;
-  margin-left: 5px;
-  margin-right: 5px;
-  padding-right: 5px;
-  padding-left: 5px;
+.tabla_high_value span{
+  color: #2da4b1;
+  width: 1px;
+  height: 2px;
+  font-size: 20px;
+}
+.tabla_high_value span:hover{
+  color: #def9ff;
+  transition: background-color  1s;
+}
+.paginate_button{
+  color: #00e5ff;
+  font-size: 20px;
+  background-color:  rgb(0, 10, 21);
+  border:1px solid #00c8d2;
+  padding: 5px;
+  margin: 5px;
+  border-radius: 5px;
+}
+.paginate_button:hover{
+  color: #def9ff;
+  padding: 5px;
+  font-size: 20px;
+  background-color: #00e5ff;
+  border: 1px solid #def9ff;
+  border-radius: 10px;
+  margin: 5px;
+  transition: border-radius 0.5s;
+  box-shadow: 5px 5px 25px rgba(4, 166, 202, 0.549);
+  transition: background-color  1s;
+}
+.tabla_high_value thead {
+  background-color: rgb(0, 10, 21);
+  color: #f7dbb7;
+  text-align: center;
+  align-items: center;
+  margin-left: 10px;
+  margin-right: 10px;
+  padding-right: 10px;
+  padding-left: 10px;
+
 }
 .tabla_high_value th {
   padding-top: 5px;
@@ -984,21 +1017,13 @@ background-color: #00c8d2;
   border-bottom: 1px solid #2da4b1;
   border-top: 1px solid #2da4b1;
   font-size: 1.5vw;
-  margin-left: 5px;
-  margin-right: 5px;
-  padding-right: 5px;
-  padding-left: 5px;
+  margin-left: 10px;
+  margin-right: 10px;
+  padding-right: 10px;
+  padding-left: 10px;
 }
-.tabla_high_value thead {
-  background-color: rgb(0, 10, 21);
-  color: #f7dbb7;
-  text-align: center;
-  align-items: center;
-  margin-left: 5px;
-  margin-right: 5px;
-  padding-right: 5px;
-  padding-left: 5px;
-
+.tabla_high_value th:hover {
+  color:  #def9ff;
 }
 .tabla_high_value tbody {
   background-color: rgb(0, 10, 21);
@@ -1006,16 +1031,30 @@ background-color: #00c8d2;
   text-align: center;
   border-bottom: 2px solid #2da4b1;
   align-items: center;
-  margin-left: 5px;
-  margin-right: 5px;
-  padding-right: 5px;
-  padding-left: 5px;
+  margin-left: 10px;
+  margin-right: 10px;
+  padding-right: 10px;
+  padding-left: 10px;
 }
+.tabla_high_value tr {
+  border-bottom: 0.5px solid #4c5f61;
+  border-left: 0.5px solid #4c5f61;
+  border-right: 0.5px solid #4c5f61;
+  font-size: 1vw;
+  margin-left: 10px;
+  margin-right: 10px;
+  padding-right: 10px;
+  padding-left: 10px;
+}
+
 .dataTables_length{
   visibility:hidden;
   color: #f7dbb7;
 }
-
+.dataTables_filter{
+  visibility:hidden;
+  color: #f7dbb7;
+}
 
 .grafico_movil_costado iframe {
   max-width: 700px;
