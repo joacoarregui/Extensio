@@ -1392,6 +1392,16 @@ footer .glyphicon {
   border-start-start-radius:5px;
   margin-left: 5px;
 }
+.display{
+  max-width: 600px;
+  max-height: 600px;
+  padding-left: 5px;
+  padding-right: 5px;
+  margin-right: 5px;
+  margin-left: 5px;
+  display:inline-table;
+  
+}
 
 /* Fade in tabs */
 @-webkit-keyframes fadeEffect {
@@ -2166,3 +2176,4 @@ button-log {
 
 .error-log {
   color: red
+}
