@@ -2113,6 +2113,12 @@ footer .glyphicon {
     max-width: 320px;
     max-height: 300px;
   }
+  .display{
+    max-width: 300px;
+    max-height: 300px;
+    padding-left: 1px;
+    padding-right: 1px;
+  }
 }
 @import url('https://fonts.googleapis.com/css?family=Montserrat:400,800');
 
