@@ -147,10 +147,10 @@
       <table id="tablaDatos" class="display tabla_high_value text-center">
         <thead >
           <tr> 
+            <th>% total <span class="glyphicon glyphicon-sort"></span></th>
             <th>Ticker <span class="glyphicon glyphicon-sort"></span></th>
-            <th>Nombre <span class="glyphicon glyphicon-sort"></span></th>
-            <th>Mercado Bursatil <span class="glyphicon glyphicon-sort"></span></th>
-            <th>País <span class="glyphicon glyphicon-sort"&nbsp;&nbsp;></span></th>
+            <th>Precio actual <span class="glyphicon glyphicon-sort"></span></th>
+            <th>% P&L <span class="glyphicon glyphicon-sort"&nbsp;&nbsp;></span></th>
           </tr>
         </thead>
         <tbody>
@@ -165,14 +165,14 @@
             "processing": true,
             "serverSide": false,
             "ajax": {
-              "url": "https://sheets.googleapis.com/v4/spreadsheets/1jyzHFthvhOcBf9oDwA7XrkJ1ZS1wGtFZu7rHE0QbJD8/values/D.USA!A3:D10?key=AIzaSyDD6wEmrY190Br80MQCrVDCYgZx4KJic_Y",
+              "url": "https://sheets.googleapis.com/v4/spreadsheets/1jyzHFthvhOcBf9oDwA7XrkJ1ZS1wGtFZu7rHE0QbJD8/values/high_value!B37:J57?key=AIzaSyDD6wEmrY190Br80MQCrVDCYgZx4KJic_Y",
               "dataSrc": "values"
             },
             "columns": [
+              { "data": 6 },
               { "data": 0 },
-              { "data": 1 },
-              { "data": 2 },
-              { "data": 3 }
+              { "data": 4 },
+              { "data": 8 },
             ]
           });
         });
