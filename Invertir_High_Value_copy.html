@@ -155,42 +155,35 @@
 
     
 
-    <script>
+
+<script>
+
       function mostrarTabla() {
-        var xhr = new XMLHttpRequest();
-        xhr.open('GET', 'credentials.json');
-        xhr.onload = function() {
-          if (xhr.status === 200) {
-            var credentials = JSON.parse(xhr.responseText);
-            gapi.client.init({
-              apiKey: credentials.apiKey
-            }).then(function() {
-              return gapi.client.request({
-                'path': 'https://sheets.googleapis.com/v4/spreadsheets/1jyzHFthvhOcBf9oDwA7XrkJ1ZS1wGtFZu7rHE0QbJD8/values/D.USA!A3:D10',
-              });
-            }).then(function(response) {
-              var datos = response.result.values;
-              var tabla = document.getElementById("tablaDatos");
-              for (var i = 0; i < datos.length; i++) {
-                var fila = tabla.insertRow(i);
-                for (var j = 0; j < datos[i].length; j++) {
-                  var celda = fila.insertCell(j);
-                  celda.innerHTML = datos[i][j];
-                }
+        gapi.load('client', function() {
+          gapi.client.init({
+            apiKey: 'AIzaSyDD6wEmrY190Br80MQCrVDCYgZx4KJic_Y'
+          }).then(function() {
+            return gapi.client.request({
+              'path': 'https://sheets.googleapis.com/v4/spreadsheets/1jyzHFthvhOcBf9oDwA7XrkJ1ZS1wGtFZu7rHE0QbJD8/values/D.USA!A3:D10',
+            })
+          }).then(function(response) {
+            var datos = response.result.values;
+            var tabla = document.getElementById("tablaDatos");
+            for (var i = 0; i < datos.length; i++) {
+              var fila = tabla.insertRow(i);
+              for (var j = 0; j < datos[i].length; j++) {
+                var celda = fila.insertCell(j);
+                celda.innerHTML = datos[i][j];
               }
-            }, function(reason) {
-              console.error('Error: ' + reason.result.error.message);
-            });
-          } else {
-            console.error('Error al cargar el archivo credentials.json');
-          }
-        };
-        xhr.send();
+            }
+          }, function(reason) {
+            console.error('Error: ' + reason.result.error.message);
+          });
+        });
       }
-    
+  
       gapi.load('client', mostrarTabla);
     </script>
-    
 
 
     <div  class="col-lg-12 col-sm-12 col-xs-12">
