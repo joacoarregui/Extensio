@@ -1048,11 +1048,11 @@ background-color: #00c8d2;
 }
 
 .dataTables_length{
-  visibility:hidden;
+  visibility:visible;
   color: #f7dbb7;
 }
 .dataTables_filter{
-  visibility:hidden;
+  visibility:visible;
   color: #f7dbb7;
 }
 
