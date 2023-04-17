@@ -151,16 +151,56 @@
             <th>Precio actual <span class="glyphicon glyphicon-sort"></span></th>
             <th>% P&L <span class="glyphicon glyphicon-sort"></span></th>
           </tr>
+          <tr class="table-filter-row"></tr> <!-- Agregar una fila para los filtros -->
         </thead>
         <tbody>
         </tbody>
       </table>
-      </div>
-      <script src="https://cdn.datatables.net/colreorder/1.5.4/js/dataTables.colReorder.min.js"></script>
-      <script src="https://cdn.datatables.net/fixedcolumns/3.3.2/js/dataTables.fixedColumns.min.js"></script>
-      <script src="https://code.jquery.com/jquery-3.5.1.js"></script>
-      <script src="https://cdn.datatables.net/1.10.24/js/jquery.dataTables.min.js"></script>
-      <script src="index.js"></script>
+    </div>
+    
+    <script src="https://cdn.datatables.net/colreorder/1.5.4/js/dataTables.colReorder.min.js"></script>
+    <script src="https://cdn.datatables.net/fixedcolumns/3.3.2/js/dataTables.fixedColumns.min.js"></script>
+    <script src="https://code.jquery.com/jquery-3.5.1.js"></script>
+    <script src="https://cdn.datatables.net/1.10.24/js/jquery.dataTables.min.js"></script>
+    <script>
+    $(document).ready(function() {
+      var table = $('#tablaDatos').DataTable({
+        "processing": true,
+        "serverSide": false,
+        "ajax": {
+          "url": "https://sheets.googleapis.com/v4/spreadsheets/1jyzHFthvhOcBf9oDwA7XrkJ1ZS1wGtFZu7rHE0QbJD8/values/high_value!B37:J57?key=AIzaSyDD6wEmrY190Br80MQCrVDCYgZx4KJic_Y",
+          "dataSrc": "values"
+        },
+        "columns": [
+          { "data": 6 },
+          { "data": 0 },
+          { "data": 4 },
+          { "data": 8 }
+        ],
+        "dom": 'R<"table-filter-container"fr><"table-scrollable"t><"table-footer"ip>', // Agregar "f" para indicar la posición de los filtros
+        "colReorder": true,
+        "fixedColumns": {
+          "leftColumns": 0,
+          "rightColumns": 0
+        }
+      });
+    
+      // Agregar filtros independientes a cada columna
+      $('.tabla_high_value thead tr:eq(1) th').each(function(i) {
+        var title = $(this).text();
+        $('.table-filter-row').append('<th><input type="text" placeholder="Buscar ' + title + '" /></th>');
+    
+        $('input', this).on('keyup change', function() {
+          if (table.column(i).search() !== this.value) {
+            table
+              .column(i)
+              .search(this.value)
+              .draw();
+          }
+        });
+      });
+    });
+    </script>
 
 
 
