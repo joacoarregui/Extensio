@@ -137,6 +137,15 @@
     </div>
     <div class="container"></div>
 
+ <script>
+  "drawCallback": function( settings ) {
+  var api = this.api();
+  var numRows = api.rows({ page: 'current' }).count();
+  var tableContainer = $('.table-scrollable');
+  var newHeight = numRows * api.row(0).node().offsetHeight + tableContainer.prev().outerHeight();
+  tableContainer.height(newHeight);
+}
+ </script>
     <div class="text-center">
       <div class="table-filter-container"></div>
       <table id="tablaDatos" class="display tabla_high_value text-center">
@@ -153,7 +162,6 @@
             <th>Precio actual</th>
             <th>% P&L</th>
           </tr>
-
         </thead>
         <tbody></tbody>
       </table>
@@ -170,7 +178,7 @@
           "processing": true,
           "serverSide": false,
           "ajax": {
-            "url": "https://sheets.googleapis.com/v4/spreadsheets/1jyzHFthvhOcBf9oDwA7XrkJ1ZS1wGtFZu7rHE0QbJD8/values/high_value!B37:J57?key=AIzaSyDD6wEmrY190Br80MQCrVDCYgZx4KJic_Y",
+            "url": "https://sheets.googleapis.com/v4/spreadsheets/1jyzHFthvhOcBf9oDwA7XrkJ1ZS1wGtFZu7rHE0QbJD8/values/high_value!B37:J57?key=YOUR_API_KEY",
             "dataSrc": "values"
           },
           "columns": [
@@ -184,16 +192,24 @@
           "fixedColumns": {
             "leftColumns": 0,
             "rightColumns": 0
+          },
+          "drawCallback": function( settings ) {
+            var api = this.api();
+            var numRows = api.rows({ page: 'current' }).count();
+            var tableContainer = $('.table-scrollable');
+            var newHeight = numRows * api.row(0).node().offsetHeight
+            50; // add some extra height to prevent scrollbar from appearing/disappearing
+          tableContainer.css('height', newHeight + 'px');
           }
-        });
-    
-        // Agregar filtros independientes a cada columna
-        $('.tabla_high_value thead input').on('keyup change', function() {
+          });
+
+          // Add search input functionality
+          $('#tablaDatos thead input').on('keyup change', function () {
           table.column($(this).parent().index()).search(this.value).draw();
-        });
-      });
-    </script>
-    
+          });
+
+          });
+      </script>"    
 
 
 
