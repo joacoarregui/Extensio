@@ -137,21 +137,14 @@
     </div>
     <div class="container"></div>
 
- <script>
-  "drawCallback": function( settings ) {
-  var api = this.api();
-  var numRows = api.rows({ page: 'current' }).count();
-  var tableContainer = $('.table-scrollable');
-  var newHeight = numRows * api.row(0).node().offsetHeight + tableContainer.prev().outerHeight();
-  tableContainer.height(newHeight);
-}
- </script>
+    <div class="container"></div>
+
     <div class="text-center">
       <div class="table-filter-container"></div>
-      <table id="tablaDatos" class="display tabla_high_value text-center">
+      <table id="tablaDatos" class="display tabla_blackground_invertir text-center">
         <thead>
           <tr>
-            <th><input type="text" placeholder="Buscar % total" /></th>
+            <th><input type="text"  placeholder="Buscar % total" /></th>
             <th><input type="text" placeholder="Buscar Ticker" /></th>
             <th><input type="text" placeholder="Buscar Precio actual" /></th>
             <th><input type="text" placeholder="Buscar % P&L" /></th>
@@ -162,6 +155,7 @@
             <th>Precio actual</th>
             <th>% P&L</th>
           </tr>
+
         </thead>
         <tbody></tbody>
       </table>
@@ -172,44 +166,48 @@
     <script src="https://cdn.datatables.net/colreorder/1.5.4/js/dataTables.colReorder.min.js"></script>
     <script src="https://cdn.datatables.net/fixedcolumns/3.3.2/js/dataTables.fixedColumns.min.js"></script>
     
+
     <script>
-      $(document).ready(function() {
-        var table = $('#tablaDatos').DataTable({
-          "processing": true,
-          "serverSide": false,
-          "ajax": {
-            "url": "https://sheets.googleapis.com/v4/spreadsheets/1jyzHFthvhOcBf9oDwA7XrkJ1ZS1wGtFZu7rHE0QbJD8/values/high_value!B37:J57?key=AIzaSyDD6wEmrY190Br80MQCrVDCYgZx4KJic_Y",
-            "dataSrc": "values"
-          },
-          "columns": [
-            { "data": 6 },
-            { "data": 0 },
-            { "data": 4 },
-            { "data": 8 },
-          ],
-          "dom": 'R<"table-scrollable"t><"table-footer"ip>',
-          "colReorder": true,
-          "fixedColumns": {
-            "leftColumns": 0,
-            "rightColumns": 0
-          },
-          "drawCallback": function( settings ) {
-            var api = this.api();
-            var numRows = api.rows({ page: 'current' }).count();
-            var tableContainer = $('.table-scrollable');
-            var newHeight = numRows * api.row(0).node().offsetHeight
-            50; // add some extra height to prevent scrollbar from appearing/disappearing
-          tableContainer.css('height', newHeight + 'px');
-          }
-          });
+     $(document).ready(function() {
+  var table = $('#tablaDatos').DataTable({
+    "processing": true,
+    "serverSide": false,
+    "ajax": {
+      "url": "https://sheets.googleapis.com/v4/spreadsheets/1jyzHFthvhOcBf9oDwA7XrkJ1ZS1wGtFZu7rHE0QbJD8/values/high_value!B37:J57?key=AIzaSyDD6wEmrY190Br80MQCrVDCYgZx4KJic_Y",
+      "dataSrc": "values"
+    },
+    "columns": [
+      { "data": 6 },
+      { "data": 0 },
+      { "data": 4 },
+      { "data": 8 },
+    ],
+    "dom": 'R<"table-scrollable"t><"table-footer"ip>',
+    "colReorder": true,
+    "fixedColumns": {
+      "leftColumns": 0,
+      "rightColumns": 0
+    },
+    "drawCallback": function( settings ) {
+      var api = this.api();
+      var numRows = api.rows( {search: 'applied'} ).nodes().length;
+      var rowHeight = 48; // Set the row height in pixels
+      var tableHeight = numRows * rowHeight;
+      $('.tabla_high_value .table-scrollable').css('height', tableHeight + 'px');
+    }
+  });
 
-          // Add search input functionality
-          $('#tablaDatos thead input').on('keyup change', function () {
-          table.column($(this).parent().index()).search(this.value).draw();
-          });
+  // Agregar filtros independientes a cada columna
+  $('.tabla_high_value thead input').on('keyup change', function() {
+    table.column($(this).parent().index()).search(this.value).draw();
+  });
+});
 
-          });
-      </script>"    
+    </script>
+
+    
+    
+    
 
 
 

@@ -961,19 +961,18 @@ background-color: #00c8d2;
 .container-fluid table {
   max-width: 1800px;
   max-height: 650px;
-  min-height: 500px;
   min-width: 700px;
   text-align: center;
   align-items: center;
   padding: 10px;
 }
-.tabla_high_value span{
+.tabla_blackground_invertir span{
   color: #2da4b1;
   width: 1px;
   height: 2px;
   font-size: 20px;
 }
-.tabla_high_value span:hover{
+.tabla_blackground_invertir span:hover{
   color: #def9ff;
   transition: background-color  1s;
 }
@@ -998,9 +997,9 @@ background-color: #00c8d2;
   box-shadow: 5px 5px 25px rgba(4, 166, 202, 0.549);
   transition: background-color  1s;
 }
-.tabla_high_value thead {
+.tabla_blackground_invertir thead {
   background-color: rgb(0, 10, 21);
-  color: #f7dbb7;
+  color: #00e5ff;
   text-align: center;
   align-items: center;
   margin-left: 10px;
@@ -1009,10 +1008,10 @@ background-color: #00c8d2;
   padding-left: 10px;
 
 }
-.tabla_high_value th {
+.tabla_blackground_invertir th {
   padding-top: 5px;
   background-color: rgb(0, 10, 12);
-  color: #f7dbb7;
+  color: #00e5ff;
   text-align: center;
   border-bottom: 1px solid #2da4b1;
   border-top: 1px solid #2da4b1;
@@ -1022,12 +1021,12 @@ background-color: #00c8d2;
   padding-right: 10px;
   padding-left: 10px;
 }
-.tabla_high_value th:hover {
+.tabla_blackground_invertir th:hover {
   color:  #def9ff;
 }
-.tabla_high_value tbody {
+.tabla_blackground_invertir tbody {
   background-color: rgb(0, 10, 21);
-  color: #f7dbb7;
+  color: #00e5ff;
   text-align: center;
   border-bottom: 2px solid #2da4b1;
   align-items: center;
@@ -1036,7 +1035,7 @@ background-color: #00c8d2;
   padding-right: 10px;
   padding-left: 10px;
 }
-.tabla_high_value tr {
+.tabla_blackground_invertir tr {
   border-bottom: 0.5px solid #4c5f61;
   border-left: 0.5px solid #4c5f61;
   border-right: 0.5px solid #4c5f61;
@@ -1046,14 +1045,25 @@ background-color: #00c8d2;
   padding-right: 10px;
   padding-left: 10px;
 }
+.tabla_blackground_invertir input {
+  padding-top: 5px;
+  background-color: rgb(0, 10, 12);
+  color: #00e5ff;
+  text-align: center;
+  border-radius: 10px;
+  border: 1px solid #2da4b1;
+  font-size: 1.1vw;
+  margin: 5px;
+  padding: 5px;
+}
 
 .dataTables_length{
   visibility:visible;
-  color: #f7dbb7;
+  color: #00e5ff;
 }
 .dataTables_filter{
   visibility:visible;
-  color: #f7dbb7;
+  color: #00e5ff;
 }
 
 .grafico_movil_costado iframe {
@@ -1570,37 +1580,11 @@ footer .glyphicon {
   .container-fluid table {
     max-width: 1000px;
     max-height: 650px;
-    min-height: 600px;
     min-width: 800px;
     text-align: center;
     align-items: center;
   }
-  .tabla_high_value tr {
-    font-size: 3vw;
-    margin-left: 3px;
-    margin-right: 3px;
-    padding-right: 3px;
-    padding-left: 3px
-  }
-  .tabla_high_value th {
-    font-size: 3vw;
-    margin-left: 3px;
-    margin-right: 3px;
-    padding-right: 3px;
-    padding-left: 3px
-  }
-  .tabla_high_value thead {
-    margin-left: 3px;
-    margin-right: 3px;
-    padding-right: 3px;
-    padding-left: 3px
-  }
-  .tabla_high_value tbody {
-    margin-left: 3px;
-    margin-right: 3px;
-    padding-right: 3px;
-    padding-left: 3px
-  }
+
   .grafico_movil_costado iframe {
     max-width: 800px;
     max-height: 450px;
@@ -1748,32 +1732,31 @@ footer .glyphicon {
   .container-fluid table {
     max-width: 1000px;
     max-height: 650px;
-    min-height: 350px;
-    min-width: 650px;
+    min-width: 300px;
     text-align: center;
     align-items: center;
   }
-  .tabla_high_value tr {
+  .tabla_blackground_invertir tr {
     font-size: 3vw;
     margin-left: 1px;
     margin-right: 1px;
     padding-right: 1px;
     padding-left: 1px
   }
-  .tabla_high_value th {
+  .tabla_blackground_invertir th {
     font-size: 3vw;
     margin-left: 1px;
     margin-right: 1px;
     padding-right: 1px;
     padding-left: 1px
   }
-  .tabla_high_value thead {
+  .tabla_blackground_invertir thead {
     margin-left: 1px;
     margin-right: 1px;
     padding-right: 1px;
     padding-left: 1px
   }
-  .tabla_high_value tbody {
+  .tabla_blackground_invertir tbody {
     margin-left: 1px;
     margin-right: 1px;
     padding-right: 1px;
@@ -2042,42 +2025,7 @@ footer .glyphicon {
     padding:0px;
     visibility: visible;
   } 
-  .container-fluid table {
-    max-width: 1800px;
-    max-height: 650px;
-    min-height: 350px;
-    min-width: 330px;
-    text-align: center;
-    align-items: center;
-  }
-  .tabla_high_value tr {
-    font-size: 3vw;
-    margin-left: 0px;
-    margin-right: 0px;
-    padding-right: 0px;
-    padding-left: 0px;
-  }
-  .tabla_high_value th {
-    font-size: 3vw;
-    margin-left: 0px;
-    margin-right: 0px;
-    padding-right: 0px;
-    padding-left: 0px;
-  }
-  .tabla_high_value thead {
-    margin-left: 0px;
-    margin-right: 0px;
-    padding-right: 0px;
-    padding-left: 0px;
-  
-  }
-  .tabla_high_value tbody {
-
-    margin-left: 0px;
-    margin-right: 0px;
-    padding-right: 0px;
-    padding-left: 0px;
-  }
+ 
   .grafico_movil_costado iframe {
     max-width: 390px;
     max-height: 380px;
