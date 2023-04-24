@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>Ejemplo de tabla con datos de Google Sheets</title>
+  <link rel="stylesheet" href="https://cdn.datatables.net/1.10.24/css/jquery.dataTables.min.css">
+</head>
+<body>
+  <div>
+    <label>Nombre de usuario:</label>
+    <input type="text" id="username">
+  </div>
+  <div>
+    <label>Contraseña:</label>
+    <input type="password" id="password">
+  </div>
+  <div>
+    <button id="login-btn">Iniciar sesión</button>
+  </div>
+  <hr>
+  <table id="tablaDatos" class="display">
+    <thead>
+      <tr>
+        <th>Columna 1</th>
+        <th>Columna 2</th>
+        <th>Columna 3</th>
+      </tr>
+    </thead>
+    <tbody></tbody>
+  </table>
+
+  <script src="https://code.jquery.com/jquery-3.5.1.js"></script>
+  <script src="https://cdn.datatables.net/1.10.24/js/jquery.dataTables.min.js"></script>
+
+  <script>
+    var spreadsheetId;
+
+    $(document).ready(function() {
+      $('#login-btn').on('click', function() {
+        var username = $('#username').val();
+        var password = $('#password').val();
+        var controlSheetId = '1m0ofOGAruz-aqPZTukAxrL84hOi8_f3aQzW_I1gWXUA';
+        var apiKey = 'AIzaSyDD6wEmrY190Br80MQCrVDCYgZx4KJic_Y';
+
+        // Realizar petición a la hoja de control para obtener el ID de la hoja de datos
+        $.ajax({
+          url: 'https://sheets.googleapis.com/v4/spreadsheets/' + controlSheetId + '/values/control!A:C?key=' + apiKey,
+          type: 'GET',
+          dataType: 'json',
+          success: function(data) {
+            var controlData = data.values;
+            var found = false;
+            for (var i = 0; i < controlData.length; i++) {
+              if (controlData[i][0] === username && controlData[i][1] === password) {
+                spreadsheetId = controlData[i][2];
+                found = true;
+                break;
+              }
+            }
+            if (found) {
+              loadTable();
+            } else {
+              alert('Usuario o contraseña incorrectos');
+            }
+          },
+          error: function() {
+            alert('No se pudo conectar a la hoja de control');
+          }
+        });
+      });
+    });
+
+    function loadTable() {
+      var dataUrl = 'https://sheets.googleapis.com/v4/spreadsheets/' + spreadsheetId + '/values/high_value!B37:D57?key=AIzaSyDD6wEmrY190Br80MQCrVDCYgZx4KJic_Y';
+      $('#tablaDatos').DataTable({
+        "ajax": {
+          "url": dataUrl,
+          "dataSrc": "values"
+        },
+        "columns": [
+          { "data": 0 },
+          { "data": 1 },
+          { "data": 2 }
+        ]
+      });
+    }
+  </script>
+</body>
+</html>
