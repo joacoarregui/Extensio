@@ -116,6 +116,180 @@
 
 
 
+<div  class="img_background_invertir_fondo">
+  <div class="container-fluid text-center">
+    <h1 class="extensio_turquesa" >  Ranking Fondos de Renta Fija en Pesos </h1>  
+
+    <div class="tab-invertir">
+      <div class="col-lg-3 col-md-3  col-sm-12 col-xs-12 tab-invertir-links text-center" onclick="openCity(event, 'muy_corto_plazo')">Muy corto plazo</div>
+      <div class="col-lg-3 col-md-3 col-sm-12 col-xs-12 tab-invertir-links text-center"onclick="openCity(event, 'corto_plazo')">Corto plazo</div>
+      <div class="col-lg-3 col-md-3 col-sm-12 col-xs-12 tab-invertir-links text-center"onclick="openCity(event, 'indexados_cer')">Indexados a la inflación</div>
+      <div class="col-lg-3 col-md-3 col-sm-12 col-xs-12 tab-invertir-links text-center"onclick="openCity(event, 'indexados_dolar_linked')">Indexados a la devaluación</div>
+    </div>
+  
+  <div id="muy_corto_plazo" class="tabcontent">
+    <div class="col-lg-12  col-md-12 col-sm-12 col-xs-12 text-center">
+      <h2 class="extensio_turquesa">Fondos pesos, horizonte muy corto plazo, con rescate inmediato</h2>  
+      <h4>Si estas buscando manejar de corto plazo los ingresos de tu empresa con los fondos que mejor rinden, te mostramos el ranking de rendimientos de fondos entre bancos tradicionales y los Brokers del mercado de capitales con los que trabaja EXTENSIO S.A.S . Si contemplamos rendimiento en el mes y a 1 año, en el top 3 de rendimientos tenemos a los fondos con los que trabajamos.</h4>
+    </div>
+    
+    <div class="text-center">
+      <div class="table-filter-container"></div>
+      <table id="tablaDatos" class="display tabla_blackground_invertir text-center">
+        <thead>
+          <tr>
+            <th><input type="text"  placeholder="Buscar Ranking" /></th>
+            <th><input type="text" placeholder="Buscar Nombre Fondo" /></th>
+            <th><input type="text" placeholder="Buscar Rend. Mes" /></th>
+            <th><input type="text" placeholder="Buscar Rend Año" /></th>
+            <th><input type="text" placeholder="Buscar Rend. 1 Año" /></th>
+          </tr>
+          <tr>
+            <th>Ranking</th>
+            <th>Fondo</th>
+            <th>Rend. Mes</th>
+            <th>Rend. Año</th>
+            <th>Rend. 1 Año</th>
+          </tr>
+
+        </thead>
+        <tbody></tbody>
+      </table>
+    </div>
+ 
+    <script src="https://code.jquery.com/jquery-3.5.1.js"></script>
+    <script src="https://cdn.datatables.net/1.10.24/js/jquery.dataTables.min.js"></script>
+    <script src="https://cdn.datatables.net/colreorder/1.5.4/js/dataTables.colReorder.min.js"></script>
+    <script src="https://cdn.datatables.net/fixedcolumns/3.3.2/js/dataTables.fixedColumns.min.js"></script>
+    
+
+    <script>
+     $(document).ready(function() {
+  var table = $('#tablaDatos').DataTable({
+    "processing": true,
+    "serverSide": false,
+    "ajax": {
+      "url": "https://sheets.googleapis.com/v4/spreadsheets/1JJf7z5h9-RiJr0rWUpGpdTQPBfIslbyNXtIurq1660s/values/FCI TABLAS ARS!D6:I23?key=AIzaSyDD6wEmrY190Br80MQCrVDCYgZx4KJic_Y",
+      "dataSrc": "values"
+    },
+    "columns": [
+      { "data": 0 },
+      { "data": 2 },
+      { "data": 3 },
+      { "data": 4 },
+      { "data": 5 },
+    ],
+    "dom": 'R<"table-scrollable"t><"table-footer"ip>',
+    "colReorder": true,
+    "fixedColumns": {
+      "leftColumns": 0,
+      "rightColumns": 0
+    },
+    "drawCallback": function( settings ) {
+      var api = this.api();
+      var numRows = api.rows( {search: 'applied'} ).nodes().length;
+      var rowHeight = 48; // Set the row height in pixels
+      var tableHeight = numRows * rowHeight;
+      $('.tabla_high_value .table-scrollable').css('height', tableHeight + 'px');
+    }
+  });
+
+  // Agregar filtros independientes a cada columna
+  $('.tabla_high_value thead input').on('keyup change', function() {
+    table.column($(this).parent().index()).search(this.value).draw();
+  });
+});
+
+    </script>
+    
+
+    <a href="https://www.cnv.gov.ar/SitioWeb/FondosComunesInversion/CuotaPartes"><!-- -->
+      <h4 >Fuente: cnv.gov.ar/FondosComunesInversion</h3> 
+    </a>  
+    <h4>Los datos tomados son a la fecha que se menciona en el inicio de la página para el valor de cuotas partes de los fondos comunes de inversión. Además se toma como premisa que todas las cuotapartes son clase B. El ranking tiene en cuenta para tomar como peso en porcentajes aproximados a  un 60% como rindió en el mes, 20% el rendimiento en el año en el curso y 20% rendimiento a 1 año.</h3> 
+
+    <h4>La colocación de excedentes en estos fondos es para manejar un interés de corto plazo, es decir menor a 45 días. Los mismos siguen la tasa BADLAR menos costos de administración del fondo.</h4>  
+    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<button onclick="this.parentElement.style.display='none'" class="topright">Cerrar Perfil</button>
+    <br>
+  </div>
+ 
+
+
+  <div id="corto_plazo" class="tabcontent">
+    <div class="col-lg-12  col-md-12 col-sm-12 col-xs-12 ">
+      <div class="col-lg-6  col-md-6 col-sm-12 col-xs-12 "><br>
+        <img  src="https://thumbs.gfycat.com/EveryOptimisticGemsbok-size_restricted.gif" >
+      </div> 
+      <div class="col-lg-6  col-md-6 col-sm-12 col-xs-12 ">
+        <h3 class="moderate_value"> Nuestra estrategia de inversión tiene como objetivo brindar una exposición moderada a la innovación disruptiva mediante empresas con valor fundamental proyectable, con el fin de minimizar la volatilidad a cambio de retornos ligeramente más bajos.  </h3>
+        <h3 class="moderate_value"> Nos enfocamos en empresas que se centran en áreas como inteligencia artificial, robótica, almacenamiento de energía y secuenciación de ADN, y las combinamos con empresas que tienen ingresos más predecibles y estables para lograr un equilibrio en la cartera.</h3>
+        <h3 class="moderate_value"> Esta estrategia está diseñada para inversores moderados con un horizonte de inversión de al menos 5 años y una mediana tolerancia al riesgo.</h3>
+        <a  href="Invertir_Moderate_Value">     
+          <button class="btn btn-default btn-lg">Explorar perfil ➡</button>  
+       </a>    
+      </div> 
+    </div>
+    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<button onclick="this.parentElement.style.display='none'" class="topright">Cerrar Perfil</button>
+    <br>
+  </div>
+
+  <div id="indexados_cer" class="tabcontent">
+    <div class="col-lg-12  col-md-12 col-sm-12 col-xs-12 ">
+      <div class="col-lg-6  col-md-6 col-sm-12 col-xs-12 "><br>
+        <img  src="https://thumbs.gfycat.com/AgonizingObviousHochstettersfrog-size_restricted.gif" >
+      </div> 
+      <div class="col-lg-6  col-md-6 col-sm-12 col-xs-12 ">
+        <h3 class="high_value"> Nuestra estrategia de inversión se enfoca en proporcionar una amplia exposición a la innovación disruptiva y empresas con alto valor fundamental.  </h3>
+        <h3 class="high_value"> Nos enfocamos en áreas de innovación como inteligencia artificial, robótica, almacenamiento de energía, secuenciación de ADN y tecnología blockchain, que transformarán las industrias y crearán un crecimiento significativo en el futuro.</h3>
+        <h3 class="high_value"> Si buscas una inversión audaz con un horizonte de inversión de al menos 5 años y una alta tolerancia al riesgo, esta estrategia puede ser para ti.</h3>
+        <a  href="Invertir_High_Value">     
+          <button class="btn btn-default btn-lg">Explorar perfil ➡</button>  
+       </a>    
+      </div> 
+    </div>
+    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<button onclick="this.parentElement.style.display='none'" class="topright">Cerrar Perfil</button>
+    <br>
+  </div>
+
+  <div id="indexados_dolar_linked" class="tabcontent">
+    <div class="col-lg-12  col-md-12 col-sm-12 col-xs-12 ">
+      <div class="col-lg-6  col-md-6 col-sm-12 col-xs-12 "><br>
+        <img  src="https://wallpapercave.com/uwp/uwp2115607.gif" >
+      </div> 
+      <div class="col-lg-6  col-md-6 col-sm-12 col-xs-12 ">
+        <h3 class="h2_technology">Si buscas una opción de inversión más estable y con menor volatilidad, contamos con una estrategia de renta fija que incluye bonos corporativos, deuda soberana y fondos de dividendos.  </h3>
+        <h3 class="h2_technology"> Esta estrategia está diseñada para aquellos inversores que buscan retornos modestos y quieren minimizar el riesgo.</h3>
+        <h3 class="h2_technology"> También combinamos estos fondos con otros que compran deuda del tesoro de Estados Unidos, así como de países en vías de desarrollo para diversificar aún más tu cartera y reducir el riesgo. Si deseas explorar esta opción de inversión, contáctanos para más información.</h3>
+        <a target="_blank" href="https://chatwith.io/es/s/extensio">     
+          <button class="btn btn-default btn-lg">whatsapp</button>  
+        </a>  
+      </div> 
+    </div>
+    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<button onclick="this.parentElement.style.display='none'" class="topright">Cerrar Perfil</button>
+    <br>
+  </div>
+
+  <script>
+    function openCity(evt, cityName) {
+      var i, tabcontent, tablinks;
+      tabcontent = document.getElementsByClassName("tabcontent");
+      for (i = 0; i < tabcontent.length; i++) {
+        tabcontent[i].style.display = "none";
+      }
+      tablinks = document.getElementsByClassName("tab-invertir-links");
+      for (i = 0; i < tablinks.length; i++) {
+        tablinks[i].className = tablinks[i].className.replace(" active", "");
+      }
+      document.getElementById(cityName).style.display = "block";
+      evt.currentTarget.className += " active";
+    }
+    </script> 
+  </div>     
+</div>
+
+
+
+
 <!--J SERVICIOS SEGUNDOS -->
 <div class="container-fluid fluid-white text-center">
   <div class="row serviceanim">
