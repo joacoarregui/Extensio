@@ -108,10 +108,22 @@
 <br>
 <!--SERVICIOS PRIMEROS -->
 <div id="servicios" class="jumbotron text-center">
-  <h2>Informes de Rentabilidades de Fondos Comunes de Inversión</h2> 
-  <H4 >23 de Enero, 2023.</H4>
-  <H4>Estimación de lectura 5 minutos.</H4>
-  <h4>Tenga en cuenta que las comparaciones se enfocan en exponer las rentabilidades de los fondos con objetivos y características  similares, de los principales bancos locales VS fondos que tienen los brokers con los que trabajamos. La comparación no tiene en cuenta todos los fondos de brokers. Hacemos 4 comparaciones teniendo en cuenta distintos objetivos de los fondos</h4>
+  <h2>Ranking de Rentabilidades de Fondos Comunes de Inversión en Pesos y Dólares</h2> 
+  <H4 >Actualizado al 25/04/23.</H4>
+  <h4>Tenga en cuenta que las comparaciones se enfocan en exponer las rentabilidades de los fondos con objetivos y características  similares, siendo los fondos mas relevantes de la industria para ese objetivo.</h4>
+  <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 text-center">
+    <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12 text-center">
+    <a target="_blank" href="https://chatwith.io/es/s/extensio">     
+      <button class="btn btn-default btn-lg">Contactanos por whatsapp</button>  
+    </a>     
+    </div>
+    <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12 text-center">
+    <a target="_blank" href="mailto:joaquinarregui@extensiosas.com?cc=info@extensiosas.com&Subject=Consulta%20por%20asistencia%20en%20el%20mercado%20de%20capitales&body=Hola,%0AQuisiera%20consulta%20para%20abrir%20una%20cuenta%20en%20el%20mercado%20de%20capitales.%0ASaludos.">     
+      <button class="btn btn-default btn-lg">Contactanos por mail</button>     
+    </a> 
+    </div>
+  </div>
+  <div class="container"></div>
 </div>
 
 
@@ -121,21 +133,22 @@
     <h1 class="extensio_turquesa" >  Ranking Fondos de Renta Fija en Pesos </h1>  
 
     <div class="tab-invertir">
-      <div class="col-lg-3 col-md-3  col-sm-12 col-xs-12 tab-invertir-links text-center" onclick="openCity(event, 'muy_corto_plazo')">Muy corto plazo</div>
-      <div class="col-lg-3 col-md-3 col-sm-12 col-xs-12 tab-invertir-links text-center"onclick="openCity(event, 'corto_plazo')">Corto plazo</div>
-      <div class="col-lg-3 col-md-3 col-sm-12 col-xs-12 tab-invertir-links text-center"onclick="openCity(event, 'indexados_cer')">Indexados a la inflación</div>
-      <div class="col-lg-3 col-md-3 col-sm-12 col-xs-12 tab-invertir-links text-center"onclick="openCity(event, 'indexados_dolar_linked')">Indexados a la devaluación</div>
+      <div class="col-lg-3 col-md-3  col-sm-12 col-xs-12 tab-invertir-links text-center" onclick="FCIARS(event, 'muy_corto_plazo')">Muy corto plazo</div>
+      <div class="col-lg-3 col-md-3 col-sm-12 col-xs-12 tab-invertir-links text-center"onclick="FCIARS(event, 'corto_plazo')">Corto plazo</div>
+      <div class="col-lg-3 col-md-3 col-sm-12 col-xs-12 tab-invertir-links text-center"onclick="FCIARS(event, 'indexados_cer')">Indexados a la inflación</div>
+      <div class="col-lg-3 col-md-3 col-sm-12 col-xs-12 tab-invertir-links text-center"onclick="FCIARS(event, 'indexados_dolar_linked')">Indexados a la devaluación</div>
     </div>
   
   <div id="muy_corto_plazo" class="tabcontent">
     <div class="col-lg-12  col-md-12 col-sm-12 col-xs-12 text-center">
       <h2 class="extensio_turquesa">Fondos pesos, horizonte muy corto plazo, con rescate inmediato</h2>  
-      <h4>Si estas buscando manejar de corto plazo los ingresos de tu empresa con los fondos que mejor rinden, te mostramos el ranking de rendimientos de fondos entre bancos tradicionales y los Brokers del mercado de capitales con los que trabaja EXTENSIO S.A.S . Si contemplamos rendimiento en el mes y a 1 año, en el top 3 de rendimientos tenemos a los fondos con los que trabajamos.</h4>
+      <h4 class="extensio_turquesa">Los FCI con rescate inmediato, trabajan con el interés similar a un plazo fijo con la diferencia que las empresas lo usan para eludir el impuesto a los debitos y creditos bancarios invirtiendo en este fondo y luego solicitando el rescate con echeq para endosar o con transferencia bancaria.</h4>
+      <h4 class="extensio_turquesa">La colocación de excedentes en estos fondos es para manejar un interés de corto plazo, es decir menor a 45 días. Los mismos siguen la tasa BADLAR menos costos de administración del fondo.</h4>  
     </div>
     
     <div class="text-center">
       <div class="table-filter-container"></div>
-      <table id="tablaDatos" class="display tabla_blackground_invertir text-center">
+      <table id="tablaDatos_muy_corto_plazo" class="display tabla_muy_corto_plazo tabla_blackground_invertir text-center">
         <thead>
           <tr>
             <th><input type="text"  placeholder="Buscar Ranking" /></th>
@@ -165,50 +178,45 @@
 
     <script>
      $(document).ready(function() {
-  var table = $('#tablaDatos').DataTable({
-    "processing": true,
-    "serverSide": false,
-    "ajax": {
-      "url": "https://sheets.googleapis.com/v4/spreadsheets/1JJf7z5h9-RiJr0rWUpGpdTQPBfIslbyNXtIurq1660s/values/FCI TABLAS ARS!D6:I23?key=AIzaSyDD6wEmrY190Br80MQCrVDCYgZx4KJic_Y",
-      "dataSrc": "values"
-    },
-    "columns": [
-      { "data": 0 },
-      { "data": 2 },
-      { "data": 3 },
-      { "data": 4 },
-      { "data": 5 },
-    ],
-    "dom": 'R<"table-scrollable"t><"table-footer"ip>',
-    "colReorder": true,
-    "fixedColumns": {
-      "leftColumns": 0,
-      "rightColumns": 0
-    },
-    "drawCallback": function( settings ) {
-      var api = this.api();
-      var numRows = api.rows( {search: 'applied'} ).nodes().length;
-      var rowHeight = 48; // Set the row height in pixels
-      var tableHeight = numRows * rowHeight;
-      $('.tabla_high_value .table-scrollable').css('height', tableHeight + 'px');
-    }
-  });
-
-  // Agregar filtros independientes a cada columna
-  $('.tabla_high_value thead input').on('keyup change', function() {
-    table.column($(this).parent().index()).search(this.value).draw();
-  });
-});
-
+      var table_muy_corto_plazo = $('#tablaDatos_muy_corto_plazo').DataTable({
+        "processing": true,
+        "serverSide": false,
+        "ajax": {
+          "url": "https://sheets.googleapis.com/v4/spreadsheets/1JJf7z5h9-RiJr0rWUpGpdTQPBfIslbyNXtIurq1660s/values/FCI TABLAS ARS!D6:I23?key=AIzaSyDD6wEmrY190Br80MQCrVDCYgZx4KJic_Y",
+          "dataSrc": "values"
+        },
+        "columns": [
+          { "data": 0 },
+          { "data": 2 },
+          { "data": 3 },
+          { "data": 4 },
+          { "data": 5 },
+        ],
+        "dom": 'R<"table-scrollable"t><"table-footer"ip>',
+        "colReorder": true,
+        "fixedColumns": {
+          "leftColumns": 0,
+          "rightColumns": 0
+        },
+        "drawCallback": function( settings ) {
+          var api_muy_corto_plazo = this.api();
+          var numRows_muy_corto_plazo = api_muy_corto_plazo.rows( {search: 'applied'} ).nodes().length;
+          var rowHeight_muy_corto_plazo = 48; // Set the row height in pixels
+          var tableHeight_muy_corto_plazo = numRows_muy_corto_plazo * rowHeight_muy_corto_plazo;
+          $('.tabla_muy_corto_plazo .table-scrollable').css('height', tableHeight_muy_corto_plazo + 'px');
+        }
+      });
+      // Agregar filtros independientes a cada columna
+      $('.tabla_muy_corto_plazo thead input').on('keyup change', function() {
+        table_muy_corto_plazo.column($(this).parent().index()).search(this.value).draw();
+      });
+    });
     </script>
-    
-
     <a href="https://www.cnv.gov.ar/SitioWeb/FondosComunesInversion/CuotaPartes"><!-- -->
-      <h4 >Fuente: cnv.gov.ar/FondosComunesInversion</h3> 
+      <br>
+      <p class="extensio_turquesa" >Fuente: cnv.gov.ar/FondosComunesInversion</p> 
     </a>  
-    <h4>Los datos tomados son a la fecha que se menciona en el inicio de la página para el valor de cuotas partes de los fondos comunes de inversión. Además se toma como premisa que todas las cuotapartes son clase B. El ranking tiene en cuenta para tomar como peso en porcentajes aproximados a  un 60% como rindió en el mes, 20% el rendimiento en el año en el curso y 20% rendimiento a 1 año.</h3> 
-
-    <h4>La colocación de excedentes en estos fondos es para manejar un interés de corto plazo, es decir menor a 45 días. Los mismos siguen la tasa BADLAR menos costos de administración del fondo.</h4>  
+    <p class="extensio_turquesa"> Los datos tomados son a la fecha que se menciona en el inicio de la página para el valor de cuotas partes de los fondos comunes de inversión. Además se toma como premisa que todas las cuotapartes son clase B. El ranking tiene en cuenta los datos de rendimientos en el mes, año en curso y 1 año y los honorarios del fondo, tomando como promedio ponderado por el patrimonio de cada clase de cuotaparte el valor de cada variable. Luego se ponderan estas variables hasta que la suma de 100%, siendo del 30% para el rendimiento del mes, 30% para el rendimiento del año en curso, 20% para el rendimiento que tuvo en el último año y del 20% para los honorarios. Con cada variable ponderada, para cada una de ellas se dividió por el promedio de cada fondo que tuvo para esa variable y se la multiplicó por el peso ponderado en porcentaje. Así se realizó con cada una de ellas salvo en honorarios donde la división fue inversa ya que el resultado es mayor mientras menor sea el cobro de honorarios. Al resultado de las sumas ponderadas se las clasificó en un ranking </p> 
     &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<button onclick="this.parentElement.style.display='none'" class="topright">Cerrar Perfil</button>
     <br>
   </div>
@@ -216,61 +224,253 @@
 
 
   <div id="corto_plazo" class="tabcontent">
-    <div class="col-lg-12  col-md-12 col-sm-12 col-xs-12 ">
-      <div class="col-lg-6  col-md-6 col-sm-12 col-xs-12 "><br>
-        <img  src="https://thumbs.gfycat.com/EveryOptimisticGemsbok-size_restricted.gif" >
-      </div> 
-      <div class="col-lg-6  col-md-6 col-sm-12 col-xs-12 ">
-        <h3 class="moderate_value"> Nuestra estrategia de inversión tiene como objetivo brindar una exposición moderada a la innovación disruptiva mediante empresas con valor fundamental proyectable, con el fin de minimizar la volatilidad a cambio de retornos ligeramente más bajos.  </h3>
-        <h3 class="moderate_value"> Nos enfocamos en empresas que se centran en áreas como inteligencia artificial, robótica, almacenamiento de energía y secuenciación de ADN, y las combinamos con empresas que tienen ingresos más predecibles y estables para lograr un equilibrio en la cartera.</h3>
-        <h3 class="moderate_value"> Esta estrategia está diseñada para inversores moderados con un horizonte de inversión de al menos 5 años y una mediana tolerancia al riesgo.</h3>
-        <a  href="Invertir_Moderate_Value">     
-          <button class="btn btn-default btn-lg">Explorar perfil ➡</button>  
-       </a>    
-      </div> 
+    <div class="col-lg-12  col-md-12 col-sm-12 col-xs-12 text-center">
+      <h2 class="extensio_turquesa">Fondos pesos, horizonte muy corto plazo, con rescate inmediato</h2>  
+      <h4 class="extensio_turquesa">Para inversiones entre 30 y 60 días se recomienda este tipo de FCI que dan un rendimiento superior a un plazo fijo, ideales para una PYME. Son los primeros excedentes de fondos a corto plazo que no se usaran en un período corto. En el top 3 del ranking estan los fondos con los que trabajamos y que puedes suscribrir.</h4>
+      <h4 class="extensio_turquesa">La colocación de excedentes en estos fondos es para manejar un interés de corto plazo. Los mismos intentan mejorar en rendimiento la tasa BADLAR que informa el BCRA para plazos fijos, por lo que esta opción es una mejor alternativa al plazo fijo por ese tiempo determinado.</h4>  
     </div>
+    
+    <div class="text-center">
+      <div class="table-filter-container"></div>
+      <table id="tablaDatos_corto_plazo" class="display tabla_corto_plazo tabla_blackground_invertir text-center">
+        <thead>
+          <tr>
+            <th><input type="text"  placeholder="Buscar Ranking" /></th>
+            <th><input type="text" placeholder="Buscar Nombre Fondo" /></th>
+            <th><input type="text" placeholder="Buscar Rend. Mes" /></th>
+            <th><input type="text" placeholder="Buscar Rend Año" /></th>
+            <th><input type="text" placeholder="Buscar Rend. 1 Año" /></th>
+          </tr>
+          <tr>
+            <th>Ranking</th>
+            <th>Fondo</th>
+            <th>Rend. Mes</th>
+            <th>Rend. Año</th>
+            <th>Rend. 1 Año</th>
+          </tr>
+
+        </thead>
+        <tbody></tbody>
+      </table>
+    </div>
+ 
+    <script src="https://code.jquery.com/jquery-3.5.1.js"></script>
+    <script src="https://cdn.datatables.net/1.10.24/js/jquery.dataTables.min.js"></script>
+    <script src="https://cdn.datatables.net/colreorder/1.5.4/js/dataTables.colReorder.min.js"></script>
+    <script src="https://cdn.datatables.net/fixedcolumns/3.3.2/js/dataTables.fixedColumns.min.js"></script>
+    
+
+    <script>
+       $(document).ready(function() {
+      var table_corto_plazo = $('#tablaDatos_corto_plazo').DataTable({
+        "processing": true,
+        "serverSide": false,
+        "ajax": {
+          "url": "https://sheets.googleapis.com/v4/spreadsheets/1JJf7z5h9-RiJr0rWUpGpdTQPBfIslbyNXtIurq1660s/values/FCI TABLAS ARS!D49:I67?key=AIzaSyDD6wEmrY190Br80MQCrVDCYgZx4KJic_Y",
+          "dataSrc": "values"
+        },
+        "columns": [
+          { "data": 0 },
+          { "data": 2 },
+          { "data": 3 },
+          { "data": 4 },
+          { "data": 5 },
+        ],
+        "dom": 'R<"table-scrollable"t><"table-footer"ip>',
+        "colReorder": true,
+        "fixedColumns": {
+          "leftColumns": 0,
+          "rightColumns": 0
+        },
+        "drawCallback": function( settings ) {
+          var api_corto_plazo = this.api();
+          var numRows_corto_plazo = api_corto_plazo.rows( {search: 'applied'} ).nodes().length;
+          var rowHeight_corto_plazo = 48; // Set the row height in pixels
+          var tableHeight_corto_plazo = numRows_corto_plazo * rowHeight_corto_plazo;
+          $('.tabla_corto_plazo .table-scrollable').css('height', tableHeight_corto_plazo + 'px');
+        }
+      });
+      // Agregar filtros independientes a cada columna
+      $('.tabla_corto_plazo thead input').on('keyup change', function() {
+        table_corto_plazo.column($(this).parent().index()).search(this.value).draw();
+      });
+    });
+    </script>
+    <a href="https://www.cnv.gov.ar/SitioWeb/FondosComunesInversion/CuotaPartes"><!-- -->
+      <br>
+      <p class="extensio_turquesa" >Fuente: cnv.gov.ar/FondosComunesInversion</p> 
+    </a>  
+    <p class="extensio_turquesa"> Los datos tomados son a la fecha que se menciona en el inicio de la página para el valor de cuotas partes de los fondos comunes de inversión. Además se toma como premisa que todas las cuotapartes son clase B. El ranking tiene en cuenta los datos de rendimientos en el mes, año en curso y 1 año y los honorarios del fondo, tomando como promedio ponderado por el patrimonio de cada clase de cuotaparte el valor de cada variable. Luego se ponderan estas variables hasta que la suma de 100%, siendo del 30% para el rendimiento del mes, 30% para el rendimiento del año en curso, 20% para el rendimiento que tuvo en el último año y del 20% para los honorarios. Con cada variable ponderada, para cada una de ellas se dividió por el promedio de cada fondo que tuvo para esa variable y se la multiplicó por el peso ponderado en porcentaje. Así se realizó con cada una de ellas salvo en honorarios donde la división fue inversa ya que el resultado es mayor mientras menor sea el cobro de honorarios. Al resultado de las sumas ponderadas se las clasificó en un ranking </p> 
     &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<button onclick="this.parentElement.style.display='none'" class="topright">Cerrar Perfil</button>
     <br>
   </div>
 
   <div id="indexados_cer" class="tabcontent">
-    <div class="col-lg-12  col-md-12 col-sm-12 col-xs-12 ">
-      <div class="col-lg-6  col-md-6 col-sm-12 col-xs-12 "><br>
-        <img  src="https://thumbs.gfycat.com/AgonizingObviousHochstettersfrog-size_restricted.gif" >
-      </div> 
-      <div class="col-lg-6  col-md-6 col-sm-12 col-xs-12 ">
-        <h3 class="high_value"> Nuestra estrategia de inversión se enfoca en proporcionar una amplia exposición a la innovación disruptiva y empresas con alto valor fundamental.  </h3>
-        <h3 class="high_value"> Nos enfocamos en áreas de innovación como inteligencia artificial, robótica, almacenamiento de energía, secuenciación de ADN y tecnología blockchain, que transformarán las industrias y crearán un crecimiento significativo en el futuro.</h3>
-        <h3 class="high_value"> Si buscas una inversión audaz con un horizonte de inversión de al menos 5 años y una alta tolerancia al riesgo, esta estrategia puede ser para ti.</h3>
-        <a  href="Invertir_High_Value">     
-          <button class="btn btn-default btn-lg">Explorar perfil ➡</button>  
-       </a>    
-      </div> 
+    <div class="col-lg-12  col-md-12 col-sm-12 col-xs-12 text-center">
+      <h2 class="extensio_turquesa">Fondos de mediano plazo, indexados a la inflación con rescate a 48 horas</h2>  
+      <h4 class="extensio_turquesa">Para excedentes de fondos de mediano plazo que no se usarán, se sugiere invertir en fondos que están indexados a la inflación, a los efectos de no generar una pérdida monetaria que luego se usara para inversiones en capital de trabajo o inversión. Se logra mantener el capital actualizado. La colocación de excedentes es para manejar un interés de mediano plazo, es decir desde 70 días a 2 años siguiendo la evolución de la inflación más una tasa de interés adicional. Los mismos en su mayoría tienen bonos y obligaciones negociables CER (que ajustar por inflación).</h4>
+      <h4 class="extensio_turquesa">Dada la volatilidad que hoy atraviesa nuestro país, sugerimos no invertir estos fondos de corto plazo, puesto que si bien están indexados a un dato mensual informados por el INDEC, los precios de dichos activos o instrumentos de negociación en el mercado de capitales hacen que a veces de corto plazo se puedan tornar menos o más rentables, generando posibles resultados negativos en periodos menores a 50 días.</h4>  
     </div>
+    
+    <div class="text-center">
+      <div class="table-filter-container"></div>
+      <table id="tablaDatos_index_cer" class="display tabla_index_cer tabla_blackground_invertir text-center">
+        <thead>
+          <tr>
+            <th><input type="text"  placeholder="Buscar Ranking" /></th>
+            <th><input type="text" placeholder="Buscar Nombre Fondo" /></th>
+            <th><input type="text" placeholder="Buscar Rend. Mes" /></th>
+            <th><input type="text" placeholder="Buscar Rend Año" /></th>
+            <th><input type="text" placeholder="Buscar Rend. 1 Año" /></th>
+          </tr>
+          <tr>
+            <th>Ranking</th>
+            <th>Fondo</th>
+            <th>Rend. Mes</th>
+            <th>Rend. Año</th>
+            <th>Rend. 1 Año</th>
+          </tr>
+
+        </thead>
+        <tbody></tbody>
+      </table>
+    </div>
+ 
+    <script src="https://code.jquery.com/jquery-3.5.1.js"></script>
+    <script src="https://cdn.datatables.net/1.10.24/js/jquery.dataTables.min.js"></script>
+    <script src="https://cdn.datatables.net/colreorder/1.5.4/js/dataTables.colReorder.min.js"></script>
+    <script src="https://cdn.datatables.net/fixedcolumns/3.3.2/js/dataTables.fixedColumns.min.js"></script>
+    
+
+    <script>
+       $(document).ready(function() {
+      var table_index_cer = $('#tablaDatos_index_cer').DataTable({
+        "processing": true,
+        "serverSide": false,
+        "ajax": {
+          "url": "https://sheets.googleapis.com/v4/spreadsheets/1JJf7z5h9-RiJr0rWUpGpdTQPBfIslbyNXtIurq1660s/values/FCI TABLAS ARS!D27:I46?key=AIzaSyDD6wEmrY190Br80MQCrVDCYgZx4KJic_Y",
+          "dataSrc": "values"
+        },
+        "columns": [
+          { "data": 0 },
+          { "data": 2 },
+          { "data": 3 },
+          { "data": 4 },
+          { "data": 5 },
+        ],
+        "dom": 'R<"table-scrollable"t><"table-footer"ip>',
+        "colReorder": true,
+        "fixedColumns": {
+          "leftColumns": 0,
+          "rightColumns": 0
+        },
+        "drawCallback": function( settings ) {
+          var api_index_cer = this.api();
+          var numRows_index_cer = api_index_cer.rows( {search: 'applied'} ).nodes().length;
+          var rowHeight_index_cer = 48; // Set the row height in pixels
+          var tableHeight_index_cer = numRows_index_cer * rowHeight_index_cer;
+          $('.tabla_index_cer .table-scrollable').css('height', tableHeight_index_cer + 'px');
+        }
+      });
+      // Agregar filtros independientes a cada columna
+      $('.tabla_index_cer thead input').on('keyup change', function() {
+        table_index_cer.column($(this).parent().index()).search(this.value).draw();
+      });
+    });
+    </script>
+    <a href="https://www.cnv.gov.ar/SitioWeb/FondosComunesInversion/CuotaPartes"><!-- -->
+      <br>
+      <p class="extensio_turquesa" >Fuente: cnv.gov.ar/FondosComunesInversion</p> 
+    </a>  
+    <p class="extensio_turquesa"> Los datos tomados son a la fecha que se menciona en el inicio de la página para el valor de cuotas partes de los fondos comunes de inversión. Además se toma como premisa que todas las cuotapartes son clase B. El ranking tiene en cuenta los datos de rendimientos en el mes, año en curso y 1 año y los honorarios del fondo, tomando como promedio ponderado por el patrimonio de cada clase de cuotaparte el valor de cada variable. Luego se ponderan estas variables hasta que la suma de 100%, siendo del 15% para el rendimiento del mes, 30% para el rendimiento del año en curso, 40% para el rendimiento que tuvo en el último año y del 15% para los honorarios. Con cada variable ponderada, para cada una de ellas se dividió por el promedio de cada fondo que tuvo para esa variable y se la multiplicó por el peso ponderado en porcentaje. Así se realizó con cada una de ellas salvo en honorarios donde la división fue inversa ya que el resultado es mayor mientras menor sea el cobro de honorarios. Al resultado de las sumas ponderadas se las clasificó en un ranking </p> 
     &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<button onclick="this.parentElement.style.display='none'" class="topright">Cerrar Perfil</button>
     <br>
   </div>
 
   <div id="indexados_dolar_linked" class="tabcontent">
-    <div class="col-lg-12  col-md-12 col-sm-12 col-xs-12 ">
-      <div class="col-lg-6  col-md-6 col-sm-12 col-xs-12 "><br>
-        <img  src="https://wallpapercave.com/uwp/uwp2115607.gif" >
-      </div> 
-      <div class="col-lg-6  col-md-6 col-sm-12 col-xs-12 ">
-        <h3 class="h2_technology">Si buscas una opción de inversión más estable y con menor volatilidad, contamos con una estrategia de renta fija que incluye bonos corporativos, deuda soberana y fondos de dividendos.  </h3>
-        <h3 class="h2_technology"> Esta estrategia está diseñada para aquellos inversores que buscan retornos modestos y quieren minimizar el riesgo.</h3>
-        <h3 class="h2_technology"> También combinamos estos fondos con otros que compran deuda del tesoro de Estados Unidos, así como de países en vías de desarrollo para diversificar aún más tu cartera y reducir el riesgo. Si deseas explorar esta opción de inversión, contáctanos para más información.</h3>
-        <a target="_blank" href="https://chatwith.io/es/s/extensio">     
-          <button class="btn btn-default btn-lg">whatsapp</button>  
-        </a>  
-      </div> 
+    <div class="col-lg-12  col-md-12 col-sm-12 col-xs-12 text-center">
+      <h2 class="extensio_turquesa">Fondos de mediano plazo, indexados a la inflación con rescate a 48 horas</h2>  
+      <h4 class="extensio_turquesa">Para excedentes que se usarán en el mediano y corto plazo para importaciones, o son excedentes de exportaciones donde se desea mantener la rentabilidad de la devaluación del tipo de cambio, estos fondos cumplen el objetivo deseado, invirtiendo en instrumentos indexados a la devaluación del tipo de cambio. La colocación de excedentes en estos fondos es para manejar un interés de mediano plazo, es decir de 70 días a 2 años siguiendo la evolución del tipo de cambio oficial más una tasa de interés adicional. Los mismos en su mayoría tienen sintéticos de dólar linked a través de más una cobertura con dólar futuro en Rofex.</h4>
+      <h4 class="extensio_turquesa">Dada la volatilidad que hoy atraviesa nuestro país, sugerimos no invertir estos fondos de corto plazo, puesto que si bien están indexados a la política monetaria que ejecuta el BCRA, los precios de dichos activos o instrumentos de negociación en el mercado de capitales hacen que a veces de corto plazo se puedan tornar menos o más rentables, generando posibles resultados negativos en periodos menores a 50 días.</h4>  
     </div>
+    
+    <div class="text-center">
+      <div class="table-filter-container"></div>
+      <table id="tablaDatos_index_dl" class="display tabla_index_dl tabla_blackground_invertir text-center">
+        <thead>
+          <tr>
+            <th><input type="text"  placeholder="Buscar Ranking" /></th>
+            <th><input type="text" placeholder="Buscar Nombre Fondo" /></th>
+            <th><input type="text" placeholder="Buscar Rend. Mes" /></th>
+            <th><input type="text" placeholder="Buscar Rend Año" /></th>
+            <th><input type="text" placeholder="Buscar Rend. 1 Año" /></th>
+          </tr>
+          <tr>
+            <th>Ranking</th>
+            <th>Fondo</th>
+            <th>Rend. Mes</th>
+            <th>Rend. Año</th>
+            <th>Rend. 1 Año</th>
+          </tr>
+
+        </thead>
+        <tbody></tbody>
+      </table>
+    </div>
+ 
+    <script src="https://code.jquery.com/jquery-3.5.1.js"></script>
+    <script src="https://cdn.datatables.net/1.10.24/js/jquery.dataTables.min.js"></script>
+    <script src="https://cdn.datatables.net/colreorder/1.5.4/js/dataTables.colReorder.min.js"></script>
+    <script src="https://cdn.datatables.net/fixedcolumns/3.3.2/js/dataTables.fixedColumns.min.js"></script>
+    
+
+    <script>
+       $(document).ready(function() {
+      var table_index_dl = $('#tablaDatos_index_dl').DataTable({
+        "processing": true,
+        "serverSide": false,
+        "ajax": {
+          "url": "https://sheets.googleapis.com/v4/spreadsheets/1JJf7z5h9-RiJr0rWUpGpdTQPBfIslbyNXtIurq1660s/values/FCI TABLAS ARS!D70:I86?key=AIzaSyDD6wEmrY190Br80MQCrVDCYgZx4KJic_Y",
+          "dataSrc": "values"
+        },
+        "columns": [
+          { "data": 0 },
+          { "data": 2 },
+          { "data": 3 },
+          { "data": 4 },
+          { "data": 5 },
+        ],
+        "dom": 'R<"table-scrollable"t><"table-footer"ip>',
+        "colReorder": true,
+        "fixedColumns": {
+          "leftColumns": 0,
+          "rightColumns": 0
+        },
+        "drawCallback": function( settings ) {
+          var api_index_dl = this.api();
+          var numRows_index_dl = api_index_dl.rows( {search: 'applied'} ).nodes().length;
+          var rowHeight_index_dl = 48; // Set the row height in pixels
+          var tableHeight_index_dl = numRows_index_dl * rowHeight_index_dl;
+          $('.tabla_index_dl .table-scrollable').css('height', tableHeight_index_dl + 'px');
+        }
+      });
+      // Agregar filtros independientes a cada columna
+      $('.tabla_index_dl thead input').on('keyup change', function() {
+        table_index_dl.column($(this).parent().index()).search(this.value).draw();
+      });
+    });
+    </script>
+    <a href="https://www.cnv.gov.ar/SitioWeb/FondosComunesInversion/CuotaPartes"><!-- -->
+      <br>
+      <p class="extensio_turquesa" >Fuente: cnv.gov.ar/FondosComunesInversion</p> 
+    </a>  
+    <p class="extensio_turquesa"> Los datos tomados son a la fecha que se menciona en el inicio de la página para el valor de cuotas partes de los fondos comunes de inversión. Además se toma como premisa que todas las cuotapartes son clase B. El ranking tiene en cuenta los datos de rendimientos en el mes, año en curso y 1 año y los honorarios del fondo, tomando como promedio ponderado por el patrimonio de cada clase de cuotaparte el valor de cada variable. Luego se ponderan estas variables hasta que la suma de 100%, siendo del 15% para el rendimiento del mes, 30% para el rendimiento del año en curso, 40% para el rendimiento que tuvo en el último año y del 15% para los honorarios. Con cada variable ponderada, para cada una de ellas se dividió por el promedio de cada fondo que tuvo para esa variable y se la multiplicó por el peso ponderado en porcentaje. Así se realizó con cada una de ellas salvo en honorarios donde la división fue inversa ya que el resultado es mayor mientras menor sea el cobro de honorarios. Al resultado de las sumas ponderadas se las clasificó en un ranking </p> 
     &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<button onclick="this.parentElement.style.display='none'" class="topright">Cerrar Perfil</button>
     <br>
   </div>
 
   <script>
-    function openCity(evt, cityName) {
+    function FCIARS(evt, cityName) {
       var i, tabcontent, tablinks;
       tabcontent = document.getElementsByClassName("tabcontent");
       for (i = 0; i < tabcontent.length; i++) {
@@ -284,209 +484,392 @@
       evt.currentTarget.className += " active";
     }
     </script> 
-  </div>     
-</div>
-
-
-
-
-<!--J SERVICIOS SEGUNDOS -->
-<div class="container-fluid fluid-white text-center">
-  <div class="row serviceanim">
-      <div class="col-lg-3 col-sm-6 col-xs-12">
-        <div class="panel panel-white text-center">
-          <div class="panel-heading">
-            <h3>Fondos pesos, horizonte muy corto plazo, con rescate inmediato</h3>
-          </div>
-            <h4>Los FCI con rescate inmediato, trabajan con el interés similar a un plazo fijo con la diferencia que las empresas lo usan para eludir el impuesto a los debitos y creditos bancarios invirtiendo en este fondo y luego solicitando el rescate con echeq para endosar o con transferencia bancaria. </h4>
-            <br>
-            <div class="panel-footer">
-            <a href="#fci_rescate_inmediato">
-              <button class="btn btn-lg" >Más información</button>
-            </a>
-          </div>
-        </div>      
-      </div>    
-
-      <div class="col-lg-3 col-sm-6 col-xs-12">
-        <div class="panel panel-white text-center">
-          <div class="panel-heading1">
-            <h3>Fondos pesos, horizonte corto plazo, rescate 24hs</h3>
-            <br>
-          </div>
-            <h4>Para inversiones entre 30 y 60 días se recomienda este tipo de FCI que dan un rendimiento superior a un plazo fijo. Estos son los primeros excedentes de fondos a corto plazo que no se usaran y que luego de un tiempo pueden invertirse en fondos con mayor rendimiento.</h4>
-          <div class="panel-footer">
-            <a href="#fci_24hs">
-              <button class="btn btn-lg">Más información</button>
-            </a>
-          </div>
-        </div>      
-      </div> 
-
-      <div class="col-lg-3 col-sm-6 col-xs-12">
-        <div class="panel panel-white text-center">
-          <div class="panel-heading2">
-            <h3>Fondos pesos, horizonte mediano plazo ajusta por inflación (CER)</h3>
-          </div>
-            <h4>Para fondos de mediano plazo donde el excedente no se usará, se sugiere invertir en fondos que están indexados a la inflación, a los efectos de no generar una pérdida en los excedentes que luego se usarán para capital de trabajo o inversión. Se logra mantener el capital actualizado. </h4>
-          <div class="panel-footer">
-            <a href="#fci_cer">
-              <button class="btn btn-lg">Más información</button>
-            </a>
-          </div>
-        </div>      
-      </div> 
-
-      <div class="col-lg-3 col-sm-6 col-xs-12">
-        <div class="panel panel-white text-center">
-          <div class="panel-heading4">
-            <h3>Fondos pesos, horizonte mediano plazo ajusta Devaluación</h3>
-          </div>
-            <h4>Para excedentes que se usarán en el mediano y corto plazo para importaciones, o son excedentes de exportaciones donde se desea mantener la rentabilidad de la devaluación del tipo de cambio, estos fondos cumplen el objetivo deseado, invirtiendo en instrumentos indexados a la devaluación del tipo de cambio.</h4>
-          <div class="panel-footer">
-            <a href="#fci_devaluacion_tc">
-              <button class="btn btn-lg">Más información</button>
-            </a>
-          </div>
-        </div>      
-      </div> 
-
-      <div class="container-center">      
-        <div class="col-sm-12 col-xs-12">
-          <div class="col-lg-6 col-sm-6 col-xs-12 ">
-            <a target="_blank" href="https://chatwith.io/es/s/extensio">     
-              <button class="btn-white btn-default btn-lg">Contactanos por whatsapp</button>  
-            </a>     
-          </div> 
-          <div class="col-lg-4 col-sm-6 col-xs-12">
-            <a target="_blank" href="mailto:joaquinarregui@extensiosas.com?cc=info@extensiosas.com&Subject=Consulta%20por%20asistencia%20en%20el%20mercado%20de%20capitales&body=Hola,%0AQuisiera%20consulta%20para%20abrir%20una%20cuenta%20en%20el%20mercado%20de%20capitales.%0ASaludos.">     
-            <button class="btn-white btn-default btn-lg">Contactanos por mail</button>     
-            </a>  
-          </div>
-          
-        </div>
-      </div>
-
-    
-  </div>
-</div>
-
-<div id="fci_rescate_inmediato" class="container-left">
- <br>
- <div class="row">
-    <div class="col-md-12">
-      <div class="ml-12">     
-          <h2 class="extensio_turquesa">Fondos pesos, horizonte muy corto plazo, con rescate inmediato</h2>  
-          <h4>Si estas buscando manejar de corto plazo los ingresos de tu empresa con los fondos que mejor rinden, te mostramos el ranking de rendimientos de fondos entre bancos tradicionales y los Brokers del mercado de capitales con los que trabaja EXTENSIO S.A.S . Si contemplamos rendimiento en el mes y a 1 año, en el top 3 de rendimientos tenemos a los fondos con los que trabajamos.</h4>
-      </div>
-      <div class="container">
-        
-        <div class="tabla_grande">
-          <iframe   class=chart seamless frameborder="0" scrolling="no" src="https://script.google.com/macros/s/AKfycbxQJGEHtfsNLz5dyv2DNDaJ2JgYU-rcKd7cv_nDzP1qUREunerHFWIstRS1wgrigvus/exec"></iframe>
-        </div>
-        <a href="https://www.cnv.gov.ar/SitioWeb/FondosComunesInversion/CuotaPartes"><!-- -->
-          <h3 class="letra_pie_dibujo">Fuente: cnv.gov.ar/FondosComunesInversion</h3> 
-        </a>  
-        <h3 class="letra_pie_dibujo">Los datos tomados son a la fecha que se menciona en el inicio de la página para el valor de cuotas partes de los fondos comunes de inversión. Además se toma como premisa que todas las cuotapartes son clase B. El ranking tiene en cuenta para tomar como peso en porcentajes aproximados a  un 60% como rindió en el mes, 20% el rendimiento en el año en el curso y 20% rendimiento a 1 año.</h3> 
-      </div>  
-      <h4>La colocación de excedentes en estos fondos es para manejar un interés de corto plazo, es decir menor a 45 días. Los mismos siguen la tasa BADLAR menos costos de administración del fondo.</h4>  
-  </div>
-        <div class="col-lg-2 col-sm-4 col-xs-4">
-          <a target="_blank" href="https://instagram.com/extensio.finanzas?igshid=NmQ2ZmYxZjA=">
-              <img src="https://drive.google.com/uc?export=view&id=1xR2QakU2V2x8_3sMaXC6S7eGMW16K5ld" width=50% height=50% > 
-          </a>
-        </div>         
-        <div class="col-lg-2 col-sm-4 col-xs-4">
-          <a target="_blank" href="https://www.linkedin.com/in/joaquin-arregui-36918979">
-            <img  src="https://drive.google.com/uc?export=view&id=1Ha2voPTwFaazo0Z888KT1_PM1eaRQT-B"  width=50% height=50% > 
-          </a>
-        </div>
-      <div id="fci_24hs" class="col-lg-2 col-sm-4 col-xs-4">
-        <a target="_blank" href="https://twitter.com/extensiofinanza">
-          <img  src="https://drive.google.com/uc?export=view&id=1BkQcZ7csUjQR_Bvqjk_hnhQCfNdP_L15" width=50% height=50% >       
-        </a>
+  </div>  
+  <div class="container"></div>
+  <div  class="col-lg-12 col-sm-12 col-xs-12 text-center">
+    <div class="col-lg-4 col-md-4 col-sm-12 col-xs-12"></div>
+    <div class="col-lg-1 col-md-4 col-sm-4 col-xs-4 img-inversion-icons">
+      <a target="_blank" href="https://instagram.com/extensio.finanzas?igshid=NmQ2ZmYxZjA=">
+          <img src="https://drive.google.com/uc?export=view&id=1XPsgqFYNQf5BrhxlTw64o00_MF-j1TGT" width=100% height=100% >  
+      </a>
+    </div>         
+    <div class="col-lg-1 col-md-4 col-sm-4 col-xs-4 img-inversion-icons">
+      <a target="_blank" href="https://www.linkedin.com/in/joaquin-arregui-36918979">
+        <img  src="https://drive.google.com/uc?export=view&id=1DgXbmm9k4oMS4gzporEWxEp3IMHVAxlV" width=100% height=100%  >  
+      </a>
+    </div>
+    <div class="col-lg-1 col-md-4 col-sm-4 col-xs-4 img-inversion-icons">
+      <a target="_blank" href="https://twitter.com/extensiofinanza">
+        <img  src="https://drive.google.com/uc?export=view&id=1N8bjiwsCo5lUzTYCh9d0B_mlhNySGPqP" width=100% height=100% >        
+      </a>
     </div>
   </div>
-</div>
+
+  <div class="container"></div>
 
 
-<div id="FAKE" class="container-left">
-  <div class="row">
-     <div class="col-md-12">
-       <div class="ml-12">     
-           <h2 class="extensio_turquesa">Fondos de corto plazo, rescate a 24 horas</h2>  
-           <h4>Para ingresos que no se ocuparán dentro de los siguientes 30 días hasta 70 días, mostramos los rendimientos de fondos ideales para una pyme. Te mostramos el ranking de rendimientos de fondos entre bancos tradicionales y los Brokers del mercado de capitales con los que trabaja EXTENSIO S.A.S . Si contemplamos rendimiento en el mes y a 1 año, en el top 3 de rendimientos tenemos a los fondos con los que trabajamos.</h4>
-          <h4>La colocación de excedentes en estos fondos es para manejar un interés de corto plazo. Los mismos intentan mejorar en rendimiento la tasa BADLAR que informa el BCRA para plazos fijos, por lo que esta opción es una mejor alternativa al plazo fijo por ese tiempo determinado.</h4>
-        </div>
-       <div class="container">
-         <div class="tabla_grande">
-           <iframe   class=chart seamless frameborder="0" scrolling="no" src="https://script.google.com/macros/s/AKfycbxxhkR4spznfOk9DLRRWfZ-Fec4jYMG8iP61oaOw-pkjEoDAUL3LQ2lk8AB-Vtl8G0Zfg/exec"></iframe>
-         </div>
-         <a href="https://www.cnv.gov.ar/SitioWeb/FondosComunesInversion/CuotaPartes">
-           <h3 class="letra_pie_dibujo">Fuente: cnv.gov.ar/FondosComunesInversion</h3> 
-         </a>   
-        <h3 class="letra_pie_dibujo">Los datos tomados son a la fecha que se menciona en el inicio de la página para el valor de cuotas partes de los fondos comunes de inversión. Además se toma como premisa que todas las cuotapartes son clase B. El ranking tiene en cuenta para tomar como peso en porcentajes aproximados a  un 60% como rindió en el mes, 20% el rendimiento en el año en el curso y 20% rendimiento a 1 año.</h3> 
-       </div>  
-   </div>
+  <div class="container-fluid text-center">
+    <h1 class="extensio_turquesa" >  Ranking Fondos de Renta Fija en Dólares </h1>  
+
+    <div class="tab-invertir">
+      <div class="col-lg-3 col-md-3  col-sm-12 col-xs-12 tab-invertir-links text-center" onclick="FCIUSD(event, 'usd_corto_plazo_offshore')">Corto Plazo Offshore</div>
+      <div class="col-lg-3 col-md-3 col-sm-12 col-xs-12 tab-invertir-links text-center"onclick="FCIUSD(event, 'usd_mediano_plazo_offshore')">Mediano Plazo Offshore</div>
+      <div class="col-lg-3 col-md-3 col-sm-12 col-xs-12 tab-invertir-links text-center"onclick="FCIUSD(event, 'usd_mediano_plazo_local')">Mediano Plazo Local</div>
+      <div class="col-lg-3 col-md-3 col-sm-12 col-xs-12 tab-invertir-links text-center"onclick="FCIUSD(event, 'usd_largo_plazo_local')">Largo Plazo Local</div>
+    </div>
+  
+  <div id="usd_corto_plazo_offshore" class="tabcontent">
+    <div class="col-lg-12  col-md-12 col-sm-12 col-xs-12 text-center">
+      <h2 class="extensio_turquesa">Fondos pesos, horizonte muy corto plazo, con rescate inmediato</h2>  
+      <h4 class="extensio_turquesa">Los FCI con rescate inmediato, trabajan con el interés similar a un plazo fijo con la diferencia que las empresas lo usan para eludir el impuesto a los debitos y creditos bancarios invirtiendo en este fondo y luego solicitando el rescate con echeq para endosar o con transferencia bancaria.</h4>
+      <h4 class="extensio_turquesa">La colocación de excedentes en estos fondos es para manejar un interés de corto plazo, es decir menor a 45 días. Los mismos siguen la tasa BADLAR menos costos de administración del fondo.</h4>  
+    </div>
+    
+    <div class="text-center">
+      <div class="table-filter-container"></div>
+      <table id="tablaDatos_usd_corto_plazo_offshore" class="display tabla_usd_corto_plazo_offshore tabla_blackground_invertir text-center">
+        <thead>
+          <tr>
+            <th><input type="text"  placeholder="Buscar Ranking" /></th>
+            <th><input type="text" placeholder="Buscar Nombre Fondo" /></th>
+            <th><input type="text" placeholder="Buscar Rend. Mes" /></th>
+            <th><input type="text" placeholder="Buscar Rend Año" /></th>
+            <th><input type="text" placeholder="Buscar Rend. 1 Año" /></th>
+          </tr>
+          <tr>
+            <th>Ranking</th>
+            <th>Fondo</th>
+            <th>Rend. Mes</th>
+            <th>Rend. Año</th>
+            <th>Rend. 1 Año</th>
+          </tr>
+
+        </thead>
+        <tbody></tbody>
+      </table>
+    </div>
+ 
+    <script src="https://code.jquery.com/jquery-3.5.1.js"></script>
+    <script src="https://cdn.datatables.net/1.10.24/js/jquery.dataTables.min.js"></script>
+    <script src="https://cdn.datatables.net/colreorder/1.5.4/js/dataTables.colReorder.min.js"></script>
+    <script src="https://cdn.datatables.net/fixedcolumns/3.3.2/js/dataTables.fixedColumns.min.js"></script>
+    
+
+    <script>
+     $(document).ready(function() {
+      var table_usd_corto_plazo_offshore = $('#tablaDatos_usd_corto_plazo_offshore').DataTable({
+        "processing": true,
+        "serverSide": false,
+        "ajax": {
+          "url": "https://sheets.googleapis.com/v4/spreadsheets/1JJf7z5h9-RiJr0rWUpGpdTQPBfIslbyNXtIurq1660s/values/FCI TABLAS USD!D6:I23?key=AIzaSyDD6wEmrY190Br80MQCrVDCYgZx4KJic_Y",
+          "dataSrc": "values"
+        },
+        "columns": [
+          { "data": 0 },
+          { "data": 2 },
+          { "data": 3 },
+          { "data": 4 },
+          { "data": 5 },
+        ],
+        "dom": 'R<"table-scrollable"t><"table-footer"ip>',
+        "colReorder": true,
+        "fixedColumns": {
+          "leftColumns": 0,
+          "rightColumns": 0
+        },
+        "drawCallback": function( settings ) {
+          var api_usd_corto_plazo_offshore = this.api();
+          var numRows_usd_corto_plazo_offshore = api_usd_corto_plazo_offshore.rows( {search: 'applied'} ).nodes().length;
+          var rowHeight_usd_corto_plazo_offshore = 48; // Set the row height in pixels
+          var tableHeight_usd_corto_plazo_offshore = numRows_usd_corto_plazo_offshore * rowHeight_usd_corto_plazo_offshore;
+          $('.tabla_usd_corto_plazo_offshore .table-scrollable').css('height', tableHeight_usd_corto_plazo_offshore + 'px');
+        }
+      });
+      // Agregar filtros independientes a cada columna
+      $('.tabla_usd_corto_plazo_offshore thead input').on('keyup change', function() {
+        table_usd_corto_plazo_offshore.column($(this).parent().index()).search(this.value).draw();
+      });
+    });
+    </script>
+    <a href="https://www.cnv.gov.ar/SitioWeb/FondosComunesInversion/CuotaPartes"><!-- -->
+      <br>
+      <p class="extensio_turquesa" >Fuente: cnv.gov.ar/FondosComunesInversion</p> 
+    </a>  
+    <p class="extensio_turquesa"> Los datos tomados son a la fecha que se menciona en el inicio de la página para el valor de cuotas partes de los fondos comunes de inversión. Además se toma como premisa que todas las cuotapartes son clase B. El ranking tiene en cuenta los datos de rendimientos en el mes, año en curso y 1 año y los honorarios del fondo, tomando como promedio ponderado por el patrimonio de cada clase de cuotaparte el valor de cada variable. Luego se ponderan estas variables hasta que la suma de 100%, siendo del 30% para el rendimiento del mes, 30% para el rendimiento del año en curso, 20% para el rendimiento que tuvo en el último año y del 20% para los honorarios. Con cada variable ponderada, para cada una de ellas se dividió por el promedio de cada fondo que tuvo para esa variable y se la multiplicó por el peso ponderado en porcentaje. Así se realizó con cada una de ellas salvo en honorarios donde la división fue inversa ya que el resultado es mayor mientras menor sea el cobro de honorarios. Al resultado de las sumas ponderadas se las clasificó en un ranking </p> 
+    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<button onclick="this.parentElement.style.display='none'" class="topright">Cerrar Perfil</button>
+    <br>
   </div>
-</div>
-
-<div class="container">
-  <a href="#servicios">
-    <button id="fci_cer" class="btn btn-default btn-lg">Volvé al inicio de página</button>
-  </a>
-</div>
+ 
 
 
-<div id="FAKE" class="container-left">
-  <div class="row">
-     <div class="col-md-12">
-       <div class="ml-12">     
-           <h2 class="extensio_turquesa">Fondos de mediano plazo, indexados a la inflación con rescate a 48 horas</h2>  
-           <h4>La colocación de excedentes en estos fondos es para manejar un interés de mediano plazo, es decir de 70 días a 2 años siguiendo la evolución de la inflación más una tasa de interés adicional. Los mismos en su mayoría tienen bonos y obligaciones negociables CER (que ajustar por inflación).</h4>
-           <h4>Dada la volatilidad que hoy atraviesa nuestro país, sugerimos no invertir estos fondos de corto plazo, puesto que si bien están indexados a un dato mensual informados por el INDEC, los precios de dichos activos o instrumentos de negociación en el mercado de capitales hacen que a veces de corto plazo se puedan tornar menos o más rentables, generando posibles resultados negativos en periodos menores a 50 días.</h4>
-          </div>
-       <div class="container">
-         <div class="tabla_grande">
-           <iframe   class=chart seamless frameborder="0" scrolling="no" src="https://script.google.com/macros/s/AKfycbxpCuGnlGYaIiXQe-qimigamuE4gHO7CgodTpaRmaTTcmEUeznZbEHmqOyj2uag42Gk/exec"></iframe>
-         </div>
-         <a href="https://www.cnv.gov.ar/SitioWeb/FondosComunesInversion/CuotaPartes">
-           <h3 class="letra_pie_dibujo">Fuente: cnv.gov.ar/FondosComunesInversion</h3> 
-         </a>   
-         <h3 class="letra_pie_dibujo">Los datos tomados son a la fecha que se menciona en el inicio de la página para el valor de cuotas partes de los fondos comunes de inversión. Además se toma como premisa que todas las cuotapartes son clase B. El ranking tiene en cuenta para tomar como peso en porcentajes aproximados a  un 60% como rindió en el mes, 20% el rendimiento en el año en el curso y 20% rendimiento a 1 año.</h3> 
-       </div>  
-       <h4>Te mostramos el ranking de rendimientos de fondos entre bancos tradicionales y los Brokers del mercado de capitales con los que trabaja EXTENSIO S.A.S . Si contemplamos rendimiento en el mes y a 1 año, en el top 3 de rendimientos tenemos a los fondos con los que trabajamos.</h4>  
-   </div>
+  <div id="usd_mediano_plazo_offshore" class="tabcontent">
+    <div class="col-lg-12  col-md-12 col-sm-12 col-xs-12 text-center">
+      <h2 class="extensio_turquesa">Fondos pesos, horizonte muy corto plazo, con rescate inmediato</h2>  
+      <h4 class="extensio_turquesa">Para inversiones entre 30 y 60 días se recomienda este tipo de FCI que dan un rendimiento superior a un plazo fijo, ideales para una PYME. Son los primeros excedentes de fondos a corto plazo que no se usaran en un período corto. En el top 3 del ranking estan los fondos con los que trabajamos y que puedes suscribrir.</h4>
+      <h4 class="extensio_turquesa">La colocación de excedentes en estos fondos es para manejar un interés de corto plazo. Los mismos intentan mejorar en rendimiento la tasa BADLAR que informa el BCRA para plazos fijos, por lo que esta opción es una mejor alternativa al plazo fijo por ese tiempo determinado.</h4>  
+    </div>
+    
+    <div class="text-center">
+      <div class="table-filter-container"></div>
+      <table id="tablaDatos_usd_mediano_plazo_offshore" class="display tabla_usd_mediano_plazo_offshore tabla_blackground_invertir text-center">
+        <thead>
+          <tr>
+            <th><input type="text"  placeholder="Buscar Ranking" /></th>
+            <th><input type="text" placeholder="Buscar Nombre Fondo" /></th>
+            <th><input type="text" placeholder="Buscar Rend. Mes" /></th>
+            <th><input type="text" placeholder="Buscar Rend Año" /></th>
+            <th><input type="text" placeholder="Buscar Rend. 1 Año" /></th>
+          </tr>
+          <tr>
+            <th>Ranking</th>
+            <th>Fondo</th>
+            <th>Rend. Mes</th>
+            <th>Rend. Año</th>
+            <th>Rend. 1 Año</th>
+          </tr>
+
+        </thead>
+        <tbody></tbody>
+      </table>
+    </div>
+ 
+    <script src="https://code.jquery.com/jquery-3.5.1.js"></script>
+    <script src="https://cdn.datatables.net/1.10.24/js/jquery.dataTables.min.js"></script>
+    <script src="https://cdn.datatables.net/colreorder/1.5.4/js/dataTables.colReorder.min.js"></script>
+    <script src="https://cdn.datatables.net/fixedcolumns/3.3.2/js/dataTables.fixedColumns.min.js"></script>
+    
+
+    <script>
+       $(document).ready(function() {
+      var table_usd_mediano_plazo_offshore = $('#tablaDatos_usd_mediano_plazo_offshore').DataTable({
+        "processing": true,
+        "serverSide": false,
+        "ajax": {
+          "url": "https://sheets.googleapis.com/v4/spreadsheets/1JJf7z5h9-RiJr0rWUpGpdTQPBfIslbyNXtIurq1660s/values/FCI TABLAS USD!D49:I67?key=AIzaSyDD6wEmrY190Br80MQCrVDCYgZx4KJic_Y",
+          "dataSrc": "values"
+        },
+        "columns": [
+          { "data": 0 },
+          { "data": 2 },
+          { "data": 3 },
+          { "data": 4 },
+          { "data": 5 },
+        ],
+        "dom": 'R<"table-scrollable"t><"table-footer"ip>',
+        "colReorder": true,
+        "fixedColumns": {
+          "leftColumns": 0,
+          "rightColumns": 0
+        },
+        "drawCallback": function( settings ) {
+          var api_usd_mediano_plazo_offshore = this.api();
+          var numRows_usd_mediano_plazo_offshore = api_usd_mediano_plazo_offshore.rows( {search: 'applied'} ).nodes().length;
+          var rowHeight_usd_mediano_plazo_offshore = 48; // Set the row height in pixels
+          var tableHeight_usd_mediano_plazo_offshore = numRows_usd_mediano_plazo_offshore * rowHeight_usd_mediano_plazo_offshore;
+          $('.tabla_usd_mediano_plazo_offshore .table-scrollable').css('height', tableHeight_usd_mediano_plazo_offshore + 'px');
+        }
+      });
+      // Agregar filtros independientes a cada columna
+      $('.tabla_usd_mediano_plazo_offshore thead input').on('keyup change', function() {
+        table_usd_mediano_plazo_offshore.column($(this).parent().index()).search(this.value).draw();
+      });
+    });
+    </script>
+    <a href="https://www.cnv.gov.ar/SitioWeb/FondosComunesInversion/CuotaPartes"><!-- -->
+      <br>
+        <p class="extensio_turquesa" >Fuente: cnv.gov.ar/FondosComunesInversion</p> 
+    </a>  
+    <p class="extensio_turquesa"> Los datos tomados son a la fecha que se menciona en el inicio de la página para el valor de cuotas partes de los fondos comunes de inversión. Además se toma como premisa que todas las cuotapartes son clase B. El ranking tiene en cuenta los datos de rendimientos en el mes, año en curso y 1 año y los honorarios del fondo, tomando como promedio ponderado por el patrimonio de cada clase de cuotaparte el valor de cada variable. Luego se ponderan estas variables hasta que la suma de 100%, siendo del 30% para el rendimiento del mes, 30% para el rendimiento del año en curso, 20% para el rendimiento que tuvo en el último año y del 20% para los honorarios. Con cada variable ponderada, para cada una de ellas se dividió por el promedio de cada fondo que tuvo para esa variable y se la multiplicó por el peso ponderado en porcentaje. Así se realizó con cada una de ellas salvo en honorarios donde la división fue inversa ya que el resultado es mayor mientras menor sea el cobro de honorarios. Al resultado de las sumas ponderadas se las clasificó en un ranking </p> 
+    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<button onclick="this.parentElement.style.display='none'" class="topright">Cerrar Perfil</button>
+    <br>
   </div>
-</div>
 
-<div class="container">
-  <a href="#servicios">
-    <button id="fci_devaluacion_tc" class="btn btn-default btn-lg">Volvé al inicio de página</button>
-  </a>
-</div>
+  <div id="usd_mediano_plazo_local" class="tabcontent">
+    <div class="col-lg-12  col-md-12 col-sm-12 col-xs-12 text-center">
+      <h2 class="extensio_turquesa">Fondos de mediano plazo, indexados a la inflación con rescate a 48 horas</h2>  
+      <h4 class="extensio_turquesa">Para excedentes de fondos de mediano plazo que no se usarán, se sugiere invertir en fondos que están indexados a la inflación, a los efectos de no generar una pérdida monetaria que luego se usara para inversiones en capital de trabajo o inversión. Se logra mantener el capital actualizado. La colocación de excedentes es para manejar un interés de mediano plazo, es decir desde 70 días a 2 años siguiendo la evolución de la inflación más una tasa de interés adicional. Los mismos en su mayoría tienen bonos y obligaciones negociables CER (que ajustar por inflación).</h4>
+      <h4 class="extensio_turquesa">Dada la volatilidad que hoy atraviesa nuestro país, sugerimos no invertir estos fondos de corto plazo, puesto que si bien están indexados a un dato mensual informados por el INDEC, los precios de dichos activos o instrumentos de negociación en el mercado de capitales hacen que a veces de corto plazo se puedan tornar menos o más rentables, generando posibles resultados negativos en periodos menores a 50 días.</h4>  
+    </div>
+    
+    <div class="text-center">
+      <div class="table-filter-container"></div>
+      <table id="tablaDatos_usd_mediano_plazo_local" class="display tabla_usd_mediano_plazo_local tabla_blackground_invertir text-center">
+        <thead>
+          <tr>
+            <th><input type="text"  placeholder="Buscar Ranking" /></th>
+            <th><input type="text" placeholder="Buscar Nombre Fondo" /></th>
+            <th><input type="text" placeholder="Buscar Rend. Mes" /></th>
+            <th><input type="text" placeholder="Buscar Rend Año" /></th>
+            <th><input type="text" placeholder="Buscar Rend. 1 Año" /></th>
+          </tr>
+          <tr>
+            <th>Ranking</th>
+            <th>Fondo</th>
+            <th>Rend. Mes</th>
+            <th>Rend. Año</th>
+            <th>Rend. 1 Año</th>
+          </tr>
 
-<div id="FAKE" class="container-left">
-  <div class="row">
-     <div class="col-md-12">
-       <div class="ml-12">     
-           <h2 class="extensio_turquesa">Fondos de mediano plazo, indexados a la devaluación del tipo de cambio mayorista con rescate a 48 horas</h2>  
-           <h4>La colocación de excedentes en estos fondos es para manejar un interés de mediano plazo, es decir de 70 días a 2 años siguiendo la evolución del tipo de cambio oficial más una tasa de interés adicional. Los mismos en su mayoría tienen sintéticos de dólar linked a través de más una cobertura con dólar futuro en Rofex.</h4>
-           <h4>Dada la volatilidad que hoy atraviesa nuestro país, sugerimos no invertir estos fondos de corto plazo, puesto que si bien están indexados a la política monetaria que ejecuta el BCRA, los precios de dichos activos o instrumentos de negociación en el mercado de capitales hacen que a veces de corto plazo se puedan tornar menos o más rentables, generando posibles resultados negativos en periodos menores a 50 días.</h4>
-          </div>
-       <div class="container">
-         <div class="tabla_grande">
-           <iframe   class=chart seamless frameborder="0" scrolling="no" src="https://script.google.com/macros/s/AKfycbzFOHMC9MIrWhe84Yex7tKXKjeHiUutcfIh-xLkLmQecuyXeSbMLSgdP1kZVxQHx0fwSA/exec"></iframe>
-         </div>
-         <a href="https://www.cnv.gov.ar/SitioWeb/FondosComunesInversion/CuotaPartes">
-           <h3 class="letra_pie_dibujo">Fuente: cnv.gov.ar/FondosComunesInversion</h3> 
-         </a>   
-         <h3 class="letra_pie_dibujo">Los datos tomados son a la fecha que se menciona en el inicio de la página para el valor de cuotas partes de los fondos comunes de inversión. Además se toma como premisa que todas las cuotapartes son clase B. El ranking tiene en cuenta para tomar como peso en porcentajes aproximados a  un 60% como rindió en el mes, 20% el rendimiento en el año en el curso y 20% rendimiento a 1 año.</h3> 
-       </div>  
-       <h4>Te mostramos el ranking de rendimientos de fondos entre bancos tradicionales y los Brokers del mercado de capitales con los que trabaja EXTENSIO S.A.S . Si contemplamos rendimiento en el mes y a 1 año, en el top 3 de rendimientos tenemos a los fondos con los que trabajamos.</h4>  
-   </div>
+        </thead>
+        <tbody></tbody>
+      </table>
+    </div>
+ 
+    <script src="https://code.jquery.com/jquery-3.5.1.js"></script>
+    <script src="https://cdn.datatables.net/1.10.24/js/jquery.dataTables.min.js"></script>
+    <script src="https://cdn.datatables.net/colreorder/1.5.4/js/dataTables.colReorder.min.js"></script>
+    <script src="https://cdn.datatables.net/fixedcolumns/3.3.2/js/dataTables.fixedColumns.min.js"></script>
+    
+
+    <script>
+       $(document).ready(function() {
+      var table_usd_mediano_plazo_local = $('#tablaDatos_usd_mediano_plazo_local').DataTable({
+        "processing": true,
+        "serverSide": false,
+        "ajax": {
+          "url": "https://sheets.googleapis.com/v4/spreadsheets/1JJf7z5h9-RiJr0rWUpGpdTQPBfIslbyNXtIurq1660s/values/FCI TABLAS USD!D27:I46?key=AIzaSyDD6wEmrY190Br80MQCrVDCYgZx4KJic_Y",
+          "dataSrc": "values"
+        },
+        "columns": [
+          { "data": 0 },
+          { "data": 2 },
+          { "data": 3 },
+          { "data": 4 },
+          { "data": 5 },
+        ],
+        "dom": 'R<"table-scrollable"t><"table-footer"ip>',
+        "colReorder": true,
+        "fixedColumns": {
+          "leftColumns": 0,
+          "rightColumns": 0
+        },
+        "drawCallback": function( settings ) {
+          var api_usd_mediano_plazo_local = this.api();
+          var numRows_usd_mediano_plazo_local = api_usd_mediano_plazo_local.rows( {search: 'applied'} ).nodes().length;
+          var rowHeight_usd_mediano_plazo_local = 48; // Set the row height in pixels
+          var tableHeight_usd_mediano_plazo_local = numRows_usd_mediano_plazo_local * rowHeight_usd_mediano_plazo_local;
+          $('.tabla_usd_mediano_plazo_local .table-scrollable').css('height', tableHeight_usd_mediano_plazo_local + 'px');
+        }
+      });
+      // Agregar filtros independientes a cada columna
+      $('.tabla_usd_mediano_plazo_local thead input').on('keyup change', function() {
+        table_usd_mediano_plazo_local.column($(this).parent().index()).search(this.value).draw();
+      });
+    });
+    </script>
+    <a href="https://www.cnv.gov.ar/SitioWeb/FondosComunesInversion/CuotaPartes"><!-- -->
+      <br>
+      <p class="extensio_turquesa" >Fuente: cnv.gov.ar/FondosComunesInversion</p> 
+    </a>  
+    <p class="extensio_turquesa"> Los datos tomados son a la fecha que se menciona en el inicio de la página para el valor de cuotas partes de los fondos comunes de inversión. Además se toma como premisa que todas las cuotapartes son clase B. El ranking tiene en cuenta los datos de rendimientos en el mes, año en curso y 1 año y los honorarios del fondo, tomando como promedio ponderado por el patrimonio de cada clase de cuotaparte el valor de cada variable. Luego se ponderan estas variables hasta que la suma de 100%, siendo del 15% para el rendimiento del mes, 30% para el rendimiento del año en curso, 40% para el rendimiento que tuvo en el último año y del 15% para los honorarios. Con cada variable ponderada, para cada una de ellas se dividió por el promedio de cada fondo que tuvo para esa variable y se la multiplicó por el peso ponderado en porcentaje. Así se realizó con cada una de ellas salvo en honorarios donde la división fue inversa ya que el resultado es mayor mientras menor sea el cobro de honorarios. Al resultado de las sumas ponderadas se las clasificó en un ranking </p> 
+    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<button onclick="this.parentElement.style.display='none'" class="topright">Cerrar Perfil</button>
+    <br>
   </div>
+
+  <div id="usd_largo_plazo_local" class="tabcontent">
+    <div class="col-lg-12  col-md-12 col-sm-12 col-xs-12 text-center">
+      <h2 class="extensio_turquesa">Fondos de mediano plazo, indexados a la inflación con rescate a 48 horas</h2>  
+      <h4 class="extensio_turquesa">Para excedentes que se usarán en el mediano y corto plazo para importaciones, o son excedentes de exportaciones donde se desea mantener la rentabilidad de la devaluación del tipo de cambio, estos fondos cumplen el objetivo deseado, invirtiendo en instrumentos indexados a la devaluación del tipo de cambio. La colocación de excedentes en estos fondos es para manejar un interés de mediano plazo, es decir de 70 días a 2 años siguiendo la evolución del tipo de cambio oficial más una tasa de interés adicional. Los mismos en su mayoría tienen sintéticos de dólar linked a través de más una cobertura con dólar futuro en Rofex.</h4>
+      <h4 class="extensio_turquesa">Dada la volatilidad que hoy atraviesa nuestro país, sugerimos no invertir estos fondos de corto plazo, puesto que si bien están indexados a la política monetaria que ejecuta el BCRA, los precios de dichos activos o instrumentos de negociación en el mercado de capitales hacen que a veces de corto plazo se puedan tornar menos o más rentables, generando posibles resultados negativos en periodos menores a 50 días.</h4>  
+    </div>
+    
+    <div class="text-center">
+      <div class="table-filter-container"></div>
+      <table id="tablaDatos_usd_largo_plazo_local" class="display tabla_usd_largo_plazo_local tabla_blackground_invertir text-center">
+        <thead>
+          <tr>
+            <th><input type="text"  placeholder="Buscar Ranking" /></th>
+            <th><input type="text" placeholder="Buscar Nombre Fondo" /></th>
+            <th><input type="text" placeholder="Buscar Rend. Mes" /></th>
+            <th><input type="text" placeholder="Buscar Rend Año" /></th>
+            <th><input type="text" placeholder="Buscar Rend. 1 Año" /></th>
+          </tr>
+          <tr>
+            <th>Ranking</th>
+            <th>Fondo</th>
+            <th>Rend. Mes</th>
+            <th>Rend. Año</th>
+            <th>Rend. 1 Año</th>
+          </tr>
+
+        </thead>
+        <tbody></tbody>
+      </table>
+    </div>
+ 
+    <script src="https://code.jquery.com/jquery-3.5.1.js"></script>
+    <script src="https://cdn.datatables.net/1.10.24/js/jquery.dataTables.min.js"></script>
+    <script src="https://cdn.datatables.net/colreorder/1.5.4/js/dataTables.colReorder.min.js"></script>
+    <script src="https://cdn.datatables.net/fixedcolumns/3.3.2/js/dataTables.fixedColumns.min.js"></script>
+    
+
+    <script>
+       $(document).ready(function() {
+      var table_usd_largo_plazo_local = $('#tablaDatos_usd_largo_plazo_local').DataTable({
+        "processing": true,
+        "serverSide": false,
+        "ajax": {
+          "url": "https://sheets.googleapis.com/v4/spreadsheets/1JJf7z5h9-RiJr0rWUpGpdTQPBfIslbyNXtIurq1660s/values/FCI TABLAS USD!D70:I86?key=AIzaSyDD6wEmrY190Br80MQCrVDCYgZx4KJic_Y",
+          "dataSrc": "values"
+        },
+        "columns": [
+          { "data": 0 },
+          { "data": 2 },
+          { "data": 3 },
+          { "data": 4 },
+          { "data": 5 },
+        ],
+        "dom": 'R<"table-scrollable"t><"table-footer"ip>',
+        "colReorder": true,
+        "fixedColumns": {
+          "leftColumns": 0,
+          "rightColumns": 0
+        },
+        "drawCallback": function( settings ) {
+          var api_usd_largo_plazo_local = this.api();
+          var numRows_usd_largo_plazo_local = api_usd_largo_plazo_local.rows( {search: 'applied'} ).nodes().length;
+          var rowHeight_usd_largo_plazo_local = 48; // Set the row height in pixels
+          var tableHeight_usd_largo_plazo_local = numRows_usd_largo_plazo_local * rowHeight_usd_largo_plazo_local;
+          $('.tabla_usd_largo_plazo_local .table-scrollable').css('height', tableHeight_usd_largo_plazo_local + 'px');
+        }
+      });
+      // Agregar filtros independientes a cada columna
+      $('.tabla_usd_largo_plazo_local thead input').on('keyup change', function() {
+        table_usd_largo_plazo_local.column($(this).parent().index()).search(this.value).draw();
+      });
+    });
+    </script>
+    <a href="https://www.cnv.gov.ar/SitioWeb/FondosComunesInversion/CuotaPartes"><!-- -->
+      <br>
+      <p class="extensio_turquesa" >Fuente: cnv.gov.ar/FondosComunesInversion</p> 
+    </a>  
+    <p class="extensio_turquesa"> Los datos tomados son a la fecha que se menciona en el inicio de la página para el valor de cuotas partes de los fondos comunes de inversión. Además se toma como premisa que todas las cuotapartes son clase B. El ranking tiene en cuenta los datos de rendimientos en el mes, año en curso y 1 año y los honorarios del fondo, tomando como promedio ponderado por el patrimonio de cada clase de cuotaparte el valor de cada variable. Luego se ponderan estas variables hasta que la suma de 100%, siendo del 15% para el rendimiento del mes, 30% para el rendimiento del año en curso, 40% para el rendimiento que tuvo en el último año y del 15% para los honorarios. Con cada variable ponderada, para cada una de ellas se dividió por el promedio de cada fondo que tuvo para esa variable y se la multiplicó por el peso ponderado en porcentaje. Así se realizó con cada una de ellas salvo en honorarios donde la división fue inversa ya que el resultado es mayor mientras menor sea el cobro de honorarios. Al resultado de las sumas ponderadas se las clasificó en un ranking </p> 
+    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<button onclick="this.parentElement.style.display='none'" class="topright">Cerrar Perfil</button>
+    <br>
+  </div>
+
+  <script>
+    function FCIUSD(evt, cityName) {
+      var i, tabcontent, tablinks;
+      tabcontent = document.getElementsByClassName("tabcontent");
+      for (i = 0; i < tabcontent.length; i++) {
+        tabcontent[i].style.display = "none";
+      }
+      tablinks = document.getElementsByClassName("tab-invertir-links");
+      for (i = 0; i < tablinks.length; i++) {
+        tablinks[i].className = tablinks[i].className.replace(" active", "");
+      }
+      document.getElementById(cityName).style.display = "block";
+      evt.currentTarget.className += " active";
+    }
+    </script> 
+  </div>  
+
+
 </div>
+
+
+
 
 <div id="Dolar" class="container-fluid fluid bg-grey">
   <h2 class="text-center">CONTACTO</h2>

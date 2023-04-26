@@ -103,7 +103,7 @@ h6{
 }
 .h2_technology{
   text-transform: bitter;
-  color: #63f4b3;
+  color: #45eba0;
   
   margin-bottom: 30px;
 }
@@ -976,6 +976,16 @@ background-color: #00c8d2;
   color: #def9ff;
   transition: background-color  1s;
 }
+.tabla_blackground_invertir_green span{
+  color: #45eba0;
+  width: 1px;
+  height: 2px;
+  font-size: 20px;
+}
+.tabla_blackground_invertir_green span:hover{
+  color: #def9ff;
+  transition: background-color  1s;
+}
 .paginate_button{
   color: #00e5ff;
   font-size: 20px;
@@ -1059,6 +1069,72 @@ background-color: #00c8d2;
 .tabla_blackground_invertir ::placeholder {
   background-color: rgb(0, 10, 12);
   color: #00e5ff;
+  text-align: center;
+  font-size: 1.1vw;
+}
+
+.tabla_blackground_invertir_green thead {
+  background-color: rgb(0, 10, 21);
+  color: #45eba0;
+  text-align: center;
+  align-items: center;
+  margin-left: 10px;
+  margin-right: 10px;
+  padding-right: 10px;
+  padding-left: 10px;
+
+}
+.tabla_blackground_invertir_green th {
+  padding-top: 5px;
+  background-color: rgb(0, 10, 12);
+  color: #45eba0;
+  text-align: center;
+  border-bottom: 1px solid #45eba0;
+  border-top: 1px solid #45eba0;
+  font-size: 1.5vw;
+  margin-left: 10px;
+  margin-right: 10px;
+  padding-right: 10px;
+  padding-left: 10px;
+}
+.tabla_blackground_invertir_green th:hover {
+  color:  #def9ff;
+}
+.tabla_blackground_invertir_green tbody {
+  background-color: rgb(0, 10, 21);
+  color: #00e5ff;
+  text-align: center;
+  border-bottom: 2px solid #45eba0;
+  align-items: center;
+  margin-left: 10px;
+  margin-right: 10px;
+  padding-right: 10px;
+  padding-left: 10px;
+}
+.tabla_blackground_invertir_green tr {
+  border-bottom: 0.5px solid #4c5f61;
+  border-left: 0.5px solid #4c5f61;
+  border-right: 0.5px solid #4c5f61;
+  font-size: 1vw;
+  margin-left: 10px;
+  margin-right: 10px;
+  padding-right: 10px;
+  padding-left: 10px;
+}
+.tabla_blackground_invertir_green input {
+  padding-top: 5px;
+  background-color: rgb(0, 10, 12);
+  color: #45eba0;
+  text-align: center;
+  border-radius: 10px;
+  border: 1px solid #45eba0;
+  font-size: 1.1vw;
+  margin: 5px;
+  padding: 5px;
+}
+.tabla_blackground_invertir_green ::placeholder {
+  background-color: rgb(0, 10, 12);
+  color: #45eba0;
   text-align: center;
   font-size: 1.1vw;
 }
@@ -1248,7 +1324,7 @@ footer .glyphicon {
 }
 .tabcontent table{
   min-width: 550px;
-  min-height: 500px;
+  
 
 }
 /* Style the buttons inside the tab */
@@ -1271,7 +1347,7 @@ footer .glyphicon {
   outline: none;
   cursor: pointer;
   padding: 5px 5px 5px 5px;
-  marging: 0px 0px 0px 0px;
+  margin: 0px 0px 0px 0px;
   transition: 0.3s;
   font-size: 17px;
 }
@@ -2105,7 +2181,7 @@ footer .glyphicon {
     max-width: 250px;
     max-height: 250px;
     min-width: 250px;
-    min-height: 200px;
+  
     padding: 10px 0px 10px 0px;
     margin: 0px 0px 0px 0px;
   } 
