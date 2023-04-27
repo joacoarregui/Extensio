@@ -196,13 +196,11 @@
       $('.tabla_high_value .table-scrollable').css('height', tableHeight + 'px');
     }
   });
-
   // Agregar filtros independientes a cada columna
   $('.tabla_high_value thead input').on('keyup change', function() {
     table.column($(this).parent().index()).search(this.value).draw();
   });
 });
-
     </script>
 
     
