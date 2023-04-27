@@ -2223,6 +2223,9 @@ footer .glyphicon {
     max-height: 300px;
     padding-left: 0px;
     padding-right: 0px;
+    margin-left: 0px;
+    margin-right: 0px;
+    display:table;
   }
 }
 @import url('https://fonts.googleapis.com/css?family=Montserrat:400,800');
