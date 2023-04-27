@@ -1834,30 +1834,30 @@ footer .glyphicon {
     align-items: center;
   }
   .tabla_blackground_invertir tr {
-    font-size: 3vw;
-    margin-left: 1px;
-    margin-right: 1px;
-    padding-right: 1px;
-    padding-left: 1px;
+    font-size: 2.7vw;
+    margin-left: 0px;
+    margin-right: 0px;
+    padding-right: 0px;
+    padding-left: 0px;
   }
   .tabla_blackground_invertir th {
-    font-size: 3vw;
-    margin-left: 1px;
-    margin-right: 1px;
-    padding-right: 1px;
-    padding-left: 1px
+    font-size: 2.7vw;
+    margin-left: 0px;
+    margin-right: 0px;
+    padding-right: 0px;
+    padding-left: 0px
   }
   .tabla_blackground_invertir thead {
-    margin-left: 1px;
-    margin-right: 1px;
-    padding-right: 1px;
-    padding-left: 1px
+    margin-left: 0px;
+    margin-right: 0px;
+    padding-right: 0px;
+    padding-left: 0px
   }
   .tabla_blackground_invertir tbody {
-    margin-left: 1px;
-    margin-right: 1px;
-    padding-right: 1px;
-    padding-left: 1px;
+    margin-left: 0px;
+    margin-right: 0px;
+    padding-right: 0px;
+    padding-left: 0px;
   }
   .tabla_blackground_invertir ::placeholder {
     font-size: 2vw;
@@ -2136,13 +2136,6 @@ footer .glyphicon {
     padding:0px;
     visibility: visible;
   } 
-  .container-fluid table {
-    max-width: 300px;
-    max-height: 500px;
-    min-width: 250px;
-    text-align: center;
-    align-items: center;
-  }
   .grafico_movil_costado iframe {
     max-width: 390px;
     max-height: 380px;
@@ -2157,15 +2150,22 @@ footer .glyphicon {
     margin-top: 10px;
     margin-bottom: 10px;
   }
+  .container-fluid table {
+    max-width: 270px;
+    min-width: 200px;
+    margin: 0px;
+    padding: 0px;
+    text-align: center;
+    align-items: center;
+  }
   .tablinks{
     padding: 10px 0px 10px 5px;
     margin: 0px 0px 0px 0px;
-    font-size: 20px;
   }
   .tab-invertir-links{
     padding: 10px 0px 10px 0px;
     margin: 0px 0px 0px 0px;
-    font-size: 20px;
+   
   }
   .tabcontent img{
     max-width: 250px;
@@ -2179,9 +2179,27 @@ footer .glyphicon {
   }
   .tabcontent table{
     max-width: 250px;
-    max-height: 250px;
-    min-width: 250px;
-  
+    max-height: 400px;
+    min-width: 200px;
+    padding: 0px;
+    margin-right: -40px;
+  } 
+  .tabcontent{
+    max-width: 390px;
+    margin: 0px;
+    padding: 0px;
+  }
+  .dataTable{
+    max-width: 270px;
+    max-height: 400px;
+    min-width: 200px;
+    padding: 10px 0px 10px 0px;
+    margin: 0px 0px 0px 0px;
+  } 
+  .tabla_blackground_invertir{
+    max-width: 270px;
+    max-height: 400px;
+    min-width: 200px;
     padding: 10px 0px 10px 0px;
     margin: 0px 0px 0px 0px;
   } 
@@ -2201,10 +2219,10 @@ footer .glyphicon {
     max-height: 300px;
   }
   .display{
-    max-width: 300px;
+    max-width: 270px;
     max-height: 300px;
-    padding-left: 1px;
-    padding-right: 1px;
+    padding-left: 0px;
+    padding-right: 0px;
   }
 }
 @import url('https://fonts.googleapis.com/css?family=Montserrat:400,800');
