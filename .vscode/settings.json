@@ -13,5 +13,11 @@
             "database": "extensio_finanzas_users_db_name",
             "username": "extensio_finanzas_users_db_username"
         }
-    ]
+    ],
+    "terminal.integrated.commandsToSkipShell": [
+        "A:\\OneDrive\\Documentos\\GitHub\\Extensio-WEB\\server\\index.js"
+    ],
+    "terminal.integrated.env.windows": {
+        "A:\\OneDrive\\Documentos\\GitHub\\Extensio-WEB\\server\\index.js"
+    }
 }
