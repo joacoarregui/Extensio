@@ -11,7 +11,7 @@ app.use(express.static('public'));
 app.get('/api/tabla_usd_largo_plazo_local', async (req, res) => {
   try {
     const response = await axios.get(
-      `https://sheets.googleapis.com/v4/spreadsheets/1JJf7z5h9-RiJr0rWUpGpdTQPBfIslbyNXtIurq1660s/values/FCI TABLAS USD!D83:I102?key=${process.env.API_KEY}`
+      `https://sheets.googleapis.com/v4/spreadsheets/1JJf7z5h9-RiJr0rWUpGpdTQPBfIslbyNXtIurq1660s/values/FCI%20TABLAS%20USD!D83:I102?key=${process.env.API_KEY}`
     );
     res.json(response.data.values);
   } catch (error) {
