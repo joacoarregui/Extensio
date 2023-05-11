@@ -48,8 +48,7 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/jquery.tablesorter/2.31.3/css/jquery.tablesorter.pager.min.css" />
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/jquery.tablesorter/2.14.0/css/theme.blue.css"  />
  
-    <link rel="preload" href="indexx.js" as="script">
-
+    
     <link rel=“stylesheet” type=“text/css” href=“./style.css”>
     <link rel="stylesheet"                 href="./style.css">
 
@@ -785,7 +784,6 @@
             <th>Rend. Año</th>
             <th>Rend. 1 Año</th>
           </tr>
-
         </thead>
         <tbody></tbody>
       </table>
@@ -797,15 +795,19 @@
     <script src="https://cdn.datatables.net/fixedcolumns/3.3.2/js/dataTables.fixedColumns.min.js"></script>
     
     <link rel="preload" href="./server/index.js" as="script">
-    <script>
-      
+
+    <script> 
+    
        $(document).ready(function() {
       var table_usd_largo_plazo_local = $('#tablaDatos_usd_largo_plazo_local').DataTable({
         "processing": true,
         "serverSide": false,
         "ajax": {
-          "url": "valores/tabla_usd_largo_plazo_local",
-          "dataSrc": "values"
+          "url": "/valores/tabla_usd_largo_plazo_local",
+          "dataSrc": "",
+          "error": function(jqXHR, textStatus, errorThrown) {
+  alert('Error al obtener los datos: ' + textStatus + '\n\nDetalles del error:\n\nEstado de la solicitud: ' + jqXHR.status + '\nMensaje de error: ' + errorThrown.message);
+}
         },
         "columns": [
           { "data": 0 },
