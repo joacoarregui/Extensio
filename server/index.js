@@ -1,10 +1,8 @@
 require('dotenv').config();
 const express = require('express');
-const dotenv = require('dotenv');
 const axios = require('axios');
 const app = express();
 
-dotenv.config();
 
 app.use(express.static('public'));
 
