@@ -21,13 +21,13 @@ const auth = new google.auth.GoogleAuth({
 
 const sheets = google.sheets({ version: 'v4', auth });
 
-const spreadsheetId = '1JJf7z5h9-RiJr0rWUpGpdTQPBfIslbyNXtIurq1660s';
+const spreadsheetId = '1JJf7z5h9-RiJr0rWUpGpdTQPBfIslbyNXtIurq1660s'; 
 const range = 'FCI TABLAS USD!D83:I102';
 
 app.get('/valores/tabla_usd_largo_plazo_local', async (req, res) => {
   console.log('Endpoint llamado');
   try {
-    const url = `https://sheets.googleapis.com/v4/spreadsheets/${spreadsheetId}/values/${range}`;
+    const url = "https://sheets.googleapis.com/v4/spreadsheets/1JJf7z5h9-RiJr0rWUpGpdTQPBfIslbyNXtIurq1660s/values/FCI TABLAS USD!D83:I102?key=AIzaSyDD6wEmrY190Br80MQCrVDCYgZx4KJic_Y";
     const response = await axios.get(url);
     console.log(response.data); // Verificar si la respuesta contiene los datos esperados
 
