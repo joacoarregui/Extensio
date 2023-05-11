@@ -48,7 +48,7 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/jquery.tablesorter/2.31.3/css/jquery.tablesorter.pager.min.css" />
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/jquery.tablesorter/2.14.0/css/theme.blue.css"  />
  
-    <link rel="preload" href="index.js" as="script">
+    <link rel="preload" href="indexx.js" as="script">
 
     <link rel=“stylesheet” type=“text/css” href=“./style.css”>
     <link rel="stylesheet"                 href="./style.css">
@@ -796,34 +796,9 @@
     <script src="https://cdn.datatables.net/colreorder/1.5.4/js/dataTables.colReorder.min.js"></script>
     <script src="https://cdn.datatables.net/fixedcolumns/3.3.2/js/dataTables.fixedColumns.min.js"></script>
     
-
+    <link rel="preload" href="./server/index.js" as="script">
     <script>
-      require('dotenv').config();
-      const express = require('express');
-      const axios = require('axios');
-      const app = express();
-      app.use(express.static('public'));
-
-      app.get('/api/tabla_usd_largo_plazo_local', async (req, res) => {
-        try {
-          const response = await axios.get(
-            `https://sheets.googleapis.com/v4/spreadsheets/1JJf7z5h9-RiJr0rWUpGpdTQPBfIslbyNXtIurq1660s/values/FCI%20TABLAS%20USD!D83:I102`,
-            { headers: { 'Authorization': `Bearer ${process.env.API_KEY}` } }
-          );
-          res.json(response.data.values);
-        } catch (error) {
-          console.error(error);
-          res.status(500).send('Error al obtener los datos de la tabla');
-        }
-      });
-
-      const PORT = process.env.PORT || 3000;
-
-      app.listen(PORT, () => {
-        console.log(`Servidor iniciado en el puerto ${PORT}`);
-      });
-
-
+      
        $(document).ready(function() {
       var table_usd_largo_plazo_local = $('#tablaDatos_usd_largo_plazo_local').DataTable({
         "processing": true,
