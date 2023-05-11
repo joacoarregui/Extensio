@@ -797,51 +797,41 @@
     <link rel="preload" href="./server/index.js" as="script">
 
     <script> 
-      $(document).ready(function() {
-        var table_usd_largo_plazo_local = $('#tablaDatos_usd_largo_plazo_local').DataTable({
-          "processing": true,
-          "serverSide": false,
-          "ajax": {
-            "url": "/valores/tabla_usd_largo_plazo_local",
-            "dataSrc": ""
-          },
-          "columns": [
-            { "data": 0 },
-            { "data": 2 },
-            { "data": 3 },
-            { "data": 4 },
-            { "data": 5 },
-          ],
-          "dom": 'R<"table-scrollable"t><"table-footer"ip>',
-          "colReorder": true,
-          "fixedColumns": {
-            "leftColumns": 0,
-            "rightColumns": 0
-          },
-          "drawCallback": function( settings ) {
-            var api_usd_largo_plazo_local = this.api();
-            var numRows_usd_largo_plazo_local = api_usd_largo_plazo_local.rows( {search: 'applied'} ).nodes().length;
-            var rowHeight_usd_largo_plazo_local = 48; // Set the row height in pixels
-            var tableHeight_usd_largo_plazo_local = numRows_usd_largo_plazo_local * rowHeight_usd_largo_plazo_local;
-            $('.tabla_usd_largo_plazo_local .table-scrollable').css('height', tableHeight_usd_largo_plazo_local + 'px');
-          }
-        });
+$(document).ready(function() {
+  var table_usd_largo_plazo_local = $('#tablaDatos_usd_largo_plazo_local').DataTable({
+        "processing": true,
+        "serverSide": false,
+        "ajax": {
+      "url": "https://sheets.googleapis.com/v4/spreadsheets/1JJf7z5h9-RiJr0rWUpGpdTQPBfIslbyNXtIurq1660s/values/FCI TABLAS USD!D83:I107?key="+ process.env.API_KEY,
+      "dataSrc": "values"
+    },
+    "columns": [
+      { "data": 0 },
+      { "data": 2 },
+      { "data": 3 },
+      { "data": 4 },
+      { "data": 5 },
+    ],
+    "dom": 'R<"table-scrollable"t><"table-footer"ip>',
+    "colReorder": true,
+    "fixedColumns": {
+      "leftColumns": 0,
+      "rightColumns": 0
+    },
+    "drawCallback": function( settings ) {
+      var api_usd_largo_plazo_local = this.api();
+      var numRows_usd_largo_plazo_local = api_usd_largo_plazo_local.rows( {search: 'applied'} ).nodes().length;
+      var rowHeight_usd_largo_plazo_local = 48; // Set the row height in pixels
+      var tableHeight_usd_largo_plazo_local = numRows_usd_largo_plazo_local * rowHeight_usd_largo_plazo_local;
+      $('.tabla_usd_largo_plazo_local .table-scrollable').css('height', tableHeight_usd_largo_plazo_local + 'px');
+    }
+  });
 
-        table_usd_largo_plazo_local.on( 'error.dt', function ( e, settings, techNote, message ) {
-          console.log( 'Error al obtener los datos: ' + message );
-          alert( 'Error al obtener los datos: ' + message );
-        } ).on( 'xhr.dt', function ( e, settings, json, xhr ) {
-          if ( xhr.status != 200 ) {
-            console.log( 'Error al obtener los datos: ' + xhr.responseText );
-            alert( 'Error al obtener los datos: ' + xhr.responseText );
-          }
-        } );
-
-        // Agregar filtros independientes a cada columna
-        $('.tabla_usd_largo_plazo_local thead input').on('keyup change', function() {
-          table_usd_largo_plazo_local.column($(this).parent().index()).search(this.value).draw();
-        });
-      });    
+  // Agregar filtros independientes a cada columna
+  $('.tabla_usd_largo_plazo_local thead input').on('keyup change', function() {
+    table_usd_largoo_plazo_local.column($(this).parent().index()).search(this.value).draw();
+      });
+    });
     </script>
     
     <a href="https://www.cnv.gov.ar/SitioWeb/FondosComunesInversion/CuotaPartes"><!-- -->
