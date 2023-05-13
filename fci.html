@@ -765,10 +765,14 @@
       <h4 class="extensio_turquesa">Son fondos con el objetivo de obtener una renta estable en dólares en el largo plazo, con rentornos entre el 7% y 9% anual.</h4>
       <h4 class="extensio_turquesa">Mayoritariamente estos fondos se componen de bonos corporativos, pero hay fondos que invierte en bonos soberanos locales con vencimientos superiores a 5 años que con el fin de aumentar la potencial tasa de rendimiento, se incrementará el riesgo de default, por lo que es clave identificar aquellos fondos que tienen una composición elevada en este tipo de instrumentos.</h4>  
     </div>
-    
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://cdn.datatables.net/1.11.3/js/jquery.dataTables.min.js"></script>
+    <script src="server/index.js"></script>
+
     <div class="text-center">
       <div class="table-filter-container"></div>
       <table id="tablaDatos_usd_largo_plazo_local" class="display tabla_usd_largo_plazo_local tabla_blackground_invertir">
+       
         <thead>
           <tr>
             <th><input type="text"  placeholder="Buscar Ranking" /></th>
@@ -788,21 +792,27 @@
         <tbody></tbody>
       </table>
     </div>
+    
+
  
     <script src="https://code.jquery.com/jquery-3.5.1.js"></script>
     <script src="https://cdn.datatables.net/1.10.24/js/jquery.dataTables.min.js"></script>
     <script src="https://cdn.datatables.net/colreorder/1.5.4/js/dataTables.colReorder.min.js"></script>
     <script src="https://cdn.datatables.net/fixedcolumns/3.3.2/js/dataTables.fixedColumns.min.js"></script>
     
-    <link rel="preload" href="./server/index.js" as="script">
+
 
     <script> 
 $(document).ready(function() {
+
+
+  var valor_apikey= 'AIzaSyDD6wEmrY190Br80MQCrVDCYgZx4KJic_Y';
+  var url_mas_apikey="https://sheets.googleapis.com/v4/spreadsheets/1JJf7z5h9-RiJr0rWUpGpdTQPBfIslbyNXtIurq1660s/values/FCI TABLAS USD!D83:I107?key="+ valor_apikey;
   var table_usd_largo_plazo_local = $('#tablaDatos_usd_largo_plazo_local').DataTable({
         "processing": true,
         "serverSide": false,
         "ajax": {
-      "url": "https://sheets.googleapis.com/v4/spreadsheets/1JJf7z5h9-RiJr0rWUpGpdTQPBfIslbyNXtIurq1660s/values/FCI TABLAS USD!D83:I107?key="+ process.env.API_KEY,
+      "url": "/api/tabla_usd_largo_plazo_local",
       "dataSrc": "values"
     },
     "columns": [
