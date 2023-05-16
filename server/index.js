@@ -1,4 +1,5 @@
-require('dotenv').config();
+const path = require('path');
+require('dotenv').config({ path: path.resolve(__dirname, '../.env') });
 const express = require('express');
 const axios = require('axios');
 const app = express();
@@ -14,7 +15,7 @@ app.use(express.static('public'));
 app.get('/api/tabla_usd_largo_plazo_local', async (req, res) => {
   try {
     const response = await axios.get(
-      `https://sheets.googleapis.com/v4/spreadsheets/1JJf7z5h9-RiJr0rWUpGpdTQPBfIslbyNXtIurq1660s/valuesFCI%20TABLAS%20USD!D83:I102?key=${process.env.API_KEY}`
+      `https://sheets.googleapis.com/v4/spreadsheets/1IaDo-W3LL4F_SXnLZJ6GOCf4ey4ywwUWtCIL7kT2eBM/valuesFCI%20TABLAS%20USD!E83:I102?key=${process.env.API_KEY}`
     );
     res.json(response.data.values);
   } catch (error) {
