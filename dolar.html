@@ -102,10 +102,63 @@
   <div class="container-whitecenter">
     <h2>Comprá dólar mep y ampliá las posibilidades de manejo de dinero</h2> 
     <div class="iframe-dolar">
-      <div class="col-md-3 col-sm-6 col-xs-12">
-        <iframe width="330" height="280" src="https://script.google.com/macros/s/AKfycbzTBuajl-l-wJGjFSSwVRJ3nTqJHpBBx407jPr5EUV2076RkV2l2XanR3Pddl2K8UW0/exec"></iframe>
-      </div> 
-      <div class="col-sm-9 col-xs-12">
+      <div class="text-center">
+      <table id="tablaDatos_muy_corto_plazo" class="display tabla_muy_corto_plazo tabla_blackground_invertir text-center">
+        <thead>
+          <tr>
+            <th>Dolar</th>
+            <th>Venta</th>
+            <th>Compra</th>
+            <th>% Dia</th>
+          </tr>
+
+        </thead>
+        <tbody></tbody>
+      </table>
+    </div>
+ 
+    <script src="https://code.jquery.com/jquery-3.5.1.js"></script>
+    <script src="https://cdn.datatables.net/1.10.24/js/jquery.dataTables.min.js"></script>
+    <script src="https://cdn.datatables.net/colreorder/1.5.4/js/dataTables.colReorder.min.js"></script>
+    <script src="https://cdn.datatables.net/fixedcolumns/3.3.2/js/dataTables.fixedColumns.min.js"></script>
+    
+
+    <script>
+     $(document).ready(function() {
+      var table_muy_corto_plazo = $('#tablaDatos_muy_corto_plazo').DataTable({
+        "processing": true,
+        "serverSide": false,
+        "ajax": {
+          "url": "https://sheets.googleapis.com/v4/spreadsheets/1t6bOM2mKdWnALtH_0pzM6fO3l6-566fZEu6TA0CyVLM/values/data!A3:D7?key=AIzaSyDD6wEmrY190Br80MQCrVDCYgZx4KJic_Y",
+          "dataSrc": "values"
+        },
+        "columns": [
+         { "data": 0 },
+          { "data": 1 },
+          { "data": 2 },
+          { "data": 3 },
+        ],
+        "dom": 'R<"table-scrollable"t><"table-footer"ip>',
+        "colReorder": true,
+        "fixedColumns": {
+          "leftColumns": 0,
+          "rightColumns": 0
+        },
+        "drawCallback": function( settings ) {
+          var api_muy_corto_plazo = this.api();
+          var numRows_muy_corto_plazo = api_muy_corto_plazo.rows( {search: 'applied'} ).nodes().length;
+          var rowHeight_muy_corto_plazo = 48; // Set the row height in pixels
+          var tableHeight_muy_corto_plazo = numRows_muy_corto_plazo * rowHeight_muy_corto_plazo;
+          $('.tabla_muy_corto_plazo .table-scrollable').css('height', tableHeight_muy_corto_plazo + 'px');
+        }
+      });
+    });
+    </script>
+
+
+
+
+      <div class="col-lg-12 col-md-12 col-sm-9 col-xs-12">
         <div class="lista_despegable">
           <a href="#demo1" class="btn btn-default btn-lg " data-toggle="collapse">¿Qué significa cada tipo de dólar?</a>
           <div id="demo1" class="collapse">
@@ -117,15 +170,17 @@
         </div>
       </div>      
     </div>   
-    <div class="col-md-9 col-sm-12 col-xs-12">    
+    <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">    
       <h3><a href="dolar_futuro">Ir a datos de dolar futuro</a></h3>
       <h3><a href="#ccl">Enviar y recibir dinero del exterior</a></h3>
-    </div>
-    <a target="_blank" href="https://chatwith.io/es/s/extensio">     
+    
+    <a target="_blank" href="https://chatwith.io/es/s/extensio" class="text-center">     
       <button class="btn btn-default btn-lg">Contactanos por whatsapp</button>  
-    </a>      
+    </a>    
+  </div>  
   </div>
   <div  class="container-whitecenter text-center">
+    <div class="col-lg-3 col-sm-4 col-xs-4"></div>
     <div class="col-lg-2 col-sm-4 col-xs-4">
       <a target="_blank" href="https://instagram.com/extensio.finanzas?igshid=NmQ2ZmYxZjA=">
           <img src="https://drive.google.com/uc?export=view&id=1NzDa_9zCKfSjgP94PtG6O8MlAz1Oav0u" width=50% height=50% > 
