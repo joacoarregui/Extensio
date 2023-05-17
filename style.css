@@ -1138,6 +1138,70 @@ background-color: #00c8d2;
   text-align: center;
   font-size: 1.1vw;
 }
+.tabla_greyground_sinfiltros thead {
+  background-color: rgb(252, 252, 255);
+  color: #2da4b1;
+  text-align: center;
+  align-items: center;
+  margin-left: 10px;
+  margin-right: 10px;
+  padding-right: 10px;
+  padding-left: 10px;
+}
+.tabla_greyground_sinfiltros th {
+  padding-top: 5px;
+  background-color: rgb(252, 252, 255);
+  color: #2da4b1;
+  text-align: center;
+  border-bottom: 1px solid #2da4b1;
+  border-top: 1px solid #2da4b1;
+  font-size: 1.5vw;
+  margin-left: 10px;
+  margin-right: 10px;
+  padding-right: 10px;
+  padding-left: 10px;
+}
+.tabla_greyground_sinfiltros th:hover {
+  color:  #0d2125;
+}
+.tabla_greyground_sinfiltros tbody {
+  background-color: rgb(252, 252, 255);
+  color: #2da4b1;
+  text-align: center;
+  border-bottom: 2px solid #2da4b1;
+  align-items: center;
+  margin-left: 10px;
+  margin-right: 10px;
+  padding-right: 10px;
+  padding-left: 10px;
+}
+.tabla_greyground_sinfiltros tr {
+  border-bottom: 0.5px solid #4c5f61;
+  border-left: 0.5px solid #4c5f61;
+  border-right: 0.5px solid #4c5f61;
+  font-size: 1vw;
+  margin-left: 10px;
+  margin-right: 10px;
+  padding-right: 10px;
+  padding-left: 10px;
+}
+.tabla_greyground_sinfiltros input {
+  padding-top: 5px;
+  background-color: rgb(252, 252, 255);
+  color: #2da4b1;
+  text-align: center;
+  border-radius: 10px;
+  border: 1px solid #2da4b1;
+  font-size: 1.1vw;
+  margin: 5px;
+  padding: 5px;
+}
+.tabla_greyground_sinfiltros ::placeholder {
+  background-color: rgb(252, 252, 255);
+  color: #2da4b1;
+  text-align: center;
+  font-size: 1.1vw;
+}
 
 .dataTables_length{
   visibility:visible;
