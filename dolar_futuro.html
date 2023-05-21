@@ -2,9 +2,18 @@
 <html lang="en">
 <head>
 
-  <title>Dolar futuro</title>
+  <title>Asesoría financiera en Contratos de Dólar Futuro Rofex| Extensio Finanzas </title>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="En Extensio Finanzas, ofrecemos asesoría financiera personalizada en inversiones en el mercado de capitales, planes de ahorro y cursos especializados. Maximiza tu rendimiento financiero y potencia tu éxito financiero con nuestras soluciones integrales.">
+  <meta name="keywords" content="asesoría financiera, inversiones, mercado de capitales, Rofex,Forex,FX, dolar futuro, extensio, extensiosas, extensio finanzas">
+  <meta name="robots" content="index, follow">
+  <link rel="canonical" href="https://www.extensiosas.com/" />
+  <meta property="og:site_name" content="Extensiosas finanzas | Asesoramos en inversiones de Negocios innovadores y disruptivos ">
+  <script type="text/javascript" async="" src="https://www.google-analytics.com/plugins/ua/linkid.js"></script>
+  <script type="text/javascript" async="" src="https://www.google-analytics.com/analytics.js"></script>
+  <script type="text/javascript" async="" src="https://www.googletagmanager.com/gtag/js?id=UA-196800844-1&amp;l=dataLayer&amp;cx=c"></script><!-- originales -->
+
 
  
 <!-- originales -->
@@ -27,16 +36,10 @@
 <!-- originales -->
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
-
+  <meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=4.0">
 
   <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
-  <link rel="preload" href="index.js" as="script">
-  <link rel="preload" href="tabla_futuros.js" as="script">
-  <script src="./tabla_futuros.js"></script>
-  <link rel="preload" href="tabla_futuros2.js" as="script">
-  <script src="./tabla_futuros2.js"></script>
-  <!--<meta name="viewport" content="width=device-width,initial-scale=1.0,maximum-scale=1.0,minimum-scale=1.0">-->
-  <!-- script sort tables -->
+<!-- script sort tables -->
 <base target="_top">
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js" ></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.tablesorter/2.31.3/js/jquery.tablesorter.min.js" ></script>
@@ -45,17 +48,11 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/jquery.tablesorter/2.31.3/css/jquery.tablesorter.pager.min.css" />
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/jquery.tablesorter/2.14.0/css/theme.blue.css"  />
  
-
+    
     <link rel=“stylesheet” type=“text/css” href=“./style.css”>
     <link rel="stylesheet"                 href="./style.css">
-    
-    <link rel="preload" href="API_GSHEET.py" as script>
-  
-    <link rel="icon" href="https://drive.google.com/uc?export=view&id=1TDpO7D-xdhEp-Q6YrhFCVj-OyfAE9iEQ" type="image/x-icon">
-    
-   
 
-    <link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/1.10.25/css/jquery.dataTables.css">
+    <link rel="icon" href="https://drive.google.com/uc?export=view&id=1TDpO7D-xdhEp-Q6YrhFCVj-OyfAE9iEQ" type="image/x-icon">
 </head>
 <body>
 
@@ -153,14 +150,94 @@
   }
     </script>
   </div>
+  <br><br>
+  <h3>Contratos futuros de dólar ROFEX, abajo dejamos la explicación:</h3> 
+</div>
 
-<br><br>
-<h3>Para una mejor experiencia, gire el celular en modo horizontal o utilice un dispositvo como una notebook.</h3> 
-<h3>Contratos futuros de dólar ROFEX, abajo dejamos la explicación:</h3> 
+<div  class="img_background_invertir ">         
+  <div class="container-fluid">
+    <div class="text-center">
+      <div class="table-filter-container"></div>
+        <div class="table-wrapper">
+        <table id="tablaDatos_futuros_rofex" class="display tabla_muy_corto_plazo tabla_blackground_invertir text-center" >
+          <thead>
+            <tr>
+              <th><input type="text"  placeholder="Buscar Concepto" /></th>
+              <th><input type="text" placeholder="Buscar Vto" /></th>
+              <th><input type="text" placeholder="Buscar Precio" /></th>
+              <th><input type="text" placeholder="Buscar Variacion" /></th>
+              <th><input type="text" placeholder="Buscar Devaluacion" /></th>
+              <th><input type="text" placeholder="Buscar TEA" /></th>
+              <th><input type="text" placeholder="Buscar Proyeccion" /></th>
+              <th><input type="text" placeholder="Buscar TEA" /></th>
+              <th><input type="text" placeholder="Buscar Variacion Nominal" /></th>
+              <th><input type="text" placeholder="Buscar Variacion % Pro." /></th>
+            </tr>
+            <tr>
+              <th>Concepto</th>
+              <th>Vencimiento</th>
+              <th>Precio</th>
+              <th>Variación</th>
+              <th>Devaluacion</th>
+              <th>T.E.A</th>
+              <th>Proyeccion</th>
+              <th>Tasa Efectiva Anual</th>
+              <th>Variación Nominal P.</th>
+              <th>Variación % Proyectada</th>
+            </tr>
+          </thead>
+          <tbody></tbody>
+        </table>
+        </div>
+    </div>
 
-<div class="container">
-  <div class="grafico_grande">
-    <iframe   class=chart seamless frameborder="0" scrolling="no" src="https://script.google.com/macros/s/AKfycbyFKJ3piwoWmRyo-bq5HGl1msTQSO_Auevctan-Yeph05O_ywa7ZE9n91I415ITZBlhNQ/exec"></iframe>
+    <script src="https://code.jquery.com/jquery-3.5.1.js"></script>
+    <script src="https://cdn.datatables.net/1.10.24/js/jquery.dataTables.min.js"></script>
+    <script src="https://cdn.datatables.net/colreorder/1.5.4/js/dataTables.colReorder.min.js"></script>
+    <script src="https://cdn.datatables.net/fixedcolumns/3.3.2/js/dataTables.fixedColumns.min.js"></script>
+
+
+    <script>
+    $(document).ready(function() {
+      var table_muy_corto_plazo = $('#tablaDatos_futuros_rofex').DataTable({
+        "processing": true,
+        "serverSide": false,
+        "ajax": {
+          "url": "https://sheets.googleapis.com/v4/spreadsheets/1-eHJNl1chHQWbooU7LaONSKt1rbAcwp0XFJF8AWULck/values/data_contratos_rofex!B9:K20?key=AIzaSyDD6wEmrY190Br80MQCrVDCYgZx4KJic_Y",
+          "dataSrc": "values"
+        },
+        "columns": [
+          { "data": 0 },
+          { "data": 1 },
+          { "data": 2 },
+          { "data": 3 },
+          { "data": 4 },
+          { "data": 5 },
+          { "data": 6 },
+          { "data": 7 },
+          { "data": 8 },
+          { "data": 9 },
+        ],
+        "dom": 'R<"table-scrollable"t><"table-footer"ip>',
+        "colReorder": true,
+        "fixedColumns": {
+          "leftColumns": 0,
+          "rightColumns": 0
+        },
+        "drawCallback": function( settings ) {
+          var api_muy_corto_plazo = this.api();
+          var numRows_muy_corto_plazo = api_muy_corto_plazo.rows( {search: 'applied'} ).nodes().length;
+          var rowHeight_muy_corto_plazo = 48; // Set the row height in pixels
+          var tableHeight_muy_corto_plazo = numRows_muy_corto_plazo * rowHeight_muy_corto_plazo;
+          $('.tabla_muy_corto_plazo .table-scrollable').css('height', tableHeight_muy_corto_plazo + 'px');
+        }
+      });
+      // Agregar filtros independientes a cada columna
+      $('.tabla_muy_corto_plazo thead input').on('keyup change', function() {
+        table_muy_corto_plazo.column($(this).parent().index()).search(this.value).draw();
+      });
+    });
+    </script>
   </div>
 </div>
 
