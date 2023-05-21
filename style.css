@@ -2361,11 +2361,11 @@ footer .glyphicon {
     margin: 0px 0px 0px 0px;
   }
   .tabcontent table{
-    max-width: 250px;
+    max-width: 350px;
     max-height: 400px;
-    min-width: 200px;
+    min-width: 250px;
     padding: 0px;
-    margin-right: -40px;
+    margin-right: 0px;
   } 
   .tabcontent{
     max-width: 390px;
@@ -2373,16 +2373,16 @@ footer .glyphicon {
     padding: 0px;
   }
   .dataTable{
-    max-width: 270px;
+    max-width: 350px;
     max-height: 400px;
-    min-width: 200px;
+    min-width: 250px;
     padding: 10px 0px 10px 0px;
     margin: 0px 0px 0px 0px;
   } 
   .tabla_blackground_invertir{
-    max-width: 270px;
+    max-width: 350px;
     max-height: 400px;
-    min-width: 200px;
+    min-width: 250px;
     padding: 10px 0px 10px 0px;
     margin: 0px 0px 0px 0px;
   } 
