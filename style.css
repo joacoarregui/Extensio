@@ -1056,11 +1056,11 @@ background-color: #00c8d2;
   text-align: center;
   border-bottom: 1px solid #2da4b1;
   border-top: 1px solid #2da4b1;
-  font-size: 1.5vw;
-  margin-left: 10px;
-  margin-right: 10px;
-  padding-right: 10px;
-  padding-left: 10px;
+  font-size: 1.3vw;
+  margin-left: 2px;
+  margin-right: 2px;
+  padding-right: 2px;
+  padding-left: 2px;
 }
 .tabla_blackground_invertir th:hover {
   color:  #def9ff;
@@ -1094,8 +1094,9 @@ background-color: #00c8d2;
   border-radius: 10px;
   border: 1px solid #2da4b1;
   font-size: 1.1vw;
-  margin: 5px;
-  padding: 5px;
+  margin: 5px 1px 5px 1px;
+  padding: 5px 1px 5px 1px;
+  max-width: 150px;
 }
 .tabla_blackground_invertir ::placeholder {
   background-color: rgb(0, 10, 12);
@@ -1212,27 +1213,29 @@ background-color: #00c8d2;
   border-left: 0.5px solid #2da4b1;
   border-right: 0.5px solid #2da4b1;
   font-size: 1vw;
-  margin-left: 10px;
-  margin-right: 10px;
-  padding-right: 10px;
-  padding-left: 10px;
+  margin-left: 5px;
+  margin-right: 5px;
+  padding-right: 5px;
+  padding-left: 5px;
 }
 .tabla_greyground_sinfiltros input {
-  padding-top: 5px;
   background-color: rgb(252, 252, 255);
   color: #2da4b1;
   text-align: center;
   border-radius: 10px;
   border: 1px solid #2da4b1;
   font-size: 1.1vw;
-  margin: 5px;
-  padding: 5px;
+  margin: 5px 1px 5px 1px;
+  padding: 5px 1px 5px 1px;
+
 }
 .tabla_greyground_sinfiltros ::placeholder {
   background-color: rgb(252, 252, 255);
   color: #2da4b1;
   text-align: center;
   font-size: 1.1vw;
+  max-width: 150px;
+  width: 10%;
 }
 
 .dataTables_length{
@@ -1243,6 +1246,40 @@ background-color: #00c8d2;
   visibility:visible;
   color: #00e5ff;
 }
+.table-wrapper {
+  max-width: 1800px;
+  max-height: 700px;
+  overflow-x: auto;
+  margin: 0 auto;
+}
+.table-wrapper::-webkit-scrollbar {
+  height: 8px;
+  margin-top: 3px;
+  padding-top: 3px;
+}
+.table-wrapper::-webkit-scrollbar-thumb {
+  background-color:  #037e93;
+  border-radius: 6px;
+}
+.table-wrapper::-webkit-scrollbar-track {
+  background-color: #00061a;
+}
+
+.tabla_muy_corto_plazo {
+  table-layout: auto;
+  width: 100%;
+}
+.tabla_muy_corto_plazo th,
+.tabla_muy_corto_plazo td {
+  width: 10%;
+  max-width: 170px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+
+
 
 .grafico_movil_costado iframe {
   max-width: 700px;
@@ -1946,14 +1983,14 @@ footer .glyphicon {
     align-items: center;
   }
   .tabla_blackground_invertir tr {
-    font-size: 2.7vw;
+    font-size: 3.5vw;
     margin-left: 0px;
     margin-right: 0px;
     padding-right: 0px;
     padding-left: 0px;
   }
   .tabla_blackground_invertir th {
-    font-size: 2.7vw;
+    font-size: 3.5vw;
     margin-left: 0px;
     margin-right: 0px;
     padding-right: 0px;
@@ -1972,7 +2009,7 @@ footer .glyphicon {
     padding-left: 0px;
   }
   .tabla_blackground_invertir ::placeholder {
-    font-size: 2vw;
+    font-size: 3vw;
     margin-left: 0px;
     margin-right: 0px;
     padding-right: 0px;
@@ -2371,6 +2408,34 @@ footer .glyphicon {
   .paginate_button:hover  {
     font-size: 3vw;
   }
+  .table-wrapper {
+    max-width: 350px;
+    max-height: 500px;
+    overflow-x: auto;
+    margin: 0 auto;
+  }
+  .table-wrapper::-webkit-scrollbar {
+    height: 5px;
+  }
+  .table-wrapper::-webkit-scrollbar-thumb {
+    background-color: #037e93;
+    border-radius: 6px;
+  }
+  .table-wrapper::-webkit-scrollbar-track {
+    background-color: #00000e;
+  }
+  
+  .tabla_muy_corto_plazo {
+    table-layout: auto;
+    width: 100%;
+  }
+  .tabla_muy_corto_plazo th,
+  .tabla_muy_corto_plazo td {
+    width: 10%;
+    max-width: 170px;
+    white-space: nowrap;
+    overflow: hidden;
+  }   
   .bandera img {
     width: 40px;
     height: 30px;
@@ -2407,6 +2472,7 @@ footer .glyphicon {
     min-height: 300px;
     max-height: 400px;
   }
+
 }
 @import url('https://fonts.googleapis.com/css?family=Montserrat:400,800');
 
