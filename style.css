@@ -986,8 +986,39 @@ background-color: #00c8d2;
   color: #def9ff;
   transition: background-color  1s;
 }
-.paginate_button{
-  color: #00e5ff;
+ #tablaDatos_dolar_paginate .paginate_button  {
+  color: #116c71 ;
+  font-size: 1vw;
+  background-color:  rgb(251, 252, 255);
+  border:1px solid #00c8d2;
+  padding: 5px;
+  margin: 5px;
+  border-radius: 5px;
+}
+#tablaDatos_dolar_paginate  .paginate_button:hover {
+  color: #def9ff;
+  padding: 5px;
+  font-size: 20px;
+  background-color: #00c8d2;
+  border: 1px solid #def9ff;
+  border-radius: 10px;
+  margin: 5px;
+  transition: border-radius 0.5s;
+  box-shadow: 5px 5px 25px rgba(4, 166, 202, 0.549);
+  transition: background-color  1s;
+}
+#tablaDatos_dolar_paginate .paginate_button.current {
+  color: #116c71 ;
+  font-size: 20px;
+  background-color:  rgb(251, 252, 255);
+  border:1px solid #00c8d2;
+  padding: 5px;
+  margin: 5px;
+  border-radius: 5px;
+}
+
+.paginate_button {
+  color: #00e5ff ;
   font-size: 20px;
   background-color:  rgb(0, 10, 21);
   border:1px solid #00c8d2;
@@ -995,7 +1026,7 @@ background-color: #00c8d2;
   margin: 5px;
   border-radius: 5px;
 }
-.paginate_button:hover{
+.paginate_button:hover  {
   color: #def9ff;
   padding: 5px;
   font-size: 20px;
@@ -1138,6 +1169,7 @@ background-color: #00c8d2;
   text-align: center;
   font-size: 1.1vw;
 }
+ 
 .tabla_greyground_sinfiltros thead {
   background-color: rgb(252, 252, 255);
   color: #2da4b1;
@@ -1176,9 +1208,9 @@ background-color: #00c8d2;
   padding-left: 10px;
 }
 .tabla_greyground_sinfiltros tr {
-  border-bottom: 0.5px solid #4c5f61;
-  border-left: 0.5px solid #4c5f61;
-  border-right: 0.5px solid #4c5f61;
+  border-bottom: 0.5px solid #2da4b1;
+  border-left: 0.5px solid #2da4b1;
+  border-right: 0.5px solid #2da4b1;
   font-size: 1vw;
   margin-left: 10px;
   margin-right: 10px;
@@ -1388,8 +1420,6 @@ footer .glyphicon {
 }
 .tabcontent table{
   min-width: 550px;
-  
-
 }
 /* Style the buttons inside the tab */
 .tab button {
@@ -1565,6 +1595,16 @@ footer .glyphicon {
   margin-left: 5px;
   display:inline-table;
   
+}
+#chart_div_brechas {
+  width: 100%;
+  height: 500px;
+  margin: 0 auto;
+}
+#chart_div_evol_dolares {
+  width: 100%;
+  height: 500px;
+  margin: 0 auto;
 }
 
 /* Fade in tabs */
@@ -1786,6 +1826,14 @@ footer .glyphicon {
     min-width: 400px;
     min-height: 300px;
   }  
+  #chart_div_brechas {
+    min-height: 400px;
+    min-width: 600px;
+  }
+  #chart_div_evol_dolares {
+    min-height: 400px;
+    min-width: 600px;
+  }
 
 }
 
@@ -1930,7 +1978,40 @@ footer .glyphicon {
     padding-right: 0px;
     padding-left: 0px;
     justify-content: center;
-
+  }
+  .tabla_greyground_sinfiltros tr {
+    font-size: 4vw;
+    margin-left: 0px;
+    margin-right: 0px;
+    padding-right: 0px;
+    padding-left: 0px;
+  }
+  .tabla_greyground_sinfiltros th {
+    font-size: 4vw;
+    margin-left: 0px;
+    margin-right: 0px;
+    padding-right: 0px;
+    padding-left: 0px
+  }
+  .tabla_greyground_sinfiltros thead {
+    margin-left: 0px;
+    margin-right: 0px;
+    padding-right: 0px;
+    padding-left: 0px
+  }
+  .tabla_greyground_sinfiltros tbody {
+    margin-left: 0px;
+    margin-right: 0px;
+    padding-right: 0px;
+    padding-left: 0px;
+  }
+  .tabla_greyground_sinfiltros ::placeholder {
+    font-size: 4vw;
+    margin-left: 0px;
+    margin-right: 0px;
+    padding-right: 0px;
+    padding-left: 0px;
+    justify-content: center;
   }
 
   .grafico_movil_costado iframe {
@@ -2215,9 +2296,10 @@ footer .glyphicon {
     margin-bottom: 10px;
   }
   .container-fluid table {
-    max-width: 270px;
-    min-width: 200px;
-    margin: 0px;
+    max-width: 350px;
+    min-width: 300px;
+    min-height: 350px;
+    margin: 10px;
     padding: 0px;
     text-align: center;
     align-items: center;
@@ -2267,6 +2349,28 @@ footer .glyphicon {
     padding: 10px 0px 10px 0px;
     margin: 0px 0px 0px 0px;
   } 
+  .tabla_greyground_sinfiltros{
+    max-width: 270px;
+    max-height: 400px;
+    min-width: 200px;
+    padding: 10px 0px 10px 0px;
+    margin: 0px 0px 0px 0px;
+  }
+  #tablaDatos_dolar_paginate .paginate_button  {
+    font-size: 3vw;
+  }
+  #tablaDatos_dolar_paginate  .paginate_button:hover {
+    font-size: 3vw;
+  }
+  #tablaDatos_dolar_paginate .paginate_button.current {
+    font-size: 3vw;
+  }
+  .paginate_button {
+    font-size: 3vw;
+  }
+  .paginate_button:hover  {
+    font-size: 3vw;
+  }
   .bandera img {
     width: 40px;
     height: 30px;
@@ -2290,6 +2394,18 @@ footer .glyphicon {
     margin-left: 0px;
     margin-right: 0px;
     display:table;
+  }
+  #chart_div_brechas {
+    min-width: 300px;
+    max-width: 400px;
+    min-height: 300px;
+    max-height: 400px;
+  }
+  #chart_div_evol_dolares {
+    min-width: 300px;
+    max-width: 400px;
+    min-height: 300px;
+    max-height: 400px;
   }
 }
 @import url('https://fonts.googleapis.com/css?family=Montserrat:400,800');

@@ -88,7 +88,7 @@
               <ul class="dropdown-menu">
                 <li><a href="datosmercado">Datos Mercado</a></li>
                 <li><a href="fci">Comparador Fondos</a></li>
-                <li><a href="Invertir">Dolar Futuro</a></li>
+                <li><a href="dolar_futuro">Dolar Futuro</a></li>
                 <li><a href="Planes_ahorros">Planes de Ahorros</a></li>
               </ul>
             </li>              
@@ -107,33 +107,26 @@
 
 <!--SERVICIOS PRIMEROS -->
 <div id="servicios" class="container-fluid jumbotron text-center">
-  <div class="container-whitecenter">
+  <div class="container-fluid text-center">
     <h2>Comprá dólar mep y ampliá las posibilidades de manejo de dinero</h2> 
-    <div class="iframe-dolar">
-      <div class="text-center">
-      <table id="tablaDatos_muy_corto_plazo" class="display tabla_muy_corto_plazo tabla_greyground_sinfiltros text-center">
-        <thead>
-          <tr>
-            <th>Dolar</th>
-            <th>Venta</th>
-            <th>Compra</th>
-            <th>% Dia</th>
-          </tr>
-
-        </thead>
-        <tbody></tbody>
+      <table id="tablaDatos_dolar" class="display tabla_greyground_sinfiltros text-center">
+          <thead>
+            <tr>
+              <th>Dolar</th>
+              <th>Venta</th>
+              <th>Compra</th>
+              <th>% Dia</th>
+            </tr>
+          </thead>
+          <tbody></tbody>
       </table>
-    </div>
- 
     <script src="https://code.jquery.com/jquery-3.5.1.js"></script>
     <script src="https://cdn.datatables.net/1.10.24/js/jquery.dataTables.min.js"></script>
     <script src="https://cdn.datatables.net/colreorder/1.5.4/js/dataTables.colReorder.min.js"></script>
     <script src="https://cdn.datatables.net/fixedcolumns/3.3.2/js/dataTables.fixedColumns.min.js"></script>
-    
-
     <script>
      $(document).ready(function() {
-      var table_muy_corto_plazo = $('#tablaDatos_muy_corto_plazo').DataTable({
+      var tablaDatos_dolar = $('#tablaDatos_dolar').DataTable({
         "processing": true,
         "serverSide": false,
         "ajax": {
@@ -162,10 +155,83 @@
       });
     });
     </script>
+  </div>
+  <div class="container-fluid">
+    <br>
+    <script src="https://www.gstatic.com/charts/loader.js"></script>
+    <script>
+      google.charts.load('current', {'packages':['corechart']});
+      google.charts.setOnLoadCallback(drawChart);
+  
+      function drawChart() {
+        var url_brechas = "https://docs.google.com/spreadsheets/d/1t6bOM2mKdWnALtH_0pzM6fO3l6-566fZEu6TA0CyVLM/gviz/tq?range=A3:A69,J3:J69,K3:K69&sheet=datos%20dolares&headers=1&key=AIzaSyDD6wEmrY190Br80MQCrVDCYgZx4KJic_Y";
+        var query_brechas = new google.visualization.Query(url_brechas);
+  
+        query_brechas.send(function(response) {
+        var dataTable_brechas = response.getDataTable();
+        var yData_brechas = dataTable_brechas.getColumnRange(1);
+        var min_brechas = yData_brechas.min-0.02;
+        var max_brechas = yData_brechas.max+0.02;
+        var ticks_brechas = [];
+        var step_brechas = (max_brechas - min_brechas) / 10;
 
-
-
-
+        for (var i = 0; i <= 10; i++) {
+          var tickValue_brechas = min_brechas + (step_brechas * i);
+          ticks_brechas.push({v: tickValue_brechas, f: (tickValue_brechas * 100).toFixed(1) + '%'});
+        }
+          // Configuración adicional
+          var options = {
+            title: 'Cuanto ahorramos por comprar dólar MEP vs BLUE',
+            titleTextStyle: {
+            color: '#2da4b1',
+            fontSize: 18,
+            bold: true,
+            textAlign: 'center'
+            },            
+            curveType: 'function',
+            legend: { position: 'bottom' },
+            series: {
+            0: { color: '#18ae9c' },
+            1: { color: '#1b3f6b' }
+              },
+              vAxis: {
+            format: '0.0%',
+            textStyle: {
+              color: '#2da4b1'
+            },
+            gridlines: {
+              color: '#2da4b1'
+            },
+            ticks: ticks_brechas,
+            viewWindow: {
+              min: min_brechas,
+              max: max_brechas,
+            }
+          },
+            hAxis: {
+              textStyle: {
+                color: '#2da4b1'
+              },
+              gridlines: {
+                color: 'transparent'
+              }
+            },
+            chartArea: {
+              left: 50,
+              top: 50,
+              width: '80%',
+              height: '70%'
+            }
+          };
+  
+          var chart_brechas = new google.visualization.AreaChart(document.getElementById('chart_div_brechas'));
+          chart_brechas.draw(dataTable_brechas, options);
+        });
+      }
+    </script>
+    <div id="chart_div_brechas"></div>
+  </div>
+  <div class="container-whitecenter">
       <div class="col-lg-12 col-md-12 col-sm-9 col-xs-12">
         <div class="lista_despegable">
           <a href="#demo1" class="btn btn-default btn-lg " data-toggle="collapse">¿Qué significa cada tipo de dólar?</a>
@@ -177,7 +243,86 @@
           </div>  
         </div>
       </div>      
-    </div>   
+  </div>   
+
+  <div class="container-fluid">
+    <br>
+    <script>
+      google.charts.load('current', {'packages':['corechart']});
+      google.charts.setOnLoadCallback(drawChart);
+  
+      function drawChart() {
+        var url_evol_dolares = "https://docs.google.com/spreadsheets/d/1t6bOM2mKdWnALtH_0pzM6fO3l6-566fZEu6TA0CyVLM/gviz/tq?range=A3:A69,C3:C69,D3:D69,E3:E69,F3:F69&sheet=datos%20dolares&headers=1&key=AIzaSyDD6wEmrY190Br80MQCrVDCYgZx4KJic_Y";
+        var query_evol_dolares = new google.visualization.Query(url_evol_dolares);
+  
+        query_evol_dolares.send(function(response) {
+        var dataTable_evol_dolares = response.getDataTable();
+        var yData_evol_dolares = dataTable_evol_dolares.getColumnRange(1);
+        var min_evol_dolares = yData_evol_dolares.min-20;
+        var max_evol_dolares = yData_evol_dolares.max+20;
+        var ticks_evol_dolares = [];
+        var step_evol_dolares = (max_evol_dolares - min_evol_dolares) / 10;
+
+        for (var i = 0; i <= 10; i++) {
+          var tickValue_evol_dolares = min_evol_dolares + (step_evol_dolares * i);
+          ticks_evol_dolares.push({v: tickValue_evol_dolares, f: (tickValue_evol_dolares).toFixed(0)});
+        }
+          // Configuración adicional
+          var options = {
+            title: 'Evolucion tipos de dolares',
+            titleTextStyle: {
+            color: '#2da4b1',
+            fontSize: 18,
+            bold: true,
+            textAlign: 'center'
+            },            
+            curveType: 'function',
+            legend: { position: 'bottom' },
+            series: {
+            0: { color: '#ff6161', visibleInLegend: true, labelInLegend: ' Dolar CCL' },
+            1: { color: '#1b3f6b', visibleInLegend: true, labelInLegend: 'Dolar MEP' },
+            2: { color: '#18ae9c', visibleInLegend: true, labelInLegend: 'Dolar BLUE' },
+            3: { color: '#ffc000', visibleInLegend: true, labelInLegend: 'Dolar Solidarios' }
+              },
+              vAxis: {
+            format: '0',
+            textStyle: {
+              color: '#2da4b1'
+            },
+            gridlines: {
+              color: '#2da4b1'
+            },
+            ticks: ticks_evol_dolares,
+            viewWindow: {
+              min: min_evol_dolares,
+              max: max_evol_dolares,
+            }
+          },
+            hAxis: {
+              textStyle: {
+                color: '#2da4b1'
+              },
+              gridlines: {
+                color: 'transparent'
+              }
+            },
+            chartArea: {
+              left: 50,
+              top: 50,
+              width: '80%',
+              height: '70%'
+            }
+          };
+  
+          var chart_evol_dolares = new google.visualization.LineChart(document.getElementById('chart_div_evol_dolares'));
+          chart_evol_dolares.draw(dataTable_evol_dolares, options);
+        });
+      }
+    </script>
+    <div id="chart_div_evol_dolares"></div>
+  </div> 
+
+
     <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">    
       <h3><a href="dolar_futuro">Ir a datos de dolar futuro</a></h3>
       <h3><a href="#ccl">Enviar y recibir dinero del exterior</a></h3>
@@ -186,7 +331,7 @@
       <button class="btn btn-default btn-lg">Contactanos por whatsapp</button>  
     </a>    
   </div>  
-  </div>
+  
   <div  class="container-whitecenter text-center">
     <div class="col-lg-3 col-sm-4 col-xs-4"></div>
     <div class="col-lg-2 col-sm-4 col-xs-4">
@@ -210,7 +355,7 @@
   <div class="container-fluid text-center img_background_invertir_fondo">
   <div class="iframe-dolar">
     <div class="grafico_mediano">
-      <div class="col-sm-6 col-xs-12">
+      <div class="col-lg-12 col-sm-12 col-xs-12">
         <h1 class="h7"><strong>Beneficios del dólar MEP</strong></h1>
         <h2 class="h7">Sin límites</h2> 
         <h3 class="conservate_value">¡No hay cupo ni tope! Comprá y vendé dólares sin montos mínimos ni máximos en cada operación.</h3> 
@@ -218,10 +363,6 @@
         <h3 class="conservate_value">Los brókers que elegimos son entidades financieras nacionales reguladas por la Comisión Nacional de Valores.</h3> 
         <h2 class="h7">Sin impuestos</h2> 
         <h3 class="conservate_value">No aplica el 30% de impuesto PAIS, ni el 35% de adelanto del Impuesto a las ganancias</h3> 
-      </div>
-      <div class="col-sm-6 col-xs-12">
-        <iframe  width=100% height=100%  class=chart  seamless frameborder="0" scrolling="no" src="https://docs.google.com/spreadsheets/d/e/2PACX-1vToX_LguuKTdCHslllyHge91zXJ7jsT_9oyQVgE-FBWtVJc6roM8ie1rm6c2Rv867-miv2E-DsdxTpg/pubchart?oid=683653827&amp;format=interactive" ></iframe>
-        <iframe width=100% height=100%  class=chart seamless frameborder="0" scrolling="no" src="https://docs.google.com/spreadsheets/d/e/2PACX-1vTsMxukhIWNVkgwsL3PK4DK5v2w73K__jVUDH9c9wM2hTcDx-DX568cqEiVhnANGLGsFGUnO0wHNCHL/pubchart?oid=294758732&amp;format=interactive"></iframe>
       </div>
       <br>
     </div>
