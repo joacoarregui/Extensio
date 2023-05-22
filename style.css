@@ -968,21 +968,16 @@ background-color: #00c8d2;
 }
 .tabla_blackground_invertir span{
   color: #2da4b1;
-  width: 1px;
-  height: 2px;
-  font-size: 20px;
-}
-.tabla_blackground_invertir span:hover{
-  color: #def9ff;
-  transition: background-color  1s;
 }
 .tabla_blackground_invertir_green span{
   color: #45eba0;
+}
+.tabla_blackground_invertir span,.tabla_blackground_invertir_green span{
   width: 1px;
   height: 2px;
   font-size: 20px;
 }
-.tabla_blackground_invertir_green span:hover{
+.tabla_blackground_invertir span:hover,.tabla_blackground_invertir_green span:hover{
   color: #def9ff;
   transition: background-color  1s;
 }
@@ -1041,129 +1036,128 @@ background-color: #00c8d2;
 .tabla_blackground_invertir thead {
   background-color: rgb(0, 10, 21);
   color: #00e5ff;
-  text-align: center;
-  align-items: center;
-  margin-left: 10px;
-  margin-right: 10px;
-  padding-right: 10px;
-  padding-left: 10px;
-
 }
-.tabla_blackground_invertir th {
-  padding-top: 5px;
-  background-color: rgb(0, 10, 12);
-  color: #00e5ff;
-  text-align: center;
-  border-bottom: 1px solid #2da4b1;
-  border-top: 1px solid #2da4b1;
-  font-size: 1.3vw;
-  margin-left: 2px;
-  margin-right: 2px;
-  padding-right: 2px;
-  padding-left: 2px;
-}
-.tabla_blackground_invertir th:hover {
-  color:  #def9ff;
-}
-.tabla_blackground_invertir tbody {
-  background-color: rgb(0, 10, 21);
-  color: #00e5ff;
-  text-align: center;
-  border-bottom: 2px solid #2da4b1;
-  align-items: center;
-  margin-left: 10px;
-  margin-right: 10px;
-  padding-right: 10px;
-  padding-left: 10px;
-}
-.tabla_blackground_invertir tr {
-  border-bottom: 0.5px solid #4c5f61;
-  border-left: 0.5px solid #4c5f61;
-  border-right: 0.5px solid #4c5f61;
-  font-size: 1vw;
-  margin-left: 10px;
-  margin-right: 10px;
-  padding-right: 10px;
-  padding-left: 10px;
-}
-.tabla_blackground_invertir input {
-  padding-top: 5px;
-  background-color: rgb(0, 10, 12);
-  color: #00e5ff;
-  text-align: center;
-  border-radius: 10px;
-  border: 1px solid #2da4b1;
-  font-size: 1.1vw;
-  margin: 5px 1px 5px 1px;
-  padding: 5px 1px 5px 1px;
-  max-width: 150px;
-}
-.tabla_blackground_invertir ::placeholder {
-  background-color: rgb(0, 10, 12);
-  color: #00e5ff;
-  text-align: center;
-  font-size: 1.1vw;
-}
-
 .tabla_blackground_invertir_green thead {
   background-color: rgb(0, 10, 21);
   color: #45eba0;
+}
+.tabla_greyground_sinfiltros thead {
+  background-color: rgb(252, 252, 255);
+  color: #2da4b1;
+}
+.tabla_blackground_invertir thead,.tabla_blackground_invertir_green thead,.tabla_greyground_sinfiltros thead {
   text-align: center;
   align-items: center;
   margin-left: 10px;
   margin-right: 10px;
   padding-right: 10px;
   padding-left: 10px;
-
+}
+.tabla_blackground_invertir th {
+  background-color: rgb(0, 10, 12);
+  color: #00e5ff;
+  border-bottom: 1px solid #2da4b1;
+  border-top: 1px solid #2da4b1;
 }
 .tabla_blackground_invertir_green th {
-  padding-top: 5px;
   background-color: rgb(0, 10, 12);
   color: #45eba0;
-  text-align: center;
   border-bottom: 1px solid #45eba0;
   border-top: 1px solid #45eba0;
+}
+.tabla_greyground_sinfiltros th {
+  background-color: rgb(252, 252, 255);
+  color: #2da4b1;
+  border-bottom: 1px solid #2da4b1;
+  border-top: 1px solid #2da4b1;
+}
+.tabla_blackground_invertir th,.tabla_blackground_invertir_green th,.tabla_greyground_sinfiltros th {
+  padding-top: 5px;
   font-size: 1.5vw;
   margin-left: 10px;
   margin-right: 10px;
   padding-right: 10px;
   padding-left: 10px;
+  text-align: center;
 }
-.tabla_blackground_invertir_green th:hover {
+.tabla_blackground_invertir th:hover,.tabla_blackground_invertir_green th:hover  {
   color:  #def9ff;
+}
+.tabla_greyground_sinfiltros th:hover {
+  color:  #0d2125;
+}
+.tabla_blackground_invertir tbody {
+  background-color: rgb(0, 10, 21);
+  color: #00e5ff;
+  border-bottom: 2px solid #2da4b1;
 }
 .tabla_blackground_invertir_green tbody {
   background-color: rgb(0, 10, 21);
   color: #00e5ff;
-  text-align: center;
   border-bottom: 2px solid #45eba0;
+}
+.tabla_greyground_sinfiltros tbody {
+  background-color: rgb(252, 252, 255);
+  color: #2da4b1;
+  border-bottom: 2px solid #2da4b1;
+}
+.tabla_blackground_invertir tbody,.tabla_blackground_invertir_green tbody,.tabla_greyground_sinfiltros tbody{
+  text-align: center;
   align-items: center;
   margin-left: 10px;
   margin-right: 10px;
   padding-right: 10px;
   padding-left: 10px;
 }
-.tabla_blackground_invertir_green tr {
+.tabla_blackground_invertir tr,.tabla_blackground_invertir_green tr{
   border-bottom: 0.5px solid #4c5f61;
   border-left: 0.5px solid #4c5f61;
   border-right: 0.5px solid #4c5f61;
+}
+.tabla_greyground_sinfiltros tr {
+  border-bottom: 0.5px solid #2da4b1;
+  border-left: 0.5px solid #2da4b1;
+  border-right: 0.5px solid #2da4b1;
+}
+.tabla_blackground_invertir tr,.tabla_blackground_invertir_green tr,.tabla_greyground_sinfiltros tr{
   font-size: 1vw;
-  margin-left: 10px;
-  margin-right: 10px;
-  padding-right: 10px;
-  padding-left: 10px;
+  margin-left: 5px;
+  margin-right: 5px;
+  padding-right: 5px;
+  padding-left: 5px;
+}
+
+.tabla_blackground_invertir input {
+  background-color: rgb(0, 10, 12);
+  color: #00e5ff;
+  border: 1px solid #2da4b1;
 }
 .tabla_blackground_invertir_green input {
-  padding-top: 5px;
   background-color: rgb(0, 10, 12);
   color: #45eba0;
+  border: 1px solid #45eba0;
+}
+.tabla_greyground_sinfiltros input {
+  background-color: rgb(252, 252, 255);
+  color: #2da4b1;
+  border: 1px solid #2da4b1;
+}
+.tabla_blackground_invertir input,.tabla_blackground_invertir_green input,.tabla_greyground_sinfiltros input{
+  padding-top: 5px;
   text-align: center;
   border-radius: 10px;
-  border: 1px solid #45eba0;
   font-size: 1.1vw;
-  margin: 5px;
-  padding: 5px;
+  margin: 5px 1px 5px 1px;
+  padding: 5px 1px 5px 1px;
 }
+.tabla_blackground_invertir ::placeholder {
+  background-color: rgb(0, 10, 12);
+  color: #00e5ff;
+  font-size: 1.1vw;
+  width: 100%;
+  text-align: center;
+}
+
 .tabla_blackground_invertir_green ::placeholder {
   background-color: rgb(0, 10, 12);
   color: #45eba0;
@@ -1171,70 +1165,12 @@ background-color: #00c8d2;
   font-size: 1.1vw;
 }
  
-.tabla_greyground_sinfiltros thead {
-  background-color: rgb(252, 252, 255);
-  color: #2da4b1;
-  text-align: center;
-  align-items: center;
-  margin-left: 10px;
-  margin-right: 10px;
-  padding-right: 10px;
-  padding-left: 10px;
-}
-.tabla_greyground_sinfiltros th {
-  padding-top: 5px;
-  background-color: rgb(252, 252, 255);
-  color: #2da4b1;
-  text-align: center;
-  border-bottom: 1px solid #2da4b1;
-  border-top: 1px solid #2da4b1;
-  font-size: 1.5vw;
-  margin-left: 10px;
-  margin-right: 10px;
-  padding-right: 10px;
-  padding-left: 10px;
-}
-.tabla_greyground_sinfiltros th:hover {
-  color:  #0d2125;
-}
-.tabla_greyground_sinfiltros tbody {
-  background-color: rgb(252, 252, 255);
-  color: #2da4b1;
-  text-align: center;
-  border-bottom: 2px solid #2da4b1;
-  align-items: center;
-  margin-left: 10px;
-  margin-right: 10px;
-  padding-right: 10px;
-  padding-left: 10px;
-}
-.tabla_greyground_sinfiltros tr {
-  border-bottom: 0.5px solid #2da4b1;
-  border-left: 0.5px solid #2da4b1;
-  border-right: 0.5px solid #2da4b1;
-  font-size: 1vw;
-  margin-left: 5px;
-  margin-right: 5px;
-  padding-right: 5px;
-  padding-left: 5px;
-}
-.tabla_greyground_sinfiltros input {
-  background-color: rgb(252, 252, 255);
-  color: #2da4b1;
-  text-align: center;
-  border-radius: 10px;
-  border: 1px solid #2da4b1;
-  font-size: 1.1vw;
-  margin: 5px 1px 5px 1px;
-  padding: 5px 1px 5px 1px;
-
-}
 .tabla_greyground_sinfiltros ::placeholder {
   background-color: rgb(252, 252, 255);
   color: #2da4b1;
   text-align: center;
   font-size: 1.1vw;
-  max-width: 150px;
+  max-width: 170px;
   width: 10%;
 }
 
@@ -1268,6 +1204,7 @@ background-color: #00c8d2;
 .tabla_muy_corto_plazo {
   table-layout: auto;
   width: 100%;
+  max-width: 170px;
 }
 .tabla_muy_corto_plazo th,
 .tabla_muy_corto_plazo td {
