@@ -1929,25 +1929,12 @@ footer .glyphicon {
     text-align: center;
     align-items: center;
   }
-  .tabla_blackground_invertir tr {
+  .tabla_blackground_invertir tr,.tabla_blackground_invertir th,.tabla_blackground_invertir thead , .tabla_blackground_invertir ::placeholder{
     font-size: 3.5vw;
     margin-left: 0px;
     margin-right: 0px;
     padding-right: 0px;
     padding-left: 0px;
-  }
-  .tabla_blackground_invertir th {
-    font-size: 3.5vw;
-    margin-left: 0px;
-    margin-right: 0px;
-    padding-right: 0px;
-    padding-left: 0px
-  }
-  .tabla_blackground_invertir thead {
-    margin-left: 0px;
-    margin-right: 0px;
-    padding-right: 0px;
-    padding-left: 0px
   }
   .tabla_blackground_invertir tbody {
     margin-left: 0px;
@@ -1955,47 +1942,18 @@ footer .glyphicon {
     padding-right: 0px;
     padding-left: 0px;
   }
-  .tabla_blackground_invertir ::placeholder {
-    font-size: 3vw;
-    margin-left: 0px;
-    margin-right: 0px;
-    padding-right: 0px;
-    padding-left: 0px;
-    justify-content: center;
-  }
-  .tabla_greyground_sinfiltros tr {
+  .tabla_greyground_sinfiltros tr,.tabla_greyground_sinfiltros th,.tabla_greyground_sinfiltros thead,.tabla_greyground_sinfiltros ::placeholder {
     font-size: 4vw;
     margin-left: 0px;
     margin-right: 0px;
     padding-right: 0px;
     padding-left: 0px;
-  }
-  .tabla_greyground_sinfiltros th {
-    font-size: 4vw;
-    margin-left: 0px;
-    margin-right: 0px;
-    padding-right: 0px;
-    padding-left: 0px
-  }
-  .tabla_greyground_sinfiltros thead {
-    margin-left: 0px;
-    margin-right: 0px;
-    padding-right: 0px;
-    padding-left: 0px
   }
   .tabla_greyground_sinfiltros tbody {
     margin-left: 0px;
     margin-right: 0px;
     padding-right: 0px;
     padding-left: 0px;
-  }
-  .tabla_greyground_sinfiltros ::placeholder {
-    font-size: 4vw;
-    margin-left: 0px;
-    margin-right: 0px;
-    padding-right: 0px;
-    padding-left: 0px;
-    justify-content: center;
   }
 
   .grafico_movil_costado iframe {
@@ -2327,9 +2285,9 @@ footer .glyphicon {
     margin: 0px 0px 0px 0px;
   } 
   .tabla_blackground_invertir{
-    max-width: 350px;
+    max-width: 370px;
     max-height: 400px;
-    min-width: 250px;
+    min-width: 290px;
     padding: 10px 0px 10px 0px;
     margin: 0px 0px 0px 0px;
   } 
