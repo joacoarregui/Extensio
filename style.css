@@ -1073,7 +1073,7 @@ background-color: #00c8d2;
 }
 .tabla_blackground_invertir th,.tabla_blackground_invertir_green th,.tabla_greyground_sinfiltros th {
   padding-top: 5px;
-  font-size: 1.5vw;
+  font-size: 1.3vw;
   margin-left: 10px;
   margin-right: 10px;
   padding-right: 10px;
@@ -1127,7 +1127,7 @@ background-color: #00c8d2;
   padding-left: 5px;
 }
 
-.tabla_blackground_invertir input {
+.tabla_blackground_invertir input,.tabla_blackground_invertir input2  {
   background-color: rgb(0, 10, 12);
   color: #00e5ff;
   border: 1px solid #2da4b1;
@@ -1149,6 +1149,16 @@ background-color: #00c8d2;
   font-size: 1.1vw;
   margin: 5px 1px 5px 1px;
   padding: 5px 1px 5px 1px;
+  max-width: 155px;
+}
+.tabla_blackground_invertir .longtext,.tabla_blackground_invertir_green .longtext,.tabla_greyground_sinfiltros .longtext{
+  padding-top: 5px;
+  text-align: center;
+  border-radius: 10px;
+  font-size: 1.1vw;
+  margin: 5px 1px 5px 1px;
+  padding: 5px 1px 5px 1px;
+  max-width: 400px;
 }
 .tabla_blackground_invertir ::placeholder {
   background-color: rgb(0, 10, 12);
