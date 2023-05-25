@@ -283,7 +283,7 @@
       google.charts.setOnLoadCallback(drawChart);
   
       function drawChart() {
-        var url_brechas = "https://docs.google.com/spreadsheets/d/1-eHJNl1chHQWbooU7LaONSKt1rbAcwp0XFJF8AWULck/gviz/tq?range=A3:A68,B3:B69,C3:C69&sheet=evol_TEM_devaluacion&headers=1&key=AIzaSyDD6wEmrY190Br80MQCrVDCYgZx4KJic_Y";
+        var url_brechas = "https://docs.google.com/spreadsheets/d/1-eHJNl1chHQWbooU7LaONSKt1rbAcwp0XFJF8AWULck/gviz/tq?range=A3:A68,B3:B68,C3:C68&sheet=evol_TEM_devaluacion&headers=1&key=AIzaSyDD6wEmrY190Br80MQCrVDCYgZx4KJic_Y";
         var query_brechas = new google.visualization.Query(url_brechas);
   
         query_brechas.send(function(response) {
@@ -350,7 +350,7 @@
     <div id="chart_div_brechas"></div>
     </div>
 </div>
-
+<div class="container"></div>
 <div class="container">
   <h3>Evolución Tasa Efectiva Anuales de los contratos</h3> 
 </div>
@@ -361,11 +361,88 @@
     <h6><strong>Objetivo del gráfico:</strong> Analizar la tendencia de las tasas efectivas anuales de devaluación de los contratos, para identificar brechas entre períodos más cortos y largos, junto con el análisis de si las tasas actualmente estan más caras que la del dolar spot o si estan baratas.</h6>
 
   </div>
-  <div class="grafico_movil_costado">
-    <iframe class=chart seamless frameborder="0" scrolling="no" src="https://docs.google.com/spreadsheets/d/e/2PACX-1vSdQf5PJdGqIyv8Mpav5eo4rXJnf1RkKBsAHjJz2FpVVcfmahGlmiHoulJ_H0eocC1kjIH_LYvgbJMS/pubchart?oid=1048378653&amp;format=interactive"></iframe>
-  </div>
-</div>
+  <div class="col-md-6 col-md-6 grafico_movil_costado">
+    <script src="https://www.gstatic.com/charts/loader.js"></script>
+    <script>
+      google.charts.load('current', {'packages':['corechart']});
+      google.charts.setOnLoadCallback(drawChart);
+  
+      function drawChart() {
+        var url_teas = "https://docs.google.com/spreadsheets/d/1-eHJNl1chHQWbooU7LaONSKt1rbAcwp0XFJF8AWULck/gviz/tq?range=A3:I68&sheet=TEAS&headers=1&key=AIzaSyDD6wEmrY190Br80MQCrVDCYgZx4KJic_Y";
+        var query_teas = new google.visualization.Query(url_teas);
+  
+        query_teas.send(function(response) {
+        var dataTable_teas = response.getDataTable();
+        var yData_min_teas = dataTable_teas.getColumnRange(1);
+        var yData_max_teas = dataTable_teas.getColumnRange(3);
+        var min_teas = yData_min_teas.min-0.05;
+        var max_teas = yData_max_teas.max+0.05;
+        var ticks_teas = [];
+        var step_teas = (max_teas - min_teas) / 10;
 
+        for (var i = 0; i <= 10; i++) {
+          var tickValue_teas = min_teas + (step_teas * i);
+          ticks_teas.push({v: tickValue_teas, f: (tickValue_teas * 100).toFixed(1) + '%'});
+        }
+          // Configuración adicional
+          var options = {         
+            titleTextStyle: {
+            color: '#2da4b1',
+            fontSize: 18,
+            bold: true,
+            textAlign: 'center'
+            },            
+            curveType: 'function',
+            legend: { position: 'bottom' },
+            series: {
+              0:  { type:'area', color: '#4472c4', areaOpacity: 0.3 },
+              1: { type:'line', pointSize: 3, color: '#ff0808' },
+              2: { type:'line', pointSize: 3, color: '#ff9900' },
+              3: { type:'line', pointSize: 3, color: '#ffff00' },
+              4: { type:'line', pointSize: 3, color: '#3cebde' },
+              5: { type:'line', pointSize: 3, color: '#20ada3' },
+              6: { type:'line', lineDashStyle: [2, 2], color: '#212121' },
+              7: { type:'line',  lineDashStyle: [2, 2], color: '#666666' }
+              },
+            vAxis: {
+              format: '0.0%',
+              textStyle: {
+                color: '#2da4b1'
+            },
+            gridlines: {
+              color: '#2da4b1'
+            },
+            ticks: ticks_teas,
+            viewWindow: {
+              min: min_teas,
+              max: max_teas,
+            }
+          },
+            hAxis: {
+              textStyle: {
+                color: '#2da4b1'
+              },
+              gridlines: {
+                color: 'transparent'
+              }
+            },
+            chartArea: {
+              left: 50,
+              top: 50,
+              width: '80%',
+              height: '70%'
+            }
+          };
+  
+          var chart_teas = new google.visualization.AreaChart(document.getElementById('chart_div_teas'));
+          chart_teas.draw(dataTable_teas, options);
+        });
+      }
+    </script>
+    <div id="chart_div_teas"></div>
+    </div>
+</div>
+<div class="container"></div>
 <div class="container">
   <h3>Evolución de los 6 contratos futuros más próximos</h3> 
 </div>

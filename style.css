@@ -1598,16 +1598,12 @@ footer .glyphicon {
   display:inline-table;
   
 }
-#chart_div_brechas {
+#chart_div_brechas,#chart_div_evol_dolares,#chart_div_teas {
   width: 100%;
   height: 400px;
   margin: 0 auto;
 }
-#chart_div_evol_dolares {
-  width: 100%;
-  height: 400px;
-  margin: 0 auto;
-}
+
 
 /* Fade in tabs */
 @-webkit-keyframes fadeEffect {
@@ -1832,15 +1828,10 @@ footer .glyphicon {
     min-width: 400px;
     min-height: 300px;
   }  
-  #chart_div_brechas {
+  #chart_div_brechas,#chart_div_evol_dolares,#chart_div_teas {
     min-height: 400px;
     min-width: 600px;
   }
-  #chart_div_evol_dolares {
-    min-height: 400px;
-    min-width: 600px;
-  }
-
 }
 
 @media screen and (max-width: 768px) {
@@ -2431,18 +2422,13 @@ footer .glyphicon {
     margin-right: 0px;
     display:table;
   }
-  #chart_div_brechas {
+  #chart_div_brechas,#chart_div_evol_dolares,#chart_div_teas {
     min-width: 300px;
     max-width: 400px;
     min-height: 300px;
     max-height: 400px;
   }
-  #chart_div_evol_dolares {
-    min-width: 300px;
-    max-width: 400px;
-    min-height: 300px;
-    max-height: 400px;
-  }
+
 
 }
 @import url('https://fonts.googleapis.com/css?family=Montserrat:400,800');
