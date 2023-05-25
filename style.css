@@ -1073,12 +1073,15 @@ background-color: #00c8d2;
 }
 .tabla_blackground_invertir th,.tabla_blackground_invertir_green th,.tabla_greyground_sinfiltros th {
   padding-top: 5px;
-  font-size: 1.3vw;
+  font-size: 1vw;
   margin-left: 10px;
   margin-right: 10px;
   padding-right: 10px;
   padding-left: 10px;
   text-align: center;
+  white-space: normal;
+  word-wrap: break-word;
+  line-height: 1.2;
 }
 .tabla_blackground_invertir th:hover,.tabla_blackground_invertir_green th:hover  {
   color:  #def9ff;
@@ -1146,7 +1149,7 @@ background-color: #00c8d2;
   padding-top: 5px;
   text-align: center;
   border-radius: 10px;
-  font-size: 1.1vw;
+  font-size: 0.7vw;
   margin: 5px 1px 5px 1px;
   padding: 5px 1px 5px 1px;
   max-width: 155px;
@@ -1159,6 +1162,21 @@ background-color: #00c8d2;
   margin: 5px 1px 5px 1px;
   padding: 5px 1px 5px 1px;
   max-width: 400px;
+  white-space: normal;
+  word-wrap: break-word;
+  line-height: 1.2;
+}
+.tabla_blackground_invertir .shorttext,.tabla_blackground_invertir_green .shorttext,.tabla_greyground_sinfiltros .shorttext{
+  padding-top: 5px;
+  text-align: center;
+  border-radius: 10px;
+  font-size: 0.7vw;
+  margin: 5px 1px 5px 1px;
+  padding: 5px 1px 5px 1px;
+  max-width: 100px;
+  white-space: normal;
+  word-wrap: break-word;
+  line-height: 1.2;
 }
 .tabla_blackground_invertir ::placeholder {
   background-color: rgb(0, 10, 12);
@@ -1929,12 +1947,13 @@ footer .glyphicon {
     text-align: center;
     align-items: center;
   }
-  .tabla_blackground_invertir tr,.tabla_blackground_invertir th,.tabla_blackground_invertir thead , .tabla_blackground_invertir ::placeholder{
-    font-size: 3.5vw;
+  .tabla_blackground_invertir tr,.tabla_blackground_invertir thead , .tabla_blackground_invertir th, .tabla_blackground_invertir ::placeholder{
+    font-size: 2.3vw;
     margin-left: 0px;
     margin-right: 0px;
     padding-right: 0px;
     padding-left: 0px;
+    margin-top: 50px;
   }
   .tabla_blackground_invertir tbody {
     margin-left: 0px;
@@ -1943,7 +1962,7 @@ footer .glyphicon {
     padding-left: 0px;
   }
   .tabla_greyground_sinfiltros tr,.tabla_greyground_sinfiltros th,.tabla_greyground_sinfiltros thead,.tabla_greyground_sinfiltros ::placeholder {
-    font-size: 4vw;
+    font-size: 3vw;
     margin-left: 0px;
     margin-right: 0px;
     padding-right: 0px;
@@ -1955,7 +1974,29 @@ footer .glyphicon {
     padding-right: 0px;
     padding-left: 0px;
   }
-
+  .tabla_blackground_invertir input,.tabla_blackground_invertir_green input,.tabla_greyground_sinfiltros input{
+    padding-top: 10px;
+    text-align: center;
+    border-radius: 10px;
+    font-size: 1.2vw;
+    margin: 5px 1px 5px 1px;
+    padding: 5px 1px 5px 1px;
+  }
+  .tabla_blackground_invertir .shorttext,.tabla_blackground_invertir_green .shorttext,.tabla_greyground_sinfiltros .shorttext{
+    font-size: 1.1vw;
+    margin: 3px 0px 3px 0px;
+    padding: 3px 0px 3px 0px;
+    max-width: 90px;
+    min-width: 50px;
+    flex-wrap: wraps;
+  } 
+  .tabla_blackground_invertir .longtext,.tabla_blackground_invertir_green .longtext,.tabla_greyground_sinfiltros .longtext{
+    font-size: 1.1vw;
+    margin: 3px 0px 3px 0px;
+    padding: 3px 0px 3px 0px;
+    max-width: 400px;
+    min-width: 180px;
+  }
   .grafico_movil_costado iframe {
     max-width: 700px;
     max-height: 380px;
@@ -2238,7 +2279,7 @@ footer .glyphicon {
     margin-bottom: 10px;
   }
   .container-fluid table {
-    max-width: 350px;
+    max-width: 400px;
     min-width: 300px;
     min-height: 350px;
     margin: 10px;
@@ -2266,9 +2307,9 @@ footer .glyphicon {
     margin: 0px 0px 0px 0px;
   }
   .tabcontent table{
-    max-width: 350px;
+    max-width: 400px;
     max-height: 400px;
-    min-width: 250px;
+    min-width: 300px;
     padding: 0px;
     margin-right: 0px;
   } 
@@ -2278,19 +2319,41 @@ footer .glyphicon {
     padding: 0px;
   }
   .dataTable{
-    max-width: 350px;
+    max-width: 400px;
     max-height: 400px;
-    min-width: 250px;
+    min-width: 300px;
     padding: 10px 0px 10px 0px;
     margin: 0px 0px 0px 0px;
   } 
   .tabla_blackground_invertir{
-    max-width: 370px;
+    max-width: 400px;
     max-height: 400px;
     min-width: 290px;
     padding: 10px 0px 10px 0px;
     margin: 0px 0px 0px 0px;
+  }
+  .tabla_blackground_invertir tr,.tabla_blackground_invertir thead , .tabla_blackground_invertir th, .tabla_blackground_invertir ::placeholder{
+    font-size: 3vw;
+    margin-left: 0px;
+    margin-right: 0px;
+    padding-right: 0px;
+    padding-left: 0px;
+    margin-top: 30px;
+  }
+  .tabla_blackground_invertir .shorttext,.tabla_blackground_invertir_green .shorttext,.tabla_greyground_sinfiltros .shorttext{
+    font-size: 1.5vw;
+    margin: 7px 1px 7px 1px;
+    padding: 7px 1px 7px 1px;
+    max-width: 50px;
+    min-width: 27px;
   } 
+  .tabla_blackground_invertir .longtext,.tabla_blackground_invertir_green .longtext,.tabla_greyground_sinfiltros .longtext{
+    font-size: 1.5vw;
+    margin: 7px 1px 7px 1px;
+    padding: 7px 1px 7px 1px;
+    max-width: 200px;
+    min-width: 128px;
+  }
   .tabla_greyground_sinfiltros{
     max-width: 270px;
     max-height: 400px;
@@ -2307,6 +2370,7 @@ footer .glyphicon {
   #tablaDatos_dolar_paginate .paginate_button.current {
     font-size: 3vw;
   }
+ 
   .paginate_button {
     font-size: 3vw;
   }
