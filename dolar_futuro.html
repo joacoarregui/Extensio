@@ -276,8 +276,79 @@
     <h6><strong>Media Móvil TMD:</strong> Es la media móvil simple de la variación de los últimos 5 días de la divisa. Se usa para suavizar los movimientos de la TMD anterior. </h6>
 
   </div>
-  <div class="grafico_movil_costado">
-    <iframe  seamless frameborder="0" scrolling="no" src="https://docs.google.com/spreadsheets/d/e/2PACX-1vQX98uxX-fPYvwz_OPfdHkGsyYbmQITo1nTzx01YiqepLIwFjuUpqHalY65YzuC_PyVP917dOzXlqjT/pubchart?oid=1113029249&amp;format=interactive"></iframe>  </div>
+  <div class="col-md-6 col-md-6 grafico_movil_costado">
+    <script src="https://www.gstatic.com/charts/loader.js"></script>
+    <script>
+      google.charts.load('current', {'packages':['corechart']});
+      google.charts.setOnLoadCallback(drawChart);
+  
+      function drawChart() {
+        var url_brechas = "https://docs.google.com/spreadsheets/d/1-eHJNl1chHQWbooU7LaONSKt1rbAcwp0XFJF8AWULck/gviz/tq?range=A3:A68,B3:B69,C3:C69&sheet=evol_TEM_devaluacion&headers=1&key=AIzaSyDD6wEmrY190Br80MQCrVDCYgZx4KJic_Y";
+        var query_brechas = new google.visualization.Query(url_brechas);
+  
+        query_brechas.send(function(response) {
+        var dataTable_brechas = response.getDataTable();
+        var yData_brechas = dataTable_brechas.getColumnRange(1);
+        var min_brechas = yData_brechas.min-0.02;
+        var max_brechas = yData_brechas.max+0.02;
+        var ticks_brechas = [];
+        var step_brechas = (max_brechas - min_brechas) / 10;
+
+        for (var i = 0; i <= 10; i++) {
+          var tickValue_brechas = min_brechas + (step_brechas * i);
+          ticks_brechas.push({v: tickValue_brechas, f: (tickValue_brechas * 100).toFixed(1) + '%'});
+        }
+          // Configuración adicional
+          var options = {         
+            titleTextStyle: {
+            color: '#2da4b1',
+            fontSize: 18,
+            bold: true,
+            textAlign: 'center'
+            },            
+            curveType: 'function',
+            legend: { position: 'bottom' },
+            series: {
+              0: { type:'line', pointSize: 5, color: '#18ae9c' },
+              1: { type:'area', color: '#1b3f6b', areaOpacity: 0.3 }
+              },
+            vAxis: {
+              format: '0.0%',
+              textStyle: {
+                color: '#2da4b1'
+            },
+            gridlines: {
+              color: '#2da4b1'
+            },
+            ticks: ticks_brechas,
+            viewWindow: {
+              min: min_brechas,
+              max: max_brechas,
+            }
+          },
+            hAxis: {
+              textStyle: {
+                color: '#2da4b1'
+              },
+              gridlines: {
+                color: 'transparent'
+              }
+            },
+            chartArea: {
+              left: 50,
+              top: 50,
+              width: '80%',
+              height: '70%'
+            }
+          };
+  
+          var chart_brechas = new google.visualization.AreaChart(document.getElementById('chart_div_brechas'));
+          chart_brechas.draw(dataTable_brechas, options);
+        });
+      }
+    </script>
+    <div id="chart_div_brechas"></div>
+    </div>
 </div>
 
 <div class="container">
