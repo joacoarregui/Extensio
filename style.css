@@ -1622,13 +1622,12 @@ footer .glyphicon {
   border-start-end-radius: 50px;
   border-end-start-radius:50px;
   border-end-end-radius:50px;
-  border: 1px solid #00e5ff2e;
-  background-color:  rgba(0, 10, 12, 0.905);
-  color: #05b8dc;
-  box-shadow: 5px 5px 5px rgba(4, 154, 188, 0.515);
+  border: 3px solid #00e5ff;
+  background-color:  rgb(240, 251, 254);
+  color: #04a5c5;
+  box-shadow: 5px 5px 5px rgba(4, 154, 188, 0.926);
   transition: background-color  1.5s;
-  transition: border-radius  0.5s;
-  border: 1px solid #1ed0f4;  
+  transition: border-radius  0.5s;  
 }
 .cuadrado_top-text {
   padding-bottom: 10px;
@@ -1639,6 +1638,7 @@ footer .glyphicon {
   left: 0%;
   transform: translateY(-100%);
 }
+
 .cuadrado_middle-text {
   font-size: 33px;
   position: absolute;
