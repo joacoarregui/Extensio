@@ -212,27 +212,6 @@
     </script>
   </div>
 <div class="container-fluid jumbotron text-center">
-  <div id="tickerValue"></div>
-
-  <script>
-    $(document).ready(function() {
-      const apiKey = '2IAANE1TKDBHIVPW'; // Reemplaza con tu propia API key de Alpha Vantage
-
-      // Hacer una solicitud a la API de Alpha Vantage para obtener la cotización de AAPL.BA
-      $.getJSON(`https://www.alphavantage.co/query?function=GLOBAL_QUOTE&symbol=AAPL&apikey=${apiKey}`, function(data) {
-        const quoteData = data['Global Quote'];
-        const symbol = quoteData['01. symbol'];
-        const price = parseFloat(quoteData['05. price']).toFixed(2);
-        const change = parseFloat(quoteData['09. change']).toFixed(2);
-        const changePercent = parseFloat(quoteData['10. change percent']).toFixed(2);
-
-        const tickerValue = `Cotización de ${symbol}: Precio: ${price}, Cambio: ${change}, Cambio (%): ${changePercent}`;
-
-        // Mostrar el valor de cotización en la página
-        $('#tickerValue').text(tickerValue);
-      });
-    });
-  </script>
   <div class="container-fluid">
     <br>
     <script src="https://www.gstatic.com/charts/loader.js"></script>
@@ -459,7 +438,7 @@
   </div>
   </div>
 </div>
-
+</div>
 <div id="apertura" class="container-whitecenter ">
   <div class="col-md-12 col-sm-12 col-xs-12 text-center">
    <h1 class="extensio_turquesa">Giros desde y hacia el exterior</h1>
