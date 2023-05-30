@@ -202,9 +202,13 @@
 
     <script src="https://code.jquery.com/jquery-3.5.1.js"></script>
     <script src="https://cdn.datatables.net/1.10.24/js/jquery.dataTables.min.js"></script>
+    <script src="https://cdn.datatables.net/buttons/1.7.1/js/dataTables.buttons.min.js"></script>
+  <script src="https://cdn.datatables.net/buttons/1.7.1/js/buttons.html5.min.js"></script>
     <script src="https://cdn.datatables.net/colreorder/1.5.4/js/dataTables.colReorder.min.js"></script>
     <script src="https://cdn.datatables.net/fixedcolumns/3.3.2/js/dataTables.fixedColumns.min.js"></script>
-
+    <script src="https://cdn.datatables.net/buttons/1.7.1/js/buttons.bootstrap4.min.js"></script>
+    <script src="https://cdn.datatables.net/buttons/1.7.1/js/buttons.print.min.js"></script>
+    <script src="https://cdn.datatables.net/select/1.3.3/js/dataTables.select.min.js"></script>
 
     <script>
     $(document).ready(function() {
@@ -244,13 +248,45 @@
           var rowHeight_muy_corto_plazo = 48; // Set the row height in pixels
           var tableHeight_muy_corto_plazo = numRows_muy_corto_plazo * rowHeight_muy_corto_plazo;
           $('.tabla_muy_corto_plazo .table-scrollable').css('height', tableHeight_muy_corto_plazo + 'px');
-        }
+        },
+        "buttons": [
+          {
+            extend: 'excel',
+            text: 'Descargar Excel',
+            className: 'btn btn-primary',
+            exportOptions: {
+            columns: ':visible'
+            }
+          }
+        ]
       });
-      // Agregar filtros independientes a cada columna
-      $('.tabla_muy_corto_plazo thead input').on('keyup change', function() {
-        table_muy_corto_plazo.column($(this).parent().index()).search(this.value).draw();
-      });
+    // Agregar filtros independientes a cada columna
+    $('.tabla_muy_corto_plazo thead input').on('keyup change', function() {
+      table_muy_corto_plazo.column($(this).parent().index()).search(this.value).draw();
     });
+
+    // Agregar el botón de descarga en un div
+    var downloadButton = $('<div class="download-button"></div>').html('<button class="btn btn-primary">Descargar Excel</button>');
+    $('.table-filter-container').prepend(downloadButton);
+
+    // Inicializar el plugin de botones de DataTables
+    new $.fn.dataTable.Buttons(table_muy_corto_plazo, {
+      buttons: [
+        {
+          extend: 'excel',
+          text: 'Descargar Excel',
+          exportOptions: {
+            columns: ':visible'
+          }
+        }
+      ]
+    });
+
+    // Asignar el evento de clic al botón de descarga
+    $('.download-button button').on('click', function() {
+      table_muy_corto_plazo.buttons.exportData({ format: 'xlsx' }).download('excel', 'data.xlsx');
+    });
+  });
     </script>
   </div>
 </div>
