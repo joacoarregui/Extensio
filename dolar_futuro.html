@@ -241,25 +241,25 @@
           "leftColumns": 0,
           "rightColumns": 0
         },
-        "order": [[2, 'asc']],
-        "drawCallback": function( settings ) {
-          var api_muy_corto_plazo = this.api();
-          var numRows_muy_corto_plazo = api_muy_corto_plazo.rows( {search: 'applied'} ).nodes().length;
-          var rowHeight_muy_corto_plazo = 48; // Set the row height in pixels
-          var tableHeight_muy_corto_plazo = numRows_muy_corto_plazo * rowHeight_muy_corto_plazo;
-          $('.tabla_muy_corto_plazo .table-scrollable').css('height', tableHeight_muy_corto_plazo + 'px');
-        },
-        "buttons": [
-          {
-            extend: 'excel',
-            text: 'Descargar Excel',
-            className: 'btn btn-primary',
-            exportOptions: {
+        "order": [[2, 'asc']], // Ordenar por la tercera columna (índice 2) de menor a mayor
+      "drawCallback": function(settings) {
+        var api_muy_corto_plazo = this.api();
+        var numRows_muy_corto_plazo = api_muy_corto_plazo.rows({ search: 'applied' }).nodes().length;
+        var rowHeight_muy_corto_plazo = 48; // Set the row height in pixels
+        var tableHeight_muy_corto_plazo = numRows_muy_corto_plazo * rowHeight_muy_corto_plazo;
+        $('.tabla_muy_corto_plazo .table-scrollable').css('height', tableHeight_muy_corto_plazo + 'px');
+      },
+      "buttons": [
+        {
+          extend: 'excel',
+          text: 'Descargar Excel',
+          className: 'btn btn-primary',
+          exportOptions: {
             columns: ':visible'
-            }
           }
-        ]
-      });
+        }
+      ]
+    });
     // Agregar filtros independientes a cada columna
     $('.tabla_muy_corto_plazo thead input').on('keyup change', function() {
       table_muy_corto_plazo.column($(this).parent().index()).search(this.value).draw();
@@ -270,17 +270,7 @@
     $('.table-filter-container').prepend(downloadButton);
 
     // Inicializar el plugin de botones de DataTables
-    new $.fn.dataTable.Buttons(table_muy_corto_plazo, {
-      buttons: [
-        {
-          extend: 'excel',
-          text: 'Descargar Excel',
-          exportOptions: {
-            columns: ':visible'
-          }
-        }
-      ]
-    });
+    table_muy_corto_plazo.buttons().container().appendTo($('.download-button'));
 
     // Asignar el evento de clic al botón de descarga
     $('.download-button button').on('click', function() {
