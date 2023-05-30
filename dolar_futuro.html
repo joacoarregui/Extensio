@@ -252,14 +252,11 @@
       },
       "buttons": [
         {
-          extend: 'excel',
-          text: 'Descargar Excel',
+          extend: 'csv',
+          text: 'Descargar CSV',
           className: 'btn btn-primary',
-          exportOptions: {
-            columns: ':visible'
-          },
           action: function(e, dt, button, config) {
-            $.fn.dataTable.ext.buttons.excelHtml5.action.call(this, e, dt, button, config);
+            window.location.href = 'https://docs.google.com/spreadsheets/d/e/2PACX-1vRakEBcYd2S2nxt2gPzUApaP-PZG-wh92nDQUTGMZ3Vj4AzlQuN34v1D2Zfx7QUH0rQL7jsaruonXws/pub?gid=429021013&single=true&output=csv';
           }
         }
       ]
@@ -271,13 +268,8 @@
     });
 
     // Agregar el botón de descarga en un div
-    var downloadButton = $('<div class="download-button"></div>').html('<button class="btn btn-primary">Descargar Excel</button>');
+    var downloadButton = $('<div class="download-button"></div>').html('<button class="btn btn-primary">Descargar CSV</button>');
     $('.table-filter-container').prepend(downloadButton);
-
-    // Asignar el evento de clic al botón de descarga
-    $('.download-button button').on('click', function() {
-      table_muy_corto_plazo.button('.buttons-excel').trigger();
-    });
   });
     </script>
   </div>
