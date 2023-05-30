@@ -1676,7 +1676,7 @@ footer .glyphicon {
   left: 50%;
   transform: translateX(-50%);
 }
-#chart_div_brechas,#chart_div_evol_dolares,#chart_div_teas {
+#chart_div_brechas,#chart_div_evol_dolares,#chart_div_teas,#chart_div_evol_data_rofex_precios {
   width: 100%;
   height: 400px;
   margin: 0 auto;
@@ -1903,7 +1903,7 @@ footer .glyphicon {
     min-width: 400px;
     min-height: 300px;
   }  
-  #chart_div_brechas,#chart_div_evol_dolares,#chart_div_teas {
+  #chart_div_brechas,#chart_div_evol_dolares,#chart_div_teas,#chart_div_evol_data_rofex_precios {
     min-height: 400px;
     min-width: 600px;
   }
@@ -2581,7 +2581,7 @@ footer .glyphicon {
     left: 50%;
     transform: translateX(-50%);
   }
-  #chart_div_brechas,#chart_div_evol_dolares,#chart_div_teas {
+  #chart_div_brechas,#chart_div_evol_dolares,#chart_div_teas,#chart_div_evol_data_rofex_precios {
     min-width: 300px;
     max-width: 400px;
     min-height: 300px;

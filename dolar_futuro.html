@@ -196,6 +196,7 @@
           </thead>
           <tbody></tbody>
         </table>
+        <br>
         </div>
     </div>
 
@@ -359,7 +360,6 @@
     <h6><strong>T.E.A Dolar Mayorista o Spot:</strong> Es la tasa efectiva anual  pasada y actual que el gobierno aplicó y aplica sobre el tipo de cambio. El pasado junto con las perspectivas a futuro dan un indicio de hacia donde va la tendencia de devaluación</h6>
     <h6><strong>TEAS de los contratos:</strong> Son las tasas efectivas anuales que los contratos proyectan que el gobierno devaluará. En general se dividen entre las tasas de los futuros más próximos a vencer y más lejanos, contemplando que de corto plazo los contratos más lejanos siguen la tendencia de los contratos más cercanos.</h6>
     <h6><strong>Objetivo del gráfico:</strong> Analizar la tendencia de las tasas efectivas anuales de devaluación de los contratos, para identificar brechas entre períodos más cortos y largos, junto con el análisis de si las tasas actualmente estan más caras que la del dolar spot o si estan baratas.</h6>
-
   </div>
   <div class="col-md-6 col-md-6 grafico_movil_costado">
     <script>
@@ -373,9 +373,9 @@
         query_teas.send(function(response) {
         var dataTable_teas = response.getDataTable();
         var yData_min_teas = dataTable_teas.getColumnRange(1);
-        var yData_max_teas = dataTable_teas.getColumnRange(3);
-        var min_teas = yData_min_teas.min-0.05;
-        var max_teas = yData_max_teas.max+0.05;
+        var yData_max_teas = dataTable_teas.getColumnRange(2);
+        var min_teas = yData_min_teas.min-(yData_max_teas.max-yData_min_teas.min)*0.05;
+        var max_teas = yData_max_teas.max+(yData_max_teas.max-yData_min_teas.min)*0.1;
         var ticks_teas = [];
         var step_teas = (max_teas - min_teas) / 10;
 
@@ -400,8 +400,8 @@
               3: { type:'line', pointSize: 3, color: '#ffff00' },
               4: { type:'line', pointSize: 3, color: '#3cebde' },
               5: { type:'line', pointSize: 3, color: '#20ada3' },
-              6: { type:'line', lineDashStyle: [2, 2], color: '#212121' },
-              7: { type:'line',  lineDashStyle: [2, 2], color: '#666666' }
+              6: { type:'line', pointSize: 2, color: '#9900ff' },
+              7: { type:'line', pointSize:2, color: '#666666' }
               },
             vAxis: {
               format: '0.0%',
@@ -447,16 +447,92 @@
 </div>
 <div class="container-whitecenter">
   <div class="col-md-6 col-md-6">
-    <h6><strong>Líneas de contratos futuros verdes y celestes:</strong> Estas líneas corresponden a los 3 contratos futuros que venceran dentro de los siguientes 3 meses. En general estos contratos se acomodan a la tasa proyectada de devaluación que el mercado pondera de corto plazo.</h6>
+    <h6><strong>Líneas de contratos futuros negro, violeta, verdes y celestes:</strong> Estas líneas corresponden a los 3 contratos futuros que venceran dentro de los siguientes 3 meses. En general estos contratos se acomodan a la tasa proyectada de devaluación que el mercado pondera de corto plazo.</h6>
     <h6><strong>Líneas de contratos futuros amarillo, naranja y rojo:</strong>  Estas líneas corresponden a los siguientes 3 contratos futuros con respecto a los anteriores que venceran luego de los siguientes 3 meses y hasta 6 meses. En general estos contratos se basan en la misma proyección que tienen los 3 contratos anteriores, pero con tasas más moderadas y menos elevadas, aunque en terminos nominales la diferencia con el paso de los meses es mayor. </h6>
     <h6><strong>Objetivo del gráfico:</strong> Analizar las tendencias que tienen los contratos, diferenciando entre los que tienen un vencimiento más cercano y los que tienen un vencimiento más lejanos, buscando oportunidades entre las distintas estrategias que ofrecemos.</h6>
-
   </div>
-  <div class="grafico_movil_costado">
-    <iframe class=chart seamless frameborder="0" scrolling="no" src="https://docs.google.com/spreadsheets/d/e/2PACX-1vQXNyE_KuOBf1gSL75-RWsDihZz9b6hZAOUD0wNnlfuVkiCYLs-Y9NiudTBX-jQJuuCx_pweupVBttF/pubchart?oid=299159920&amp;format=interactive"></iframe>
-  </div>
-</div>
+  <div class="col-md-6 col-md-6 grafico_movil_costado">
+    <script>
+      google.charts.load('current', {'packages':['corechart']});
+      google.charts.setOnLoadCallback(drawChart);
+  
+      function drawChart() {
+        var url_evol_data_rofex_precios = "https://docs.google.com/spreadsheets/d/1-eHJNl1chHQWbooU7LaONSKt1rbAcwp0XFJF8AWULck/gviz/tq?range=A3:I68&sheet=data_rofex_precios&headers=1&key=AIzaSyDD6wEmrY190Br80MQCrVDCYgZx4KJic_Y";
+        var query_evol_data_rofex_precios = new google.visualization.Query(url_evol_data_rofex_precios);
+  
+        query_evol_data_rofex_precios.send(function(response) {
+        var dataTable_evol_data_rofex_precios = response.getDataTable();
+        var yData_min_evol_data_rofex_precios = dataTable_evol_data_rofex_precios.getColumnRange(1);
+        var yData_max_evol_data_rofex_precios = dataTable_evol_data_rofex_precios.getColumnRange(2);
+        var min_evol_data_rofex_precios = yData_min_evol_data_rofex_precios.max-(yData_max_evol_data_rofex_precios.max-yData_min_evol_data_rofex_precios.min)*0.05;
+        var max_evol_data_rofex_precios = yData_max_evol_data_rofex_precios.max+(yData_max_evol_data_rofex_precios.max-yData_min_evol_data_rofex_precios.min)*0.05;
+        var ticks_evol_data_rofex_precios = [];
+        var step_evol_data_rofex_precios = (max_evol_data_rofex_precios - min_evol_data_rofex_precios) / 10;
 
+        for (var i = 0; i <= 10; i++) {
+          var tickValue_evol_data_rofex_precios = min_evol_data_rofex_precios + (step_evol_data_rofex_precios * i);
+          ticks_evol_data_rofex_precios.push({v: tickValue_evol_data_rofex_precios, f: (tickValue_evol_data_rofex_precios).toFixed(0) });
+        }
+          // Configuración adicional
+          var options = {         
+            titleTextStyle: {
+            color: '#2da4b1',
+            fontSize: 18,
+            bold: true,
+            textAlign: 'center'
+            },            
+            curveType: 'function',
+            legend: { position: 'bottom' },
+            series: {
+              0:  { type:'area', color: '#4472c4', areaOpacity: 0.3 },
+              1: { type:'line', pointSize: 1, color: '#ff0808' },
+              2: { type:'line', pointSize: 1, color: '#ff9900' },
+              3: { type:'line', pointSize: 1, color: '#ffff00' },
+              4: { type:'line', pointSize: 1, color: '#3cebde' },
+              5: { type:'line', pointSize: 1, color: '#20ada3' },
+              6: { type:'line', pointSize: 1, color: '#9900ff' },
+              7: { type:'line', pointSize:1, color: '#666666' }
+              },
+            vAxis: {
+              logScale: true,
+              format: 'short',
+              textStyle: {
+              color: '#2da4b1'
+            },
+            gridlines: {
+              color: '#2da4b1'
+            },
+            ticks: ticks_evol_data_rofex_precios,
+            viewWindow: {
+              min: min_evol_data_rofex_precios,
+              max: max_evol_data_rofex_precios,
+            }
+          },
+            hAxis: {
+              textStyle: {
+                color: '#2da4b1'
+              },
+              gridlines: {
+                color: 'transparent'
+              }
+            },
+            chartArea: {
+              left: 50,
+              top: 50,
+              width: '80%',
+              height: '70%'
+            }
+          };
+  
+          var chart_evol_data_rofex_precios = new google.visualization.AreaChart(document.getElementById('chart_div_evol_data_rofex_precios'));
+          chart_evol_data_rofex_precios.draw(dataTable_evol_data_rofex_precios, options);
+        });
+      }
+    </script>
+    <div id="chart_div_evol_data_rofex_precios"></div>
+    </div>
+  </div>
+<div class="container"></div>
 
 <div id="Dolar" class="container-fluid fluid bg-grey">
   <h2 class="text-center">CONTACTO</h2>
