@@ -217,31 +217,32 @@
         "serverSide": false,
         "ajax": {
           "url": "https://sheets.googleapis.com/v4/spreadsheets/1-eHJNl1chHQWbooU7LaONSKt1rbAcwp0XFJF8AWULck/values/data_contratos_rofex!B9:O20?key=AIzaSyDD6wEmrY190Br80MQCrVDCYgZx4KJic_Y",
+
           "dataSrc": "values"
-        },
-        "columns": [
-          { "data": 0 },
-          { "data": 1 },
-          { "data": 2 },
-          { "data": 3 },
-          { "data": 4 },
-          { "data": 5 },
-          { "data": 6 },
-          { "data": 7 },
-          { "data": 8 },
-          { "data": 9 },
-          { "data":10 },
-          { "data":11 },
-          { "data":12 },
-          { "data":13 },
-        ],
-        "dom": 'R<"table-scrollable"t><"table-footer"ip>',
-        "colReorder": true,
-        "fixedColumns": {
-          "leftColumns": 0,
-          "rightColumns": 0
-        },
-        "order": [[2, 'asc']], // Ordenar por la tercera columna (índice 2) de menor a mayor
+      },
+      "columns": [
+        { "data": 0 },
+        { "data": 1 },
+        { "data": 2 },
+        { "data": 3 },
+        { "data": 4 },
+        { "data": 5 },
+        { "data": 6 },
+        { "data": 7 },
+        { "data": 8 },
+        { "data": 9 },
+        { "data": 10 },
+        { "data": 11 },
+        { "data": 12 },
+        { "data": 13 },
+      ],
+      "dom": 'R<"table-scrollable"t><"table-footer"ip>',
+      "colReorder": true,
+      "fixedColumns": {
+        "leftColumns": 0,
+        "rightColumns": 0
+      },
+      "order": [[2, 'asc']], // Ordenar por la tercera columna (índice 2) de menor a mayor
       "drawCallback": function(settings) {
         var api_muy_corto_plazo = this.api();
         var numRows_muy_corto_plazo = api_muy_corto_plazo.rows({ search: 'applied' }).nodes().length;
@@ -256,10 +257,14 @@
           className: 'btn btn-primary',
           exportOptions: {
             columns: ':visible'
+          },
+          action: function(e, dt, button, config) {
+            $.fn.dataTable.ext.buttons.excelHtml5.action.call(this, e, dt, button, config);
           }
         }
       ]
     });
+
     // Agregar filtros independientes a cada columna
     $('.tabla_muy_corto_plazo thead input').on('keyup change', function() {
       table_muy_corto_plazo.column($(this).parent().index()).search(this.value).draw();
@@ -269,12 +274,9 @@
     var downloadButton = $('<div class="download-button"></div>').html('<button class="btn btn-primary">Descargar Excel</button>');
     $('.table-filter-container').prepend(downloadButton);
 
-    // Inicializar el plugin de botones de DataTables
-    table_muy_corto_plazo.buttons().container().appendTo($('.download-button'));
-
     // Asignar el evento de clic al botón de descarga
     $('.download-button button').on('click', function() {
-      table_muy_corto_plazo.buttons.exportData({ format: 'xlsx' }).download('excel', 'data.xlsx');
+      table_muy_corto_plazo.button('.buttons-excel').trigger();
     });
   });
     </script>
