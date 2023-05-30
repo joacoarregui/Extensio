@@ -152,8 +152,10 @@
   </div>
   <br><br>
   <h3>Contratos futuros de dólar ROFEX, abajo dejamos la explicación:</h3> 
+    <a target="_blank" href="https://docs.google.com/spreadsheets/d/e/2PACX-1vRakEBcYd2S2nxt2gPzUApaP-PZG-wh92nDQUTGMZ3Vj4AzlQuN34v1D2Zfx7QUH0rQL7jsaruonXws/pub?gid=429021013&single=true&output=csv">     
+      <button class="btn btn-default btn-lg">descargar tabla</button>  
+    </a> 
 </div>
-
 <div  class="img_background_invertir ">         
   <div class="container-fluid">
     <div class="text-center">
@@ -203,7 +205,7 @@
     <script src="https://code.jquery.com/jquery-3.5.1.js"></script>
     <script src="https://cdn.datatables.net/1.10.24/js/jquery.dataTables.min.js"></script>
     <script src="https://cdn.datatables.net/buttons/1.7.1/js/dataTables.buttons.min.js"></script>
-  <script src="https://cdn.datatables.net/buttons/1.7.1/js/buttons.html5.min.js"></script>
+    <script src="https://cdn.datatables.net/buttons/1.7.1/js/buttons.html5.min.js"></script>
     <script src="https://cdn.datatables.net/colreorder/1.5.4/js/dataTables.colReorder.min.js"></script>
     <script src="https://cdn.datatables.net/fixedcolumns/3.3.2/js/dataTables.fixedColumns.min.js"></script>
     <script src="https://cdn.datatables.net/buttons/1.7.1/js/buttons.bootstrap4.min.js"></script>
@@ -217,7 +219,6 @@
         "serverSide": false,
         "ajax": {
           "url": "https://sheets.googleapis.com/v4/spreadsheets/1-eHJNl1chHQWbooU7LaONSKt1rbAcwp0XFJF8AWULck/values/data_contratos_rofex!B9:O20?key=AIzaSyDD6wEmrY190Br80MQCrVDCYgZx4KJic_Y",
-
           "dataSrc": "values"
       },
       "columns": [
@@ -249,27 +250,13 @@
         var rowHeight_muy_corto_plazo = 48; // Set the row height in pixels
         var tableHeight_muy_corto_plazo = numRows_muy_corto_plazo * rowHeight_muy_corto_plazo;
         $('.tabla_muy_corto_plazo .table-scrollable').css('height', tableHeight_muy_corto_plazo + 'px');
-      },
-      "buttons": [
-        {
-          extend: 'csv',
-          text: 'Descargar CSV',
-          className: 'btn btn-primary',
-          action: function(e, dt, button, config) {
-            window.location.href = 'https://docs.google.com/spreadsheets/d/e/2PACX-1vRakEBcYd2S2nxt2gPzUApaP-PZG-wh92nDQUTGMZ3Vj4AzlQuN34v1D2Zfx7QUH0rQL7jsaruonXws/pub?gid=429021013&single=true&output=csv';
-          }
-        }
-      ]
+      }
     });
 
     // Agregar filtros independientes a cada columna
     $('.tabla_muy_corto_plazo thead input').on('keyup change', function() {
       table_muy_corto_plazo.column($(this).parent().index()).search(this.value).draw();
     });
-
-    // Agregar el botón de descarga en un div
-    var downloadButton = $('<div class="download-button"></div>').html('<button class="btn btn-primary">Descargar CSV</button>');
-    $('.table-filter-container').prepend(downloadButton);
   });
     </script>
   </div>
