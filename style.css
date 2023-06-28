@@ -1231,23 +1231,6 @@ background-color: #00c8d2;
   background-color: #00061a;
 }
 
-.tabla_muy_corto_plazo {
-  table-layout: auto;
-  width: 100%;
-  max-width: 170px;
-}
-.tabla_muy_corto_plazo th,
-.tabla_muy_corto_plazo td {
-  width: 10%;
-  max-width: 170px;
-  white-space: nowrap;
-  overflow: hidden;
-  text-overflow: ellipsis;
-}
-
-
-
-
 .grafico_movil_costado iframe {
   max-width: 700px;
   max-height: 450px;
@@ -2498,18 +2481,6 @@ footer .glyphicon {
   .table-wrapper::-webkit-scrollbar-track {
     background-color: #00000e;
   }
-  
-  .tabla_muy_corto_plazo {
-    table-layout: auto;
-    width: 100%;
-  }
-  .tabla_muy_corto_plazo th,
-  .tabla_muy_corto_plazo td {
-    width: 10%;
-    max-width: 170px;
-    white-space: nowrap;
-    overflow: hidden;
-  }   
   .bandera img {
     width: 40px;
     height: 30px;

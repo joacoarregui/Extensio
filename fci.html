@@ -157,7 +157,7 @@
     
     <div class="text-center">
       <div class="table-filter-container"></div>  
-      <table id="tablaDatos_muy_corto_plazo" class="display tabla_corto_plazo tabla_blackground_invertir text-center">
+      <table id="tablaDatos_muy_corto_plazo" class=" tabla_muy_corto_plazo tabla_blackground_invertir display text-center">
         <thead>
           <tr>
             <th><input type="text"  placeholder="buscar"  class="shorttext"/></th>
@@ -535,7 +535,7 @@
     
     <div class="text-center">
       <div class="table-filter-container"></div>
-       <table id="tablaDatos_usd_corto_plazo_offshore" class="display tabla_index_dl tabla_blackground_invertir text-center">
+       <table id="tablaDatos_usd_corto_plazo_offshore" class="tabla_usd_corto_plazo_offshore tabla_blackground_invertir display text-center">
         <thead>
           <tr>
             <th><input type="text"  placeholder="buscar"  class="shorttext"/></th>
@@ -784,8 +784,7 @@
 
     <div class="text-center">
       <div class="table-filter-container"></div>
-      <table id="tablaDatos_usd_largo_plazo_local" class="display tabla_usd_largo_plazo_local tabla_blackground_invertir">
-       
+      <table id="tablaDatos_usd_largo_plazo_local" class=" tabla_usd_largo_plazo_local tabla_blackground_invertir display text-center">
         <thead>
           <tr>
             <th><input type="text"  placeholder="buscar"  class="shorttext"/></th>
@@ -812,41 +811,41 @@
     <script src="https://cdn.datatables.net/fixedcolumns/3.3.2/js/dataTables.fixedColumns.min.js"></script>
     <script src="/server/index.js"></script>
     <script> 
-$(document).ready(function() {
-  var table_usd_largo_plazo_local = $('#tablaDatos_usd_largo_plazo_local').DataTable({
-        "processing": true,
-        "serverSide": false,
-        "ajax": {
-      "url": "https://sheets.googleapis.com/v4/spreadsheets/1IaDo-W3LL4F_SXnLZJ6GOCf4ey4ywwUWtCIL7kT2eBM/values/FCI%20TABLAS%20USD!E83:I102?key=AIzaSyDD6wEmrY190Br80MQCrVDCYgZx4KJic_Y",
-      "dataSrc": "values"
-    },
-    "columns": [
-    { "data": 0 },
-          { "data": 1 },
-          { "data": 2 },
-          { "data": 3 },
-          { "data": 4 },
-    ],
-    "dom": 'R<"table-scrollable"t><"table-footer"ip>',
-    "colReorder": true,
-    "fixedColumns": {
-      "leftColumns": 0,
-      "rightColumns": 0
-    },
-    "drawCallback": function( settings ) {
-      var api_usd_largo_plazo_local = this.api();
-      var numRows_usd_largo_plazo_local = api_usd_largo_plazo_local.rows( {search: 'applied'} ).nodes().length;
-      var rowHeight_usd_largo_plazo_local = 48; // Set the row height in pixels
-      var tableHeight_usd_largo_plazo_local = numRows_usd_largo_plazo_local * rowHeight_usd_largo_plazo_local;
-      $('.tabla_usd_largo_plazo_local .table-scrollable').css('height', tableHeight_usd_largo_plazo_local + 'px');
-    }
-  });
+      $(document).ready(function() {
+        var table_usd_largo_plazo_local = $('#tablaDatos_usd_largo_plazo_local').DataTable({
+              "processing": true,
+              "serverSide": false,
+              "ajax": {
+            "url": "https://sheets.googleapis.com/v4/spreadsheets/1IaDo-W3LL4F_SXnLZJ6GOCf4ey4ywwUWtCIL7kT2eBM/values/FCI%20TABLAS%20USD!E83:I102?key=AIzaSyDD6wEmrY190Br80MQCrVDCYgZx4KJic_Y",
+            "dataSrc": "values"
+          },
+          "columns": [
+              { "data": 0 },
+              { "data": 1 },
+              { "data": 2 },
+              { "data": 3 },
+              { "data": 4 },
+          ],
+          "dom": 'R<"table-scrollable"t><"table-footer"ip>',
+          "colReorder": true,
+          "fixedColumns": {
+            "leftColumns": 0,
+            "rightColumns": 0
+          },
+          "drawCallback": function( settings ) {
+            var api_usd_largo_plazo_local = this.api();
+            var numRows_usd_largo_plazo_local = api_usd_largo_plazo_local.rows( {search: 'applied'} ).nodes().length;
+            var rowHeight_usd_largo_plazo_local = 48; // Set the row height in pixels
+            var tableHeight_usd_largo_plazo_local = numRows_usd_largo_plazo_local * rowHeight_usd_largo_plazo_local;
+            $('.tabla_usd_largo_plazo_local .table-scrollable').css('height', tableHeight_usd_largo_plazo_local + 'px');
+          }
+        });
 
-  // Agregar filtros independientes a cada columna
-  $('.tabla_usd_largo_plazo_local thead input').on('keyup change', function() {
-    table_usd_largoo_plazo_local.column($(this).parent().index()).search(this.value).draw();
-      });
-    });
+        // Agregar filtros independientes a cada columna
+        $('.tabla_usd_largo_plazo_local thead input').on('keyup change', function() {
+          table_usd_largo_plazo_local.column($(this).parent().index()).search(this.value).draw();
+            });
+          });
     </script>
     
     <a href="https://www.cnv.gov.ar/SitioWeb/FondosComunesInversion/CuotaPartes"><!-- -->
