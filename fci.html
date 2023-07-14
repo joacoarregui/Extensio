@@ -117,7 +117,30 @@
  
 <div id="servicios" class="jumbotron text-center">
   <h2>Ranking de Rentabilidades de Fondos Comunes de Inversión en Pesos y Dólares</h2> 
-  <H4 >Datos actualizados al 26/06/23.</H4>
+  <h4 id="dato"></h4>
+  <script>
+    function obtenerDatoDeURL() {
+      var url = "https://sheets.googleapis.com/v4/spreadsheets/1IaDo-W3LL4F_SXnLZJ6GOCf4ey4ywwUWtCIL7kT2eBM/values/FCI%20TABLAS%20ARS!A1?key=AIzaSyDD6wEmrY190Br80MQCrVDCYgZx4KJic_Y";
+      
+      // Realizar la solicitud GET a la URL utilizando Fetch API
+      fetch(url)
+        .then(response => response.json())
+        .then(data => {
+          // Obtener el valor del dato
+          var dato = data.values[0][0];
+          
+          // Mostrar el dato en el HTML
+          document.getElementById("dato").innerText = "Datos actualizados al "+ dato ;
+        })
+        .catch(error => {
+          console.log(error);
+        });
+    }
+    
+    // Ejecutar la función al cargar la página
+    obtenerDatoDeURL();
+  </script>
+  
   <h4>Tenga en cuenta que las comparaciones se enfocan en exponer las rentabilidades de los fondos con objetivos y características  similares, siendo los fondos mas relevantes de la industria para ese objetivo.</h4>
   
   <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 text-center">
