@@ -24,33 +24,31 @@ async function authorizeWithServiceAccount() {
 }
 
 async function downloadSlidesAsPNG(presentationId, auth) {
-    // Verifica que la presentación exista
-    const response = await slides.presentations.get({
-      id: presentationId,
-      auth,
-    });
-  
-    if (!response.data) {
-      throw new Error('La presentación no existe');
-    }
-  
-    // Descarga las diapositivas
-    const slidesToExport = [1, 2, 3, 4]; // Cambia esto a las diapositivas que deseas exportar.
-  
-    for (const slideIndex of slidesToExport) {
-      const response = await slides.presentations.pages.get({
-        presentationId,
-        pageObjectId: `g${slideIndex}`,
-        auth,
-      });
-  
-      const imageUrl = response.data.pageElements[0].image.imageUri;
-      // Descarga la imagen y guárdala como PNG
-      // ...
-    }
+  // Verifica que la presentación exista
+  const response = await slides.presentations.get({
+    presentationId: presentationId,
+    auth: auth,
+  });
+
+  if (!response.data) {
+    throw new Error('La presentación no existe');
   }
-  
-  // Llama al método downloadSlidesAsPNG() con la ID de la presentación
-  await downloadSlidesAsPNG('1EfM-DXU7OmDxK8kefE8EmjmKHI_xDcqQ4zJJv1so8Zk', auth);
-  
+
+  // Descarga las diapositivas
+  const slidesToExport = [1, 2, 3, 4]; // Cambia esto a las diapositivas que deseas exportar.
+
+  for (const slideIndex of slidesToExport) {
+    const response = await slides.presentations.pages.get({
+      presentationId: presentationId,
+      pageObjectId: `g${slideIndex}`,
+      auth: auth,
+    });
+
+    const imageUrl = response.data.pageElements[0].image.imageUri;
+    // Descarga la imagen y guárdala como PNG
+    // ...
+  }
+}
+
+// Llama a la función main para iniciar el proceso
 main();
