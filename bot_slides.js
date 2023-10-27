@@ -3,30 +3,18 @@ const slides = google.slides('v1');
 
 async function main() {
   // Autenticación
-  const auth = await authorizeWithServiceAccount();
+  const auth = await authorizeWithServiceAccount({
+    keyFile: 'credentials_slides.json',
+    scopes: ['https://www.googleapis.com/auth/presentations'],
+    apiKey: 'AIzaSyBoJhzZy7ZgVwy3FKZ800OcsoFvSwqpkcQ',
+  });
 
   // ID de la presentación
   const presentationId = '1EfM-DXU7OmDxK8kefE8EmjmKHI_xDcqQ4zJJv1so8Zk';
 
-  // Actualiza tus diapositivas aquí
-  // ...
-
-  // Descarga las diapositivas en formato PNG
-  await downloadSlidesAsPNG(presentationId, auth);
-}
-
-async function authorizeWithServiceAccount() {
-  const auth = new google.auth.GoogleAuth({
-    keyFile: 'credentials_slides.json',
-    scopes: ['https://www.googleapis.com/auth/presentations'],
-  });
-  return auth.getClient();
-}
-
-async function downloadSlidesAsPNG(presentationId, auth) {
-  // Verifica que la presentación exista
+  // Descarga las diapositivas
   const response = await slides.presentations.get({
-    presentationId: presentationId,
+    presentationId,
     auth: auth,
   });
 
@@ -34,20 +22,40 @@ async function downloadSlidesAsPNG(presentationId, auth) {
     throw new Error('La presentación no existe');
   }
 
-  // Descarga las diapositivas
-  const slidesToExport = [1, 2, 3, 4]; // Cambia esto a las diapositivas que deseas exportar.
+  // Actualiza las diapositivas
+  const updatedBody = response.data.body;
 
-  for (const slideIndex of slidesToExport) {
-    const response = await slides.presentations.pages.get({
-      presentationId: presentationId,
-      pageObjectId: `g${slideIndex}`,
-      auth: auth,
-    });
-
-    const imageUrl = response.data.pageElements[0].image.imageUri;
-    // Descarga la imagen y guárdala como PNG
-    // ...
+  // Actualiza las tablas
+  for (const table of updatedBody.tables) {
+    table.values = [
+      ['Nueva fila 1', 'Nueva columna 1'],
+      ['Nueva fila 2', 'Nueva columna 2'],
+    ];
   }
+
+  // Actualiza los textos
+  for (const text of updatedBody.texts) {
+    text.text = 'Texto actualizado';
+  }
+
+  // Actualiza los gráficos vinculados
+  for (const graphic of updatedBody.graphics) {
+    graphic.data = {
+      series: [
+        {
+          data: [1, 2, 3, 4, 5],
+        },
+      ],
+    };
+  }
+
+  // Actualiza la diapositiva
+  await slides.presentations.pages.update({
+    presentationId,
+    pageObjectId: `g1`,
+    body: updatedBody,
+    auth: auth,
+  });
 }
 
 // Llama a la función main para iniciar el proceso
