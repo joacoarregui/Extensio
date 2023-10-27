@@ -6,7 +6,6 @@ async function main() {
   const auth = await authorizeWithServiceAccount({
     keyFile: 'credentials_slides.json',
     scopes: ['https://www.googleapis.com/auth/presentations'],
-    apiKey: 'AIzaSyBoJhzZy7ZgVwy3FKZ800OcsoFvSwqpkcQ',
   });
 
   // ID de la presentación
