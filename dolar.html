@@ -227,7 +227,7 @@
         query_brechas.send(function(response) {
         var dataTable_brechas = response.getDataTable();
         var yData_brechas = dataTable_brechas.getColumnRange(1);
-        var min_brechas = yData_brechas.min-0.02;
+        var min_brechas = yData_brechas.min-0.05;
         var max_brechas = yData_brechas.max+0.02;
         var ticks_brechas = [];
         var step_brechas = (max_brechas - min_brechas) / 10;
