@@ -77,6 +77,14 @@ h6{
   font-weight: 590;
   margin-bottom: 30px;
 }
+.h1_encabezado {
+  font-size: 2.6vw;
+  text-transform: Exo;
+  color: #116c71;
+  font-weight: 500;
+  margin-bottom: 20px;
+  line-height: 1.375em;
+}
 .extensio_turquesa{
   text-transform: bitter;
   color: #00c8d2;
@@ -2205,6 +2213,7 @@ footer .glyphicon {
     padding: 2px;
     padding-top: 5px;
   }
+  .h1_encabezado {font-size: 37px} 
   .slideanim img{
     padding-right: 10px; 
     padding-left: 5px; 
