@@ -6,18 +6,16 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   
-<!-- originales -->
+<!-- scripts cleaned -->
 
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
   <link href="https://fonts.googleapis.com/css?family=Bitter" rel="stylesheet" type="text/css">
   <link href="https://fonts.googleapis.com/css?family=Exo" rel="stylesheet" type="text/css">
 
 <!-- script tables -->
-  <script src="https://cdn.jsdelivr.net/npm/jquery@3.6.0/dist/jquery.slim.min.js"></script>
-  <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"></script>
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/js/bootstrap.bundle.min.js"></script>
+  <!-- cleaned: removed conflicting slim jQuery + BS4 bundle -->
 
-<!-- originales -->
+<!-- scripts cleaned -->
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
   <meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=4.0">
@@ -36,8 +34,7 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/jquery.tablesorter/2.14.0/css/theme.blue.css"  />
  
 
-    <link rel=“stylesheet” type=“text/css” href=“./style.css”>
-    <link rel="stylesheet"                 href="./style.css">
+    <link rel="stylesheet" href="./style.css">
     
     <link rel="preload" href="API_GSHEET.py" as script>
   
@@ -45,61 +42,14 @@
 </head>
 <body>
 <div id="myPage" data-spy="scroll" data-target=".navbar" data-offset="60">
- <!-- NAVEGADOR -->
-  <nav class="navbar navbar-default navbar-fixed-top">
-    <div calss="container">
-      <div class="navbar-header">
-        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
-          <span class="icon-bar"></span>
-          <span class="icon-bar"></span>
-          <span class="icon-bar"></span>   
-        </button>
-        <a class="navbar-brand" href="https://www.extensiosas.com/">
-          <img src="WEB PAGINA IMAGENES CARGADAS/logos Extensio/LOGO EI HOME PAGE.jpg" width="100%" height="100%">
-        </a>
-      </div>
-      <br>
-        <!-- aca se definen los ID que mas abajo se mencionan para poder ir a los temas de las barras-->
-      <div class="collapse navbar-collapse" id="myNavbar">
-        <div class="container">
-          <ul class="nav navbar-nav navbar-right">
-            <li><a href="https://www.extensiosas.com/">Home</a></li>
-            <li class="dropdown">
-              <a class="dropdown-toggle" data-toggle="dropdown" >Servicios<span class="caret"></span></a>
-              <ul class="dropdown-menu">
-                <li><a href="Empresas">Empresas</a></li>
-                <li><a href="Emprendedores">Emprendedores</a></li>
-                <li><a href="Planes_ahorros">Planes de Ahorros</a></li>
-                <li><a href="Invertir">Asesoramiento Inversiones</a></li>
-              </ul>
-            </li>            
-            <li><a href="dolar">Dolar</a></li>
-            <li><a href="Invertir">Invertir</a></li>
-            <li class="dropdown">
-              <a class="dropdown-toggle" data-toggle="dropdown" >Herramientas<span class="caret"></span></a>
-              <ul class="dropdown-menu">
-                <li><a href="datosmercado">Datos Mercado</a></li>
-                <li><a href="fci">Comparador Fondos</a></li>
-                <li><a href="dolar_futuro">Dolar Futuro</a></li>
-                <li><a href="Planes_ahorros">Planes de Ahorros</a></li>
-              </ul>
-            </li>              
-            <li><a href="blog">Notas e informes</a></li>
-            <li><a href="cursos">Cursos</a></li>
-            <a class="bandera" href="https://www.extensiosas.com/en/home-en">
-               <img src="WEB PAGINA IMAGENES CARGADAS\bandera usa.png" width="100%" height="100%">
-            </a>             
-          </ul>
-        </div>
-      </div>
-    </div>
-  </nav>
-<br><br><br>
+<?php include 'includes/navbar.php'; ?>
+
+
 
 
 <!--SERVICIOS PRIMEROS -->
 <div id="servicios" class="servicios-empresas text-center">
-  <div class="container-fluid text-center">
+  <div class="container-fluid text-center" style="padding-top: 15px;">
     <h2 class="extensio_turquesa">Comprá dólar mep y ampliá las posibilidades de manejo de dinero</h2> 
  
     
@@ -389,17 +339,17 @@
     <div class="col-lg-4 col-md-2 col-sm-4 col-xs-12"></div> 
     <div class="col-lg-1 col-md-4 col-sm-4 col-xs-4 img-inversion-icons">
       <a target="_blank" href="https://www.instagram.com/extensio.inversiones?igsh=MWM2MGptcGI1cTVidg==">
-        <img src="WEB PAGINA IMAGENES CARGADAS\instagram transparente turquesa claro.png" width=100% height=100% >  
+        <img src="WEB PAGINA IMAGENES CARGADAS/instagram transparente turquesa claro.png" width=100% height=100% >  
       </a>
     </div>         
     <div class="col-lg-1 col-md-4 col-sm-4 col-xs-4 img-inversion-icons">
       <a target="_blank" href="https://www.linkedin.com/in/joaquin-arregui-36918979">
-        <img  src="WEB PAGINA IMAGENES CARGADAS\linkeding transparente turquesa claro.png" width=100% height=100%  >  
+        <img  src="WEB PAGINA IMAGENES CARGADAS/linkeding transparente turquesa claro.png" width=100% height=100%  >  
       </a>
     </div>
     <div class="col-lg-1 col-md-4 col-sm-4 col-xs-4 img-inversion-icons">
       <a target="_blank" href="https://twitter.com/Extensioarg">
-        <img  src="WEB PAGINA IMAGENES CARGADAS\twitter transparente turquesa claro.png" width=100% height=100% >        
+        <img  src="WEB PAGINA IMAGENES CARGADAS/twitter transparente turquesa claro.png" width=100% height=100% >        
       </a>
     </div>
   </div>
@@ -439,7 +389,7 @@
     <div class="row slideanim" >
       <div class="col-lg-4 col-sm-10 col-xs-12">
         <div class="img-giros">
-        <img  src="WEB PAGINA IMAGENES CARGADAS\transacciones offshore.png width=100% height="100%"> 
+        <img  src="WEB PAGINA IMAGENES CARGADAS/transacciones offshore.png width=100% height="100%"> 
          </div>
       </div>
       <div class="col-md-8 col-sm-12 col-xs-12">
@@ -462,7 +412,7 @@
     <div class="row slideanim" >
       <div class="col-lg-4 col-sm-10 col-xs-12">
         <div class="img-apertura">
-        <img  src="WEB PAGINA IMAGENES CARGADAS\hero-banner-home-ibkr-gt.png" width="600px"  > 
+        <img  src="WEB PAGINA IMAGENES CARGADAS/hero-banner-home-ibkr-gt.png" width="600px"  > 
          </div>
       </div>
       <div class="col-md-8 col-sm-12 col-xs-12">
@@ -566,15 +516,9 @@
   });
 </script>
 
-<div class="container-fluid fluid bg-grey text-center">
-  <h4>Extensio S.A.S ® Copyright 2022. Todos los derechos reservados.</h4>
-</div>
 
-<footer class="container-fluid fluid text-center">
-  <a href="#myPage" title="To Top">
-    <span class="glyphicon glyphicon-chevron-up"></span>
-  </a>
-</footer>
+
+<?php include 'includes/footer.php'; ?>
 
 <script>
 $(document).ready(function(){

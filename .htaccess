@@ -1,5 +1,18 @@
 RewriteEngine on
+
+# Allow clean URLs: /fci -> fci.html (requires Apache)
 RewriteCond %{REQUEST_FILENAME} !-d
 RewriteCond %{REQUEST_FILENAME}.html -f
-RewriteRule ^(.*)$ $1.html 
+RewriteRule ^(.*)$ $1.html [L]
+
+# Disable directory listing
 Options -Indexes
+
+# Allow PHP processing inside .html files (needed for includes)
+AddHandler application/x-httpd-php .html .htm
+
+# For php built-in server or simple testing, this helps with clean URLs if needed
+# But for php -S, you can access with .html extension directly
+
+# Basic security / performance hints (optional)
+# AddOutputFilterByType DEFLATE text/html text/css application/javascript

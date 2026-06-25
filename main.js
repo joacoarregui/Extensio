@@ -1,38 +1,16 @@
-// Variables de configuración
+// LEGACY / BROKEN - NOT THE ACTIVE DATA LOADER
+// This file attempts to use gapi for Google Sheets but is not loaded on most pages.
+// The real (working) data loading for FCI, dólar, etc. is done inline in the HTML files
+// using direct fetch / gviz with the active API key.
+// DO NOT REMOVE the active API calls in the HTML pages.
+// This script has incorrect CLIENT_ID (using an API key) and invalid spreadsheet ID.
+
+console.warn('[main.js] Legacy script - not active. Real Sheets data is loaded from HTML inline scripts.');
+
+/* Original code preserved below for reference (commented to prevent errors)
 const CLIENT_ID = 'AIzaSyAoEhAcU81FRzaTRFwU4RJt_9GCec0HZGg';
 const SPREADSHEET_ID = '2Ics3_0r1pbWqmK0pbKZ-1KObviEnz9De5TUS7o';
 const RANGE = 'TEXTO!C28:H39';
 
-// Cargar la API de Google Sheets
-gapi.load('client', () => {
-  gapi.client.init({
-    clientId: CLIENT_ID,
-    discoveryDocs: ['https://sheets.googleapis.com/$discovery/rest?version=v4'],
-    scope: 'https://www.googleapis.com/auth/spreadsheets.readonly'
-  }).then(() => {
-    // Obtener los datos de la hoja de cálculo
-    gapi.client.sheets.spreadsheets.values.get({
-      spreadsheetId: SPREADSHEET_ID,
-      range: RANGE
-    }).then(response => {
-      const data = response.result.values;
-      const tbody = document.querySelector('#datos tbody');
-
-      // Recorrer los datos y crear las filas de la tabla
-      data.forEach(row => {
-        const tr = document.createElement('tr');
-        row.forEach(cell => {
-          const td = document.createElement('td');
-          td.textContent = cell;
-          tr.appendChild(td);
-        });
-        tbody.appendChild(tr);
-      });
-
-      // Inicializar la tabla con DataTables
-      $(document).ready(() => {
-        $('#datos').DataTable();
-      });
-    });
-  });
-});
+// ... (rest of original gapi code commented to avoid runtime errors)
+*/

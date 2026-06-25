@@ -14,15 +14,11 @@
   <link href="https://fonts.googleapis.com/css?family=Exo" rel="stylesheet" type="text/css">
 
 <!-- script tables -->
-  <script src="https://cdn.jsdelivr.net/npm/jquery@3.6.0/dist/jquery.slim.min.js"></script>
-  <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"></script>
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/js/bootstrap.bundle.min.js"></script>
+  <!-- cleaned conflicting slim + BS4 -->
 
 
   <!-- script margin -->
-<!--  <script src="https://cdn.jsdelivr.net/npm/jquery@3.6.0/dist/jquery.slim.min.js"></script>
-  <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"></script>
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/js/bootstrap.bundle.min.js"></script>-->
+<!--  <!-- cleaned conflicting slim + BS4 -->-->
 
 <!-- originales -->
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
@@ -41,45 +37,14 @@
  
     <link rel="preload" href="index.js" as="script">
 
-    <link rel=“stylesheet” type=“text/css” href=“./style.css”>
-    <link rel="stylesheet"                 href="./style.css">
+    <link rel="stylesheet" href="./style.css">
 
     <link rel="icon" href="https://drive.google.com/uc?export=view&id=1TDpO7D-xdhEp-Q6YrhFCVj-OyfAE9iEQ" type="image/x-icon"> 
 </head>
 <body>
 <div id="myPage" data-spy="scroll" data-target=".navbar" data-offset="60">
- <!-- NAVEGADOR -->
-  <nav class="navbar navbar-default navbar-fixed-top">
-    <div calss="container">
-      <div class="navbar-header">
-        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
-          <span class="icon-bar"></span>
-          <span class="icon-bar"></span>
-          <span class="icon-bar"></span>   
-        </button>
-        <a class="navbar-brand" href="https://www.extensiosas.com/en/home-en">
-          <img  src="https://drive.google.com/uc?export=view&id=1rlo6XgU0BHv0q0SLJtuqaKE0sibLKw2u" width= 100% height= 100%> 
-        </a>
-      </div>
-      <br>
-        <!-- aca se definen los ID que mas abajo se mencionan para poder ir a los temas de las barras-->
-      <div class="collapse navbar-collapse" id="myNavbar">
-        <div class="container">
-          <ul class="nav navbar-nav navbar-right">
-            <li><a href="home-en">Home</a></li>
-            <li><a href="outsourcing-services-en">Outsorcing</a></li>
-            <li><a href="Saving_plans-en">Saving plans</a></li>
-            <li><a href="Invest-en">Investments</a></li>
-            <li><a href="courses-en">Courses</a></li>
-            <a class="bandera" href="https://www.extensiosas.com/">
-              <img  src="https://drive.google.com/uc?export=view&id=1flW6P53UykIXNtQihXCbyBI9N3rvzpez" width= 100% height= 100%> 
-            </a>             
-          </ul>
-        </div>
-      </div>
-    </div>
-  </nav>
-<br><br><br>
+<?php include 'includes/navbar-en.php'; ?>
+
 
 <!--portada-->
 <div id="inversiones" class="img_background_invertir_fondo"><br><br>
@@ -89,7 +54,7 @@
           <h4 class="extensio_turquesa text-center">For investors seeking long-term growth</h4>
           <h4 class="extensio_turquesa text-center">Since 2022 we specialize in analyzing ETFs and high-value disruptive companies</h4><br>
           <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 text-center">
-            <a href="Invertir">
+            <a href="Invertir.html">
               <button class="btn btn-default btn-lg">Explore your profile</button>
             </a>
            
@@ -139,7 +104,7 @@
         <div class="service-panel-heading center">
           <h1 class="text-center">Outsourcing of services</h1>
           <h3 class="text-center"><strong>Empower your business with our support in finance and administration, accounting and taxes, marketing strategies and improving your core technology.</strong></h3>
-          <h5 class="text-center"><a href="Emprendedores">Learn more ➝</a></h5>
+          <h5 class="text-center"><a href="Emprendedores.html">Learn more ➝</a></h5>
           <h2 class="text-center">Entrepreneurs</h2>
           <img  src="https://drive.google.com/uc?export=view&id=1kbeaQbjHvXHCbZ1YskzmlyATOAbgeYT5"  > 
         </div>
@@ -152,7 +117,7 @@
        <div class="service-panel-heading center">
           <h1 class="text-center">Invest your money better</h1>
           <h3 class="text-center"><strong>We help you transform your personal finances with our financial advice. We create a personalized investment plan so you can achieve your financial goals and secure your future. </strong></h3>
-          <h5 class="text-center"><a href="Planes_ahorros">See more ➝</a></h5>
+          <h5 class="text-center"><a href="Planes_ahorros.html">See more ➝</a></h5>
           <h2 class="text-center">Savings plans</h2>
           <img  src="https://drive.google.com/uc?export=view&id=1NRnOP-V9w-zMqC56w4UtjuYtJC0ybhCA"  > 
         </div>
@@ -165,7 +130,7 @@
        <div class="service-panel-heading center">
           <h1 class="text-center">Make your savings grow</h1>
           <h3 class="text-center"><strong>Our investment approach combines sound investment strategies with disruptive innovation funds, giving you a unique opportunity for long-term growth with a balanced approach to risk and return.</strong></h3>
-          <h5 class="text-center"><a href="Invertir">Learn more ➝</a></h5>
+          <h5 class="text-center"><a href="Invertir.html">Learn more ➝</a></h5>
           <h2 class="text-center">Investments</h2>
           <img  src="https://drive.google.com/uc?export=view&id=1F8WDe_RHXlHK6h96WAVxy2e759eB7AB1" > 
         </div>
@@ -353,14 +318,8 @@
   });
 </script>
 
-<div class="container-fluid fluid bg-grey">
-  <h4 class="text-center">Extensio S.A.S ® Copyright 2022. All rights reserved.</h4>
-</div>
-<footer class="container-fluid fluid text-center">
-  <a href="#myPage" title="To Top">
-    <span class="glyphicon glyphicon-chevron-up"></span>
-  </a>
-</footer>
+
+<?php include 'includes/footer.php'; ?>
 
 <script>
 $(document).ready(function(){

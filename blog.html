@@ -2,29 +2,25 @@
 <html lang="en">
 <head>
 
-  <title>Extensio Inversiones | Informes que realizamos y notas en diarios</title>
+  <title>Extensio Inversiones | Notas e Informes sobre Inversiones y Mercado de Capitales</title>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
 
  
-<!-- originales -->
+<!-- scripts cleaned -->
 
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
   <link href="https://fonts.googleapis.com/css?family=Bitter" rel="stylesheet" type="text/css">
   <link href="https://fonts.googleapis.com/css?family=Exo" rel="stylesheet" type="text/css">
 
 <!-- script tables -->
-  <script src="https://cdn.jsdelivr.net/npm/jquery@3.6.0/dist/jquery.slim.min.js"></script>
-  <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"></script>
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/js/bootstrap.bundle.min.js"></script>
+  <!-- removed conflicting slim jQuery + BS4 bundle -->
 
 
   <!-- script margin -->
-<!--  <script src="https://cdn.jsdelivr.net/npm/jquery@3.6.0/dist/jquery.slim.min.js"></script>
-  <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"></script>
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/js/bootstrap.bundle.min.js"></script>-->
+<!--  <!-- removed conflicting slim jQuery + BS4 bundle -->-->
 
-<!-- originales -->
+<!-- scripts cleaned -->
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
 
@@ -45,6 +41,8 @@
     <link rel="stylesheet"                 href="./style.css">
 
     <link rel="icon" href="WEB PAGINA IMAGENES CARGADAS/logos Extensio/LOGO SIN FONDO.png" type="image/x-icon"> 
+  <meta name="description" content="Informes y análisis de Extensio sobre inversiones, dólar, FCI y mercado de capitales en Argentina.">
+  <meta name="keywords" content="informes inversiones, análisis mercado capitales, dólar, FCI, economía Argentina">
     <!-- Google Tag Manager -->
 <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
 new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
@@ -60,58 +58,8 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
   </head>
   <body>
   <div id="myPage" data-spy="scroll" data-target=".navbar" data-offset="60">
-   <!-- NAVEGADOR -->
-    <nav class="navbar navbar-default navbar-fixed-top">
-      <div calss="container">
-        <div class="navbar-header">
-          <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
-            <span class="icon-bar"></span>
-            <span class="icon-bar"></span>
-            <span class="icon-bar"></span>   
-          </button>
-          <a class="navbar-brand" href="https://www.extensiosas.com/">
-            <img src="WEB PAGINA IMAGENES CARGADAS/logos Extensio/LOGO EI HOME PAGE.jpg" width="100%" height="100%">
-          </a>
-        </div>
-        <br>
-          <!-- aca se definen los ID que mas abajo se mencionan para poder ir a los temas de las barras-->
-        <div class="collapse navbar-collapse" id="myNavbar">
-          <div class="container">
-            <ul class="nav navbar-nav navbar-right">
-              <li><a href="https://www.extensiosas.com/">Home</a></li>
-              <li class="dropdown">
-                <a class="dropdown-toggle" data-toggle="dropdown" >Servicios<span class="caret"></span></a>
-                <ul class="dropdown-menu">
-                  <li><a href="Empresas">Empresas</a></li>
-                  <li><a href="Emprendedores">Emprendedores</a></li>
-                  <li><a href="Planes_ahorros">Planes de Ahorros</a></li>
-                  <li><a href="Invertir">Asesoramiento Inversiones</a></li>
-                </ul>
-              </li>            
-              <li><a href="dolar">Dolar</a></li>
-              <li><a href="Invertir">Invertir</a></li>
-              <li class="dropdown">
-                <a class="dropdown-toggle" data-toggle="dropdown" >Herramientas<span class="caret"></span></a>
-                <ul class="dropdown-menu">
-                  <li><a href="datosmercado">Datos Mercado</a></li>
-                  <li><a href="fci">Comparador Fondos</a></li>
-                  <li><a href="dolar_futuro">Dolar Futuro</a></li>
-                  <li><a href="Planes_ahorros">Planes de Ahorros</a></li>
-                </ul>
-              </li>              
-              <li><a href="blog">Notas e informes</a></li>
-              <li><a href="cursos">Cursos</a></li>
-              <a class="bandera" href="https://www.extensiosas.com/en/home-en">
-                 <img src="WEB PAGINA IMAGENES CARGADAS\bandera usa.png" width="100%" height="100%">
-            </a>             
-          </ul>
-        </div>
-      </div>
-    </div>
-  </nav>
-<br>
-<br>
-<br>
+<?php include 'includes/navbar.php'; ?>
+
 <!--SERVICIOS PRIMEROS -->
 
 
@@ -122,7 +70,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
     <div class="col-sm-3">
       <div class="thumbnail">
         <a target="_blank" href="https://www.iprofesional.com/economia/400397-mercado-en-modo-luis-caputo-acciones-y-bonos-volaron-por-mayor-credibilidad">
-          <img src="WEB PAGINA IMAGENES CARGADAS\imagenes notas\basili bcra.webp"> 
+          <img src="WEB PAGINA IMAGENES CARGADAS/imagenes notas/basili bcra.webp"> 
           <h4><strong>26/02/27 El BCRA fortalece sus reservas, pero aún está muy lejos del récord de 2019</strong></h4>
        </a>
       </div>
@@ -130,7 +78,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
     <div class="col-sm-3">
       <div class="thumbnail">
         <a target="_blank" href="https://www.iprofesional.com/economia/400397-mercado-en-modo-luis-caputo-acciones-y-bonos-volaron-por-mayor-credibilidad">
-          <img src="WEB PAGINA IMAGENES CARGADAS\imagenes notas\caputo wall street.jpg"> 
+          <img src="WEB PAGINA IMAGENES CARGADAS/imagenes notas/caputo wall street.jpg"> 
           <h4><strong>23/02/24 Repunte de acciones y bonos: ¿mero rebote o un guiño clave del mercado hacia Caputo?</strong></h4>
        </a>
       </div>
@@ -138,7 +86,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
     <div class="col-sm-3">
       <div class="thumbnail">
         <a target="_blank" href="https://www.serindustria.com.ar/auguran-otro-ano-positivo-para-el-mercado-de-capitales-argentino/">
-          <img src="WEB PAGINA IMAGENES CARGADAS\imagenes notas\notas ser mercado.png"> 
+          <img src="WEB PAGINA IMAGENES CARGADAS/imagenes notas/notas ser mercado.png"> 
           <h4><strong>03/01/24 Auguran otro año positivo para el mercado de capitales argentino</strong></h4>
        </a>
       </div>
@@ -149,7 +97,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
     <div class="col-sm-3">
       <div class="thumbnail">
         <a target="_blank" href="https://www.forbesargentina.com/money/desafios-medidas-mercado-financiero-mas-fluido-n45229">
-          <img src="WEB PAGINA IMAGENES CARGADAS\imagenes notas\cnv.jpg"> 
+          <img src="WEB PAGINA IMAGENES CARGADAS/imagenes notas/cnv.jpg"> 
           <h4><strong>18/12/23 Desafíos y medidas para un mercado financiero más fluido</strong></h4>
        </a>
       </div>
@@ -157,7 +105,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
     <div class="col-sm-3">
       <div class="thumbnail">
         <a target="_blank" href="https://drive.google.com/file/d/1g137pWyRJ7ryXoyS2-UlczTJnYejRZUM/view">
-          <img src="WEB PAGINA IMAGENES CARGADAS\imagenes notas\innovacion.jpeg"> 
+          <img src="WEB PAGINA IMAGENES CARGADAS/imagenes notas/innovacion.jpeg"> 
           <h4><strong>23/11/23 Queres comprar dólares oficiales a $570? Si te interesa cubrir tus excedentes y no sabes como te dejo una informe donde explico esto!</strong></h4>
       </a>
       </div>
@@ -165,7 +113,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
     <div class="col-sm-3">
       <div class="thumbnail">
         <a target="_blank" href="https://www.iproup.com/finanzas/42213-efecto-milei-en-que-invertir-acciones-baratas">
-          <img src="WEB PAGINA IMAGENES CARGADAS\imagenes notas\iproup inversiones.webp"> 
+          <img src="WEB PAGINA IMAGENES CARGADAS/imagenes notas/iproup inversiones.webp"> 
           <h4><strong>16/08/23 Acciones, a precio de ganga: 12 papeles que podés comprar a menos de u$s1</strong></h4>
        </a>
       </div>
@@ -173,7 +121,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
     <div class="col-sm-3">
       <div class="thumbnail">
         <a target="_blank" href="https://www.iprofesional.com/economia/386623-tension-con-el-dolar-busqueda-de-cobertura-o-un-voto-cantado">
-          <img src="WEB PAGINA IMAGENES CARGADAS\imagenes notas\dolae 3.webp"> 
+          <img src="WEB PAGINA IMAGENES CARGADAS/imagenes notas/dolae 3.webp"> 
           <h4><strong>09/08/23 Turbulencia cambiaria a días de las PASO: ¿búsqueda cobertura en el dólar o un voto cantado?</strong></h4>
        </a>
       </div>
@@ -184,7 +132,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
     <div class="col-sm-3">
       <div class="thumbnail">
         <a target="_blank" href="https://www.serindustria.com.ar/inflacion-si-no-hay-una-devaluacion-el-cepo-a-las-importaciones-continuara-y-empeorara/">
-          <img src="WEB PAGINA IMAGENES CARGADAS\Foto 2 retrato.jpg"> 
+          <img src="WEB PAGINA IMAGENES CARGADAS/Foto 2 retrato.jpg"> 
           <h4><strong>17/07/23 Si no hay una devaluación, el cepo a las importaciones continuará y empeorará</strong></h4>
        </a>
       </div>
@@ -192,7 +140,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
     <div class="col-sm-3">
       <div class="thumbnail">
         <a target="_blank" href="https://www.iprofesional.com/economia/385118-acuerdo-con-fmi-las-partes-no-ceden-y-los-dolares-se-disparan">
-          <img src="WEB PAGINA IMAGENES CARGADAS\imagenes notas\fmi.webp"> 
+          <img src="WEB PAGINA IMAGENES CARGADAS/imagenes notas/fmi.webp"> 
           <h4><strong>14/07/23 Incertidumbre por el acuerdo con FMI: las partes no ceden y los dólares no encuentran techo</strong></h4>
        </a>
       </div>
@@ -200,7 +148,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
     <div class="col-sm-3">
       <div class="thumbnail">
         <a target="_blank" href="https://www.iprofesional.com/finanzas/385039-con-el-blue-imparable-como-dolarizar-tu-cartera">
-          <img src="WEB PAGINA IMAGENES CARGADAS\imagenes notas\iprofesional.png">
+          <img src="WEB PAGINA IMAGENES CARGADAS/imagenes notas/iprofesional.png">
           <h4><strong>13/07/23 Atención ahorrista: con el blue imparable, ¿cómo dolarizar tu cartera?</strong></h4>
        </a>
       </div>
@@ -208,7 +156,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
     <div class="col-sm-3">
       <div class="thumbnail">
         <a target="_blank" href="https://www.iprofesional.com/finanzas/384618-se-acelera-el-dolar-oficial-que-puede-pasar-con-el-blue">
-          <img src="WEB PAGINA IMAGENES CARGADAS\imagenes notas\521380.png"> 
+          <img src="WEB PAGINA IMAGENES CARGADAS/imagenes notas/521380.png"> 
           <h4><strong>06/07/23 Se apura el ritmo de suba del dólar oficial: ¿qué puede pasar con el blue?</strong></h4>
        </a>
       </div>
@@ -219,7 +167,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
     <div class="col-sm-3">
       <div class="thumbnail">
         <a target="_blank" href="https://www.iprofesional.com/economia/381900-dolar-massa-triplico-el-ritmo-devaluatorio-y-mira-al-fmi">
-          <img src="WEB PAGINA IMAGENES CARGADAS\imagenes notas\imagen inflacion.jpg"> 
+          <img src="WEB PAGINA IMAGENES CARGADAS/imagenes notas/imagen inflacion.jpg"> 
           <h4><strong>18/05/23 Sí se puede ahorrar para mañana: ¿valen la pena los seguros de retiro en la Argentina?</strong></h4>
        </a>
       </div>
@@ -227,7 +175,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
     <div class="col-sm-3">
       <div class="thumbnail">
         <a target="_blank" href="https://www.iprofesional.com/finanzas/381349-bcra-la-sangria-incontrolable-provoca-reservas-netas-negativas">
-          <img src="WEB PAGINA IMAGENES CARGADAS\imagenes notas\dolar bcra iprofesional.webp"> 
+          <img src="WEB PAGINA IMAGENES CARGADAS/imagenes notas/dolar bcra iprofesional.webp"> 
           <h4><strong>04/05/23 Falta de dólares: advierten que las reservas netas del Banco Central cayeron a un nivel negativo</strong></h4>
        </a>
       </div>
@@ -235,7 +183,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
     <div class="col-sm-3">
       <div class="thumbnail">
         <a target="_blank" href="https://www.iprofesional.com/finanzas/380818-como-dolarizar-tus-inversiones-y-evitar-el-alto-costo-del-blue">
-          <img src="WEB PAGINA IMAGENES CARGADAS\imagenes notas\dolarizacion iprofesional.webp">
+          <img src="WEB PAGINA IMAGENES CARGADAS/imagenes notas/dolarizacion iprofesional.webp">
           <h4><strong>24/04/23 Cómo dolarizarse con inversiones y protegerse de la devaluación</strong></h4>
        </a>
       </div>
@@ -243,7 +191,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
     <div class="col-sm-3">
       <div class="thumbnail">
         <a target="_blank" href="https://www.iprofesional.com/economia/380648-dolar-futuro-tras-el-salto-del-blue-se-espera-mas-devaluacion">
-          <img src="WEB PAGINA IMAGENES CARGADAS\imagenes notas\reloj iprofesional.webp"> 
+          <img src="WEB PAGINA IMAGENES CARGADAS/imagenes notas/reloj iprofesional.webp"> 
           <h4><strong>23/04/23 Dólar futuro: tras la disparada de los dólares paralelos, ¿el mercado espera un salto del oficial?</strong></h4>
        </a>
       </div>
@@ -254,7 +202,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
       <div class="col-sm-3">
         <div class="thumbnail">
           <a target="_blank" href="https://www.iprofesional.com/finanzas/380270-dolar-blue-a-400-que-dice-moritan-y-a-que-precio-puede-llegar">
-            <img src="WEB PAGINA IMAGENES CARGADAS\imagenes notas\521380.png">  
+            <img src="WEB PAGINA IMAGENES CARGADAS/imagenes notas/521380.png">  
             <h4><strong>13/04/23 Dólar blue a $400: qué dice ahora García Moritán y qué precio anticipan otros economistas para fin de año</strong></h4>
          </a>
         </div>
@@ -262,7 +210,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
       <div class="col-sm-3">
         <div class="thumbnail">
           <a target="_blank" href="https://www.iproup.com/economia-digital/39236-jubilacion-como-sacar-un-seguro-de-retiro-y-que-ganancia-deja">
-            <img src="WEB PAGINA IMAGENES CARGADAS\imagenes notas\planes de ahorro.png">
+            <img src="WEB PAGINA IMAGENES CARGADAS/imagenes notas/planes de ahorro.png">
             <h4><strong>11/04/23 Con la jubilación no alcanza: cuál es el plan b que crece entre argentinos y qué sueldazo se aseguran para la vejez</strong></h4>
          </a>
         </div>
@@ -270,7 +218,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
       <div class="col-sm-3">
         <div class="thumbnail">
           <a target="_blank" href="https://www.iprofesional.com/finanzas/380128-invertir-en-bitcoin-en-pesos-como-son-los-futuros-en-esta-moneda">
-            <img src="WEB PAGINA IMAGENES CARGADAS\imagenes notas\bitcoin.png">
+            <img src="WEB PAGINA IMAGENES CARGADAS/imagenes notas/bitcoin.png">
             <h4><strong>11/04/23 Invertir pesos en Bitcoin: Así funcionarán los futuros basados en esta criptomoneda</strong></h4>
          </a>
         </div>
@@ -278,7 +226,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
       <div class="col-sm-3">
         <div class="thumbnail">
           <a target="_blank" href="https://www.iprofesional.com/finanzas/379840-se-encarece-el-dolar-tarjeta-mas-presion-para-el-blue.amp">
-            <img src="WEB PAGINA IMAGENES CARGADAS\imagenes notas\542423.png"> 
+            <img src="WEB PAGINA IMAGENES CARGADAS/imagenes notas/542423.png"> 
             <h4><strong>08/04/23 El Gobierno encarece el dólar tarjeta: ¿sumará presión a los demás tipos de cambio?</strong></h4>
          </a>
         </div>
@@ -289,7 +237,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
         <div class="col-sm-3">
           <div class="thumbnail">
             <a target="_blank" href="https://www.iprofesional.com/finanzas/379618-llega-el-dolar-soja-3-por-que-es-rechazado-por-los-especialistas">
-              <img src="WEB PAGINA IMAGENES CARGADAS\imagenes notas\551772 (1).png"> 
+              <img src="WEB PAGINA IMAGENES CARGADAS/imagenes notas/551772 (1).png"> 
               <h4><strong>31/03/23 Llega el dólar soja 3: por qué la solución preferida de la gestión Massa ya genera preocupación en el mercado</strong></h4>
            </a>
           </div>
@@ -297,7 +245,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
         <div class="col-sm-3">
           <div class="thumbnail">
             <a target="_blank" href="https://www.forbesargentina.com/money/que-consecuencias-pueden-tener-nuevas-medidas-gobierno-contener-dolar-n31049">
-              <img src="WEB PAGINA IMAGENES CARGADAS\imagenes notas\63934eb850309__822x460.png">
+              <img src="WEB PAGINA IMAGENES CARGADAS/imagenes notas/63934eb850309__822x460.png">
               <h4><strong>22/03/23 Qué consecuencias pueden tener las nuevas medidas del Gobierno para contener al dólar</strong></h4>
            </a>
           </div>
@@ -305,7 +253,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
         <div class="col-sm-3">
           <div class="thumbnail">
             <a target="_blank" href="https://www.iprofesional.com/finanzas/379129-maniobra-para-pagar-menos-por-compras-con-tarjeta-al-dolar-qatar">
-              <img src="WEB PAGINA IMAGENES CARGADAS\imagenes notas\542423.png"> 
+              <img src="WEB PAGINA IMAGENES CARGADAS/imagenes notas/542423.png"> 
               <h4><strong>21/03/23 Maniobra para pagar menos por compras con tarjeta al dolar qatar</strong></h4>
            </a>
           </div>
@@ -313,7 +261,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
         <div class="col-sm-3">
           <div class="thumbnail">
             <a target="_blank" href="https://www.iprofesional.com/finanzas/376498-esta-compania-vale-mas-que-la-suma-de-17-empresas-argentinas">
-              <img src="WEB PAGINA IMAGENES CARGADAS\imagenes notas\521450.png">
+              <img src="WEB PAGINA IMAGENES CARGADAS/imagenes notas/521450.png">
               <h4><strong>25/01/23 Mercado Libre ya vale más que la suma de las 17 principales empresas argentinas que cotizan en la Bolsa</strong></h4>
            </a>
           </div>
@@ -324,7 +272,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
       <div class="col-sm-3">
         <div class="thumbnail">
           <a target="_blank" href="https://www.iprofesional.com/finanzas/373990-en-que-cedears-recomiendan-poner-plata-para-huir-del-riesgo-local">
-            <img src="WEB PAGINA IMAGENES CARGADAS\imagenes notas\iprofesional.png" >       
+            <img src="WEB PAGINA IMAGENES CARGADAS/imagenes notas/iprofesional.png" >       
             <h4><strong>07/12/22 ¿Habrá revancha para los Cedears?: qué anticipan expertos para esta inversión que permite huir del riesgo local</strong></h4>
           </a>
         </div>
@@ -332,7 +280,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
       <div class="col-sm-3">
         <div class="thumbnail">
           <a target="_blank" href="https://www.cronista.com/finanzas-mercados/que-recomiendan-los-fondos-oportunidades-para-los-pesos-rumbo-a-los-proximos-meses/">
-            <img src="WEB PAGINA IMAGENES CARGADAS\imagenes notas\innovacion.jpeg">    
+            <img src="WEB PAGINA IMAGENES CARGADAS/imagenes notas/innovacion.jpeg">    
             <h4><strong>04/11/22 Que recomiendan los fonodos invertir en pesos para los próximos meses</strong></h4>
          </a>
         </div>
@@ -340,7 +288,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
     <div class="col-sm-3">
       <div class="thumbnail">
         <a target="_blank" href="https://www.infobae.com/opinion/2022/10/28/las-ventajas-de-invertir-en-empresas-de-innovacion/">
-          <img src="WEB PAGINA IMAGENES CARGADAS\imagenes notas\innovacion.jpeg" >       
+          <img src="WEB PAGINA IMAGENES CARGADAS/imagenes notas/innovacion.jpeg" >       
           <h4><strong>30/10/22 Las ventajas de invertir en empresas de innovación</strong></h4>
        </a>
       </div>
@@ -348,7 +296,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
     <div class="col-sm-3">
       <div class="thumbnail">
         <a target="_blank" href="https://www.cronista.com/finanzas-mercados/dolar-barato-la-caida-del-15-del-ccl-muestra-que-la-sobrerreaccion-cambiaria-se-agoto-y-se-renuevan-las-presiones-alcistas/">
-          <img src="WEB PAGINA IMAGENES CARGADAS\imagenes notas\dolar-nota.png" >       
+          <img src="WEB PAGINA IMAGENES CARGADAS/imagenes notas/dolar-nota.png" >       
           <h4><strong>09/08/22 Dolar Caro o barato: cual es la medida que lo determina tras la caida del 15% del CCL</strong></h4>
         </a>
       </div>
@@ -358,7 +306,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
     <div class="col-sm-3">
       <div class="thumbnail">
         <a target="_blank" href="https://www.cronista.com/finanzas-mercados/el-mensaje-laxo-de-powell-produjo-una-caida-de-las-tasas-en-eeuu-pero-analistas-no-lo-ven-como-un-dirver-positivo-para-la-deuda-local/">
-          <img src="WEB PAGINA IMAGENES CARGADAS\imagenes notas\powel FED.jpg">        
+          <img src="WEB PAGINA IMAGENES CARGADAS/imagenes notas/powel FED.jpg">        
           <h4><strong>28/07/22 El mensaje laxo de powell produjo una caída de las tasas en eeuu pero analistas no lo ven como un driver positivo para la deuda local</strong></h4> 
         </a>
       </div>
@@ -366,7 +314,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
     <div class="col-sm-3">
       <div class="thumbnail">
         <a target="_blank" href="https://www.iprofesional.com/finanzas/366554-sin-dolares-cuando-el-banco-central-tendra-reservas-negativas">
-          <img src="WEB PAGINA IMAGENES CARGADAS\imagenes notas\banco.png">  
+          <img src="WEB PAGINA IMAGENES CARGADAS/imagenes notas/banco.png">  
           <h4><strong>27/07/22 Sin dólares: cuándo el BCRA puede llegar a tener las reservas en terreno "negativo"</strong></h4> 
         </a>
       </div>
@@ -374,7 +322,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
     <div class="col-sm-3">
       <div class="thumbnail">
         <a target="_blank" href="https://www.forbesargentina.com/money/dolar-futuro-bcra-apuesta-fuerte-pero-mercado-continua-proyectando-una-devaluacion-n19467">
-          <img src="WEB PAGINA IMAGENES CARGADAS\imagenes notas\537091.png">        
+          <img src="WEB PAGINA IMAGENES CARGADAS/imagenes notas/537091.png">        
           <h4><strong>26/07/22 Dólar futuro: el BCRA apuesta fuerte, pero el mercado continúa proyectando una devaluación</strong></h4> 
         </a>
       </div>
@@ -382,7 +330,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
     <div class="col-sm-3">
       <div class="thumbnail">
         <a target="_blank" href="https://www.iprofesional.com/finanzas/365471-la-valuacion-de-bancos-argentinos-equivale-a-10-de-mercado-libre">
-          <img src="WEB PAGINA IMAGENES CARGADAS\imagenes notas\521450.png" >       
+          <img src="WEB PAGINA IMAGENES CARGADAS/imagenes notas/521450.png" >       
           <h4><strong>18/07/22 Insólito: la valuación de los bancos argentinos equivale al 10% del valor de Mercado Libre</strong></h4>
        </a>
       </div>
@@ -460,15 +408,9 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
   });
 </script>
 
-<div class="container-fluid fluid bg-grey text-center">
-  <h4>Extensio S.A.S ® Copyright 2022. Todos los derechos reservados.</h4>
-</div>
 
-<footer class="container-fluid fluid text-center">
-  <a href="#myPage" title="To Top">
-    <span class="glyphicon glyphicon-chevron-up"></span>
-  </a>
-</footer>
+
+<?php include 'includes/footer.php'; ?>
 
 <script>
 $(document).ready(function(){
